@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Gantt EPSA" company="EPSA" webLink="http://" view-date="2019-06-17" view-index="0" gantt-divider-location="401" resource-divider-location="300" version="2.8.10" locale="fr">
+    <description/>
+    <view zooming-state="default:5" id="gantt-chart">
+        <field id="tpd3" name="Nom" width="188" order="0"/>
+        <field id="tpd4" name="Date de début" width="97" order="1"/>
+        <field id="tpd5" name="Date de fin" width="97" order="2"/>
+        <option id="taskLabelLeft" value="name"/>
+        <option id="taskLabelRight" value="coordinator"/>
+        <option id="color.recent"><![CDATA[#0066ff #ff0000 #330033 #ece9d8 #ff00ff #ffff33 #00cc00 #cccccc #ffffff #000000]]></option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Nom" width="210" order="0"/>
+        <field id="1" name="Rôle par défaut" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="46" name="Tops" meeting="false" start="2019-04-03" duration="320" complete="0" expand="false">
+            <task id="1" name="Top Projet" color="#000000" meeting="true" start="2019-04-03" duration="0" complete="0" thirdDate="2019-04-01" thirdDate-constraint="0" priority="2" expand="true"/>
+            <task id="42" name="RVP2" color="#000000" meeting="true" start="2019-04-03" duration="0" complete="0" thirdDate="2019-04-01" thirdDate-constraint="0" priority="2" expand="true"/>
+            <task id="39" name="Roll Out" color="#000000" meeting="true" start="2019-04-10" duration="0" complete="0" thirdDate="2019-04-01" thirdDate-constraint="0" priority="2" expand="true"/>
+            <task id="7" name="Top Prédim" color="#000000" meeting="true" start="2019-06-12" duration="0" complete="0" thirdDate="2019-04-01" thirdDate-constraint="0" priority="2" expand="true"/>
+            <task id="11" name="Top Appro" color="#000000" meeting="true" start="2019-06-27" duration="0" complete="0" thirdDate="2019-04-01" thirdDate-constraint="0" priority="2" expand="true"/>
+            <task id="13" name="Top Saison" color="#000000" meeting="true" start="2019-09-30" duration="0" complete="0" thirdDate="2019-04-01" thirdDate-constraint="0" priority="2" expand="true"/>
+            <task id="4" name="Top Maquette" color="#000000" meeting="true" start="2019-05-01" duration="0" complete="0" thirdDate="2019-04-01" thirdDate-constraint="0" priority="2" expand="true"/>
+            <task id="15" name="Top Synthèse" color="#000000" meeting="true" start="2019-10-02" duration="0" complete="0" thirdDate="2019-04-01" thirdDate-constraint="0" priority="2" expand="true"/>
+            <task id="21" name="Top Copeau 1" color="#000000" meeting="true" start="2019-11-06" duration="0" complete="0" thirdDate="2019-04-01" thirdDate-constraint="0" priority="2" expand="true"/>
+            <task id="25" name="Top Copeau 2" color="#000000" meeting="true" start="2019-11-20" duration="0" complete="0" thirdDate="2019-04-01" thirdDate-constraint="0" priority="2" expand="true"/>
+            <task id="23" name="Top Organe" color="#000000" meeting="true" start="2020-02-05" duration="0" complete="0" thirdDate="2019-04-01" thirdDate-constraint="0" priority="2" expand="true"/>
+            <task id="27" name="Top Véhicule" color="#000000" meeting="true" start="2020-02-19" duration="0" complete="0" thirdDate="2019-04-01" thirdDate-constraint="0" priority="2" expand="true"/>
+            <task id="29" name="Top Moteur" color="#000000" meeting="true" start="2020-03-04" duration="0" complete="0" thirdDate="2019-04-01" thirdDate-constraint="0" priority="2" expand="true"/>
+            <task id="31" name="Top Qualif" color="#000000" meeting="true" start="2020-03-17" duration="0" complete="0" thirdDate="2019-04-01" thirdDate-constraint="0" priority="2" expand="true"/>
+            <task id="37" name="Top Compet" color="#000000" meeting="true" start="2020-06-24" duration="0" complete="0" thirdDate="2019-04-01" thirdDate-constraint="0" priority="2" expand="true"/>
+        </task>
+        <task id="103" name="Livrables" meeting="false" start="2019-05-22" duration="12" complete="0" expand="true"/>
+        <task id="481" name="Carnet de conception" color="#8cb6ce" meeting="false" start="2019-07-01" duration="40" complete="0" thirdDate="2019-04-22" thirdDate-constraint="0" expand="true"/>
+        <task id="47" name="Frame" meeting="false" start="2019-05-22" duration="101" complete="31" expand="true">
+            <task id="353" name="Continuer test chassis surfacique" color="#ffff33" meeting="false" start="2019-05-22" duration="33" complete="80" thirdDate="2019-04-29" thirdDate-constraint="0" expand="true"/>
+            <task id="486" name="Cellule avant" color="#ffff33" meeting="false" start="2019-08-01" duration="10" complete="0" thirdDate="2019-04-22" thirdDate-constraint="0" expand="true">
+                <depend id="487" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="487" name="Cellule arrière" color="#ffff33" meeting="false" start="2019-08-15" duration="10" complete="0" thirdDate="2019-04-22" thirdDate-constraint="0" expand="true">
+                <notes><![CDATA[Sans suspensions
+]]></notes>
+                <depend id="489" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="489" name="Cellule arrière terminée" color="#ffff33" meeting="false" start="2019-08-29" duration="10" complete="0" thirdDate="2019-09-12" thirdDate-constraint="0" expand="true">
+                <notes><![CDATA[Retouche echappement]]></notes>
+                <depend id="490" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="490" name="Châssis complet" color="#ffff33" meeting="false" start="2019-09-12" duration="20" complete="0" thirdDate="2019-09-12" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="176" name="Aéro" meeting="false" start="2019-07-01" duration="70" complete="1" expand="true">
+            <task id="358" name="Design du kit" meeting="false" start="2019-07-01" duration="70" complete="0" expand="true">
+                <task id="565" name="Aile arrière" meeting="false" start="2019-07-01" duration="40" complete="0" expand="true">
+                    <task id="546" name="Methode de fixation" color="#ff00ff" meeting="false" start="2019-07-01" duration="10" complete="0" thirdDate="2019-06-24" thirdDate-constraint="0" expand="true">
+                        <depend id="548" type="2" difference="0" hardness="Strong"/>
+                        <depend id="568" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="548" name="Insert aile arrière" color="#ff00ff" meeting="false" start="2019-07-15" duration="10" complete="0" thirdDate="2019-06-24" thirdDate-constraint="0" expand="true"/>
+                    <task id="568" name="Calculs de déflection" color="#ff00ff" meeting="false" start="2019-07-15" duration="30" complete="0" thirdDate="2019-07-15" thirdDate-constraint="0" expand="true"/>
+                </task>
+                <task id="531" name="Aile avant" color="#330033" meeting="false" start="2019-07-29" duration="40" complete="0" thirdDate="2019-07-29" thirdDate-constraint="0" expand="true">
+                    <task id="554" name="Methode de fixation" color="#ff00ff" meeting="false" start="2019-07-29" duration="10" complete="0" thirdDate="2019-06-24" thirdDate-constraint="0" expand="true">
+                        <depend id="555" type="2" difference="0" hardness="Strong"/>
+                        <depend id="571" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="555" name="Insert ailes avant" color="#ff00ff" meeting="false" start="2019-08-12" duration="15" complete="0" thirdDate="2019-08-12" thirdDate-constraint="0" expand="true"/>
+                    <task id="571" name="Déflection" color="#ff00ff" meeting="false" start="2019-08-12" duration="30" complete="0" thirdDate="2019-08-12" thirdDate-constraint="0" expand="true"/>
+                </task>
+                <task id="580" name="Ouies" meeting="false" start="2019-07-01" duration="55" complete="0" expand="true">
+                    <task id="532" name="Concept ouies" color="#ff00ff" meeting="false" start="2019-07-01" duration="10" complete="0" thirdDate="2019-04-22" thirdDate-constraint="0" expand="true"/>
+                    <task id="581" name="Dessin final" color="#ff00ff" meeting="false" start="2019-09-02" duration="10" complete="0" thirdDate="2019-06-24" thirdDate-constraint="0" expand="true"/>
+                </task>
+                <task id="540" name="Carrosserie" color="#ff00ff" meeting="false" start="2019-09-02" duration="15" complete="0" thirdDate="2019-08-12" thirdDate-constraint="0" expand="true">
+                    <depend id="543" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="543" name="Fond-plat" color="#ff00ff" meeting="false" start="2019-09-23" duration="10" complete="0" thirdDate="2019-06-10" thirdDate-constraint="0" expand="true"/>
+            </task>
+            <task id="328" name="Prototypage" meeting="false" start="2019-09-02" duration="10" complete="10" expand="true">
+                <task id="380" name="Proto toile cirée" color="#ff00ff" meeting="false" start="2019-09-02" duration="10" complete="10" thirdDate="2019-05-01" thirdDate-constraint="0" expand="true"/>
+            </task>
+        </task>
+        <task id="116" name="LAS" meeting="false" start="2019-07-01" duration="60" complete="0" expand="true">
+            <task id="386" name="Point de LAS" color="#330033" meeting="false" start="2019-07-01" duration="25" complete="0" thirdDate="2019-05-29" thirdDate-constraint="0" expand="true">
+                <task id="594" name="LAS avant" color="#ff0000" meeting="false" start="2019-07-01" duration="20" complete="0" thirdDate="2019-04-08" thirdDate-constraint="0" expand="true"/>
+                <task id="595" name="LAS arrière" color="#ff0000" meeting="false" start="2019-07-08" duration="20" complete="0" thirdDate="2019-04-08" thirdDate-constraint="0" expand="true">
+                    <depend id="615" type="2" difference="0" hardness="Strong"/>
+                    <depend id="622" type="2" difference="0" hardness="Strong"/>
+                </task>
+            </task>
+            <task id="117" name="Pneu" color="#330033" meeting="false" start="2019-07-01" duration="20" complete="0" thirdDate="2019-04-29" thirdDate-constraint="0" expand="true">
+                <task id="599" name="Identifier les pneus dispo" color="#ff0000" meeting="false" start="2019-07-01" duration="10" complete="0" thirdDate="2019-04-08" thirdDate-constraint="0" expand="true">
+                    <depend id="600" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="600" name="Choisir les pneus" color="#ff0000" meeting="false" start="2019-07-15" duration="10" complete="0" thirdDate="2019-04-08" thirdDate-constraint="0" expand="true"/>
+            </task>
+            <task id="589" name="Suspension" color="#330033" meeting="false" start="2019-08-05" duration="15" complete="0" thirdDate="2019-07-29" thirdDate-constraint="0" expand="true">
+                <task id="615" name="Choix composants" color="#ff0000" meeting="false" start="2019-08-05" duration="15" complete="0" thirdDate="2019-06-03" thirdDate-constraint="0" expand="true"/>
+            </task>
+            <task id="590" name="Barre anti rouli" meeting="false" start="2019-08-05" duration="15" complete="0" expand="true">
+                <task id="622" name="Conception détaillée" color="#ff0000" meeting="false" start="2019-08-05" duration="15" complete="0" thirdDate="2019-05-13" thirdDate-constraint="0" expand="true"/>
+            </task>
+            <task id="587" name="Colonne de direction" meeting="false" start="2019-07-01" duration="60" complete="0" expand="true">
+                <task id="629" name="Se renseigner" color="#ff0000" meeting="false" start="2019-07-01" duration="5" complete="0" thirdDate="2019-05-13" thirdDate-constraint="0" expand="true"/>
+                <task id="627" name="Nombre de cardan" color="#ff0000" meeting="false" start="2019-07-03" duration="10" complete="0" thirdDate="2019-05-13" thirdDate-constraint="0" expand="true">
+                    <depend id="632" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="632" name="Colonne crémaillère" color="#ff0000" meeting="false" start="2019-07-17" duration="10" complete="0" thirdDate="2019-05-13" thirdDate-constraint="0" expand="true"/>
+                <task id="635" name="Biellette" color="#ff0000" meeting="false" start="2019-09-02" duration="15" complete="0" thirdDate="2019-05-13" thirdDate-constraint="0" expand="true"/>
+            </task>
+            <task id="588" name="Système de freinage" meeting="false" start="2019-07-01" duration="60" complete="0" expand="true">
+                <task id="639" name="Contraintes" color="#ff0000" meeting="false" start="2019-07-01" duration="5" complete="0" thirdDate="2019-05-13" thirdDate-constraint="0" expand="true">
+                    <depend id="641" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="641" name="Système de freinage" color="#ff0000" meeting="false" start="2019-07-08" duration="35" complete="0" thirdDate="2019-05-13" thirdDate-constraint="0" expand="true">
+                    <depend id="644" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="644" name="Pédalier" color="#ff0000" meeting="false" start="2019-08-26" duration="20" complete="0" thirdDate="2019-05-13" thirdDate-constraint="0" expand="true"/>
+            </task>
+        </task>
+        <task id="48" name="Motorisation" color="#000000" meeting="false" start="2019-07-01" duration="57" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true">
+            <task id="63" name="Admission" color="#000000" meeting="false" start="2019-07-01" duration="57" complete="0" expand="true">
+                <task id="64" name="Architecture à définir" color="#0066ff" meeting="false" start="2019-07-01" duration="7" complete="0" thirdDate="2019-04-22" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[faire attention à l'aéro
+]]></notes>
+                    <depend id="650" type="2" difference="0" hardness="Strong"/>
+                    <depend id="651" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="650" name="Bride guillotine" color="#0066ff" meeting="false" start="2019-07-10" duration="50" complete="0" thirdDate="2019-05-13" thirdDate-constraint="0" expand="true"/>
+                <task id="651" name="Admission" color="#0066ff" meeting="false" start="2019-07-10" duration="50" complete="0" thirdDate="2019-05-13" thirdDate-constraint="0" expand="true"/>
+            </task>
+            <task id="319" name="Echappement" color="#000000" meeting="false" start="2019-07-01" duration="45" complete="0" thirdDate="2019-05-27" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                <task id="321" name="Architecture à définir" color="#0066ff" meeting="false" start="2019-07-01" duration="5" complete="0" thirdDate="2019-04-22" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <notes><![CDATA[faire attention à l'aéro
+]]></notes>
+                    <depend id="653" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="653" name="Dessiner l'échappement" color="#0066ff" meeting="false" start="2019-07-08" duration="40" complete="0" thirdDate="2019-07-08" thirdDate-constraint="0" expand="true"/>
+            </task>
+            <task id="57" name="Refroidissement" color="#000000" meeting="false" start="2019-07-01" duration="15" complete="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                <task id="58" name="Architecture à définir" color="#0066ff" meeting="false" start="2019-07-01" duration="5" complete="0" thirdDate="2019-04-22" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <notes><![CDATA[A définir en fonction du choix aéro]]></notes>
+                    <depend id="660" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="660" name="Dimenssionnement" color="#0066ff" meeting="false" start="2019-07-08" duration="10" complete="0" thirdDate="2019-07-08" thirdDate-constraint="0" expand="true"/>
+            </task>
+            <task id="663" name="Transmission secondaire" meeting="false" start="2019-07-01" duration="45" complete="0" expand="true">
+                <task id="664" name="Architecture" color="#0066ff" meeting="false" start="2019-07-01" duration="45" complete="0" thirdDate="2019-04-29" thirdDate-constraint="0" expand="true"/>
+            </task>
+        </task>
+        <task id="169" name="SEISM" meeting="false" start="2019-07-01" duration="86" complete="0" expand="true">
+            <task id="170" name="Démarchage" meeting="false" start="2019-07-01" duration="5" complete="0" expand="true">
+                <task id="408" name="Relancer pour la caméra" color="#00cc00" meeting="false" start="2019-07-01" duration="5" complete="0" thirdDate="2019-05-01" thirdDate-constraint="0" expand="true"/>
+            </task>
+            <task id="172" name="Faisceau" meeting="false" start="2019-07-01" duration="40" complete="0" expand="true">
+                <task id="173" name="Architecture Faisceau" color="#00cc00" meeting="false" start="2019-07-01" duration="5" complete="0" thirdDate="2019-04-22" thirdDate-constraint="0" expand="true">
+                    <depend id="174" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="175" name="Faisceau LV" color="#00cc00" meeting="false" start="2019-07-01" duration="5" complete="0" thirdDate="2019-05-29" thirdDate-constraint="0" expand="true">
+                    <depend id="174" type="2" difference="0" hardness="Strong"/>
+                    <depend id="451" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="174" name="Faisceau HV" color="#00cc00" meeting="false" start="2019-07-08" duration="15" complete="0" thirdDate="2019-05-29" thirdDate-constraint="0" expand="true">
+                    <depend id="223" type="2" difference="0" hardness="Strong"/>
+                    <depend id="451" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="451" name="Module Electrical CATIA" color="#00cc00" meeting="false" start="2019-07-29" duration="20" complete="0" thirdDate="2019-04-22" thirdDate-constraint="0" expand="true"/>
+                <task id="223" name="Batterie" color="#00cc00" meeting="false" start="2019-07-29" duration="10" complete="0" thirdDate="2019-05-31" thirdDate-constraint="0" expand="true"/>
+            </task>
+            <task id="216" name="Tableau de bord" meeting="false" start="2019-07-08" duration="30" complete="0" expand="true">
+                <task id="217" name="Architecture" color="#00cc00" meeting="false" start="2019-07-08" duration="15" complete="0" thirdDate="2019-04-22" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[TdB/Volant équipé]]></notes>
+                    <depend id="453" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="453" name="Test des écrans" color="#00cc00" meeting="false" start="2019-07-29" duration="15" complete="0" thirdDate="2019-05-20" thirdDate-constraint="0" expand="true"/>
+            </task>
+            <task id="221" name="Passage de rapport" meeting="false" start="2019-07-01" duration="35" complete="0" expand="true">
+                <task id="463" name="Dimensionnement moteur" color="#00cc00" meeting="false" start="2019-07-01" duration="15" complete="0" thirdDate="2019-06-10" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[Moteur
+Rapport de réduction]]></notes>
+                    <depend id="235" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="235" name="Commande de boîte" color="#00cc00" meeting="false" start="2019-07-22" duration="20" complete="0" thirdDate="2019-04-11" thirdDate-constraint="0" expand="true"/>
+            </task>
+            <task id="222" name="Télémétrie" meeting="false" start="2019-07-01" duration="40" complete="0" expand="true">
+                <task id="229" name="Architecture" color="#00cc00" meeting="false" start="2019-07-01" duration="5" complete="0" thirdDate="2019-04-22" thirdDate-constraint="0" expand="true">
+                    <depend id="232" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="232" name="Choix capteurs" color="#00cc00" meeting="false" start="2019-07-08" duration="35" complete="0" thirdDate="2019-05-30" thirdDate-constraint="0" expand="true"/>
+            </task>
+            <task id="424" name="Communication pilote-stand" meeting="false" start="2019-10-01" duration="20" complete="0" expand="true">
+                <task id="425" name="Architecture" color="#00cc00" meeting="false" start="2019-10-01" duration="20" complete="0" thirdDate="2019-05-01" thirdDate-constraint="0" expand="true"/>
+            </task>
+        </task>
+    </tasks>
+    <resources>
+        <resource id="5" name="MJT" function="Default:0" contacts="" phone=""/>
+        <resource id="17" name="ARZ" function="Default:0" contacts="" phone=""/>
+        <resource id="6" name="TLS" function="Default:0" contacts="" phone=""/>
+        <resource id="7" name="PTN" function="Default:0" contacts="" phone=""/>
+        <resource id="2" name="CMI" function="Default:0" contacts="" phone=""/>
+        <resource id="0" name="TMN" function="Default:0" contacts="" phone=""/>
+        <resource id="1" name="PTS" function="Default:0" contacts="" phone=""/>
+        <resource id="3" name="ASE" function="Default:0" contacts="" phone=""/>
+        <resource id="8" name="IGH" function="Default:0" contacts="" phone=""/>
+        <resource id="10" name="EBA" function="Default:0" contacts="" phone=""/>
+        <resource id="9" name="GLD" function="Default:0" contacts="" phone=""/>
+        <resource id="4" name="CAD" function="Default:0" contacts="" phone=""/>
+        <resource id="11" name="MKI" function="Default:0" contacts="" phone=""/>
+        <resource id="12" name="MSO" function="Default:0" contacts="" phone=""/>
+        <resource id="13" name="PAX" function="Default:0" contacts="" phone=""/>
+        <resource id="14" name="ADT" function="Default:0" contacts="" phone=""/>
+        <resource id="15" name="VDA" function="Default:0" contacts="" phone=""/>
+        <resource id="16" name="PCK" function="Default:0" contacts="" phone=""/>
+        <resource id="19" name="CLS" function="Default:0" contacts="" phone=""/>
+        <resource id="20" name="RMN" function="Default:0" contacts="" phone=""/>
+        <resource id="21" name="BMA" function="Default:0" contacts="" phone=""/>
+    </resources>
+    <allocations>
+        <allocation task-id="321" resource-id="5" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="653" resource-id="5" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="64" resource-id="6" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="481" resource-id="6" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="650" resource-id="6" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="651" resource-id="6" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="486" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="487" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="489" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="490" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="532" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="581" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="540" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="543" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="58" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="660" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="599" resource-id="12" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="600" resource-id="12" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="615" resource-id="13" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="622" resource-id="13" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="639" resource-id="14" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="641" resource-id="14" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="644" resource-id="14" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="629" resource-id="16" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="627" resource-id="16" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="632" resource-id="16" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="173" resource-id="19" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="174" resource-id="19" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="223" resource-id="19" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="175" resource-id="19" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="229" resource-id="19" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="232" resource-id="19" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="451" resource-id="19" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="217" resource-id="20" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="235" resource-id="21" function="Default:0" responsible="true" load="100.0"/>
+    </allocations>
+    <vacations>
+        <vacation start="2019-07-07" end="2019-07-12" resourceid="17"/>
+        <vacation start="2019-07-15" end="2019-09-01" resourceid="1"/>
+        <vacation start="2019-07-29" end="2019-08-19" resourceid="11"/>
+        <vacation start="2019-08-01" end="2019-09-01" resourceid="12"/>
+        <vacation start="2019-07-10" end="2019-07-24" resourceid="14"/>
+        <vacation start="2019-07-29" end="2019-08-24" resourceid="14"/>
+        <vacation start="2019-08-05" end="2019-09-01" resourceid="16"/>
+        <vacation start="2019-08-26" end="2019-09-01" resourceid="19"/>
+    </vacations>
+    <previous>
+        <previous-tasks name="15_05_2019">
+            <previous-task id="46" start="2019-04-03" duration="320" meeting="false" super="true"/>
+            <previous-task id="1" start="2019-04-03" duration="0" meeting="true" super="false"/>
+            <previous-task id="42" start="2019-04-03" duration="0" meeting="true" super="false"/>
+            <previous-task id="39" start="2019-04-10" duration="0" meeting="true" super="false"/>
+            <previous-task id="7" start="2019-06-12" duration="0" meeting="true" super="false"/>
+            <previous-task id="11" start="2019-06-27" duration="0" meeting="true" super="false"/>
+            <previous-task id="13" start="2019-09-30" duration="0" meeting="true" super="false"/>
+            <previous-task id="4" start="2019-05-01" duration="0" meeting="true" super="false"/>
+            <previous-task id="15" start="2019-10-02" duration="0" meeting="true" super="false"/>
+            <previous-task id="21" start="2019-11-06" duration="0" meeting="true" super="false"/>
+            <previous-task id="25" start="2019-11-20" duration="0" meeting="true" super="false"/>
+            <previous-task id="23" start="2020-02-05" duration="0" meeting="true" super="false"/>
+            <previous-task id="27" start="2020-02-19" duration="0" meeting="true" super="false"/>
+            <previous-task id="29" start="2020-03-04" duration="0" meeting="true" super="false"/>
+            <previous-task id="31" start="2020-03-17" duration="0" meeting="true" super="false"/>
+            <previous-task id="37" start="2020-06-24" duration="0" meeting="true" super="false"/>
+            <previous-task id="103" start="2019-05-08" duration="20" meeting="false" super="true"/>
+            <previous-task id="104" start="2019-05-08" duration="5" meeting="false" super="false"/>
+            <previous-task id="106" start="2019-05-08" duration="5" meeting="false" super="false"/>
+            <previous-task id="108" start="2019-05-15" duration="5" meeting="false" super="false"/>
+            <previous-task id="111" start="2019-05-22" duration="5" meeting="false" super="false"/>
+            <previous-task id="113" start="2019-05-22" duration="5" meeting="false" super="false"/>
+            <previous-task id="115" start="2019-05-29" duration="5" meeting="false" super="false"/>
+            <previous-task id="47" start="2019-05-08" duration="11" meeting="false" super="true"/>
+            <previous-task id="20" start="2019-05-08" duration="11" meeting="false" super="true"/>
+            <previous-task id="0" start="2019-05-08" duration="6" meeting="false" super="false"/>
+            <previous-task id="168" start="2019-05-16" duration="1" meeting="false" super="false"/>
+            <previous-task id="43" start="2019-05-08" duration="3" meeting="false" super="false"/>
+            <previous-task id="14" start="2019-05-13" duration="4" meeting="false" super="false"/>
+            <previous-task id="17" start="2019-05-17" duration="1" meeting="false" super="false"/>
+            <previous-task id="19" start="2019-05-22" duration="1" meeting="false" super="false"/>
+            <previous-task id="36" start="2019-05-08" duration="2" meeting="false" super="true"/>
+            <previous-task id="38" start="2019-05-08" duration="1" meeting="false" super="false"/>
+            <previous-task id="44" start="2019-05-09" duration="1" meeting="false" super="false"/>
+            <previous-task id="10" start="2019-05-08" duration="4" meeting="false" super="false"/>
+            <previous-task id="45" start="2019-05-08" duration="7" meeting="false" super="false"/>
+            <previous-task id="48" start="2019-05-06" duration="15" meeting="false" super="true"/>
+            <previous-task id="50" start="2019-05-08" duration="10" meeting="false" super="true"/>
+            <previous-task id="73" start="2019-05-08" duration="10" meeting="false" super="false"/>
+            <previous-task id="51" start="2019-05-08" duration="5" meeting="false" super="false"/>
+            <previous-task id="52" start="2019-05-17" duration="3" meeting="false" super="false"/>
+            <previous-task id="57" start="2019-05-20" duration="5" meeting="false" super="true"/>
+            <previous-task id="58" start="2019-05-20" duration="5" meeting="false" super="false"/>
+            <previous-task id="63" start="2019-05-08" duration="10" meeting="false" super="true"/>
+            <previous-task id="64" start="2019-05-08" duration="10" meeting="false" super="false"/>
+            <previous-task id="74" start="2019-05-06" duration="15" meeting="false" super="true"/>
+            <previous-task id="75" start="2019-05-06" duration="15" meeting="false" super="false"/>
+            <previous-task id="69" start="2019-05-08" duration="10" meeting="false" super="false"/>
+            <previous-task id="116" start="2019-05-08" duration="15" meeting="false" super="true"/>
+            <previous-task id="117" start="2019-05-08" duration="15" meeting="false" super="true"/>
+            <previous-task id="118" start="2019-05-08" duration="10" meeting="false" super="false"/>
+            <previous-task id="121" start="2019-05-08" duration="5" meeting="false" super="false"/>
+            <previous-task id="126" start="2019-05-08" duration="5" meeting="false" super="false"/>
+            <previous-task id="142" start="2019-05-08" duration="5" meeting="false" super="false"/>
+            <previous-task id="132" start="2019-05-22" duration="5" meeting="false" super="false"/>
+            <previous-task id="139" start="2019-05-22" duration="5" meeting="false" super="true"/>
+            <previous-task id="141" start="2019-05-22" duration="5" meeting="false" super="false"/>
+            <previous-task id="140" start="2019-05-22" duration="5" meeting="false" super="true"/>
+            <previous-task id="166" start="2019-05-22" duration="5" meeting="false" super="false"/>
+            <previous-task id="148" start="2019-05-08" duration="15" meeting="false" super="true"/>
+            <previous-task id="151" start="2019-05-08" duration="10" meeting="false" super="false"/>
+            <previous-task id="152" start="2019-05-08" duration="15" meeting="false" super="false"/>
+            <previous-task id="169" start="2019-05-10" duration="5" meeting="false" super="true"/>
+            <previous-task id="170" start="2019-05-10" duration="5" meeting="false" super="true"/>
+            <previous-task id="171" start="2019-05-10" duration="5" meeting="false" super="false"/>
+        </previous-tasks>
+    </previous>
+    <roles roleset-name="Default"/>
+</project>

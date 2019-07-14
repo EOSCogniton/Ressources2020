@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Gantt EPSA" company="EPSA" webLink="http://" view-date="2019-04-01" view-index="0" gantt-divider-location="557" resource-divider-location="300" version="2.8.10" locale="fr">
+    <description/>
+    <view zooming-state="default:8" id="gantt-chart">
+        <field id="tpd3" name="Nom" width="361" order="0"/>
+        <field id="tpd4" name="Date de début" width="100" order="1"/>
+        <field id="tpd5" name="Date de fin" width="77" order="2"/>
+        <option id="color.recent"><![CDATA[#ff0033 #000000]]></option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Nom" width="210" order="0"/>
+        <field id="1" name="Rôle par défaut" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="530" name="Tops" meeting="false" start="2019-04-03" duration="320" complete="0" expand="false">
+            <task id="1" name="Top Projet" color="#000000" meeting="true" start="2019-04-03" duration="0" complete="0" thirdDate="2019-04-01" thirdDate-constraint="0" priority="2" expand="true"/>
+            <task id="42" name="RVP2" color="#000000" meeting="true" start="2019-04-03" duration="0" complete="0" thirdDate="2019-04-01" thirdDate-constraint="0" priority="2" expand="true"/>
+            <task id="39" name="Roll Out" color="#000000" meeting="true" start="2019-04-10" duration="0" complete="0" thirdDate="2019-04-01" thirdDate-constraint="0" priority="2" expand="true"/>
+            <task id="4" name="Top Maquette" color="#000000" meeting="true" start="2019-05-01" duration="0" complete="0" thirdDate="2019-04-01" thirdDate-constraint="0" priority="2" expand="true"/>
+            <task id="7" name="Top Prédim" color="#000000" meeting="true" start="2019-05-29" duration="0" complete="0" thirdDate="2019-04-01" thirdDate-constraint="0" priority="2" expand="true">
+                <depend id="45" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="11" name="Top Appro" color="#000000" meeting="true" start="2019-06-19" duration="0" complete="0" thirdDate="2019-04-01" thirdDate-constraint="0" priority="2" expand="true"/>
+            <task id="13" name="Top Saison" color="#000000" meeting="true" start="2019-09-23" duration="0" complete="0" thirdDate="2019-04-01" thirdDate-constraint="0" priority="2" expand="true">
+                <depend id="76" type="2" difference="0" hardness="Strong"/>
+                <depend id="96" type="2" difference="0" hardness="Strong"/>
+                <depend id="390" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="56" name="Top Synthèse" color="#000000" meeting="true" start="2019-10-02" duration="0" complete="0" thirdDate="2019-01-01" thirdDate-constraint="0" expand="true"/>
+            <task id="21" name="Top Copeau 1" color="#000000" meeting="true" start="2019-11-06" duration="0" complete="0" thirdDate="2019-04-01" thirdDate-constraint="0" priority="2" expand="true">
+                <depend id="80" type="2" difference="0" hardness="Strong"/>
+                <depend id="88" type="2" difference="0" hardness="Strong"/>
+                <depend id="98" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="25" name="Top Copeau 2" color="#000000" meeting="true" start="2019-11-20" duration="0" complete="0" thirdDate="2019-04-01" thirdDate-constraint="0" priority="2" expand="true">
+                <depend id="68" type="2" difference="0" hardness="Strong"/>
+                <depend id="110" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="23" name="Top Organe" color="#000000" meeting="true" start="2020-02-05" duration="0" complete="0" thirdDate="2019-04-01" thirdDate-constraint="0" priority="2" expand="true">
+                <depend id="71" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="27" name="Top Véhicule" color="#000000" meeting="true" start="2020-02-19" duration="0" complete="0" thirdDate="2019-04-01" thirdDate-constraint="0" priority="2" expand="true"/>
+            <task id="29" name="Top Moteur" color="#000000" meeting="true" start="2020-03-04" duration="0" complete="0" thirdDate="2019-04-01" thirdDate-constraint="0" priority="2" expand="true"/>
+            <task id="31" name="Top Qualif" color="#000000" meeting="true" start="2020-03-17" duration="0" complete="0" thirdDate="2019-04-01" thirdDate-constraint="0" priority="2" expand="true"/>
+            <task id="37" name="Top Compet" color="#000000" meeting="true" start="2020-06-24" duration="0" complete="0" thirdDate="2019-04-01" thirdDate-constraint="0" priority="2" expand="true"/>
+        </task>
+        <task id="55" name="Faisceau" meeting="false" start="2019-05-01" duration="210" complete="0" expand="true">
+            <task id="50" name="Dessiner le schéma de transmission de puissance" color="#8cb6ce" meeting="false" start="2019-05-01" duration="10" complete="0" thirdDate="2019-04-01" thirdDate-constraint="0" expand="true">
+                <depend id="45" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="51" name="Dessiner le schéma de transmission de données" color="#8cb6ce" meeting="false" start="2019-05-01" duration="20" complete="0" thirdDate="2019-04-01" thirdDate-constraint="0" expand="true">
+                <depend id="45" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="45" name="Dessiner le faisceau complet" color="#8cb6ce" meeting="false" start="2019-05-29" duration="40" complete="0" thirdDate="2019-06-17" thirdDate-constraint="0" expand="true">
+                <depend id="65" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="65" name="Dimensionner la batterie et les câbles et les connecteurs" color="#8cb6ce" meeting="false" start="2019-07-24" duration="40" complete="0" thirdDate="2019-01-01" thirdDate-constraint="0" expand="true">
+                <depend id="66" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="66" name="Placer les composants sur la maquette" color="#8cb6ce" meeting="false" start="2019-09-18" duration="15" complete="0" thirdDate="2019-01-01" thirdDate-constraint="0" expand="true">
+                <depend id="67" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="67" name="Réaliser les schéma RapidHarness / CATIA" color="#8cb6ce" meeting="false" start="2019-10-09" duration="30" complete="0" thirdDate="2019-01-01" thirdDate-constraint="0" expand="true">
+                <depend id="68" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="68" name="Réaliser les commandes" color="#ff0033" meeting="false" start="2019-11-20" duration="40" complete="0" thirdDate="2019-01-01" thirdDate-constraint="0" expand="true">
+                <depend id="69" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="69" name="Réaliser la planche à clous" color="#8cb6ce" meeting="false" start="2020-01-15" duration="15" complete="0" thirdDate="2019-11-21" thirdDate-constraint="0" expand="true">
+                <depend id="71" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="71" name="Intégrer le faisceau" color="#8cb6ce" meeting="false" start="2020-02-05" duration="10" complete="0" thirdDate="2019-01-01" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="72" name="Passage de vitesse" meeting="false" start="2019-05-29" duration="180" complete="0" expand="true">
+            <task id="73" name="Etudier le passage de rapport pneumatique" color="#8cb6ce" meeting="false" start="2019-05-29" duration="20" complete="0" thirdDate="2019-01-01" thirdDate-constraint="0" expand="true">
+                <depend id="76" type="2" difference="0" hardness="Strong"/>
+                <depend id="77" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="74" name="Passage de vitesse électrique" meeting="false" start="2019-09-23" duration="40" complete="0" expand="true">
+                <task id="76" name="Adapter celui d'Optimus" color="#8cb6ce" meeting="false" start="2019-09-23" duration="40" complete="0" thirdDate="2019-09-23" thirdDate-constraint="0" expand="true"/>
+            </task>
+            <task id="75" name="Passage de vitesse pneumatique" meeting="false" start="2019-06-26" duration="95" complete="0" expand="true">
+                <task id="77" name="Dimensionner l'actionneur" color="#8cb6ce" meeting="false" start="2019-06-26" duration="30" complete="0" thirdDate="2019-06-26" thirdDate-constraint="0" expand="true">
+                    <depend id="78" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="78" name="Réaliser la loi de commande" color="#8cb6ce" meeting="false" start="2019-08-07" duration="35" complete="0" thirdDate="2019-07-24" thirdDate-constraint="0" expand="true">
+                    <depend id="79" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="79" name="Dimensionner le réservoir" color="#8cb6ce" meeting="false" start="2019-09-25" duration="30" complete="0" thirdDate="2019-09-18" thirdDate-constraint="0" expand="true">
+                    <depend id="80" type="2" difference="0" hardness="Strong"/>
+                </task>
+            </task>
+            <task id="80" name="Réaliser les commandes" color="#ff0033" meeting="false" start="2019-11-06" duration="40" complete="0" thirdDate="2019-11-20" thirdDate-constraint="0" expand="true">
+                <depend id="81" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="81" name="Assembler le sous-système" color="#8cb6ce" meeting="false" start="2020-01-01" duration="10" complete="0" thirdDate="2020-01-15" thirdDate-constraint="0" expand="true">
+                <depend id="82" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="82" name="Vérifier le sous-système" color="#8cb6ce" meeting="false" start="2020-01-15" duration="5" complete="0" thirdDate="2020-01-29" thirdDate-constraint="0" expand="true">
+                <depend id="83" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="83" name="Intégrer le sous-système" color="#8cb6ce" meeting="false" start="2020-01-22" duration="10" complete="0" thirdDate="2020-02-12" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="84" name="Embrayage motorisé" meeting="false" start="2019-05-29" duration="185" complete="0" expand="true">
+            <task id="85" name="Déterminer la loi de commande" color="#8cb6ce" meeting="false" start="2019-05-29" duration="40" complete="0" thirdDate="2019-01-01" thirdDate-constraint="0" expand="true">
+                <depend id="86" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="86" name="Dimensionner l'actionneur" color="#8cb6ce" meeting="false" start="2019-07-24" duration="45" complete="0" thirdDate="2019-06-26" thirdDate-constraint="0" expand="true">
+                <depend id="87" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="87" name="Implémenter la loi de commande" color="#8cb6ce" meeting="false" start="2019-09-25" duration="30" complete="0" thirdDate="2019-08-21" thirdDate-constraint="0" expand="true">
+                <depend id="88" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="88" name="Réaliser les commandes" color="#ff0033" meeting="false" start="2019-11-06" duration="40" complete="0" thirdDate="2019-11-20" thirdDate-constraint="0" expand="true">
+                <depend id="89" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="89" name="Assembler le sous-système" color="#8cb6ce" meeting="false" start="2020-01-01" duration="10" complete="0" thirdDate="2020-01-15" thirdDate-constraint="0" expand="true">
+                <depend id="90" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="90" name="Vérifier le sous-système sur un autre véhicule" color="#8cb6ce" meeting="false" start="2020-01-15" duration="10" complete="0" thirdDate="2020-01-29" thirdDate-constraint="0" expand="true">
+                <depend id="91" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="91" name="Intégrer le sous-système" color="#8cb6ce" meeting="false" start="2020-01-29" duration="10" complete="0" thirdDate="2020-02-26" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="92" name="Tableau de bord" meeting="false" start="2019-05-01" duration="223" complete="0" expand="true">
+            <task id="93" name="Lire le règlement" color="#8cb6ce" meeting="false" start="2019-05-01" duration="10" complete="0" thirdDate="2019-01-01" thirdDate-constraint="0" expand="true">
+                <depend id="94" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="94" name="Choisir les éléments à afficher" color="#8cb6ce" meeting="false" start="2019-05-15" duration="10" complete="0" thirdDate="2019-10-09" thirdDate-constraint="0" expand="true">
+                <depend id="95" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="95" name="Chosir les boutons et les afficheurs" color="#8cb6ce" meeting="false" start="2019-05-29" duration="10" complete="0" thirdDate="2019-10-23" thirdDate-constraint="0" expand="true">
+                <depend id="96" type="2" difference="0" hardness="Strong"/>
+                <depend id="390" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="390" name="Réaliser le soft" color="#8cb6ce" meeting="false" start="2019-09-23" duration="40" complete="0" thirdDate="2019-11-06" thirdDate-constraint="0" expand="true">
+                <depend id="391" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="391" name="Dessiner la carte de commande" color="#8cb6ce" meeting="false" start="2019-11-18" duration="30" complete="0" thirdDate="2019-12-04" thirdDate-constraint="0" expand="true">
+                <depend id="98" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="96" name="Réaliser une maquette CATIA" color="#8cb6ce" meeting="false" start="2019-09-23" duration="20" complete="0" thirdDate="2019-10-24" thirdDate-constraint="0" expand="true">
+                <depend id="97" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="97" name="Réaliser des prototypes" color="#8cb6ce" meeting="false" start="2019-10-21" duration="10" complete="0" thirdDate="2019-09-25" thirdDate-constraint="0" expand="true">
+                <depend id="98" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="98" name="Réaliser les commandes" color="#ff0033" meeting="false" start="2019-12-30" duration="40" complete="0" thirdDate="2019-05-10" thirdDate-constraint="0" expand="true">
+                <depend id="99" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="99" name="Intégrer le sous-système" color="#8cb6ce" meeting="false" start="2020-02-24" duration="10" complete="0" thirdDate="2020-02-24" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="100" name="Volant équipé" meeting="false" start="2019-05-01" duration="230" complete="0" expand="true">
+            <task id="101" name="Demander l'avis des pilotes" color="#8cb6ce" meeting="false" start="2019-05-01" duration="10" complete="0" thirdDate="2019-01-01" thirdDate-constraint="0" expand="true">
+                <depend id="103" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="102" name="Estimer le gain de masse" color="#8cb6ce" meeting="false" start="2019-05-01" duration="10" complete="0" thirdDate="2019-05-02" thirdDate-constraint="0" expand="true">
+                <depend id="103" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="103" name="Chosir les éléments à afficher" color="#8cb6ce" meeting="false" start="2019-05-15" duration="10" complete="0" thirdDate="2019-05-29" thirdDate-constraint="0" expand="true">
+                <depend id="95" type="2" difference="0" hardness="Strong"/>
+                <depend id="104" type="2" difference="0" hardness="Strong"/>
+                <depend id="105" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="105" name="Concevoir les palettes" color="#8cb6ce" meeting="false" start="2019-05-29" duration="20" complete="0" thirdDate="2019-06-12" thirdDate-constraint="0" expand="true"/>
+            <task id="104" name="Choisir les boutons et la afficheurs" color="#8cb6ce" meeting="false" start="2019-05-29" duration="10" complete="0" thirdDate="2019-05-29" thirdDate-constraint="0" expand="true">
+                <depend id="106" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="106" name="Réaliser le soft" color="#8cb6ce" meeting="false" start="2019-06-12" duration="75" complete="0" thirdDate="2019-06-26" thirdDate-constraint="0" expand="true">
+                <depend id="108" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="108" name="Réaliser des prototypes" color="#8cb6ce" meeting="false" start="2019-09-25" duration="20" complete="0" thirdDate="2019-10-23" thirdDate-constraint="0" expand="true">
+                <depend id="107" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="107" name="Dessiner la carte de commande" color="#8cb6ce" meeting="false" start="2019-10-23" duration="20" complete="0" thirdDate="2019-09-25" thirdDate-constraint="0" expand="true">
+                <depend id="109" type="2" difference="0" hardness="Strong"/>
+                <depend id="111" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="109" name="Faire relire par PJR" color="#8cb6ce" meeting="false" start="2019-11-20" duration="15" complete="0" thirdDate="2019-10-24" thirdDate-constraint="0" expand="true">
+                <depend id="110" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="111" name="Dessiner le volant" color="#8cb6ce" meeting="false" start="2019-11-20" duration="15" complete="0" thirdDate="2019-12-11" thirdDate-constraint="0" expand="true"/>
+            <task id="110" name="Réaliser les commandes" color="#ff0033" meeting="false" start="2019-12-11" duration="40" complete="0" thirdDate="2019-05-15" thirdDate-constraint="0" expand="true">
+                <depend id="112" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="112" name="Assembler le sous-système" color="#8cb6ce" meeting="false" start="2020-02-05" duration="10" complete="0" thirdDate="2020-02-05" thirdDate-constraint="0" expand="true">
+                <depend id="113" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="113" name="Vérifier le sous-système" color="#8cb6ce" meeting="false" start="2020-02-19" duration="10" complete="0" thirdDate="2020-02-19" thirdDate-constraint="0" expand="true">
+                <depend id="114" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="114" name="Intégrer le sous-système" color="#8cb6ce" meeting="false" start="2020-03-04" duration="10" complete="0" thirdDate="2020-03-04" thirdDate-constraint="0" expand="true"/>
+        </task>
+    </tasks>
+    <resources/>
+    <allocations/>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+    <roles roleset-name="SoftwareDevelopment"/>
+</project>

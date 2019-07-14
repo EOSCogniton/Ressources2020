@@ -1,0 +1,136 @@
+\section{Partie commune}
+
+\subsection{Ecurie Piston Sport Automobile - EPSA}
+
+L’EPSA (Ecurie Piston Sport Automobile) est l’écurie de sport automobile de l’Ecole Centrale de Lyon. Chaque année, l’EPSA conçoit et réalise un véhicule de course monoplace et l’inscrit au Formula Student, une compétition internationale de sport automobile pour étudiants.
+
+\subsection{Le Formula Student}
+Créée en 1980 aux États-Unis par la Society of Automotive Engineers (SAE) pour promouvoir l’industrie automobile au travers d’une compétition entre les universités, le Formula Student s’est exporté partout dans le monde grâce aux sociétés d’ingénieurs des différents pays. Il rassemble aujourd'hui plus de 800 équipes faisant partie des plus prestigieuses universités du monde, servant de véritable vitrine pour ces dernières.
+
+%------ Pour insérer et citer une image centralisée -----
+\insererfigure{img/Photo_Formula_Society_of_Automotive_Engineers(FSAE).PNG}{8cm}{Photo de la compétition  internationale de sport automobile Formula Student. \\ Source : E-Motion Rennteam Aalen}{Label_Formula_Student}
+% Le premier argument est le chemin pour la photo
+% Le deuxième est la hauteur de la photo
+% Le troisième la légende
+% Le quatrième le label
+%Ici, je cite l'image \ref{fig: Label_Formula_Student}
+
+La philosophie de cette compétition peut être résumée par les trois citations suivantes :
+
+\noindent
+“It’s not about getting faster; it’s about getting smarter” - Formula Student Germany
+
+\noindent
+“Courses taught me theory, competitions made me an engineer” - Philllip Tischler [HAHN, 2018]
+
+\noindent
+“There are two really innovative forms of motorsport left: Formula one and Formula Student.” - Ross Brown
+
+\newpage
+
+Le championnat officiel regroupe 9 compétitions sur des circuits tels que Silverstone ou Hockenheim. Les compétitions regroupent entre 30 et 150 véhicules. Les véhicules qui participent au Formula Student doivent satisfaire un règlement très strict qui décline les consignes de sécurité ainsi que les nombreuses spécificités techniques que chaque véhicule doit remplir. Les véhicules peuvent participer à la compétition dans l’une de ces trois catégories : thermique (Figure \ref{fig: Label_Vulcanix_Véhicule_thermique}), électrique et sans pilote (Figure \ref{fig: Label_AMZ-Polytechnique_Zurick_Vehicule_sans_pilote}). Ces véhicules sont des monoplaces à cockpit ouvert pesant entre 150, pour les meilleurs prototypes, et 250kg.
+
+%------ Pour insérer et citer une image centralisée -----
+\insererfigure{img/Vulcanix_Vehicule_thermique.PNG}{4cm}{Vulcanix - EPSA - Ecole Centrale de Lyon : Véhicule thermique. \\ Source : EPSA}{Label_Vulcanix_Véhicule_thermique}
+
+
+%------ Pour insérer et citer une image centralisée -----
+\insererfigure{img/AMZ-Polytechnique_Zurick_Vehicule_sans_pilote.PNG}{4cm}{AMZ -  Polytechnique Zurick : Vehicule sans pilote. \\ Source : E-Motion Rennteam Aalen}{Label_AMZ-Polytechnique_Zurick_Vehicule_sans_pilote}
+
+
+
+%Les véhicules peuvent participer à la compétition dans l’une de ces trois catégories : thermique, électrique et sans pilote (Figure \ref{fig:  Label_Exemples_des_vehicules_thermique_et_sans_pilote}). Ces véhicules sont des monoplaces à cockpit ouvert pesant entre 150, pour les meilleurs prototypes, et 250kg.
+
+% \begin{figure}[!hb]
+%         %\captionsetup[subfigure]{labelformat=empty}
+%         \begin{subfigure}[b]{0.45\textwidth}
+%             \centering
+%             \includegraphics[width=0.9\textwidth]{img/Vulcanix_Vehicule_thermique.PNG}
+%             \caption{Vulcanix - EPSA - : Ecole Centrale de Lyon : Véhicule thermique. Source : Les auteurs}
+%             \label{Label_Vulcanix_Véhicule_thermique}
+%         \end{subfigure}
+%         \begin{subfigure}[b]{0.45\textwidth}
+%             \centering
+%             \includegraphics[width=0.9\textwidth]{img/AMZ-Polytechnique_Zurick_Vehicule_sans_pilote.PNG}
+%             \caption{AMZ -  Polytechnique Zurick : Vehicule sans pilote. Source : E-Motion Rennteam Aalen}
+%             \label{Label_AMZ-Polytechnique_Zurick_Vehicule_sans_pilote}
+%         \end{subfigure}
+%         \caption{Exemples des véhicules thermique et sans pilote.}
+%         \label{Label_Exemples_des_vehicules_thermique_et_sans_pilote}
+%     \end{figure}
+
+\newpage
+
+\subsection{Les compétitions}
+
+Les compétitions comportent huit épreuves statiques puis dynamiques qui évaluent les performances du prototype conçu, mais également la démarche d’ingénierie et de commercialisation.
+
+\subsubsection{Les épreuves statiques}
+
+Les épreuves statiques sont les suivantes :
+
+\begin{itemize}
+    \item \textbf{Design Event}, 150 points\\
+    Il s’agit de l’épreuve reine. Les étudiants doivent défendre et justifier, devant des ingénieurs spécialisés, l’ensemble des choix et concepts de la voiture.
+    \item \textbf{Cost and Manufacturing Event}, 100 points\\
+    Cette épreuve évalue les aspects reliés aux coûts de fabrication et comment les réduire en affectant le moins possible la performance du véhicule.
+    \item \textbf{Presentation Event}, 75 points\\
+    Pour cette épreuve, les équipes doivent réaliser un Business plan autour du prototype conçu et le présenter devant des juges-investisseurs.
+    \item \textbf{Scrutering}, 0 points\\
+    Il s'agit de la vérification technique du véhicule. A ce moment de la compétition, le véhicule doit satisfaire l'ensemble du règlement afin de participer aux épreuves dynamiques. Plus précisement, le scrutering se compose d'une vérification statique du véhicule, du noise test, du tilt test (Figure \ref{fig: Label_Tilt_Test}) et du brake test (Figure \ref{fig: Label_Brake_Test}).
+\end{itemize}
+
+\insererfigure{img/Tilt_Test.png}{4cm}{Vulcanix - EPSA - Ecole Centrale de Lyon : Tilt Test. \\ Source : EPSA}{Label_Tilt_Test}
+
+\insererfigure{img/Brake_Test.png}{4cm}{Olympix - EPSA - Ecole Centrale de Lyon : Brake Test. \\ Source : EPSA}{Label_Brake_Test}
+
+\newpage
+
+\subsubsection{Les épreuves dynamique}
+
+Ensuite viennent les épreuves dynamiques :
+\begin{itemize}
+    \item \textbf{Acceleration Event}, 75 points\\
+    Il s’agit d’une épreuve en départ arrêté de 75 mètres qui évalue l’accélération du véhicule.
+    \item \textbf{Skidpad Event}, 75 points\\
+    Le véhicule doit faire deux tours d’un cercle de 16m de diamètre à gauche puis à droite (Figure \ref{fig: Label_skidpad_track_layout}). Cette épreuve évalue la maniabilité des prototypes.
+\end{itemize}
+
+\insererfigure{img/skidpad_track_layout.JPG}{4cm}{Circuit pour le Skidpad Event. \\ Source : FORMULA STUDENT GERMANY, 2018}{Label_skidpad_track_layout}
+
+\begin{itemize}
+    \item \textbf{Autocross Event}, 100 points\\
+    Le véhicule réalise un tour de circuit d’une longueur de 1 km (Figure \ref{fig :Label_Autocross}).
+\end{itemize}
+
+\insererfigure{img/Autocross.png}{4cm}{Circuit pour l'autocross en Autriche (à droite) et en Allemagne (à gauche). \\ Source : OptimumLap}{Label_Autocross}
+
+
+\begin{itemize}
+    \item \textbf{Endurance and Effiency Event}, 325 et 100  points\\
+    Les véhicules doivent parcourir 22 km sur le circuit de l’Autocross. Le temps et la consommation énergétique sont évalués.
+\end{itemize}
+
+\newpage
+
+\section{La gestion de projet à l’EPSA}
+
+La réalisation d’un véhicule de l’EPSA suit un chemin particulier. Elle est guidée par un cheminement dit “cycle en V racine carrée”, comme illustré sur la Figure \ref{fig: Label_Vracine}.
+
+%------ Pour insérer et citer une image centralisée -----
+\insererfigure{img/Vracine.png}{7.1cm}{Modèle managérial "full intergénérationnel" V Racine Carrée arrêté pour la saison 2019. \\ Source : Patrick SERRAFERO, 2018}{Label_Vracine}
+% Le premier argument est le chemin pour la photo
+% Le deuxième est la hauteur de la photo
+% Le troisième la légende
+% Le quatrième le label
+%Ici, je cite l'image \ref{fig: Label_Vracine}
+
+En Octobre 2018, lorsque les élèves de première année intègrent l’EPSA, ils aident les élèves de deuxième année dans la phase de conception détaillée et de production de leur véhicule Optimus, lancée en Avril 2018. La flèche blanche coudée n’est en fait que le bas des flèches verte et bleue du chemin des élèves de deuxième année (Figure \ref{fig : Label_Fractale}).
+
+\insererfigure{img/Gestion_Fractale.png}{7.1cm}{Modèle de cycle en V appliqé à chaque véhicule. \\ Source : Aimery SAULIERE, 2018}{Label_Fractale}
+
+\newpage
+
+Le véhicule Optimus, présenté lors du Roll Out le 10 avril 2019 est actuellement en phase de validation. Cette phase se compose principalement d'essais et de réglages. Il participera en juillet 2019 à deux compétions (aux Pays-Bas et en Italie).
+
+Depuis le 1er avril, le projet Invictus (successeur d'Optimus) est officiellement lancé. La conception préliminaire sera terminée en Juillet 2019, et la conception détaillée fin décembre de la même année (flèche verte descendante). Puis c’est le moment de la production et de l’intégration des systèmes jusqu’en avril 2020 (flèche bleue ascendante). Enfin le véhicule est validé via des tests et des essais (flèche rouge) puis participe à la compétition en Juillet 2020 (flèche noire).

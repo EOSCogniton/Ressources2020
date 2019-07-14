@@ -1,0 +1,28 @@
+Un problème constaté cette année est la difficulté d'utiliser les livrables EPSABox afin de préparer les documents relatifs à la compétition. Il convient donc de trouver une solution afin de rendre ces livrables exploitables (sans devoir exporter 10 .pdf et de les compiler pour chaque pièce).
+
+Les deux livrables D2I et CCA se composent de reprises des articles antérieurs (copiés-collés) et d’ajouts, ils sont donc réalisés directement sur EPSABox.
+
+Les autres livrables présentent la particularité de devoir être imprimés à un moment de l'année, et organisés dans des classeurs pour la compétition. Ces livrables se déclineront alors sur deux supports : le Git et EPSABox. 
+Sur le Git se trouvent un dossier LB_Logbook dont l’architecture est la même que celle du Git où se trouvent les pièces. L’objectif de ces documents est de constituer les supports d’ingénierie pour la compétition et doivent pour ce foire être rapidement imprimable (d’où la découpe en deux fichiers word / libreoffice). Les livrables rédigés (ou copiés-collés) pour EPSABox constitue alors une sauvegarde de ces fichiers.
+
+Les livrables sont de deux types :
+
+*Les Logbooks sont rédigés pour chaque pièce et se composent de :
+**La nomenclature de la pièce ainsi qu’une brève description
+**Le cahier des charges fonctionnel
+**Le modèle utilisé lors de la conception de la pièce
+**Un Screenshot de la pièce CATIA
+**La mise en plan
+**Le contrôle de qualité et les remarques qui en découlent
+**Le cost
+**Le numéro du kit de montage
+*Les kits constituent les autres livrables et sont composés de :
+**La nomenclature du kit et son responsable
+**L’ICO et l’ICP
+**Le protocole de validation
+**Le protocole de montage
+**Le protocole de validation
+**L’AMDEC
+
+L’ensemble de documents comporteront pour chaque étape le trigramme du responsable ainsi que la version du livrable
+

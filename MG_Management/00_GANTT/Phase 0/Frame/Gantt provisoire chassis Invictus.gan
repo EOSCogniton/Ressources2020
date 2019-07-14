@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2019-01-01" view-index="0" gantt-divider-location="582" resource-divider-location="300" version="2.8.10" locale="fr_FR">
+    <description/>
+    <view zooming-state="default:10" id="gantt-chart">
+        <field id="tpd3" name="Nom" width="261" order="0"/>
+        <field id="tpd4" name="Date de début" width="159" order="1"/>
+        <field id="tpd5" name="Date de fin" width="158" order="2"/>
+        <option id="color.recent"><![CDATA[#ffff33 #330033 #0066ff #ff0000 #00cc00]]></option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Nom" width="210" order="0"/>
+        <field id="1" name="Rôle par défaut" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="59" name="Echanger sur l'Ergonomie avec toutes les equipes" color="#0066ff" meeting="false" start="2019-04-01" duration="180" complete="0" thirdDate="2019-03-01" thirdDate-constraint="0" expand="true"/>
+        <task id="27" name="Echanger avec la LAS" color="#8cb6ce" meeting="false" start="2019-04-03" duration="30" complete="0" thirdDate="2019-03-01" thirdDate-constraint="0" expand="true">
+            <depend id="0" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="0" name="Faire un premier filaire" color="#8cb6ce" meeting="false" start="2019-05-15" duration="20" complete="0" thirdDate="2019-04-01" thirdDate-constraint="0" expand="true">
+            <depend id="32" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="32" name="Ajuster Points de LAS" color="#8cb6ce" meeting="false" start="2019-06-12" duration="10" complete="0" thirdDate="2019-03-01" thirdDate-constraint="0" expand="true">
+            <depend id="36" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="36" name="Finaliser le Filaire" color="#8cb6ce" meeting="false" start="2019-06-26" duration="30" complete="0" thirdDate="2019-03-01" thirdDate-constraint="0" expand="true">
+            <depend id="39" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="39" name="Faire le tubulaire" color="#8cb6ce" meeting="false" start="2019-08-07" duration="30" complete="0" thirdDate="2019-03-01" thirdDate-constraint="0" expand="true"/>
+        <task id="46" name="Faire la carrosserie" color="#ff0000" meeting="false" start="2019-10-01" duration="15" complete="0" thirdDate="2019-03-01" thirdDate-constraint="0" expand="true"/>
+        <task id="1" name="Faire le Fond plat" color="#ff0000" meeting="false" start="2019-10-01" duration="5" complete="0" thirdDate="2019-03-01" thirdDate-constraint="0" expand="true"/>
+        <task id="56" name="Faire pare feu" color="#ff0000" meeting="false" start="2019-10-01" duration="15" complete="0" thirdDate="2019-03-01" thirdDate-constraint="0" expand="true"/>
+        <task id="58" name="Commander les tubes" color="#00cc00" meeting="false" start="2019-09-02" duration="3" complete="0" thirdDate="2019-03-01" thirdDate-constraint="0" expand="true"/>
+        <task id="63" name="Equiper le châssis" color="#330033" meeting="false" start="2019-12-02" duration="45" complete="0" thirdDate="2019-03-01" thirdDate-constraint="0" expand="true">
+            <depend id="67" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="67" name="Intégrer Invictus" color="#330033" meeting="false" start="2020-02-03" duration="45" complete="0" thirdDate="2019-03-01" thirdDate-constraint="0" expand="true"/>
+        <task id="74" name="Test châssis" color="#ffff33" meeting="false" start="2019-11-15" duration="45" complete="0" thirdDate="2018-12-03" thirdDate-constraint="0" expand="true"/>
+        <task id="77" name="Faire SES" color="#ffff33" meeting="false" start="2019-12-03" duration="80" complete="0" thirdDate="2018-12-03" thirdDate-constraint="0" expand="true"/>
+    </tasks>
+    <resources/>
+    <allocations/>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+</project>
