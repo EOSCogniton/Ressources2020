@@ -55,6 +55,7 @@
         </task>
         <task id="103" name="Livrables" meeting="false" start="2019-05-22" duration="12" complete="0" expand="true"/>
         <task id="481" name="Carnet de conception" color="#8cb6ce" meeting="false" start="2019-07-01" duration="40" complete="0" thirdDate="2019-04-22" thirdDate-constraint="0" expand="true"/>
+        <task id="704" name="Nomenclature" color="#8cb6ce" meeting="false" start="2019-07-18" duration="30" complete="0" thirdDate="2019-06-24" thirdDate-constraint="0" expand="true"/>
         <task id="47" name="Frame" meeting="false" start="2019-05-22" duration="101" complete="32" expand="true">
             <task id="353" name="Continuer test chassis surfacique" color="#ffff33" meeting="false" start="2019-05-22" duration="33" complete="80" thirdDate="2019-04-29" thirdDate-constraint="0" expand="true"/>
             <task id="685" name="Dessin préliminaire" color="#ffff33" meeting="false" start="2019-07-15" duration="5" complete="50" thirdDate="2019-06-17" thirdDate-constraint="0" expand="true"/>
@@ -109,9 +110,9 @@
             </task>
         </task>
         <task id="116" name="LAS" meeting="false" start="2019-07-01" duration="60" complete="3" expand="true">
-            <task id="386" name="Point de LAS" color="#330033" meeting="false" start="2019-07-01" duration="35" complete="0" thirdDate="2019-05-29" thirdDate-constraint="0" expand="true">
-                <task id="594" name="LAS avant" color="#ff0000" meeting="false" start="2019-07-01" duration="30" complete="0" thirdDate="2019-04-08" thirdDate-constraint="0" expand="true"/>
-                <task id="595" name="LAS arrière" color="#ff0000" meeting="false" start="2019-07-08" duration="30" complete="0" thirdDate="2019-04-08" thirdDate-constraint="0" expand="true">
+            <task id="386" name="Point de LAS" color="#330033" meeting="false" start="2019-07-01" duration="45" complete="0" thirdDate="2019-05-29" thirdDate-constraint="0" expand="true">
+                <task id="594" name="LAS avant" color="#ff0000" meeting="false" start="2019-07-01" duration="40" complete="0" thirdDate="2019-04-08" thirdDate-constraint="0" expand="true"/>
+                <task id="595" name="LAS arrière" color="#ff0000" meeting="false" start="2019-07-08" duration="40" complete="0" thirdDate="2019-04-08" thirdDate-constraint="0" expand="true">
                     <depend id="615" type="2" difference="0" hardness="Strong"/>
                     <depend id="622" type="2" difference="0" hardness="Strong"/>
                 </task>
@@ -122,11 +123,11 @@
                 </task>
                 <task id="600" name="Choisir les pneus" color="#ff0000" meeting="false" start="2019-07-22" duration="10" complete="0" thirdDate="2019-04-08" thirdDate-constraint="0" expand="true"/>
             </task>
-            <task id="589" name="Suspension" color="#330033" meeting="false" start="2019-08-19" duration="15" complete="0" thirdDate="2019-07-29" thirdDate-constraint="0" expand="true">
-                <task id="615" name="Choix composants" color="#ff0000" meeting="false" start="2019-08-19" duration="15" complete="0" thirdDate="2019-06-03" thirdDate-constraint="0" expand="true"/>
+            <task id="589" name="Suspension" color="#330033" meeting="false" start="2019-09-02" duration="15" complete="0" thirdDate="2019-07-29" thirdDate-constraint="0" expand="true">
+                <task id="615" name="Choix composants" color="#ff0000" meeting="false" start="2019-09-02" duration="15" complete="0" thirdDate="2019-06-03" thirdDate-constraint="0" expand="true"/>
             </task>
-            <task id="590" name="Barre anti rouli" meeting="false" start="2019-08-19" duration="15" complete="0" expand="true">
-                <task id="622" name="Conception détaillée" color="#ff0000" meeting="false" start="2019-08-19" duration="15" complete="0" thirdDate="2019-05-13" thirdDate-constraint="0" expand="true"/>
+            <task id="590" name="Barre anti rouli" meeting="false" start="2019-09-02" duration="15" complete="0" expand="true">
+                <task id="622" name="Conception détaillée" color="#ff0000" meeting="false" start="2019-09-02" duration="15" complete="0" thirdDate="2019-05-13" thirdDate-constraint="0" expand="true"/>
             </task>
             <task id="587" name="Colonne de direction" meeting="false" start="2019-07-01" duration="60" complete="0" expand="true">
                 <task id="629" name="Se renseigner" color="#ff0000" meeting="false" start="2019-07-01" duration="5" complete="0" thirdDate="2019-05-13" thirdDate-constraint="0" expand="true"/>
@@ -254,6 +255,7 @@ Rapport de réduction]]></notes>
         <allocation task-id="481" resource-id="6" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="650" resource-id="6" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="651" resource-id="6" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="704" resource-id="6" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="486" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="487" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="489" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
