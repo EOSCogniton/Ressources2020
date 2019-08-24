@@ -1,0 +1,794 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Gantt EPSA" company="EPSA" webLink="http://" view-date="2019-07-29" view-index="0" gantt-divider-location="432" resource-divider-location="300" version="2.8.10" locale="fr">
+    <description/>
+    <view zooming-state="default:6" id="gantt-chart">
+        <field id="tpd3" name="Nom" width="233" order="0"/>
+        <field id="tpd4" name="Date de début" width="84" order="1"/>
+        <field id="tpd5" name="Date de fin" width="96" order="2"/>
+        <option id="taskLabelLeft" value="name"/>
+        <option id="taskLabelRight" value="coordinator"/>
+        <option id="color.recent"><![CDATA[#00cc33 #0066ff #ffcc00 #9900ff #000000 #330033 #cccccc #ff0000 #f4f4f4 #ffff33]]></option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Nom" width="210" order="0"/>
+        <field id="1" name="Rôle par défaut" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="true"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="46" name="Tops" meeting="false" start="2019-06-27" duration="363" complete="0" expand="false">
+            <task id="11" name="Top Appro" color="#000000" meeting="true" start="2019-06-27" duration="0" complete="0" thirdDate="2019-04-01" thirdDate-constraint="0" priority="2" expand="true">
+                <depend id="103" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="13" name="Top Saison" color="#000000" meeting="true" start="2019-09-30" duration="0" complete="0" thirdDate="2019-04-01" thirdDate-constraint="0" priority="2" expand="true"/>
+            <task id="15" name="Top Synthèse" color="#000000" meeting="true" start="2019-10-02" duration="0" complete="0" thirdDate="2019-04-01" thirdDate-constraint="0" priority="2" expand="true"/>
+            <task id="21" name="Top Copeau 1" color="#000000" meeting="true" start="2019-11-06" duration="0" complete="0" thirdDate="2019-04-01" thirdDate-constraint="0" priority="2" expand="true"/>
+            <task id="25" name="Top Copeau 2" color="#000000" meeting="true" start="2019-11-20" duration="0" complete="0" thirdDate="2019-04-01" thirdDate-constraint="0" priority="2" expand="true">
+                <depend id="1430" type="3" difference="0" hardness="Strong"/>
+            </task>
+            <task id="23" name="Top Organe" color="#000000" meeting="true" start="2020-02-05" duration="0" complete="0" thirdDate="2019-04-01" thirdDate-constraint="0" priority="2" expand="true"/>
+            <task id="27" name="Top Véhicule" color="#000000" meeting="true" start="2020-02-19" duration="0" complete="0" thirdDate="2019-04-01" thirdDate-constraint="0" priority="2" expand="true"/>
+            <task id="29" name="Top Moteur" color="#000000" meeting="true" start="2020-03-04" duration="0" complete="0" thirdDate="2019-04-01" thirdDate-constraint="0" priority="2" expand="true"/>
+            <task id="31" name="Top Qualif" color="#000000" meeting="true" start="2020-03-17" duration="0" complete="0" thirdDate="2019-04-01" thirdDate-constraint="0" priority="2" expand="true"/>
+            <task id="37" name="Top Compet" color="#000000" meeting="true" start="2020-06-24" duration="0" complete="0" thirdDate="2019-04-01" thirdDate-constraint="0" priority="2" expand="true">
+                <depend id="103" type="3" difference="0" hardness="Strong"/>
+            </task>
+        </task>
+        <task id="103" name="Livrables" color="#8cb6ce" meeting="false" start="2019-06-27" duration="363" complete="0" thirdDate="2020-06-24" thirdDate-constraint="0" expand="true"/>
+        <task id="481" name="Carnet de conception" color="#cccccc" meeting="false" start="2019-07-01" duration="51" complete="0" thirdDate="2019-04-22" thirdDate-constraint="0" expand="true"/>
+        <task id="704" name="Nomenclature" color="#cccccc" meeting="false" start="2019-07-18" duration="38" complete="0" thirdDate="2019-06-24" thirdDate-constraint="0" expand="true"/>
+        <task id="116" name="LAS" meeting="false" start="2019-08-19" duration="98" complete="0" expand="true">
+            <task id="723" name="Cinématique" meeting="false" start="2019-08-19" duration="70" complete="0" expand="true">
+                <task id="709" name="Points de LAS avant" color="#ff0000" meeting="false" start="2019-08-19" duration="14" complete="0" thirdDate="2019-06-24" thirdDate-constraint="0" expand="true">
+                    <depend id="711" type="1" difference="0" hardness="Strong"/>
+                    <depend id="731" type="2" difference="0" hardness="Strong"/>
+                    <depend id="944" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="721" name="Points de LAS arrière" color="#ff0000" meeting="false" start="2019-08-26" duration="21" complete="0" thirdDate="2019-06-24" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <depend id="731" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="725" name="Géométrie de suspension" color="#ff0000" meeting="false" start="2019-08-26" duration="35" complete="0" thirdDate="2019-06-24" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <depend id="731" type="2" difference="0" hardness="Strong"/>
+                    <depend id="905" type="4" difference="0" hardness="Strong"/>
+                    <depend id="907" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="729" name="Géométrie d'anti-roulis" color="#ff0000" meeting="false" start="2019-09-16" duration="14" complete="0" thirdDate="2019-06-24" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <depend id="731" type="2" difference="0" hardness="Strong"/>
+                    <depend id="916" type="2" difference="0" hardness="Strong"/>
+                    <depend id="921" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="731" name="Seconde itération" color="#ff0000" meeting="false" start="2019-09-30" duration="28" complete="0" thirdDate="2019-06-24" thirdDate-constraint="0" expand="true">
+                    <depend id="1175" type="1" difference="0" hardness="Strong"/>
+                </task>
+            </task>
+            <task id="737" name="Cas de charge" meeting="false" start="2019-09-02" duration="66" complete="0" expand="true">
+                <task id="810" name="Logiciel?" color="#ff0000" meeting="false" start="2019-09-02" duration="4" complete="0" thirdDate="2019-08-05" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[Mecamaster ou Optimum Kinematics?
+]]></notes>
+                    <depend id="813" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="813" name="Paul Clauzel" color="#ff0000" meeting="false" start="2019-09-06" duration="3" complete="0" thirdDate="2019-08-05" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <notes><![CDATA[Le contacter pour la licence Mecamaster
+
+]]></notes>
+                    <depend id="815" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="815" name="LAS Auto" color="#ff0000" meeting="false" start="2019-09-09" duration="14" complete="0" thirdDate="2019-08-05" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <notes><![CDATA[A préparer
+]]></notes>
+                    <depend id="817" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="817" name="Modèle" color="#ff0000" meeting="false" start="2019-09-23" duration="7" complete="0" thirdDate="2019-08-05" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <notes><![CDATA[
+]]></notes>
+                    <depend id="819" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="819" name="Cas de charge" color="#ff0000" meeting="false" start="2019-09-30" duration="14" complete="0" thirdDate="2019-08-05" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <notes><![CDATA[Premiers cas de charges
+
+]]></notes>
+                    <depend id="826" type="2" difference="0" hardness="Strong"/>
+                    <depend id="903" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="826" name="Vérification" color="#ff0000" meeting="false" start="2019-10-14" duration="7" complete="0" thirdDate="2019-08-05" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <notes><![CDATA[A voir avec Paul Clozel]]></notes>
+                    <depend id="828" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="828" name="Itérations" color="#ff0000" meeting="false" start="2019-10-21" duration="7" complete="0" thirdDate="2019-08-05" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <notes><![CDATA[
+
+]]></notes>
+                    <depend id="824" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="824" name="Fin des cas de charges" color="#ff0000" meeting="false" start="2019-10-28" duration="10" complete="0" thirdDate="2019-08-05" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <notes><![CDATA[
+]]></notes>
+                </task>
+            </task>
+            <task id="708" name="Roue équipée" meeting="false" start="2019-08-19" duration="82" complete="0" expand="true">
+                <task id="711" name="Choix des pneus" color="#ff0000" meeting="false" start="2019-08-19" duration="12" complete="0" thirdDate="2019-06-24" thirdDate-constraint="0" expand="true"/>
+                <task id="749" name="Architecture" color="#ff0000" meeting="false" start="2019-09-02" duration="7" complete="0" thirdDate="2019-08-05" thirdDate-constraint="0" expand="true">
+                    <depend id="750" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="750" name="Modifications" color="#ff0000" meeting="false" start="2019-09-09" duration="7" complete="0" thirdDate="2019-08-05" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[Recherche des éléments où il faut investir du temps
+]]></notes>
+                    <depend id="752" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="752" name="Frette de frein" color="#ff0000" meeting="false" start="2019-09-16" duration="7" complete="0" thirdDate="2019-08-05" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[Etudier la faisabilité d'un frette combiné au moyeu]]></notes>
+                    <depend id="754" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="754" name="Ebauche CATIA" color="#ff0000" meeting="false" start="2019-09-23" duration="14" complete="0" thirdDate="2019-08-05" thirdDate-constraint="0" expand="true"/>
+                <task id="755" name="Retour points de LAS" color="#ff0000" meeting="false" start="2019-09-30" duration="14" complete="0" thirdDate="2019-08-05" thirdDate-constraint="0" expand="true"/>
+                <task id="757" name="Optimisation" color="#ff0000" meeting="false" start="2019-10-07" duration="26" complete="0" thirdDate="2019-08-05" thirdDate-constraint="0" expand="true">
+                    <depend id="758" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="758" name="Fabricabilité" color="#ff0000" meeting="false" start="2019-11-02" duration="7" complete="0" thirdDate="2019-08-05" thirdDate-constraint="0" expand="true"/>
+            </task>
+            <task id="739" name="Triangles" meeting="false" start="2019-09-02" duration="84" complete="0" expand="true">
+                <task id="876" name="Choix réglage" color="#ff0000" meeting="false" start="2019-09-16" duration="7" complete="0" thirdDate="2019-07-31" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <notes><![CDATA[Voir Claude Rouelle : pas différents de chaque côté des biellettes
+]]></notes>
+                    <depend id="879" type="2" difference="0" hardness="Strong"/>
+                    <depend id="893" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="893" name="Dimensionnement biellettes" color="#ff0000" meeting="false" start="2019-09-23" duration="7" complete="0" thirdDate="2019-07-31" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <notes><![CDATA[
+
+]]></notes>
+                </task>
+                <task id="879" name="Dimensionnement visserie" color="#ff0000" meeting="false" start="2019-09-23" duration="7" complete="0" thirdDate="2019-07-31" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <notes><![CDATA[
+]]></notes>
+                    <depend id="884" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="884" name="Choix rotules" color="#ff0000" meeting="false" start="2019-09-30" duration="7" complete="0" thirdDate="2019-07-31" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <notes><![CDATA[
+
+]]></notes>
+                    <depend id="888" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="888" name="Choix entretoises" color="#ff0000" meeting="false" start="2019-10-07" duration="7" complete="0" thirdDate="2019-07-31" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <notes><![CDATA[
+
+]]></notes>
+                </task>
+                <task id="866" name="Concertation" color="#ff0000" meeting="false" start="2019-09-02" duration="7" complete="0" thirdDate="2019-07-31" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[Concertation LAS, Châssis]]></notes>
+                    <depend id="903" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="903" name="Dimenssionnement des tubes" color="#ff0000" meeting="false" start="2019-10-14" duration="7" complete="0" thirdDate="2019-07-31" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <depend id="882" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="882" name="Dimensionnement des inserts" color="#ff0000" meeting="false" start="2019-10-21" duration="7" complete="0" thirdDate="2019-07-31" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <depend id="898" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="898" name="Essais collages" color="#ff0000" meeting="false" start="2019-10-28" duration="28" complete="0" thirdDate="2019-07-31" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
+            </task>
+            <task id="743" name="Suspension" meeting="false" start="2019-08-19" duration="70" complete="0" expand="true">
+                <task id="905" name="Contacter GTE" color="#ff0000" meeting="false" start="2019-08-19" duration="7" complete="0" thirdDate="2019-07-31" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <notes><![CDATA[Pour la démarche
+
+]]></notes>
+                </task>
+                <task id="907" name="Pivot" color="#ff0000" meeting="false" start="2019-09-30" duration="7" complete="0" thirdDate="2019-07-31" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <notes><![CDATA[
+
+]]></notes>
+                </task>
+                <task id="914" name="Basculeurs" color="#ff0000" meeting="false" start="2019-10-14" duration="14" complete="0" thirdDate="2019-07-31" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <notes><![CDATA[
+
+]]></notes>
+                </task>
+            </task>
+            <task id="744" name="Anti-roulis" meeting="false" start="2019-09-30" duration="28" complete="0" expand="true">
+                <task id="916" name="Modèle efforts" color="#ff0000" meeting="false" start="2019-09-30" duration="14" complete="0" thirdDate="2019-07-31" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <notes><![CDATA[Pour la démarche
+
+]]></notes>
+                    <depend id="935" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="935" name="Dimenssionnement de la barre de torsion" color="#ff0000" meeting="false" start="2019-10-14" duration="14" complete="0" thirdDate="2019-07-31" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <notes><![CDATA[Pour la démarche
+
+]]></notes>
+                </task>
+                <task id="921" name="Couteaux" color="#ff0000" meeting="false" start="2019-09-30" duration="14" complete="0" thirdDate="2019-07-31" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <notes><![CDATA[Pour la démarche
+
+]]></notes>
+                    <depend id="923" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="923" name="Pivot" color="#ff0000" meeting="false" start="2019-10-14" duration="7" complete="0" thirdDate="2019-07-31" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <notes><![CDATA[Pour la démarche
+
+]]></notes>
+                    <depend id="940" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="940" name="Coussinets" color="#ff0000" meeting="false" start="2019-10-21" duration="7" complete="0" thirdDate="2019-07-31" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <notes><![CDATA[Pour la démarche
+
+]]></notes>
+                </task>
+            </task>
+            <task id="738" name="Direction" color="#330033" meeting="false" start="2019-09-16" duration="35" complete="0" thirdDate="2019-08-05" thirdDate-constraint="0" expand="true">
+                <task id="946" name="Cardan" color="#ff0000" meeting="false" start="2019-09-16" duration="14" complete="0" thirdDate="2019-08-05" thirdDate-constraint="0" expand="true">
+                    <depend id="950" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="950" name="Colonne de direction" color="#ff0000" meeting="false" start="2019-09-30" duration="7" complete="0" thirdDate="2019-08-05" thirdDate-constraint="0" expand="true">
+                    <depend id="944" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="944" name="Finalisation cinématique" color="#ff0000" meeting="false" start="2019-10-07" duration="7" complete="0" thirdDate="2019-08-05" thirdDate-constraint="0" expand="true">
+                    <depend id="956" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="956" name="Pivot et manchon" color="#ff0000" meeting="false" start="2019-10-14" duration="7" complete="0" thirdDate="2019-08-05" thirdDate-constraint="0" expand="true"/>
+            </task>
+            <task id="740" name="Freinage" color="#000000" meeting="false" start="2019-09-16" duration="21" complete="0" thirdDate="2019-08-05" thirdDate-constraint="0" expand="true">
+                <notes><![CDATA[En collaboration avec la roue équipée et le pédalier
+]]></notes>
+                <task id="1125" name="Répartition freinage" color="#ff0000" meeting="false" start="2019-09-16" duration="14" complete="0" thirdDate="2019-08-05" thirdDate-constraint="0" expand="true"/>
+                <task id="1133" name="Dimenssionnement disques" color="#ff0000" meeting="false" start="2019-09-23" duration="14" complete="0" thirdDate="2019-08-05" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
+                <task id="1136" name="Dimenssionnement étrier" color="#ff0000" meeting="false" start="2019-09-23" duration="14" complete="0" thirdDate="2019-08-05" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
+            </task>
+            <task id="1139" name="Pédalier" color="#000000" meeting="false" start="2019-09-16" duration="49" complete="0" thirdDate="2019-08-05" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                <task id="1143" name="Accélérateur" color="#ff0000" meeting="false" start="2019-09-16" duration="35" complete="0" thirdDate="2019-08-05" thirdDate-constraint="0" expand="true"/>
+                <task id="1145" name="Frein" color="#ff0000" meeting="false" start="2019-09-30" duration="35" complete="0" thirdDate="2019-08-05" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
+            </task>
+        </task>
+        <task id="47" name="Frame" color="#000000" meeting="false" start="2019-08-12" duration="100" complete="2" thirdDate="2019-09-12" thirdDate-constraint="0" expand="true">
+            <task id="1152" name="Structure tubulaire" color="#000000" meeting="false" start="2019-08-12" duration="98" complete="4" thirdDate="2019-09-12" thirdDate-constraint="0" expand="true">
+                <task id="1155" name="Premières esquisses" color="#ffcc00" meeting="false" start="2019-08-12" duration="14" complete="50" thirdDate="2019-09-12" thirdDate-constraint="0" expand="true">
+                    <depend id="1160" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="1160" name="Points de LAS" color="#ffcc00" meeting="false" start="2019-08-26" duration="21" complete="0" thirdDate="2019-09-12" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
+                <task id="1164" name="Ergonomie" color="#ffcc00" meeting="false" start="2019-08-19" duration="14" complete="0" thirdDate="2019-09-12" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <depend id="1168" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="1168" name="Moteur - Echappement" color="#ffcc00" meeting="false" start="2019-09-02" duration="21" complete="0" thirdDate="2019-09-12" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
+                <task id="1170" name="Finalisation filaire" color="#ffcc00" meeting="false" start="2019-09-16" duration="14" complete="0" thirdDate="2019-09-12" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <depend id="1175" type="2" difference="0" hardness="Strong"/>
+                    <depend id="1180" type="2" difference="0" hardness="Strong"/>
+                    <depend id="1314" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="1175" name="Seconde itération" color="#ffcc00" meeting="false" start="2019-09-30" duration="14" complete="0" thirdDate="2019-09-12" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <depend id="1320" type="2" difference="0" hardness="Strong"/>
+                    <depend id="1434" type="2" difference="0" hardness="Strong"/>
+                    <depend id="1436" type="2" difference="0" hardness="Strong"/>
+                    <depend id="1647" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="1180" name="Diamètres des tubes" color="#ffcc00" meeting="false" start="2019-09-30" duration="14" complete="0" thirdDate="2019-09-12" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <depend id="1183" type="2" difference="0" hardness="Strong"/>
+                    <depend id="1186" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="1183" name="Vérif règlement" color="#ffcc00" meeting="false" start="2019-10-14" duration="7" complete="0" thirdDate="2019-09-12" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
+                <task id="1186" name="Raideur en torsions" color="#ffcc00" meeting="false" start="2019-10-14" duration="14" complete="0" thirdDate="2019-09-12" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <depend id="1188" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="1195" name="Autres cas de charge" color="#ffcc00" meeting="false" start="2019-10-21" duration="14" complete="0" thirdDate="2019-09-12" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <depend id="1188" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="1188" name="Vérif règlement" color="#ffcc00" meeting="false" start="2019-11-04" duration="14" complete="0" thirdDate="2019-09-12" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
+            </task>
+            <task id="1202" name="Equipements" color="#000000" meeting="false" start="2019-09-23" duration="58" complete="0" thirdDate="2019-09-12" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                <task id="1428" name="Chappes paramétrables" color="#ffcc00" meeting="false" start="2019-09-23" duration="35" complete="0" thirdDate="2019-09-12" thirdDate-constraint="0" expand="true"/>
+                <task id="1430" name="Suivi des chappes" color="#ffcc00" meeting="false" start="2019-10-07" duration="44" complete="0" thirdDate="2019-09-12" thirdDate-constraint="0" expand="true"/>
+                <task id="1434" name="Anti-intrusion plate" color="#ffcc00" meeting="false" start="2019-10-14" duration="14" complete="0" thirdDate="2019-09-12" thirdDate-constraint="0" expand="true">
+                    <depend id="1432" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="1432" name="Pare-feu" color="#ffcc00" meeting="false" start="2019-10-28" duration="14" complete="0" thirdDate="2019-09-12" thirdDate-constraint="0" expand="true"/>
+                <task id="1436" name="Fond plat" color="#ffcc00" meeting="false" start="2019-10-14" duration="14" complete="0" thirdDate="2019-09-12" thirdDate-constraint="0" expand="true"/>
+            </task>
+        </task>
+        <task id="176" name="Aéro" color="#000000" meeting="false" start="2019-08-12" duration="98" complete="0" thirdDate="2019-09-02" thirdDate-constraint="0" expand="true">
+            <task id="1256" name="Carrosserie" color="#000000" meeting="false" start="2019-09-16" duration="63" complete="0" thirdDate="2019-09-12" thirdDate-constraint="0" expand="true">
+                <task id="1307" name="REX et étude concurrence" color="#9900ff" meeting="false" start="2019-09-16" duration="14" complete="0" thirdDate="2019-09-12" thirdDate-constraint="0" expand="true">
+                    <depend id="1314" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="1314" name="Premier version" color="#9900ff" meeting="false" start="2019-09-30" duration="14" complete="0" thirdDate="2019-09-12" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <depend id="1317" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="1317" name="Optimisation aéro" color="#9900ff" meeting="false" start="2019-10-14" duration="14" complete="0" thirdDate="2019-09-12" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <depend id="1320" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="1320" name="Seconde itération" color="#9900ff" meeting="false" start="2019-10-28" duration="7" complete="0" thirdDate="2019-09-12" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <depend id="1323" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="1323" name="Fixation aéro" color="#9900ff" meeting="false" start="2019-11-04" duration="14" complete="0" thirdDate="2019-09-12" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
+            </task>
+            <task id="1298" name="Méthode numérique" color="#000000" meeting="false" start="2019-08-19" duration="21" complete="0" thirdDate="2019-09-12" thirdDate-constraint="0" expand="true">
+                <task id="1301" name="Simulation mécanique" color="#9900ff" meeting="false" start="2019-08-19" duration="21" complete="0" thirdDate="2019-09-12" thirdDate-constraint="0" expand="true">
+                    <depend id="1374" type="2" difference="0" hardness="Strong"/>
+                    <depend id="1395" type="2" difference="0" hardness="Strong"/>
+                </task>
+            </task>
+            <task id="1412" name="Process de production" color="#000000" meeting="false" start="2019-09-02" duration="28" complete="0" thirdDate="2019-09-12" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                <task id="1414" name="Process de production" color="#9900ff" meeting="false" start="2019-09-02" duration="28" complete="0" thirdDate="2019-09-12" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <depend id="1371" type="2" difference="0" hardness="Strong"/>
+                    <depend id="1374" type="2" difference="0" hardness="Strong"/>
+                    <depend id="1393" type="2" difference="0" hardness="Strong"/>
+                    <depend id="1395" type="2" difference="0" hardness="Strong"/>
+                </task>
+            </task>
+            <task id="1260" name="Ouies" color="#000000" meeting="false" start="2019-08-12" duration="91" complete="0" thirdDate="2019-09-12" thirdDate-constraint="0" expand="true">
+                <task id="1325" name="Concept ouies" color="#9900ff" meeting="false" start="2019-08-12" duration="21" complete="0" thirdDate="2019-09-12" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
+                <task id="1332" name="Positionnement radiateur" color="#9900ff" meeting="false" start="2019-08-26" duration="14" complete="0" thirdDate="2019-09-12" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <depend id="1335" type="1" difference="0" hardness="Strong"/>
+                </task>
+                <task id="1335" name="Optimisation flux radiateur" color="#9900ff" meeting="false" start="2019-08-26" duration="28" complete="0" thirdDate="2019-09-12" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
+                <task id="1339" name="Optimisation aéro" color="#9900ff" meeting="false" start="2019-09-16" duration="14" complete="0" thirdDate="2019-09-12" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <notes><![CDATA[Après les ailes avant et arrière
+]]></notes>
+                    <depend id="1349" type="2" difference="0" hardness="Strong"/>
+                    <depend id="1354" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="1349" name="Résistance mécanique" color="#9900ff" meeting="false" start="2019-09-30" duration="28" complete="0" thirdDate="2019-09-12" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
+                <task id="1354" name="Détermination d'un process" color="#9900ff" meeting="false" start="2019-09-30" duration="28" complete="0" thirdDate="2019-09-12" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <notes><![CDATA[Voir reamrques EPFL
+Contacter Alexis Couturier si besoin]]></notes>
+                </task>
+                <task id="1357" name="Test du process" color="#9900ff" meeting="false" start="2019-10-14" duration="28" complete="0" thirdDate="2019-09-12" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
+            </task>
+            <task id="1264" name="Aile arrière" color="#000000" meeting="false" start="2019-09-09" duration="56" complete="0" thirdDate="2019-09-12" thirdDate-constraint="0" expand="true">
+                <task id="1359" name="Concept d'attaches" color="#9900ff" meeting="false" start="2019-09-09" duration="14" complete="0" thirdDate="2019-09-12" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
+                <task id="1364" name="Méthode de réglage" color="#9900ff" meeting="false" start="2019-09-16" duration="14" complete="0" thirdDate="2019-09-12" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <depend id="1367" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="1367" name="Modèle d'efforts sur l'aile" color="#9900ff" meeting="false" start="2019-09-30" duration="7" complete="0" thirdDate="2019-09-12" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <depend id="1371" type="2" difference="0" hardness="Strong"/>
+                    <depend id="1374" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="1371" name="Dessin des inserts" color="#9900ff" meeting="false" start="2019-10-07" duration="21" complete="0" thirdDate="2019-09-12" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
+                <task id="1374" name="Simulation mécanique" color="#9900ff" meeting="false" start="2019-10-07" duration="28" complete="0" thirdDate="2019-09-12" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
+                <task id="1377" name="Calcul de déflection" color="#9900ff" meeting="false" start="2019-10-14" duration="21" complete="0" thirdDate="2019-09-12" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
+            </task>
+            <task id="1385" name="Aile avant" color="#000000" meeting="false" start="2019-09-02" duration="63" complete="0" thirdDate="2019-09-12" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                <task id="1387" name="Simplification de l'aile" color="#9900ff" meeting="false" start="2019-09-02" duration="21" complete="0" thirdDate="2019-09-12" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
+                <task id="1401" name="Concept d'attaches" color="#9900ff" meeting="false" start="2019-09-09" duration="14" complete="0" thirdDate="2019-09-12" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
+                <task id="1389" name="Méthode de réglage" color="#9900ff" meeting="false" start="2019-09-16" duration="14" complete="0" thirdDate="2019-09-12" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <depend id="1391" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="1391" name="Modèle d'efforts sur l'aile" color="#9900ff" meeting="false" start="2019-09-30" duration="7" complete="0" thirdDate="2019-09-12" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <depend id="1393" type="2" difference="0" hardness="Strong"/>
+                    <depend id="1395" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="1393" name="Dessin des inserts" color="#9900ff" meeting="false" start="2019-10-07" duration="21" complete="0" thirdDate="2019-09-12" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
+                <task id="1395" name="Simulation mécanique" color="#9900ff" meeting="false" start="2019-10-07" duration="28" complete="0" thirdDate="2019-09-12" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
+                <task id="1397" name="Calcul de déflection" color="#9900ff" meeting="false" start="2019-10-14" duration="21" complete="0" thirdDate="2019-09-12" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
+            </task>
+        </task>
+        <task id="48" name="Motorisation" color="#000000" meeting="false" start="2019-08-05" duration="98" complete="8" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true">
+            <task id="1269" name="Admission" color="#000000" meeting="false" start="2019-08-12" duration="56" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true">
+                <task id="1481" name="Contact fournisseur" color="#0066ff" meeting="false" start="2019-09-02" duration="14" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
+                <task id="1454" name="Concept bride guillotine" color="#0066ff" meeting="false" start="2019-08-12" duration="21" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true"/>
+                <task id="1458" name="Concept plenum admission" color="#0066ff" meeting="false" start="2019-08-12" duration="21" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
+                <task id="1461" name="Etudes aéro" color="#0066ff" meeting="false" start="2019-08-19" duration="28" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <depend id="1465" type="2" difference="0" hardness="Strong"/>
+                    <depend id="1469" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="1465" name="Audit Volvo" color="#0066ff" meeting="false" start="2019-09-16" duration="7" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
+                <task id="1469" name="Calcul FEM" color="#0066ff" meeting="false" start="2019-09-16" duration="7" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <depend id="1473" type="2" difference="0" hardness="Strong"/>
+                    <depend id="1478" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="1473" name="Validation Romain" color="#0066ff" meeting="false" start="2019-09-23" duration="14" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <depend id="1511" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="1478" name="Validation académiciens" color="#0066ff" meeting="false" start="2019-09-23" duration="14" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <depend id="1511" type="2" difference="0" hardness="Strong"/>
+                </task>
+            </task>
+            <task id="1272" name="Echappement" color="#000000" meeting="false" start="2019-08-12" duration="56" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true">
+                <task id="1509" name="Contact Bery" color="#0066ff" meeting="false" start="2019-09-02" duration="7" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
+                <task id="1485" name="Concept échappement" color="#0066ff" meeting="false" start="2019-08-12" duration="7" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <depend id="1490" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="1490" name="Volume enveloppe" color="#0066ff" meeting="false" start="2019-08-19" duration="14" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <depend id="1495" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="1495" name="CATIA" color="#0066ff" meeting="false" start="2019-09-02" duration="21" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <depend id="1498" type="2" difference="0" hardness="Strong"/>
+                    <depend id="1503" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="1498" name="Validation Romain" color="#0066ff" meeting="false" start="2019-09-23" duration="14" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <depend id="1511" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="1503" name="Validation académiciens" color="#0066ff" meeting="false" start="2019-09-23" duration="14" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <depend id="1511" type="2" difference="0" hardness="Strong"/>
+                </task>
+            </task>
+            <task id="1275" name="Carto" color="#000000" meeting="false" start="2019-10-07" duration="7" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true">
+                <task id="1511" name="Prevoir passage au banc de Givors" color="#0066ff" meeting="false" start="2019-10-07" duration="7" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
+            </task>
+            <task id="1278" name="Refroidissement" color="#000000" meeting="false" start="2019-08-05" duration="35" complete="60" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true">
+                <task id="1513" name="Dimensionnement" color="#0066ff" meeting="false" start="2019-08-05" duration="21" complete="100" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <depend id="1517" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="1517" name="Itération 2" color="#0066ff" meeting="false" start="2019-08-26" duration="14" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <notes><![CDATA[En lien avec le dessin des ouies de PTS]]></notes>
+                </task>
+            </task>
+            <task id="1281" name="Circuit d'essence" color="#000000" meeting="false" start="2019-09-16" duration="56" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true">
+                <task id="1522" name="Réservoir" color="#0066ff" meeting="false" start="2019-09-16" duration="7" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <depend id="1526" type="2" difference="0" hardness="Strong"/>
+                    <depend id="1536" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="1526" name="Pompe à essence" color="#0066ff" meeting="false" start="2019-09-23" duration="14" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true">
+                    <depend id="1528" type="2" difference="0" hardness="Strong"/>
+                    <depend id="1530" type="2" difference="0" hardness="Strong"/>
+                    <depend id="1536" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="1528" name="Circuit d'essence" color="#0066ff" meeting="false" start="2019-10-07" duration="14" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true">
+                    <depend id="1532" type="2" difference="0" hardness="Strong"/>
+                    <depend id="1536" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="1530" name="Tuyau de remplissage" color="#0066ff" meeting="false" start="2019-10-07" duration="14" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true">
+                    <depend id="1532" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="1532" name="Modèle CATIA" color="#0066ff" meeting="false" start="2019-10-21" duration="21" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true"/>
+                <task id="1536" name="Protection thermique" color="#0066ff" meeting="false" start="2019-10-21" duration="7" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true"/>
+            </task>
+            <task id="1284" name="Transmission secondaire" color="#000000" meeting="false" start="2019-09-16" duration="49" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true">
+                <notes><![CDATA[Ressources:
+ASE et une recrue semble correct et moins risqué que deux recrues.
+Une des recrues sera donc affecté au circuit d'essence.]]></notes>
+                <task id="1534" name="Contacter CME et MPY" color="#0066ff" meeting="false" start="2019-09-16" duration="7" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true"/>
+                <task id="1545" name="Piste amélioration" color="#0066ff" meeting="false" start="2019-09-16" duration="14" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true"/>
+                <task id="1547" name="Différentiel" color="#0066ff" meeting="false" start="2019-09-16" duration="7" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true">
+                    <depend id="1549" type="2" difference="0" hardness="Strong"/>
+                    <depend id="1551" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="1549" name="Excentriques" color="#0066ff" meeting="false" start="2019-09-23" duration="21" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true"/>
+                <task id="1551" name="Porte-excentriques" color="#0066ff" meeting="false" start="2019-09-23" duration="21" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true"/>
+                <task id="1553" name="Rapport de transmission secondaire" color="#0066ff" meeting="false" start="2019-09-16" duration="21" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true"/>
+                <task id="1555" name="Pignon - Couronne" color="#0066ff" meeting="false" start="2019-09-23" duration="14" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true">
+                    <depend id="1557" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="1557" name="Porte couronne" color="#0066ff" meeting="false" start="2019-10-07" duration="14" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[Discuter avec Bertrand Houx pour usinage à Centrale]]></notes>
+                    <depend id="1568" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="1568" name="Chainshield" color="#0066ff" meeting="false" start="2019-10-21" duration="14" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[Ne pas lancer la prod, faire un template au fablab d'abord et usiner le crai quand c'est bon]]></notes>
+                </task>
+            </task>
+        </task>
+        <task id="169" name="SEISM" color="#000000" meeting="false" start="2019-09-02" duration="84" complete="0" thirdDate="2019-10-01" thirdDate-constraint="0" expand="true">
+            <task id="1287" name="Faisceau" color="#000000" meeting="false" start="2019-09-02" duration="84" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true">
+                <task id="1585" name="Faisceau LV" color="#00cc33" meeting="false" start="2019-09-02" duration="21" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true">
+                    <depend id="1609" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="1588" name="Acquisition de données" color="#00cc33" meeting="false" start="2019-09-09" duration="14" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true"/>
+                <task id="1609" name="Faisceau HV" color="#00cc33" meeting="false" start="2019-09-23" duration="21" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
+                <task id="1611" name="Batterie" color="#00cc33" meeting="false" start="2019-09-30" duration="14" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
+                <task id="1613" name="Dimensionnement câble" color="#00cc33" meeting="false" start="2019-10-07" duration="14" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
+                <task id="1615" name="Placer les boîtes" color="#00cc33" meeting="false" start="2019-10-14" duration="14" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <depend id="1625" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="1623" name="Contacter Souriaux" color="#00cc33" meeting="false" start="2019-09-02" duration="7" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <depend id="1617" type="2" difference="0" hardness="Rubber"/>
+                </task>
+                <task id="1617" name="Choix connecteur" color="#00cc33" meeting="false" start="2019-10-14" duration="14" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <depend id="1625" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="1625" name="Modèle CATIA" color="#00cc33" meeting="false" start="2019-10-28" duration="28" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
+            </task>
+            <task id="1290" name="Passage de rapport" color="#000000" meeting="false" start="2019-09-02" duration="70" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true">
+                <task id="1627" name="Dimensionnement moteur" color="#00cc33" meeting="false" start="2019-09-02" duration="28" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <depend id="1633" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="1630" name="Dimensionnement réducteur" color="#00cc33" meeting="false" start="2019-09-02" duration="28" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <notes><![CDATA[Choisir entre Atomix et Optimus]]></notes>
+                    <depend id="1633" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="1633" name="Reprendre le code" color="#00cc33" meeting="false" start="2019-09-30" duration="28" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
+                <task id="1635" name="Shield" color="#00cc33" meeting="false" start="2019-10-14" duration="28" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <notes><![CDATA[Inclure la connection CAN]]></notes>
+                </task>
+            </task>
+            <task id="1293" name="Tableau de bord" color="#000000" meeting="false" start="2019-09-02" duration="70" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true">
+                <task id="1638" name="Liste des afficheurs" color="#00cc33" meeting="false" start="2019-09-02" duration="14" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <depend id="1643" type="2" difference="0" hardness="Strong"/>
+                    <depend id="1645" type="2" difference="0" hardness="Strong"/>
+                    <depend id="1647" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="1641" name="Commande des afficheurs" color="#00cc33" meeting="false" start="2019-09-09" duration="14" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
+                <task id="1645" name="Liste des boutons" color="#00cc33" meeting="false" start="2019-09-16" duration="14" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <depend id="1647" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="1647" name="Dessin TdB" color="#00cc33" meeting="false" start="2019-10-14" duration="14" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
+                <task id="1643" name="Code sans CAN" color="#00cc33" meeting="false" start="2019-09-16" duration="56" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <notes><![CDATA[
+]]></notes>
+                    <depend id="1652" type="3" difference="0" hardness="Strong"/>
+                    <depend id="1654" type="3" difference="0" hardness="Strong"/>
+                </task>
+                <task id="1652" name="Insérer le CAN" color="#00cc33" meeting="false" start="2019-10-28" duration="14" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <depend id="1654" type="3" difference="0" hardness="Strong"/>
+                </task>
+                <task id="1654" name="Dessin des cartes" color="#00cc33" meeting="false" start="2019-10-14" duration="28" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <notes><![CDATA[
+]]></notes>
+                </task>
+            </task>
+            <task id="1296" name="Palettes" color="#000000" meeting="false" start="2019-09-09" duration="56" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true">
+                <task id="1663" name="Concept" color="#00cc33" meeting="false" start="2019-09-09" duration="21" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <depend id="1671" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="1667" name="Maquette CATIA" color="#00cc33" meeting="false" start="2019-09-16" duration="21" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true">
+                    <depend id="1669" type="2" difference="0" hardness="Strong"/>
+                    <depend id="1671" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="1671" name="Commande pour proto" color="#00cc33" meeting="false" start="2019-10-07" duration="7" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true">
+                    <depend id="1673" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="1669" name="Impression 3D" color="#00cc33" meeting="false" start="2019-10-07" duration="7" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true">
+                    <depend id="1673" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="1673" name="Proto" color="#00cc33" meeting="false" start="2019-10-14" duration="7" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true">
+                    <depend id="1679" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="1679" name="Tests" color="#00cc33" meeting="false" start="2019-10-21" duration="14" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true"/>
+            </task>
+        </task>
+    </tasks>
+    <resources>
+        <resource id="5" name="MJT" function="Default:0" contacts="" phone=""/>
+        <resource id="17" name="ARZ" function="Default:0" contacts="" phone=""/>
+        <resource id="6" name="TLS" function="Default:0" contacts="" phone=""/>
+        <resource id="7" name="PTN" function="Default:0" contacts="" phone=""/>
+        <resource id="2" name="CMI" function="Default:0" contacts="" phone=""/>
+        <resource id="23" name="NGO" function="Default:0" contacts="" phone=""/>
+        <resource id="24" name="MRI" function="Default:0" contacts="" phone=""/>
+        <resource id="0" name="TMN" function="Default:0" contacts="" phone=""/>
+        <resource id="1" name="PTS" function="Default:0" contacts="" phone=""/>
+        <resource id="3" name="ASE" function="Default:0" contacts="" phone=""/>
+        <resource id="8" name="IGH" function="Default:0" contacts="" phone=""/>
+        <resource id="10" name="EBA" function="Default:0" contacts="" phone=""/>
+        <resource id="9" name="GLD" function="Default:0" contacts="" phone=""/>
+        <resource id="4" name="CAD" function="Default:0" contacts="" phone=""/>
+        <resource id="11" name="MKI" function="Default:0" contacts="" phone=""/>
+        <resource id="12" name="MSO" function="Default:0" contacts="" phone=""/>
+        <resource id="13" name="PAX" function="Default:0" contacts="" phone=""/>
+        <resource id="14" name="ADT" function="Default:0" contacts="" phone=""/>
+        <resource id="22" name="JMN" function="Default:0" contacts="" phone=""/>
+        <resource id="15" name="VDA" function="Default:0" contacts="" phone=""/>
+        <resource id="16" name="PCK" function="Default:0" contacts="" phone=""/>
+        <resource id="19" name="CLS" function="Default:0" contacts="" phone=""/>
+        <resource id="20" name="RMN" function="Default:0" contacts="" phone=""/>
+        <resource id="21" name="BMA" function="Default:0" contacts="" phone=""/>
+    </resources>
+    <allocations>
+        <allocation task-id="1485" resource-id="5" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1490" resource-id="5" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1495" resource-id="5" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1498" resource-id="5" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1503" resource-id="5" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1509" resource-id="5" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1511" resource-id="5" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="481" resource-id="6" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="704" resource-id="6" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1430" resource-id="6" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1454" resource-id="6" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1458" resource-id="6" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1461" resource-id="6" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1465" resource-id="6" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1469" resource-id="6" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1473" resource-id="6" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1478" resource-id="6" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1481" resource-id="6" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1155" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1160" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1164" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1168" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1170" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1175" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1180" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1183" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1186" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1188" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1195" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1434" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1432" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1301" resource-id="23" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1414" resource-id="23" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1387" resource-id="24" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1414" resource-id="24" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1359" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1364" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1367" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1371" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1374" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1377" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1389" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1391" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1393" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1395" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1397" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1401" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1414" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1307" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1314" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1317" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1320" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1323" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1325" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1332" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1335" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1339" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1349" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1354" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1357" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1436" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1513" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1517" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="711" resource-id="11" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="709" resource-id="11" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="721" resource-id="11" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="810" resource-id="11" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="813" resource-id="11" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="815" resource-id="11" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="817" resource-id="11" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="819" resource-id="11" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="826" resource-id="11" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="828" resource-id="11" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="824" resource-id="11" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="711" resource-id="12" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="731" resource-id="12" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="749" resource-id="12" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="750" resource-id="12" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="752" resource-id="12" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="754" resource-id="12" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="755" resource-id="12" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="757" resource-id="12" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="758" resource-id="12" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="709" resource-id="13" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="721" resource-id="13" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="725" resource-id="13" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="729" resource-id="13" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="731" resource-id="13" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="905" resource-id="13" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="916" resource-id="13" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="921" resource-id="13" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="923" resource-id="13" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="935" resource-id="13" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="940" resource-id="13" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1125" resource-id="14" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1133" resource-id="14" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1136" resource-id="14" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1143" resource-id="22" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1145" resource-id="22" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="866" resource-id="16" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="876" resource-id="16" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="879" resource-id="16" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="882" resource-id="16" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="884" resource-id="16" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="888" resource-id="16" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="893" resource-id="16" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="898" resource-id="16" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="903" resource-id="16" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="907" resource-id="16" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="914" resource-id="16" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1585" resource-id="19" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1588" resource-id="19" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1609" resource-id="19" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1611" resource-id="19" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1613" resource-id="19" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1615" resource-id="19" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1617" resource-id="19" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1623" resource-id="19" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1625" resource-id="19" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1638" resource-id="20" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1641" resource-id="20" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1643" resource-id="20" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1645" resource-id="20" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1647" resource-id="20" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1652" resource-id="20" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1654" resource-id="20" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1627" resource-id="21" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1630" resource-id="21" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1633" resource-id="21" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1635" resource-id="21" function="Default:0" responsible="true" load="100.0"/>
+    </allocations>
+    <vacations>
+        <vacation start="2019-07-07" end="2019-07-12" resourceid="17"/>
+        <vacation start="2019-07-15" end="2019-09-01" resourceid="1"/>
+        <vacation start="2019-07-29" end="2019-08-19" resourceid="11"/>
+        <vacation start="2019-08-01" end="2019-09-01" resourceid="12"/>
+        <vacation start="2019-07-10" end="2019-07-24" resourceid="14"/>
+        <vacation start="2019-07-29" end="2019-08-24" resourceid="14"/>
+        <vacation start="2019-08-05" end="2019-09-01" resourceid="16"/>
+        <vacation start="2019-08-26" end="2019-09-01" resourceid="19"/>
+    </vacations>
+    <previous>
+        <previous-tasks name="15_05_2019">
+            <previous-task id="46" start="2019-04-03" duration="320" meeting="false" super="true"/>
+            <previous-task id="1" start="2019-04-03" duration="0" meeting="true" super="false"/>
+            <previous-task id="42" start="2019-04-03" duration="0" meeting="true" super="false"/>
+            <previous-task id="39" start="2019-04-10" duration="0" meeting="true" super="false"/>
+            <previous-task id="7" start="2019-06-12" duration="0" meeting="true" super="false"/>
+            <previous-task id="11" start="2019-06-27" duration="0" meeting="true" super="false"/>
+            <previous-task id="13" start="2019-09-30" duration="0" meeting="true" super="false"/>
+            <previous-task id="4" start="2019-05-01" duration="0" meeting="true" super="false"/>
+            <previous-task id="15" start="2019-10-02" duration="0" meeting="true" super="false"/>
+            <previous-task id="21" start="2019-11-06" duration="0" meeting="true" super="false"/>
+            <previous-task id="25" start="2019-11-20" duration="0" meeting="true" super="false"/>
+            <previous-task id="23" start="2020-02-05" duration="0" meeting="true" super="false"/>
+            <previous-task id="27" start="2020-02-19" duration="0" meeting="true" super="false"/>
+            <previous-task id="29" start="2020-03-04" duration="0" meeting="true" super="false"/>
+            <previous-task id="31" start="2020-03-17" duration="0" meeting="true" super="false"/>
+            <previous-task id="37" start="2020-06-24" duration="0" meeting="true" super="false"/>
+            <previous-task id="103" start="2019-05-08" duration="20" meeting="false" super="true"/>
+            <previous-task id="104" start="2019-05-08" duration="5" meeting="false" super="false"/>
+            <previous-task id="106" start="2019-05-08" duration="5" meeting="false" super="false"/>
+            <previous-task id="108" start="2019-05-15" duration="5" meeting="false" super="false"/>
+            <previous-task id="111" start="2019-05-22" duration="5" meeting="false" super="false"/>
+            <previous-task id="113" start="2019-05-22" duration="5" meeting="false" super="false"/>
+            <previous-task id="115" start="2019-05-29" duration="5" meeting="false" super="false"/>
+            <previous-task id="47" start="2019-05-08" duration="11" meeting="false" super="true"/>
+            <previous-task id="20" start="2019-05-08" duration="11" meeting="false" super="true"/>
+            <previous-task id="0" start="2019-05-08" duration="6" meeting="false" super="false"/>
+            <previous-task id="168" start="2019-05-16" duration="1" meeting="false" super="false"/>
+            <previous-task id="43" start="2019-05-08" duration="3" meeting="false" super="false"/>
+            <previous-task id="14" start="2019-05-13" duration="4" meeting="false" super="false"/>
+            <previous-task id="17" start="2019-05-17" duration="1" meeting="false" super="false"/>
+            <previous-task id="19" start="2019-05-22" duration="1" meeting="false" super="false"/>
+            <previous-task id="36" start="2019-05-08" duration="2" meeting="false" super="true"/>
+            <previous-task id="38" start="2019-05-08" duration="1" meeting="false" super="false"/>
+            <previous-task id="44" start="2019-05-09" duration="1" meeting="false" super="false"/>
+            <previous-task id="10" start="2019-05-08" duration="4" meeting="false" super="false"/>
+            <previous-task id="45" start="2019-05-08" duration="7" meeting="false" super="false"/>
+            <previous-task id="48" start="2019-05-06" duration="15" meeting="false" super="true"/>
+            <previous-task id="50" start="2019-05-08" duration="10" meeting="false" super="true"/>
+            <previous-task id="73" start="2019-05-08" duration="10" meeting="false" super="false"/>
+            <previous-task id="51" start="2019-05-08" duration="5" meeting="false" super="false"/>
+            <previous-task id="52" start="2019-05-17" duration="3" meeting="false" super="false"/>
+            <previous-task id="57" start="2019-05-20" duration="5" meeting="false" super="true"/>
+            <previous-task id="58" start="2019-05-20" duration="5" meeting="false" super="false"/>
+            <previous-task id="63" start="2019-05-08" duration="10" meeting="false" super="true"/>
+            <previous-task id="64" start="2019-05-08" duration="10" meeting="false" super="false"/>
+            <previous-task id="74" start="2019-05-06" duration="15" meeting="false" super="true"/>
+            <previous-task id="75" start="2019-05-06" duration="15" meeting="false" super="false"/>
+            <previous-task id="69" start="2019-05-08" duration="10" meeting="false" super="false"/>
+            <previous-task id="116" start="2019-05-08" duration="15" meeting="false" super="true"/>
+            <previous-task id="117" start="2019-05-08" duration="15" meeting="false" super="true"/>
+            <previous-task id="118" start="2019-05-08" duration="10" meeting="false" super="false"/>
+            <previous-task id="121" start="2019-05-08" duration="5" meeting="false" super="false"/>
+            <previous-task id="126" start="2019-05-08" duration="5" meeting="false" super="false"/>
+            <previous-task id="142" start="2019-05-08" duration="5" meeting="false" super="false"/>
+            <previous-task id="132" start="2019-05-22" duration="5" meeting="false" super="false"/>
+            <previous-task id="139" start="2019-05-22" duration="5" meeting="false" super="true"/>
+            <previous-task id="141" start="2019-05-22" duration="5" meeting="false" super="false"/>
+            <previous-task id="140" start="2019-05-22" duration="5" meeting="false" super="true"/>
+            <previous-task id="166" start="2019-05-22" duration="5" meeting="false" super="false"/>
+            <previous-task id="148" start="2019-05-08" duration="15" meeting="false" super="true"/>
+            <previous-task id="151" start="2019-05-08" duration="10" meeting="false" super="false"/>
+            <previous-task id="152" start="2019-05-08" duration="15" meeting="false" super="false"/>
+            <previous-task id="169" start="2019-05-10" duration="5" meeting="false" super="true"/>
+            <previous-task id="170" start="2019-05-10" duration="5" meeting="false" super="true"/>
+            <previous-task id="171" start="2019-05-10" duration="5" meeting="false" super="false"/>
+        </previous-tasks>
+    </previous>
+    <roles roleset-name="Default"/>
+</project>
