@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2019-08-23" view-index="0" gantt-divider-location="300" resource-divider-location="300" version="2.8.10" locale="fr">
     <description/>
-    <view zooming-state="default:2" id="gantt-chart">
+    <view zooming-state="default:3" id="gantt-chart">
         <field id="tpd3" name="Nom" width="167" order="0"/>
         <field id="tpd4" name="Date de début" width="65" order="1"/>
         <field id="tpd5" name="Date de fin" width="64" order="2"/>
         <option id="taskLabelLeft" value="name"/>
         <option id="taskLabelRight" value="coordinator"/>
-        <option id="color.recent"><![CDATA[#000000 #cccccc]]></option>
+        <option id="color.recent"><![CDATA[#000000 #ffcc00 #ff0000 #00cc33 #0066ff #9900ff #f4f4f4 #330033 #cccccc #ffff33]]></option>
     </view>
     <view id="resource-table">
         <field id="0" name="Nom" width="210" order="0"/>
@@ -36,16 +36,289 @@
             <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
             <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
         </taskproperties>
-        <task id="0" name="Gestion 0As" meeting="false" start="2019-09-03" duration="26" complete="0" expand="true">
-            <task id="2" name="Chaîne de rentrée" color="#000000" meeting="true" start="2019-09-03" duration="0" complete="0" thirdDate="2019-08-23" thirdDate-constraint="0" expand="true"/>
-            <task id="8" name="Autotech" color="#000000" meeting="true" start="2019-09-21" duration="0" complete="0" thirdDate="2019-08-23" thirdDate-constraint="0" expand="true"/>
-            <task id="5" name="Top Saison" color="#000000" meeting="false" start="2019-09-27" duration="2" complete="0" thirdDate="2019-08-23" thirdDate-constraint="0" expand="true"/>
+        <task id="0" name="Evenements 0As" color="#000000" meeting="false" start="2019-09-03" duration="26" complete="0" thirdDate="2019-09-03" thirdDate-constraint="0" expand="true">
+            <task id="2" name="Chaîne de rentrée" color="#cccccc" meeting="false" start="2019-09-03" duration="1" complete="0" thirdDate="2019-08-23" thirdDate-constraint="0" expand="true"/>
+            <task id="1849" name="Forum PE" color="#cccccc" meeting="false" start="2019-09-10" duration="1" complete="0" thirdDate="2019-08-23" thirdDate-constraint="0" expand="true"/>
+            <task id="1852" name="AG des asso" color="#cccccc" meeting="false" start="2019-09-16" duration="1" complete="0" thirdDate="2019-08-23" thirdDate-constraint="0" expand="true"/>
+            <task id="8" name="Autotech" color="#cccccc" meeting="false" start="2019-09-21" duration="1" complete="0" thirdDate="2019-08-23" thirdDate-constraint="0" expand="true"/>
+            <task id="1739" name="Attribution des parrains" color="#cccccc" meeting="false" start="2019-09-25" duration="1" complete="0" thirdDate="2019-08-23" thirdDate-constraint="0" expand="true"/>
+            <task id="1846" name="Administratif" color="#cccccc" meeting="false" start="2019-09-25" duration="1" complete="0" thirdDate="2019-08-23" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                <notes><![CDATA[Corrdonnées :
+voir doc compétitions
+
+
+Inscriptions :
+Site FSG
+Imeche
+]]></notes>
+            </task>
+            <task id="5" name="Top Saison" color="#cccccc" meeting="false" start="2019-09-27" duration="2" complete="0" thirdDate="2019-08-23" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="11" name="Formations 0As" color="#000000" meeting="false" start="2019-09-25" duration="26" complete="0" thirdDate="2019-09-03" thirdDate-constraint="0" expand="true">
+            <task id="17" name="Installation logiciels" color="#cccccc" meeting="false" start="2019-09-25" duration="8" complete="0" thirdDate="2019-08-23" thirdDate-constraint="0" expand="true">
+                <notes><![CDATA[Communication
+Messenger
+Slack
+
+Collaboratif
+Gitkraken, sourcetree, ...
+
+Travail
+CATIA
+ANSYS
+
+Elec
+Eagle
+Racecapture
+PCAN View
+
+
+
+]]></notes>
+                <depend id="27" type="2" difference="0" hardness="Rubber"/>
+                <depend id="1739" type="1" difference="0" hardness="Strong"/>
+                <depend id="1846" type="1" difference="0" hardness="Strong"/>
+            </task>
+            <task id="25" name="Formation travail collaboratif" color="#cccccc" meeting="false" start="2019-10-02" duration="1" complete="0" thirdDate="2019-08-23" thirdDate-constraint="0" expand="true">
+                <notes><![CDATA[Slack
+Github 
+EPSABox
+
+
+
+]]></notes>
+                <depend id="27" type="2" difference="0" hardness="Rubber"/>
+            </task>
+            <task id="27" name="Formation CATIA" color="#cccccc" meeting="false" start="2019-10-09" duration="12" complete="0" thirdDate="2019-08-23" thirdDate-constraint="0" expand="true">
+                <notes><![CDATA[Voir avec le club fusée
+
+
+
+]]></notes>
+                <depend id="34" type="2" difference="0" hardness="Strong"/>
+                <depend id="44" type="2" difference="0" hardness="Strong"/>
+                <depend id="47" type="2" difference="0" hardness="Strong"/>
+                <depend id="50" type="2" difference="0" hardness="Strong"/>
+                <depend id="53" type="2" difference="0" hardness="Strong"/>
+            </task>
+        </task>
+        <task id="32" name="Séances travail 0As" color="#000000" meeting="false" start="2019-10-21" duration="63" complete="0" thirdDate="2019-09-03" thirdDate-constraint="0" expand="true">
+            <task id="44" name="LAS" color="#000000" meeting="false" start="2019-10-21" duration="35" complete="0" thirdDate="2019-08-23" thirdDate-constraint="0" expand="true">
+                <notes><![CDATA[
+
+
+
+
+]]></notes>
+                <task id="1768" name="Appli dimenssionnement vis" color="#ff0000" meeting="false" start="2019-10-21" duration="35" complete="0" thirdDate="2019-08-23" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[Après la formation de Simon et Laurent
+
+
+
+
+]]></notes>
+                </task>
+            </task>
+            <task id="34" name="Frame" color="#000000" meeting="false" start="2019-10-21" duration="35" complete="0" thirdDate="2019-08-23" thirdDate-constraint="0" expand="true">
+                <notes><![CDATA[
+
+
+
+]]></notes>
+                <task id="1773" name="Siège custom" color="#ffcc00" meeting="false" start="2019-10-21" duration="35" complete="0" thirdDate="2019-08-23" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[
+
+
+
+
+]]></notes>
+                </task>
+            </task>
+            <task id="47" name="Aéro" color="#000000" meeting="false" start="2019-10-21" duration="8" complete="0" thirdDate="2019-08-23" thirdDate-constraint="0" expand="true">
+                <notes><![CDATA[
+
+
+
+]]></notes>
+            </task>
+            <task id="50" name="Moteur" color="#000000" meeting="false" start="2019-10-21" duration="8" complete="0" thirdDate="2019-08-23" thirdDate-constraint="0" expand="true">
+                <notes><![CDATA[
+
+
+
+]]></notes>
+            </task>
+            <task id="53" name="SEISM" color="#000000" meeting="false" start="2019-10-21" duration="63" complete="0" thirdDate="2019-08-23" thirdDate-constraint="0" expand="true">
+                <notes><![CDATA[
+
+
+
+
+]]></notes>
+                <task id="1758" name="Cellule de chronométrage" color="#000000" meeting="false" start="2019-10-21" duration="63" complete="0" thirdDate="2019-08-23" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[
+
+
+
+]]></notes>
+                    <task id="1815" name="Méthode chronométrage AutoX" color="#00cc33" meeting="false" start="2019-10-21" duration="14" complete="0" thirdDate="2019-08-23" thirdDate-constraint="0" expand="true">
+                        <notes><![CDATA[AutoX (1 cellule)
+
+Accel / Skid (2 cellules synchonisées)
+
+
+
+]]></notes>
+                        <depend id="1825" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="1821" name="Méthode chronométrage Accel / Skid" color="#00cc33" meeting="false" start="2019-10-28" duration="14" complete="0" thirdDate="2019-08-23" thirdDate-constraint="0" expand="true">
+                        <notes><![CDATA[AutoX (1 cellule)
+
+Accel / Skid (2 cellules synchonisées)
+
+
+
+]]></notes>
+                        <depend id="1825" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="1825" name="Achat matériel proto" color="#00cc33" meeting="false" start="2019-11-11" duration="7" complete="0" thirdDate="2019-08-23" thirdDate-constraint="0" expand="true">
+                        <notes><![CDATA[A regrouper avec commande palette
+
+
+
+
+]]></notes>
+                        <depend id="1834" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="1834" name="Code" color="#00cc33" meeting="false" start="2019-11-18" duration="14" complete="0" thirdDate="2019-08-23" thirdDate-constraint="0" expand="true">
+                        <notes><![CDATA[
+
+
+
+]]></notes>
+                        <depend id="1844" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="1840" name="Test" color="#00cc33" meeting="false" start="2019-11-25" duration="14" complete="0" thirdDate="2019-08-23" thirdDate-constraint="0" expand="true">
+                        <notes><![CDATA[
+
+
+
+]]></notes>
+                        <depend id="1844" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="1844" name="Packaging" color="#00cc33" meeting="false" start="2019-12-09" duration="14" complete="0" thirdDate="2019-08-23" thirdDate-constraint="0" expand="true">
+                        <notes><![CDATA[
+
+
+
+]]></notes>
+                    </task>
+                </task>
+                <task id="1770" name="Passage de vitesse auto" color="#000000" meeting="false" start="2019-10-21" duration="35" complete="0" thirdDate="2019-08-23" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[Stratégie de downshift
+
+
+
+]]></notes>
+                    <task id="1799" name="Stratégie d'upshift" color="#00cc33" meeting="false" start="2019-10-21" duration="14" complete="0" thirdDate="2019-08-23" thirdDate-constraint="0" expand="true">
+                        <notes><![CDATA[
+
+
+
+]]></notes>
+                        <depend id="1807" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="1805" name="Stratégie de downshift" color="#00cc33" meeting="false" start="2019-10-28" duration="14" complete="0" thirdDate="2019-08-23" thirdDate-constraint="0" expand="true">
+                        <notes><![CDATA[
+
+
+
+]]></notes>
+                        <depend id="1809" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="1807" name="Optimaux d'upshift" color="#00cc33" meeting="false" start="2019-11-04" duration="14" complete="0" thirdDate="2019-08-23" thirdDate-constraint="0" expand="true">
+                        <notes><![CDATA[A faire après la carto
+
+
+
+]]></notes>
+                    </task>
+                    <task id="1809" name="Callage des downshift" color="#00cc33" meeting="false" start="2019-11-11" duration="14" complete="0" thirdDate="2019-08-23" thirdDate-constraint="0" expand="true">
+                        <notes><![CDATA[A faire après la carto
+
+
+
+]]></notes>
+                    </task>
+                </task>
+                <task id="1" name="Palettes" color="#000000" meeting="false" start="2019-10-21" duration="56" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true">
+                    <task id="3" name="Concept" color="#00cc33" meeting="false" start="2019-10-21" duration="21" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true">
+                        <depend id="7" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="1777" name="Maquette CATIA" color="#00cc33" meeting="false" start="2019-10-28" duration="21" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true">
+                        <depend id="7" type="2" difference="0" hardness="Strong"/>
+                        <depend id="9" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="7" name="Commande pour proto" color="#00cc33" meeting="false" start="2019-11-18" duration="7" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true">
+                        <notes><![CDATA[A regrouper avec commande chrono]]></notes>
+                        <depend id="1778" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="9" name="Impression 3D" color="#00cc33" meeting="false" start="2019-11-18" duration="7" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true">
+                        <depend id="1778" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="1778" name="Proto" color="#00cc33" meeting="false" start="2019-11-25" duration="7" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true">
+                        <depend id="13" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="13" name="Tests" color="#00cc33" meeting="false" start="2019-12-02" duration="14" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true"/>
+                </task>
+            </task>
         </task>
     </tasks>
-    <resources/>
-    <allocations/>
-    <vacations/>
+    <resources>
+        <resource id="0" name="MJT" function="Default:0" contacts="" phone=""/>
+        <resource id="1" name="ARZ" function="Default:0" contacts="" phone=""/>
+        <resource id="2" name="TLS" function="Default:0" contacts="" phone=""/>
+        <resource id="3" name="PTN" function="Default:0" contacts="" phone=""/>
+        <resource id="4" name="CMI" function="Default:0" contacts="" phone=""/>
+        <resource id="5" name="NGO" function="Default:0" contacts="" phone=""/>
+        <resource id="6" name="MRI" function="Default:0" contacts="" phone=""/>
+        <resource id="7" name="TMN" function="Default:0" contacts="" phone=""/>
+        <resource id="8" name="PTS" function="Default:0" contacts="" phone=""/>
+        <resource id="9" name="ASE" function="Default:0" contacts="" phone=""/>
+        <resource id="10" name="IGH" function="Default:0" contacts="" phone=""/>
+        <resource id="11" name="EBA" function="Default:0" contacts="" phone=""/>
+        <resource id="12" name="GLD" function="Default:0" contacts="" phone=""/>
+        <resource id="13" name="CAD" function="Default:0" contacts="" phone=""/>
+        <resource id="14" name="MKI" function="Default:0" contacts="" phone=""/>
+        <resource id="15" name="MSO" function="Default:0" contacts="" phone=""/>
+        <resource id="16" name="PAX" function="Default:0" contacts="" phone=""/>
+        <resource id="17" name="ADT" function="Default:0" contacts="" phone=""/>
+        <resource id="18" name="JMN" function="Default:0" contacts="" phone=""/>
+        <resource id="19" name="VDA" function="Default:0" contacts="" phone=""/>
+        <resource id="20" name="PCK" function="Default:0" contacts="" phone=""/>
+        <resource id="21" name="CLS" function="Default:0" contacts="" phone=""/>
+        <resource id="22" name="RMN" function="Default:0" contacts="" phone=""/>
+        <resource id="23" name="BMA" function="Default:0" contacts="" phone=""/>
+    </resources>
+    <allocations>
+        <allocation task-id="1739" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1846" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="27" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1739" resource-id="4" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1739" resource-id="9" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1739" resource-id="14" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1739" resource-id="21" function="Default:0" responsible="true" load="100.0"/>
+    </allocations>
+    <vacations>
+        <vacation start="2019-07-07" end="2019-07-12" resourceid="1"/>
+        <vacation start="2019-07-15" end="2019-09-01" resourceid="8"/>
+        <vacation start="2019-07-29" end="2019-08-19" resourceid="14"/>
+        <vacation start="2019-08-01" end="2019-09-01" resourceid="15"/>
+        <vacation start="2019-07-10" end="2019-07-24" resourceid="17"/>
+        <vacation start="2019-07-29" end="2019-08-24" resourceid="17"/>
+        <vacation start="2019-08-05" end="2019-09-01" resourceid="20"/>
+        <vacation start="2019-08-26" end="2019-09-01" resourceid="21"/>
+    </vacations>
     <previous/>
     <roles roleset-name="Default"/>
-    <roles roleset-name="SoftwareDevelopment"/>
 </project>
