@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2019-08-29" view-index="0" gantt-divider-location="300" resource-divider-location="300" version="2.8.10" locale="fr">
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2019-08-26" view-index="0" gantt-divider-location="300" resource-divider-location="300" version="2.8.10" locale="fr">
     <description/>
-    <view zooming-state="default:3" id="gantt-chart">
+    <view zooming-state="default:4" id="gantt-chart">
         <field id="tpd3" name="Nom" width="167" order="0"/>
         <field id="tpd4" name="Date de début" width="65" order="1"/>
         <field id="tpd5" name="Date de fin" width="64" order="2"/>
@@ -58,7 +58,7 @@ Imeche
         <task id="11" name="Formations 0As" color="#000000" meeting="false" start="2019-09-18" duration="19" complete="0" thirdDate="2019-09-03" thirdDate-constraint="0" expand="true">
             <task id="17" name="Installation logiciels" color="#cccccc" meeting="false" start="2019-09-18" duration="8" complete="0" thirdDate="2019-08-23" thirdDate-constraint="0" expand="true">
                 <notes><![CDATA[Communication
-Messenger
+Messenger / Opera
 Slack
 
 Collaboratif
@@ -70,6 +70,7 @@ ANSYS
 
 Elec
 Eagle
+Rapidharness
 Racecapture
 PCAN View
 
@@ -82,7 +83,8 @@ PCAN View
             </task>
             <task id="25" name="Formation travail collaboratif" color="#cccccc" meeting="false" start="2019-09-25" duration="1" complete="0" thirdDate="2019-08-23" thirdDate-constraint="0" expand="true">
                 <notes><![CDATA[Slack
-Github 
+Github
+Gantt 
 EPSABox
 
 
@@ -309,10 +311,10 @@ Accel / Skid (2 cellules synchonisées)
     <allocations>
         <allocation task-id="1739" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="1846" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
-        <allocation task-id="27" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="1739" resource-id="4" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="1739" resource-id="9" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="1739" resource-id="14" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="27" resource-id="18" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="1739" resource-id="21" function="Default:0" responsible="true" load="100.0"/>
     </allocations>
     <vacations>
