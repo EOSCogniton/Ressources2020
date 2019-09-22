@@ -54,7 +54,7 @@
                 <depend id="103" type="3" difference="0" hardness="Strong"/>
             </task>
         </task>
-        <task id="1681" name="Vacances ECL" color="#000000" meeting="false" start="2019-10-26" duration="127" complete="0" thirdDate="2019-06-27" thirdDate-constraint="0" expand="false">
+        <task id="1681" name="Vacances ECL" color="#000000" meeting="false" start="2019-10-26" duration="127" complete="0" thirdDate="2019-06-27" thirdDate-constraint="0" expand="true">
             <task id="1709" name="Toussaint" color="#97d8d8" meeting="false" start="2019-10-26" duration="10" complete="0" thirdDate="2019-06-27" thirdDate-constraint="0" expand="true"/>
             <task id="1714" name="Noel" color="#97d8d8" meeting="false" start="2019-12-21" duration="17" complete="0" thirdDate="2019-06-27" thirdDate-constraint="0" expand="true"/>
             <task id="1717" name="Hivers" color="#97d8d8" meeting="false" start="2020-02-29" duration="1" complete="0" thirdDate="2019-06-27" thirdDate-constraint="0" expand="true"/>
