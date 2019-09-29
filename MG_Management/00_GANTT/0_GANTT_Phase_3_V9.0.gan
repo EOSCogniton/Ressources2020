@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Gantt EPSA" company="EPSA" webLink="http://" view-date="2019-07-22" view-index="0" gantt-divider-location="432" resource-divider-location="300" version="2.8.10" locale="fr">
+<?xml version="1.0" encoding="UTF-8"?><project name="Gantt EPSA" company="EPSA" webLink="http://" view-date="2019-08-05" view-index="0" gantt-divider-location="432" resource-divider-location="300" version="2.8.10" locale="fr">
     <description/>
     <view zooming-state="default:6" id="gantt-chart">
         <field id="tpd3" name="Nom" width="229" order="0"/>
@@ -55,12 +55,15 @@
             </task>
         </task>
         <task id="1681" name="Vacances ECL" color="#000000" meeting="false" start="2019-10-26" duration="127" complete="0" thirdDate="2019-06-27" thirdDate-constraint="0" expand="true">
-            <task id="1709" name="Toussaint" color="#97d8d8" meeting="false" start="2019-10-26" duration="10" complete="0" thirdDate="2019-06-27" thirdDate-constraint="0" expand="true"/>
-            <task id="1714" name="Noel" color="#97d8d8" meeting="false" start="2019-12-21" duration="17" complete="0" thirdDate="2019-06-27" thirdDate-constraint="0" expand="true"/>
+            <task id="1709" name="Toussaint" color="#97d8d8" meeting="false" start="2019-10-26" duration="9" complete="0" thirdDate="2019-06-27" thirdDate-constraint="0" expand="true"/>
+            <task id="1714" name="Noel" color="#97d8d8" meeting="false" start="2019-12-21" duration="16" complete="0" thirdDate="2019-06-27" thirdDate-constraint="0" expand="true"/>
             <task id="1717" name="Hivers" color="#97d8d8" meeting="false" start="2020-02-29" duration="1" complete="0" thirdDate="2019-06-27" thirdDate-constraint="0" expand="true"/>
         </task>
-        <task id="1705" name="Vacances partenaires" color="#000000" meeting="false" start="2020-06-24" duration="99" complete="0" thirdDate="2019-06-27" thirdDate-constraint="0" expand="false">
-            <task id="1721" name="Giraudière" color="#000000" meeting="false" start="2020-06-24" duration="99" complete="0" thirdDate="2019-06-27" thirdDate-constraint="0" expand="true"/>
+        <task id="1705" name="Vacances partenaires" color="#000000" meeting="false" start="2019-10-26" duration="341" complete="0" thirdDate="2019-06-27" thirdDate-constraint="0" expand="true">
+            <task id="1721" name="Giraudière" color="#000000" meeting="false" start="2019-10-26" duration="72" complete="0" thirdDate="2019-06-27" thirdDate-constraint="0" expand="true">
+                <task id="1876" name="Toussaint" color="#97d8d8" meeting="false" start="2019-10-26" duration="9" complete="0" thirdDate="2019-06-27" thirdDate-constraint="0" expand="true"/>
+                <task id="1881" name="Noel" color="#97d8d8" meeting="false" start="2019-12-21" duration="16" complete="0" thirdDate="2019-06-27" thirdDate-constraint="0" expand="true"/>
+            </task>
             <task id="1724" name="Boisard" color="#000000" meeting="false" start="2020-06-24" duration="99" complete="0" thirdDate="2019-06-27" thirdDate-constraint="0" expand="true"/>
         </task>
         <task id="1703" name="Global" color="#000000" meeting="false" start="2019-06-27" duration="363" complete="0" thirdDate="2019-06-27" thirdDate-constraint="0" expand="true">
@@ -68,10 +71,10 @@
             <task id="481" name="Carnet de conception" color="#cccccc" meeting="false" start="2019-08-01" duration="51" complete="0" thirdDate="2019-04-22" thirdDate-constraint="0" expand="true"/>
             <task id="704" name="Nomenclature" color="#cccccc" meeting="false" start="2019-08-01" duration="51" complete="0" thirdDate="2019-06-24" thirdDate-constraint="0" expand="true"/>
         </task>
-        <task id="116" name="LAS" meeting="false" start="2019-08-19" duration="110" complete="7" expand="true">
-            <task id="723" name="Cinématique" meeting="false" start="2019-08-19" duration="70" complete="40" expand="true">
-                <task id="1862" name="Gabarit de châssis" color="#ff0000" meeting="false" start="2019-09-16" duration="14" complete="0" thirdDate="2019-07-15" thirdDate-constraint="0" expand="true"/>
-                <task id="709" name="Points de LAS avant" color="#ff0000" meeting="false" start="2019-08-19" duration="42" complete="30" thirdDate="2019-06-24" thirdDate-constraint="0" expand="true">
+        <task id="116" name="LAS" meeting="false" start="2019-08-19" duration="110" complete="12" expand="true">
+            <task id="723" name="Cinématique" meeting="false" start="2019-08-19" duration="56" complete="86" expand="true">
+                <task id="1862" name="Gabarit de châssis" color="#ff0000" meeting="false" start="2019-09-16" duration="14" complete="100" thirdDate="2019-07-15" thirdDate-constraint="0" expand="true"/>
+                <task id="709" name="Points de LAS avant" color="#ff0000" meeting="false" start="2019-08-19" duration="42" complete="100" thirdDate="2019-06-24" thirdDate-constraint="0" expand="true">
                     <depend id="711" type="1" difference="0" hardness="Strong"/>
                     <depend id="731" type="2" difference="0" hardness="Strong"/>
                     <depend id="944" type="2" difference="0" hardness="Strong"/>
@@ -79,7 +82,7 @@
                 <task id="721" name="Points de LAS arrière" color="#ff0000" meeting="false" start="2019-08-26" duration="35" complete="100" thirdDate="2019-06-24" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
                     <depend id="731" type="2" difference="0" hardness="Strong"/>
                 </task>
-                <task id="731" name="Seconde itération" color="#ff0000" meeting="false" start="2019-09-30" duration="28" complete="0" thirdDate="2019-06-24" thirdDate-constraint="0" expand="true"/>
+                <task id="731" name="Seconde itération" color="#ff0000" meeting="false" start="2019-09-30" duration="14" complete="0" thirdDate="2019-06-24" thirdDate-constraint="0" expand="true"/>
             </task>
             <task id="737" name="Cas de charge" meeting="false" start="2019-09-23" duration="48" complete="0" expand="true">
                 <task id="813" name="Paul Clauzel" color="#ff0000" meeting="false" start="2019-09-23" duration="3" complete="0" thirdDate="2019-08-05" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
@@ -140,29 +143,29 @@
                 <task id="758" name="Fabricabilité" color="#ff0000" meeting="false" start="2019-11-30" duration="7" complete="0" thirdDate="2019-08-05" thirdDate-constraint="0" expand="true"/>
             </task>
             <task id="739" name="Triangles" meeting="false" start="2019-09-09" duration="80" complete="0" expand="true">
-                <task id="876" name="Choix réglage" color="#ff0000" meeting="false" start="2019-09-30" duration="7" complete="0" thirdDate="2019-07-31" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                <task id="876" name="Choix réglage" color="#ff0000" meeting="false" start="2019-10-07" duration="7" complete="0" thirdDate="2019-07-31" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
                     <notes><![CDATA[Voir Claude Rouelle : pas différents de chaque côté des biellettes
 ]]></notes>
                     <depend id="879" type="2" difference="0" hardness="Strong"/>
                     <depend id="893" type="2" difference="0" hardness="Strong"/>
                 </task>
-                <task id="893" name="Dimensionnement biellettes" color="#ff0000" meeting="false" start="2019-10-07" duration="7" complete="0" thirdDate="2019-07-31" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                <task id="893" name="Dimensionnement biellettes" color="#ff0000" meeting="false" start="2019-10-14" duration="7" complete="0" thirdDate="2019-07-31" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
                     <notes><![CDATA[
 
 ]]></notes>
                 </task>
-                <task id="879" name="Dimensionnement visserie" color="#ff0000" meeting="false" start="2019-10-07" duration="7" complete="0" thirdDate="2019-07-31" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                <task id="879" name="Dimensionnement visserie" color="#ff0000" meeting="false" start="2019-10-14" duration="7" complete="0" thirdDate="2019-07-31" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
                     <notes><![CDATA[
 ]]></notes>
                     <depend id="884" type="2" difference="0" hardness="Strong"/>
                 </task>
-                <task id="884" name="Choix rotules" color="#ff0000" meeting="false" start="2019-10-14" duration="7" complete="0" thirdDate="2019-07-31" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                <task id="884" name="Choix rotules" color="#ff0000" meeting="false" start="2019-10-21" duration="7" complete="0" thirdDate="2019-07-31" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
                     <notes><![CDATA[
 
 ]]></notes>
                     <depend id="888" type="2" difference="0" hardness="Strong"/>
                 </task>
-                <task id="888" name="Choix entretoises" color="#ff0000" meeting="false" start="2019-10-21" duration="7" complete="0" thirdDate="2019-07-31" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                <task id="888" name="Choix entretoises" color="#ff0000" meeting="false" start="2019-10-28" duration="7" complete="0" thirdDate="2019-07-31" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
                     <notes><![CDATA[
 
 ]]></notes>
