@@ -1,0 +1,31 @@
+"Jodie Rerat" <jodie.rerat@ecl19.ec-lyon.fr>;
+"Louise Andre--Matahri" <louise.andre-matahri@ecl19.ec-lyon.fr>;
+"Naomi Sakata" <naomi.sakata@ecl19.ec-lyon.fr>;
+"Leon Margraff" <leon.margraff@ecl19.ec-lyon.fr>;
+"Rémi Ferrand" <remi.ferrand@ecl19.ec-lyon.fr>;
+"Iliès Zouaoui" <ilies.zouaoui@ecl19.ec-lyon.fr>;
+"Ryan Houcine" <ryan.houcine@ecl19.ec-lyon.fr>;
+"Robin Niermarechal" <robin.niermarechal@ecl19.ec-lyon.fr>;
+"Raphaël Charlet" <raphael.charlet@ecl19.ec-lyon.fr>;
+"Matthieu Cornu" <matthieu.cornu@ecl19.ec-lyon.fr>;
+"Henrique Senhorini Katrip" <henrique.katrip@ecl19.ec-lyon.fr>;
+"Théo Lenoir" <theo.lenoir@ecl19.ec-lyon.fr>;
+"Rémi Hamon" <remi.hamon@ecl19.ec-lyon.fr>;
+"François Burel" <francois.burel@ecl19.ec-lyon.fr>;
+"Quentin Gonon" <quentin.gonon1@ecl19.ec-lyon.fr>;
+"Guillaume Saunier" <guillaume.saunier1@ecl19.ec-lyon.fr>;
+"Adèle Lefevre" <adele.lefevre@ecl19.ec-lyon.fr>;
+"Axel Volta" <axel.volta@ecl19.ec-lyon.fr>;
+"Pavlo Bozhok" <pavlo.bozhok@ecl19.ec-lyon.fr>;
+"Fabien Dupuis" <fabien.dupuis@ecl19.ec-lyon.fr>;
+"François Lathuile" <francois.lathuile@ecl19.ec-lyon.fr>;
+"Marcos Gomes" <marcos-vinicius.gomes@ecl19.ec-lyon.fr>;
+"Ariel Rodriguez Alanis" <ariel.rodriguez-alanis@ecl19.ec-lyon.fr>;
+"Ibrahima Balde" <ibrahima.balde@ecl19.ec-lyon.fr>;
+"Alexandre Brisemure" <alexandre.brisemure@ecl19.ec-lyon.fr>;
+"Phuc-Toan Nguyen" <phuc-toan.nguyen@ecl19.ec-lyon.fr>;
+"Jinhan Zhou" <jinhan.zhou@ecl19.ec-lyon.fr>;
+"Raphaël Viudès" <raphael.viudes@ecl19.ec-lyon.fr>;
+"Matthieu Ledoux" <matthieu.ledoux@ecl19.ec-lyon.fr>;
+antoine.ragusa@ecl19.ec-lyon.fr
+
