@@ -1,0 +1,33 @@
+Nom du groupe de contacts:	EPSA 2As
+
+Membres:	 
+
+Aimery Saulière	aimery.sauliere@ecl18.ec-lyon.fr
+Arthur Perdereau	arthur.perdereau@ecl16.ec-lyon.fr
+Arthur Rodriguez	arthur.rodriguez@ecl18.ec-lyon.fr
+Aurélien Bienner	aurelien.bienner@ecl16.ec-lyon.fr
+Bob Aubouin--Pairault	bob.aubouinpairault@ecl17.ec-lyon.fr
+Bruno Moreira Nabinger	bruno.moreira-nabinger@ecl18.ec-lyon.fr
+Calixthe Mattei	calixthe.mattei@ecl18.ec-lyon.fr
+Côme Archinard	come.archinard@ecl18.ec-lyon.fr
+Corentin Lepais	corentin.lepais@ecl18.ec-lyon.fr
+Enzo Pottez	enzo.pottez@ecl18.ec-lyon.fr
+Federico Orlacchio	federico.orlacchio@ecl19.ec-lyon.fr
+Ghislain Konate	ghislain.konate@ecl19.ec-lyon.fr
+Guillaume Tsilefski	guillaume.tsilefski@ecl16.ec-lyon.fr
+Jacques Moulin	jacques.moulin@ecl15.ec-lyon.fr
+Luca Ferrari	luca.ferrari@ecl19.ec-lyon.fr
+Martin Kawczynski	martin.kawczynski@ecl18.ec-lyon.fr
+Mathieu Jacquet	mathieu.jacquet@ecl18.ec-lyon.fr
+Michele Schio	michele.schio@ecl18.ec-lyon.fr
+Nicolas Gameiro	nicolas.gameiro@ecl17.ec-lyon.fr
+Pierre-Emmanuel Ariaux	pierre-emmanuel.ariaux@ecl18.ec-lyon.fr
+Pierre-Guillaume Thomas	pierre-guillaume.thomas@ecl18.ec-lyon.fr
+Romain Martin	romain.martin@ecl18.ec-lyon.fr
+Sébastien Giroix	sebastien.giroix@ecl18.ec-lyon.fr
+Tanguy Maurin	tanguy.maurin@ecl18.ec-lyon.fr
+Thibaud Lassus	thibaud.lassus@ecl18.ec-lyon.fr
+Thomas Cattin Mota De Campos	thomas.cattin-mota-de-campos@ecl18.ec-lyon.fr
+Vincent Barreau	vincent.barreau@ecl18.ec-lyon.fr
+
+

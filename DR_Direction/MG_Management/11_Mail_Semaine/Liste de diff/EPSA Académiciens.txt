@@ -1,0 +1,29 @@
+Nom du groupe de contacts:	EPSA Académiciens
+
+Membres:	 
+
+Antoine Rossé	Antoine.Rosse@ecl2015.ec-lyon.fr
+Aurelien Poissonnier	Aurelien.Poissonnier@ecl2015.ec-lyon.fr
+Bourquard Clément	Clement.Bourquard@ecl2015.ec-lyon.fr
+Clément CASTELLAN	clementcastellan@hotmail.fr
+Damien Turlay	damien.turlay@ecl13.ec-lyon.fr
+Fabien Robert	fabien.robert@ecl13.ec-lyon.fr
+Florian Petitjean	Florian.Petitjean@ecl2015.ec-lyon.fr
+hadrien bourjot	hadrien.bourjot@gmail.com
+Hanna Dassy	Hanna.Dassy@ecl2015.ec-lyon.fr
+Helston Albert	helston.albert@ecl13.ec-lyon.fr
+Jérémy GISSINGER	jeremy.gissinger@ecl13.ec-lyon.fr
+laurent bauvir	lbauvir@gmail.com
+Luc Brossard	luc.brossard@ecl13.ec-lyon.fr
+Martin Zeller	martin.zeller@ecl13.ec-lyon.fr
+Olivier Vallet	olivier.vallet@ecl2014.ec-lyon.fr
+Paul RICAUD (EPSAF	paul.ricaud@hotmail.fr
+romain guerout	romain.guerout@renault.com
+Sébastien Charpy	seb.charpy89@orange.fr
+Sebastien Tajan	sebtajan@hotmail.com
+Simon CHARAUDEAU	simon.charaudeau@gmail.com
+Stéphane Foulard	foulard@ims.tu-darmstadt.de
+thomas derouin	thomas.derouin@wanadoo.fr
+Yoann Gimbert	Yoann.Gimbert@ecl2015.ec-lyon.fr
+
+

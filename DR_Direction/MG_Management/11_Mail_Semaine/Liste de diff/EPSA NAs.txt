@@ -1,0 +1,30 @@
+Nom du groupe de contacts:	EPSA NAs
+
+Membres:	 
+
+Agostino Cembalo	agostino.cembalo@ecl18.ec-lyon.fr
+Andrea Possamai	andrea.possamai@ecl18.ec-lyon.fr
+Antoine Elain	antoine.elain@ecl16.ec-lyon.fr
+Antoine Maros	antoine.maros@ecl16.ec-lyon.fr
+Arthur Perdereau	arthur.perdereau@ecl16.ec-lyon.fr
+Aurélien Bienner	aurelien.bienner@ecl16.ec-lyon.fr
+Batiste Vidal	batiste.vidal-vidal@ecl17.ec-lyon.fr
+Benjamin Delalande	benjamin.delalande@ecl16.ec-lyon.fr
+Bob Aubouin--Pairault	bob.aubouinpairault@ecl17.ec-lyon.fr
+Brice Roblot	brice.roblot@ecl16.ec-lyon.fr
+Clement Emerique	clement.emerique@ecl17.ec-lyon.fr
+Erwan Le Feron De Longcamp	erwan.de-longcamp@ecl17.ec-lyon.fr
+Guillaume Touze	guillaume.touze@ecl16.ec-lyon.fr
+Guillaume Tsilefski	guillaume.tsilefski@ecl16.ec-lyon.fr
+Josselin Kiefel	josselin.kiefel@ecl17.ec-lyon.fr
+Ludovic De Souza Beghin	ludovic.de-souza-beghin@ecl17.ec-lyon.fr
+Mathieu Pinay	mathieu.pinay@ecl17.ec-lyon.fr
+Maxime Proriol	maxime.proriol@ecl17.ec-lyon.fr
+Michele Romanelli	michele.romanelli@ecl18.ec-lyon.fr
+Nicolas Gameiro	nicolas.gameiro@ecl17.ec-lyon.fr
+Paco Tanchon	paco.tanchon@ecl17.ec-lyon.fr
+Pierre-Alexis Corpechot	pierrealexis.corpechot@ecl17.ec-lyon.fr
+Robin Clamens	robin.clamens@ecl17.ec-lyon.fr
+Yohan Reguiai	yohan.reguiai@ecl17.ec-lyon.fr
+
+
