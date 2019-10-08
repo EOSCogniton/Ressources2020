@@ -75,7 +75,7 @@
             <task id="481" name="Carnet de conception" color="#cccccc" meeting="false" start="2019-08-01" duration="51" complete="0" thirdDate="2019-04-22" thirdDate-constraint="0" expand="true"/>
             <task id="704" name="Nomenclature" color="#cccccc" meeting="false" start="2019-08-01" duration="51" complete="0" thirdDate="2019-06-24" thirdDate-constraint="0" expand="true"/>
         </task>
-        <task id="116" name="LAS" meeting="false" start="2019-08-19" duration="117" complete="15" expand="false">
+        <task id="116" name="LAS" meeting="false" start="2019-08-19" duration="117" complete="16" expand="true">
             <task id="723" name="Cinématique" meeting="false" start="2019-08-19" duration="56" complete="86" expand="true">
                 <task id="1862" name="Gabarit de châssis" color="#ff0000" meeting="false" start="2019-09-16" duration="14" complete="100" thirdDate="2019-07-15" thirdDate-constraint="0" expand="true"/>
                 <task id="709" name="Points de LAS avant" color="#ff0000" meeting="false" start="2019-08-19" duration="42" complete="100" thirdDate="2019-06-24" thirdDate-constraint="0" expand="true">
@@ -257,12 +257,23 @@
                 </task>
                 <task id="1866" name="Durites" color="#ff0000" meeting="false" start="2019-10-28" duration="21" complete="0" thirdDate="2019-08-05" thirdDate-constraint="0" expand="true"/>
             </task>
-            <task id="1139" name="Pédalier" color="#000000" meeting="false" start="2019-09-16" duration="49" complete="0" thirdDate="2019-08-05" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
-                <task id="1143" name="Accélérateur" color="#ff0000" meeting="false" start="2019-09-16" duration="35" complete="0" thirdDate="2019-08-05" thirdDate-constraint="0" expand="true"/>
-                <task id="1145" name="Frein" color="#ff0000" meeting="false" start="2019-09-30" duration="35" complete="0" thirdDate="2019-08-05" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
+            <task id="1139" name="Pédalier" color="#000000" meeting="false" start="2019-10-02" duration="42" complete="0" thirdDate="2019-08-05" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                <task id="1145" name="Règlement et état de l'Art" color="#ff0000" meeting="false" start="2019-10-02" duration="7" complete="0" thirdDate="2019-08-05" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <depend id="1987" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="1987" name="Choix des liaisons mécaniques" color="#ff0000" meeting="false" start="2019-10-09" duration="7" complete="0" thirdDate="2019-08-05" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <depend id="1989" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="1989" name="Finir dimensionnement" color="#ff0000" meeting="false" start="2019-10-16" duration="14" complete="0" thirdDate="2019-08-05" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <depend id="1994" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="1994" name="Finir conception" color="#ff0000" meeting="false" start="2019-10-30" duration="7" complete="0" thirdDate="2019-08-05" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <depend id="1997" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="1997" name="Finir maquette" color="#ff0000" meeting="false" start="2019-11-06" duration="7" complete="0" thirdDate="2019-08-05" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
             </task>
         </task>
-        <task id="47" name="Frame" color="#000000" meeting="false" start="2019-08-12" duration="100" complete="10" thirdDate="2019-09-12" thirdDate-constraint="0" expand="false">
+        <task id="47" name="Frame" color="#000000" meeting="false" start="2019-08-12" duration="100" complete="10" thirdDate="2019-09-12" thirdDate-constraint="0" expand="true">
             <task id="1152" name="Structure tubulaire" color="#000000" meeting="false" start="2019-08-12" duration="98" complete="23" thirdDate="2019-09-12" thirdDate-constraint="0" expand="true">
                 <task id="1155" name="Premières esquisses" color="#ffcc00" meeting="false" start="2019-08-12" duration="28" complete="100" thirdDate="2019-09-12" thirdDate-constraint="0" expand="true">
                     <depend id="1160" type="2" difference="0" hardness="Strong"/>
@@ -460,6 +471,7 @@ Acquisition de données]]></notes>
         <resource id="26" name="EPZ" function="Default:0" contacts="" phone=""/>
         <resource id="27" name="SGX" function="Default:0" contacts="" phone=""/>
         <resource id="22" name="JMN" function="Default:0" contacts="" phone=""/>
+        <resource id="29" name="JRT" function="Default:0" contacts="" phone=""/>
         <resource id="19" name="CLS" function="Default:0" contacts="" phone=""/>
         <resource id="20" name="RMN" function="Default:0" contacts="" phone=""/>
         <resource id="21" name="BMA" function="Default:0" contacts="" phone=""/>
@@ -563,8 +575,17 @@ Acquisition de données]]></notes>
         <allocation task-id="950" resource-id="27" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="944" resource-id="27" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="956" resource-id="27" function="Default:0" responsible="true" load="100.0"/>
-        <allocation task-id="1143" resource-id="22" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="1145" resource-id="22" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1145" resource-id="22" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1987" resource-id="22" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1989" resource-id="22" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1994" resource-id="22" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1997" resource-id="22" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1145" resource-id="29" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1987" resource-id="29" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1989" resource-id="29" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1994" resource-id="29" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1997" resource-id="29" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="1585" resource-id="19" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="1609" resource-id="19" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="1611" resource-id="19" function="Default:0" responsible="true" load="100.0"/>
