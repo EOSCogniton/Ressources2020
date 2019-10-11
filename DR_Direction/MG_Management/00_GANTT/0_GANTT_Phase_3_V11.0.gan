@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Gantt EPSA" company="EPSA" webLink="http://" view-date="2019-07-29" view-index="0" gantt-divider-location="432" resource-divider-location="300" version="2.8.10" locale="fr">
+<?xml version="1.0" encoding="UTF-8"?><project name="Gantt EPSA" company="EPSA" webLink="http://" view-date="2019-08-26" view-index="0" gantt-divider-location="432" resource-divider-location="300" version="2.8.10" locale="fr">
     <description/>
     <view zooming-state="default:6" id="gantt-chart">
         <field id="tpd3" name="Nom" width="229" order="0"/>
@@ -56,13 +56,13 @@
                 <depend id="103" type="3" difference="0" hardness="Strong"/>
             </task>
         </task>
-        <task id="1978" name="Vacances" meeting="false" start="2019-10-26" duration="341" complete="0" expand="false">
-            <task id="1681" name="Vacances ECL" color="#000000" meeting="false" start="2019-10-26" duration="127" complete="0" thirdDate="2019-06-27" thirdDate-constraint="0" expand="false">
+        <task id="1978" name="Vacances" meeting="false" start="2019-10-26" duration="341" complete="0" expand="true">
+            <task id="1681" name="Vacances ECL" color="#000000" meeting="false" start="2019-10-26" duration="127" complete="0" thirdDate="2019-06-27" thirdDate-constraint="0" expand="true">
                 <task id="1709" name="Toussaint" color="#97d8d8" meeting="false" start="2019-10-26" duration="9" complete="0" thirdDate="2019-06-27" thirdDate-constraint="0" expand="true"/>
                 <task id="1714" name="Noel" color="#97d8d8" meeting="false" start="2019-12-21" duration="16" complete="0" thirdDate="2019-06-27" thirdDate-constraint="0" expand="true"/>
                 <task id="1717" name="Hivers" color="#97d8d8" meeting="false" start="2020-02-29" duration="1" complete="0" thirdDate="2019-06-27" thirdDate-constraint="0" expand="true"/>
             </task>
-            <task id="1705" name="Vacances partenaires" color="#000000" meeting="false" start="2019-10-26" duration="341" complete="0" thirdDate="2019-06-27" thirdDate-constraint="0" expand="false">
+            <task id="1705" name="Vacances partenaires" color="#000000" meeting="false" start="2019-10-26" duration="341" complete="0" thirdDate="2019-06-27" thirdDate-constraint="0" expand="true">
                 <task id="1721" name="Giraudière" color="#000000" meeting="false" start="2019-10-26" duration="72" complete="0" thirdDate="2019-06-27" thirdDate-constraint="0" expand="true">
                     <task id="1876" name="Toussaint" color="#97d8d8" meeting="false" start="2019-10-26" duration="9" complete="0" thirdDate="2019-06-27" thirdDate-constraint="0" expand="true"/>
                     <task id="1881" name="Noel" color="#97d8d8" meeting="false" start="2019-12-21" duration="16" complete="0" thirdDate="2019-06-27" thirdDate-constraint="0" expand="true"/>
@@ -365,15 +365,17 @@ Soltuion légère et réglable]]></notes>
                 <task id="1762" name="Concept aéro" color="#9900ff" meeting="false" start="2019-09-30" duration="14" complete="0" thirdDate="2019-09-12" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
             </task>
         </task>
-        <task id="48" name="Motorisation" color="#000000" meeting="false" start="2019-09-30" duration="51" complete="8" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true">
-            <task id="1269" name="Bride guillotine" color="#000000" meeting="false" start="2019-09-30" duration="14" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true">
+        <task id="48" name="Motorisation" color="#000000" meeting="false" start="2019-09-30" duration="51" complete="5" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true">
+            <task id="1269" name="Bride guillotine" color="#000000" meeting="false" start="2019-09-30" duration="21" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true">
                 <task id="1481" name="Analyser le diaphragme" color="#0066ff" meeting="false" start="2019-09-30" duration="14" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
                     <notes><![CDATA[Attention au pb de capteur]]></notes>
                 </task>
                 <task id="1935" name="CdCF bride guillotine" color="#0066ff" meeting="false" start="2019-09-30" duration="7" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
                 <task id="1969" name="Choisir l'architecture" color="#0066ff" meeting="false" start="2019-10-07" duration="7" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
+                <task id="2011" name="Dimensionner le système" color="#0066ff" meeting="false" start="2019-10-14" duration="7" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
+                <task id="2008" name="CatPart" color="#0066ff" meeting="false" start="2019-10-14" duration="7" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
             </task>
-            <task id="1948" name="Admission" meeting="false" start="2019-09-30" duration="14" complete="0" expand="true">
+            <task id="1948" name="Admission" meeting="false" start="2019-09-30" duration="15" complete="0" expand="true">
                 <task id="1938" name="Longueur des tubulures" color="#0066ff" meeting="false" start="2019-09-30" duration="7" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
                 <task id="1945" name="Contacter Michele Salvia" color="#0066ff" meeting="false" start="2019-09-30" duration="7" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
                     <depend id="1976" type="2" difference="0" hardness="Strong"/>
@@ -383,24 +385,30 @@ Soltuion légère et réglable]]></notes>
                     <depend id="1972" type="2" difference="0" hardness="Strong"/>
                 </task>
                 <task id="1972" name="CatPart v1" color="#0066ff" meeting="false" start="2019-10-07" duration="7" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
+                <task id="2004" name="Audit Volvo" color="#0066ff" meeting="true" start="2019-10-15" duration="0" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
             </task>
-            <task id="1272" name="Echappement" color="#000000" meeting="false" start="2019-09-30" duration="14" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true">
+            <task id="1272" name="Echappement" color="#000000" meeting="false" start="2019-09-30" duration="28" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true">
                 <task id="1509" name="Démarcher des partenaire" color="#0066ff" meeting="false" start="2019-09-30" duration="7" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
                 <task id="1922" name="Trouver le diamètre Yoshimura" color="#0066ff" meeting="false" start="2019-09-30" duration="7" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
                 <task id="1950" name="Récupération de celui d'Optimus??" color="#0066ff" meeting="false" start="2019-09-30" duration="14" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
+                <task id="2013" name="Suivre la modification du châssis en accord avec l'échappement" color="#0066ff" meeting="false" start="2019-10-14" duration="14" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
             </task>
             <task id="1275" name="Carto" color="#000000" meeting="false" start="2019-11-13" duration="7" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true">
                 <task id="1511" name="Prevoir passage au banc de Givors" color="#0066ff" meeting="false" start="2019-11-13" duration="7" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
             </task>
-            <task id="1278" name="Refroidissement" color="#000000" meeting="false" start="2019-09-30" duration="14" complete="50" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true">
+            <task id="1278" name="Refroidissement" color="#000000" meeting="false" start="2019-09-30" duration="21" complete="33" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true">
                 <task id="1513" name="Terminer le choix ouies, radiateur" color="#0066ff" meeting="false" start="2019-09-30" duration="7" complete="100" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
                 <task id="1956" name="Etude refroidissement" color="#0066ff" meeting="false" start="2019-10-07" duration="7" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
                     <notes><![CDATA[Avec deux radiateurs découplables?]]></notes>
                 </task>
+                <task id="2002" name="Dimensionner le radiateur" color="#0066ff" meeting="false" start="2019-10-14" duration="7" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <notes><![CDATA[Avec deux radiateurs découplables?]]></notes>
+                </task>
             </task>
-            <task id="1281" name="Circuit d'essence" color="#000000" meeting="false" start="2019-10-07" duration="7" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true">
+            <task id="1281" name="Circuit d'essence" color="#000000" meeting="false" start="2019-10-07" duration="14" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true">
                 <task id="1522" name="Commande rle tube de remplissage" color="#0066ff" meeting="false" start="2019-10-07" duration="7" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
                 <task id="1953" name="Circuit d'essence" color="#0066ff" meeting="false" start="2019-10-07" duration="7" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
+                <task id="1999" name="Ou placer le circuit" color="#0066ff" meeting="false" start="2019-10-14" duration="7" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
             </task>
             <task id="1284" name="Transmission secondaire" color="#000000" meeting="false" start="2019-09-30" duration="14" complete="0" thirdDate="2019-05-06" thirdDate-constraint="0" expand="true">
                 <notes><![CDATA[Ressources:
@@ -479,6 +487,7 @@ Acquisition de données]]></notes>
     <allocations>
         <allocation task-id="1511" resource-id="5" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="1950" resource-id="5" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="2013" resource-id="5" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="481" resource-id="6" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="704" resource-id="6" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="1430" resource-id="6" function="Default:0" responsible="true" load="100.0"/>
@@ -487,6 +496,7 @@ Acquisition de données]]></notes>
         <allocation task-id="1945" resource-id="6" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="1972" resource-id="6" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="1976" resource-id="6" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="2004" resource-id="6" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="1155" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="1160" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="1164" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
@@ -521,6 +531,8 @@ Acquisition de données]]></notes>
         <allocation task-id="1922" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="1953" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="1956" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1999" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="2002" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="1863" resource-id="9" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="1927" resource-id="9" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="1930" resource-id="9" function="Default:0" responsible="true" load="100.0"/>
@@ -528,6 +540,8 @@ Acquisition de données]]></notes>
         <allocation task-id="1481" resource-id="4" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="1935" resource-id="4" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="1969" resource-id="4" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="2008" resource-id="4" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="2011" resource-id="4" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="711" resource-id="11" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="709" resource-id="11" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="721" resource-id="11" function="Default:0" responsible="true" load="100.0"/>
