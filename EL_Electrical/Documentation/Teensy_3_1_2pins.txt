@@ -1,0 +1,4 @@
+https://forum.pjrc.com/threads/25643-Combined-Pin-Assignments-card#top
+
+
+https://www.pjrc.com/teensy/pinout.html -> Teensy3.2
