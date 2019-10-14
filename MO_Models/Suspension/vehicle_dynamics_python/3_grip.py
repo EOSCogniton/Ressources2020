@@ -60,21 +60,8 @@ plt.ylabel('Lateral force (N)')
 plt.grid(True)
 
 
+
 plt.figure(2)
-
-plt.clf()
-
-plt.plot(ay,LOAD_fe(0,ay*g,R_corner)/g,label='front exterior load')
-plt.plot(ay,LOAD_fi(0,ay*g,R_corner)/g,label='front interior load')
-plt.plot(ay,LOAD_re(0,ay*g,R_corner)/g,label='rear exterior load')
-plt.plot(ay,LOAD_ri(0,ay*g,R_corner)/g,label='rear interior load')
-
-plt.xlabel('Acceleration (g)')
-plt.ylabel('Vertical load (kg)')
-plt.grid(True)
-plt.legend(bbox_to_anchor=(0., 1.02, 1., .102), loc='lower left', ncol=2, mode="expand", borderaxespad=0.)
-
-plt.figure(3)
 
 plt.clf()
 
@@ -89,7 +76,7 @@ plt.grid(True)
 plt.legend(bbox_to_anchor=(0., 1.02, 1., .102), loc='lower left', ncol=2, mode="expand", borderaxespad=0.)
 
 
-plt.figure(4)
+plt.figure(3)
 
 plt.clf()
 cont=plt.contour(AY, R, Ff-Ffreq,10)
@@ -97,7 +84,7 @@ plt.clabel(cont)
 plt.xlabel('Lateral acceleration (g)')
 plt.ylabel('Corner radius (m)')
 
-plt.figure(5)
+plt.figure(4)
 
 plt.clf()
 cont=plt.contour(AY, R, Fr-Frreq,10)
@@ -105,7 +92,7 @@ plt.clabel(cont)
 plt.xlabel('Lateral acceleration (g)')
 plt.ylabel('Corner radius (m)')
 
-plt.figure(6)
+plt.figure(5)
 
 plt.clf()
 cont=plt.contour(AY, R, Fr+Ff-Frreq-Ffreq,10)
