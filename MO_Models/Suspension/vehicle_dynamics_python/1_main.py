@@ -81,7 +81,7 @@ Fr = np.sqrt(Kr_r/m*2*(w/xf))/(2*pi)
 
 #%% TIRE
 
-corr=0.483 #scaling factor
+corr=0.58 #scaling factor
 
 def Fy_max(Z):
     # with 65 kPa pression
