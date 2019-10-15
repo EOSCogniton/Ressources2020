@@ -24,11 +24,11 @@ ms= m - 4*m_wheel
 
 h_wheel = 0.235 #hauteur de la masse non suspendue ~ rayon du pneu
 h_stat=0.35
-hrc_f=0.115
-hrc_r=0.131
+hrc_f=0.100
+hrc_r=0.100
 
 w=1.575
-xf=0.785
+xf=w/2
 xr= w-xf
 
 tf=1.254
@@ -36,6 +36,8 @@ tr=1.200
 
 MR_f = 1.2
 MR_r = 1.18
+
+l = 0.205 #largeur du pneu
 
 #%% Aero
 
@@ -46,6 +48,8 @@ Cz= 2.13 #coefficient de portance
 af = 0.5
 ar = 0.5
 #%% RATES
+phi = np.arctan(2*hrc_f/(2*l+tf))-np.arctan(2*(hrc_f-0.05)/(2*l+tf))
+
 
 KT = 100000 #tire rate
 
@@ -58,7 +62,12 @@ Kw_f=Ks_f/(MR_f**2) # N/m
 Kw_r=Ks_r/(MR_r**2) # N/m
 
 #ARB rates
-RR = (2*pi/180)/(2*g) # rad/(m/s²) # desired roll rate
+RR = (1*pi/180)/(2.2*g) # rad/(m/s²) # desired roll rate
+
+cs = 1.5 #coeff de sécurité pour le roulis
+
+RR=RR/cs
+
 dh= h_stat - (xr/w)*hrc_f - (xf/w)*hrc_r # m
 
 ha = np.cos(np.arctan((hrc_r-hrc_f)/w))*dh
@@ -88,7 +97,7 @@ corr=0.58 #scaling factor
 
 def Fy_max(Z):
     # with 65 kPa pression
-    poly=np.polyfit([500,800,1100,1400],[1500,2308,2961,3461],3)
+    poly=np.polyfit([0,500,800,1100,1400],[0,1500,2308,2961,3461],3)
     return corr*np.polyval(poly,Z)
 
 

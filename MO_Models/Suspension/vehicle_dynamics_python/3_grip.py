@@ -47,10 +47,10 @@ plt.figure(1)
 
 plt.clf()
 
-plt.plot(ay,gripf,label='front Fy',color='blue',linestyle='solid')
+plt.plot(ay,gripf,label='front Fy max',color='blue',linestyle='solid')
 plt.plot(ay,m*ay*g*(xr/w),label='required front Fy',color='blue',linestyle='dashed')
 
-plt.plot(ay,gripr,label='rear Fy',color='red',linestyle='solid')
+plt.plot(ay,gripr,label='rear Fy max',color='red',linestyle='solid')
 plt.plot(ay,m*ay*g*(xf/w),label='required rear Fy',color='red',linestyle='dashed')
 
 
@@ -65,13 +65,13 @@ plt.figure(2)
 
 plt.clf()
 
-plt.plot(ay,GRIP_fe(0,ay*g,R_corner)/g,label='front exterior grip')
-plt.plot(ay,GRIP_fi(0,ay*g,R_corner)/g,label='front interior grip')
-plt.plot(ay,GRIP_re(0,ay*g,R_corner)/g,label='rear exterior grip')
-plt.plot(ay,GRIP_ri(0,ay*g,R_corner)/g,label='rear interior grip')
+plt.plot(ay,GRIP_fe(0,ay*g,R_corner),label='front exterior grip')
+plt.plot(ay,GRIP_fi(0,ay*g,R_corner),label='front interior grip')
+plt.plot(ay,GRIP_re(0,ay*g,R_corner),label='rear exterior grip')
+plt.plot(ay,GRIP_ri(0,ay*g,R_corner),label='rear interior grip')
 
 plt.xlabel('Acceleration (g)')
-plt.ylabel('Vertical load (kg)')
+plt.ylabel('Grip force (kg)')
 plt.grid(True)
 plt.legend(bbox_to_anchor=(0., 1.02, 1., .102), loc='lower left', ncol=2, mode="expand", borderaxespad=0.)
 

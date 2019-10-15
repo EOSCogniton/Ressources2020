@@ -88,13 +88,28 @@ Fr = np.sqrt(Kr_r/m*2*(w/xf))/(2*pi)
 
 #%% TIRE
 
-corr=0.58 #scaling factor
+corr=0.5 #scaling factor
 
-def Fy_max(Z):
+def Fy_max_hoosier(Z):
     # with 65 kPa pression
     poly=np.polyfit([0,667.233,444.822,1112.055,222.411,1556.877],[0,1783.995,1233.106,2692.902,676.343,3363.065],3)
     return corr*np.polyval(poly,Z)
 
+def Fy_max_continental(Z):
+    # with 65 kPa pression
+    poly=np.polyfit([0,500,800,1100,1400],[0,1500,2308,2961,3461],3)
+    return corr*np.polyval(poly,Z)
+
+
+ZZ = np.linspace(400,1500,50)
+plt.clf()
+plt.plot(ZZ,Fy_max_hoosier(ZZ),label='Hoosier ')
+plt.plot(ZZ,Fy_max_continental(ZZ),label= 'Continental C19')
+plt.grid(True)
+plt.xlabel('Fz (N)')
+plt.ylabel('Fy (N)')
+plt.legend()
+plt.show()
 
 def SA_max(Z):
     # with 65 kPa pression

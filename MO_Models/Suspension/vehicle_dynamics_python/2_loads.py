@@ -47,14 +47,17 @@ def LOAD_ri(ax,ay,R_corner):
     return m*g*(xf/w)/2 + 0.5*ar*0.5*Cz*rho*S*ay*R_corner + LONGITUDINAL_LOAD_TRANSFER_r(ax) + LATERAL_LOAD_TRANSFER_ri(ay,R_corner)
 
 
+ay = np.linspace(1,2.5,30)
+R_corner=0
+
 plt.clf()
 
-plt.plot(ay,LOAD_fe(0,ay*g,R_corner)/g,label='front exterior load')
-plt.plot(ay,LOAD_fi(0,ay*g,R_corner)/g,label='front interior load')
-plt.plot(ay,LOAD_re(0,ay*g,R_corner)/g,label='rear exterior load')
-plt.plot(ay,LOAD_ri(0,ay*g,R_corner)/g,label='rear interior load')
+plt.plot(ay,LOAD_fe(0,ay*g,R_corner),label='front exterior load')
+plt.plot(ay,LOAD_fi(0,ay*g,R_corner),label='front interior load')
+plt.plot(ay,LOAD_re(0,ay*g,R_corner),label='rear exterior load')
+plt.plot(ay,LOAD_ri(0,ay*g,R_corner),label='rear interior load')
 
 plt.xlabel('Acceleration (g)')
-plt.ylabel('Vertical load (kg)')
+plt.ylabel('Vertical load (N)')
 plt.grid(True)
 plt.legend(bbox_to_anchor=(0., 1.02, 1., .102), loc='lower left', ncol=2, mode="expand", borderaxespad=0.)
