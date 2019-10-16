@@ -1,5 +1,12 @@
 # -*- coding: utf-8 -*-
 """
+Created on Mon Oct 14 20:50:46 2019
+
+@author: Martin Kawczynski
+"""
+
+# -*- coding: utf-8 -*-
+"""
 Created on Fri Oct 11 14:33:24 2019
 
 @author: Martin Kawczynski
@@ -22,13 +29,12 @@ m_wheel=6.374
 m=m_car+m_pilot
 ms= m - 4*m_wheel
 
-h_wheel = 0.235 #hauteur de la masse non suspendue ~ rayon du pneu
 h_stat=0.35
-hrc_f=0.100
-hrc_r=0.100
+hrc_f=0.090
+hrc_r=0.106
 
 w=1.575
-xf=w/2
+xf=0.785
 xr= w-xf
 
 tf=1.254
@@ -36,8 +42,6 @@ tr=1.200
 
 MR_f = 1.2
 MR_r = 1.18
-
-l = 0.205 #largeur du pneu
 
 #%% Aero
 
@@ -48,8 +52,6 @@ Cz= 2.13 #coefficient de portance
 af = 0.5
 ar = 0.5
 #%% RATES
-phi = np.arctan(2*hrc_f/(2*l+tf))-np.arctan(2*(hrc_f-0.05)/(2*l+tf))
-
 
 KT = 100000 #tire rate
 
@@ -62,23 +64,16 @@ Kw_f=Ks_f/(MR_f**2) # N/m
 Kw_r=Ks_r/(MR_r**2) # N/m
 
 #ARB rates
-RR = (1*pi/180)/(2.2*g) # rad/(m/s²) # desired roll rate
-
-cs = 1.5 #coeff de sécurité pour le roulis
-
-RR=RR/cs
-
+RR = (2*pi/180)/(2*g) # rad/(m/s²) # desired roll rate
 dh= h_stat - (xr/w)*hrc_f - (xf/w)*hrc_r # m
-
-ha = np.cos(np.arctan((hrc_r-hrc_f)/w))*dh
 
 Qsf=Kw_f*tf**2/2 # Nm/rad
 Qsr=Kw_r*tr**2/2 # Nm/rad
 Qs=Qsf*Qsr/(Qsf+Qsr) # Nm/rad
 
-Qarb = ms*ha/RR - Qs # Nm/rad
+Qarb = ms*dh/RR - Qs # Nm/rad
 
-MN = 0.70 # magic number
+MN = 0.6 # magic number
 
 Qarb_f= MN*Qarb
 Qarb_r= (1-MN)*Qarb
@@ -93,13 +88,28 @@ Fr = np.sqrt(Kr_r/m*2*(w/xf))/(2*pi)
 
 #%% TIRE
 
-corr=0.58 #scaling factor
+corr=0.5 #scaling factor
 
-def Fy_max(Z):
+def Fy_max_hoosier(Z):
+    # with 65 kPa pression
+    poly=np.polyfit([0,667.233,444.822,1112.055,222.411,1556.877],[0,1783.995,1233.106,2692.902,676.343,3363.065],3)
+    return corr*np.polyval(poly,Z)
+
+def Fy_max_continental(Z):
     # with 65 kPa pression
     poly=np.polyfit([0,500,800,1100,1400],[0,1500,2308,2961,3461],3)
     return corr*np.polyval(poly,Z)
 
+
+ZZ = np.linspace(400,1500,50)
+plt.clf()
+plt.plot(ZZ,Fy_max_hoosier(ZZ),label='Hoosier ')
+plt.plot(ZZ,Fy_max_continental(ZZ),label= 'Continental C19')
+plt.grid(True)
+plt.xlabel('Fz (N)')
+plt.ylabel('Fy (N)')
+plt.legend()
+plt.show()
 
 def SA_max(Z):
     # with 65 kPa pression
