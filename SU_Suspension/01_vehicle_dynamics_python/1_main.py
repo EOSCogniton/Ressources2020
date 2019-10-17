@@ -11,29 +11,31 @@ from scipy.optimize import fsolve, fmin
 
 #PHYSICS
 
-g =9.81
-rho=1.18
+g =9.81 # gravité
+rho=1.18 # masse volumique air
 
 #%% CAR DATAS
-
+#masses
 m_car=215
 m_pilot=75
 m_wheel=6.374
 m=m_car+m_pilot
-ms= m - 4*m_wheel
+ms= m - 4*m_wheel #masse suspendue
 
 h_wheel = 0.235 #hauteur de la masse non suspendue ~ rayon du pneu
-h_stat=0.35
-hrc_f=0.100
-hrc_r=0.100
+h_stat=0.35 #hauteur du centre gravité
+hrc_f=0.100 #hauteur du centre de roulis avant
+hrc_r=0.100 #hauteur du centre de roulis arrière
 
-w=1.575
-xf=w/2
+w=1.575 #wheelbase
+xf=w/2 #distance centre de gravité jusqua train avant
 xr= w-xf
 
+#voies
 tf=1.254
 tr=1.200
 
+#motion ratio
 MR_f = 1.2
 MR_r = 1.18
 
@@ -45,10 +47,13 @@ l = 0.205 #largeur du pneu
 S= 1.14 #surface effective pour la déportance en m²
 Cz= 2.13 #coefficient de portance
 
+#répartition aéro
 af = 0.5
 ar = 0.5
+
 #%% RATES
-phi = np.arctan(2*hrc_f/(2*l+tf))-np.arctan(2*(hrc_f-0.05)/(2*l+tf))
+
+phi = np.arctan(2*hrc_f/(2*l+tf))-np.arctan(2*(hrc_f-0.05)/(2*l+tf)) #angle de roulis max
 
 
 KT = 100000 #tire rate
@@ -69,16 +74,15 @@ cs = 1.5 #coeff de sécurité pour le roulis
 RR=RR/cs
 
 dh= h_stat - (xr/w)*hrc_f - (xf/w)*hrc_r # m
-
 ha = np.cos(np.arctan((hrc_r-hrc_f)/w))*dh
 
-Qsf=Kw_f*tf**2/2 # Nm/rad
-Qsr=Kw_r*tr**2/2 # Nm/rad
+Qsf=Kw_f*tf**2/2 # Nm/rad #raideur en roulis des ressors avant
+Qsr=Kw_r*tr**2/2 # Nm/rad #raideur en roulis des ressors arrière
 Qs=Qsf*Qsr/(Qsf+Qsr) # Nm/rad
 
 Qarb = ms*ha/RR - Qs # Nm/rad
 
-MN = 0.70 # magic number
+MN = 0.55 # magic number répartition de raideur anti-roulis à l'avant
 
 Qarb_f= MN*Qarb
 Qarb_r= (1-MN)*Qarb

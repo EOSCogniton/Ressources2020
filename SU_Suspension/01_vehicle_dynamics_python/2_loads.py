@@ -48,7 +48,7 @@ def LOAD_ri(ax,ay,R_corner):
 
 
 ay = np.linspace(1,2.5,30)
-R_corner=0
+R_corner=40
 
 plt.clf()
 
