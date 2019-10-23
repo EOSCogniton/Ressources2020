@@ -28,7 +28,7 @@ def GRIP_total(ay,R_corner):
 R_corner = 0
 
 ay=np.linspace(1,2.5,50)
-r=np.linspace(0,50,50)
+r=np.linspace(3,50,50)
 AY, R = np.meshgrid(ay, r)
 
 Ff = GRIP_fe(0,AY*g,R)+GRIP_fi(0,AY*g,R)
@@ -71,7 +71,7 @@ plt.plot(ay,GRIP_re(0,ay*g,R_corner),label='rear exterior grip')
 plt.plot(ay,GRIP_ri(0,ay*g,R_corner),label='rear interior grip')
 
 plt.xlabel('Acceleration (g)')
-plt.ylabel('Grip force (kg)')
+plt.ylabel('Grip force (N)')
 plt.grid(True)
 plt.legend(bbox_to_anchor=(0., 1.02, 1., .102), loc='lower left', ncol=2, mode="expand", borderaxespad=0.)
 
