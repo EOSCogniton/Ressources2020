@@ -1,15 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2019-10-21" view-index="0" gantt-divider-location="358" resource-divider-location="300" version="2.8.5" locale="fr">
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2019-10-21" view-index="0" gantt-divider-location="779" resource-divider-location="958" version="2.8.10" locale="en_GB">
     <description/>
-    <view zooming-state="default:6" id="gantt-chart">
-        <field id="tpd3" name="Nom" width="186" order="0"/>
-        <field id="tpd4" name="Date de début" width="84" order="1"/>
-        <field id="tpd5" name="Date de fin" width="84" order="2"/>
+    <view zooming-state="default:4" id="gantt-chart">
+        <field id="tpd3" name="Name" width="368" order="0"/>
+        <field id="tpd4" name="Begin date" width="125" order="1"/>
+        <field id="tpd5" name="End date" width="107" order="2"/>
+        <field id="tpd7" name="Completion" width="67" order="4"/>
+        <field id="tpd13" name="Resources" width="108" order="3"/>
+        <option id="taskLabelUp" value=""/>
         <option id="taskLabelRight" value="resources"/>
-        <option id="color.recent"><![CDATA[#000000 #ffff00 #ff0000 #3333ff]]></option>
+        <option id="color.recent"><![CDATA[#ffff00 #ff6600 #3333ff #ff0000 #00cc66 #ff00cc #e1e1e1 #000000]]></option>
     </view>
     <view id="resource-table">
-        <field id="0" name="Nom" width="210" order="0"/>
-        <field id="1" name="Rôle par défaut" width="86" order="1"/>
+        <field id="0" name="Name" width="551" order="0"/>
+        <field id="1" name="Default role" width="247" order="1"/>
+        <field id="tpc0" name="trigramme" width="156" order="2"/>
     </view>
     <!-- -->
     <calendars>
@@ -35,21 +39,140 @@
             <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
             <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
         </taskproperties>
-        <task id="7" name="TOPs" meeting="false" start="2019-10-16" duration="153" complete="0" expand="true">
-            <task id="12" name="Top Synthèse" color="#000000" meeting="true" start="2019-10-16" duration="0" complete="0" expand="true"/>
-            <task id="14" name="Revues pré Top Copeau" color="#ffff00" meeting="false" start="2019-11-18" duration="14" complete="0" expand="true"/>
-            <task id="10" name="Top Copeau" color="#000000" meeting="true" start="2019-12-03" duration="0" complete="0" expand="true"/>
-            <task id="9" name="Limite TOP Copeau" color="#ff0000" meeting="true" start="2019-12-11" duration="0" complete="0" expand="true"/>
-            <task id="41" name="Top Organe" color="#000000" meeting="true" start="2020-02-05" duration="0" complete="0" expand="true"/>
-            <task id="42" name="Top Véhicule" color="#000000" meeting="true" start="2020-02-26" duration="0" complete="0" expand="true"/>
-            <task id="43" name="Top Moteur" color="#000000" meeting="true" start="2020-03-17" duration="0" complete="0" expand="true"/>
-        </task>
-        <task id="8" name="Vacances" meeting="false" start="2019-10-26" duration="135" complete="0" expand="true">
-            <task id="17" name="Centrale" meeting="false" start="2019-10-26" duration="135" complete="0" expand="true">
-                <task id="58" name="Toussaint" color="#8cb6ce" meeting="false" start="2019-10-26" duration="9" complete="0" expand="true"/>
-                <task id="21" name="Noël" color="#8cb6ce" meeting="false" start="2019-12-21" duration="16" complete="0" expand="true"/>
-                <task id="59" name="Février" color="#8cb6ce" meeting="false" start="2020-02-29" duration="9" complete="0" expand="true"/>
+        <task id="73" name="SU_Suspension" color="#3333ff" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+            <task id="79" name="SU_A0100 A-Arms front upper" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
+                <task id="148" name="design" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[Catia
+]]></notes>
+                </task>
+                <task id="258" name="devis" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="149" name="simulation" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[simulation EF]]></notes>
+                </task>
+                <task id="155" name="rotules" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="156" name="collage triangles" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="158" name="inserts" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
             </task>
+            <task id="100" name="SU_A0200 A-Arms front lower" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
+                <task id="150" name="design" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="151" name="simulation" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            </task>
+            <task id="101" name="SU_A0300 A-Arms rear upper" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
+                <task id="152" name="design" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="153" name="simulation" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            </task>
+            <task id="103" name="SU_A0400 A-Arms rear lower" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
+                <task id="160" name="design" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="162" name="simulation" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            </task>
+            <task id="104" name="SU_A05  A07 Shocks" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
+                <task id="164" name="maintenance kit" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
+                <task id="166" name="shock choice" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
+            </task>
+            <task id="105" name="SU_A0600 Bell Cranks Front" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
+                <task id="168" name="design" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="170" name="simulation" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            </task>
+            <task id="107" name="SU_A0800 Bell Cranks Rear" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
+                <task id="180" name="design" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="182" name="simulation" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            </task>
+            <task id="108" name="SU_A0900 Tie Rod - Rear" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
+                <task id="184" name="design" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="186" name="simulation" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            </task>
+            <task id="109" name="SU_A1000 Front Uprights" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
+                <task id="188" name="design" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="190" name="simulation" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            </task>
+            <task id="110" name="SU_A1100 Rear Uprights" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
+                <task id="192" name="design" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="194" name="simulation" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            </task>
+            <task id="111" name="SU_A1200 Push/Pullrod Front" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
+                <task id="196" name="design" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="198" name="simulation" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            </task>
+            <task id="112" name="SU_A1300 Push/Pullrod Rear" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
+                <task id="200" name="design" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="202" name="simulation" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            </task>
+            <task id="113" name="SU_A1400 Anti Roll Bar Front" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
+                <task id="204" name="design" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="206" name="simulation" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            </task>
+            <task id="114" name="rotules" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
+                <task id="207" name="maker choice" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="208" name="model choice" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            </task>
+        </task>
+        <task id="74" name="BR_BrakeSystem" color="#ff0000" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
+            <task id="80" name="BR_A0100 brake system front" color="#ff0000" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                <task id="230" name="budget" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="209" name="brake disc" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="210" name="brake caliper" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="211" name="plaquettes" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="212" name="frette" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="213" name="visserie" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            </task>
+            <task id="81" name="BR_A0200 brake system rear" color="#ff0000" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                <task id="232" name="budget" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="215" name="brake disc" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="217" name="brake caliper" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="219" name="plaquettes" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="221" name="frette" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="223" name="visserie" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            </task>
+            <task id="83" name="BR_A0300 master cylinder" color="#ff0000" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                <task id="233" name="budget" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            </task>
+            <task id="84" name="BR_A0400 balance bar" color="#ff0000" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                <task id="234" name="budget" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            </task>
+        </task>
+        <task id="75" name="WT_wheels" color="#ffff00" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+            <task id="98" name="WT_A0100 Wheels" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
+                <task id="235" name="jantes" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="236" name="pneus compet" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="237" name="pneus rally" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            </task>
+            <task id="131" name="WT_A0200 Front Hub" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
+                <task id="238" name="design" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
+                <task id="242" name="visserie" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="241" name="simulation" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            </task>
+            <task id="132" name="WTA03 Rear Hub" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
+                <task id="244" name="design" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
+                <task id="246" name="visserie" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="248" name="simulation" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            </task>
+        </task>
+        <task id="76" name="ST_Steering" color="#ff6600" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+            <task id="135" name="ST_A0100 Steering Wheel" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
+                <task id="249" name="budget" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            </task>
+            <task id="136" name="ST_A0200 Steering Shaft" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
+                <task id="250" name="budget" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            </task>
+            <task id="137" name="ST_A0300 Steering Rack" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
+                <task id="251" name="budget" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            </task>
+            <task id="138" name="ST_A0400 Tie Rods" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
+                <task id="252" name="design" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="253" name="simulation" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            </task>
+        </task>
+        <task id="78" name="Partenaires" color="#ff00cc" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
+        <task id="77" name="Budget" color="#00cc66" meeting="false" start="2019-10-21" duration="18" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+            <task id="144" name="suspension" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            <task id="145" name="brake" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            <task id="146" name="wheels" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            <task id="147" name="steering" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            <task id="254" name="envoyer devis à Romain" color="#8cb6ce" meeting="true" start="2019-11-08" duration="0" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                <notes><![CDATA[tot depenses sur 2800 € centrale + 3000€ bron]]></notes>
+            </task>
+        </task>
+        <task id="8" name="Vacances" meeting="false" start="2019-10-26" duration="135" complete="0" expand="false">
             <task id="18" name="La Gir" meeting="false" start="2019-12-21" duration="16" complete="0" expand="true">
                 <task id="63" name="Noel" color="#8cb6ce" meeting="false" start="2019-12-21" duration="16" complete="0" expand="true"/>
             </task>
@@ -59,23 +182,58 @@
             <task id="20" name="Boisard" meeting="false" start="2019-12-21" duration="16" complete="0" expand="true">
                 <task id="72" name="Noel" color="#8cb6ce" meeting="false" start="2019-12-21" duration="16" complete="0" expand="true"/>
             </task>
-        </task>
-        <task id="0" name="LAS" meeting="false" start="2019-11-24" duration="2" complete="0" expand="true">
-            <task id="1" name="Roue équipée" meeting="false" start="2019-11-24" duration="2" complete="0" expand="true">
-                <task id="2" name="PM" color="#8cb6ce" meeting="false" start="2019-11-24" duration="1" complete="0" expand="true">
-                    <depend id="3" type="2" difference="0" hardness="Strong"/>
-                </task>
-                <task id="3" name="Moyeu" color="#8cb6ce" meeting="false" start="2019-11-25" duration="1" complete="0" expand="true"/>
+            <task id="17" name="Centrale" meeting="false" start="2019-10-26" duration="135" complete="0" expand="true">
+                <task id="58" name="Toussaint" color="#8cb6ce" meeting="false" start="2019-10-26" duration="9" complete="0" expand="true"/>
+                <task id="21" name="Noël" color="#8cb6ce" meeting="false" start="2019-12-21" duration="16" complete="0" expand="true"/>
+                <task id="59" name="Février" color="#8cb6ce" meeting="false" start="2020-02-29" duration="9" complete="0" expand="true"/>
             </task>
+        </task>
+        <task id="7" name="TOPs" meeting="false" start="2019-10-16" duration="153" complete="0" expand="false">
+            <task id="12" name="Top Synthèse" color="#000000" meeting="true" start="2019-10-16" duration="0" complete="0" expand="true"/>
+            <task id="14" name="Revues pré Top Copeau" color="#ffff00" meeting="false" start="2019-11-18" duration="14" complete="0" expand="true"/>
+            <task id="10" name="Top Copeau" color="#000000" meeting="true" start="2019-12-03" duration="0" complete="0" expand="true"/>
+            <task id="9" name="Limite TOP Copeau" color="#ff0000" meeting="true" start="2019-12-11" duration="0" complete="0" expand="true"/>
+            <task id="41" name="Top Organe" color="#000000" meeting="true" start="2020-02-05" duration="0" complete="0" expand="true"/>
+            <task id="42" name="Top Véhicule" color="#000000" meeting="true" start="2020-02-26" duration="0" complete="0" expand="true"/>
+            <task id="43" name="Top Moteur" color="#000000" meeting="true" start="2020-03-17" duration="0" complete="0" expand="true"/>
         </task>
     </tasks>
     <resources>
-        <resource id="0" name="MSO" function="Default:0" contacts="" phone=""/>
+        <custom-property-definition id="tpc0" name="trigramme" type="text"/>
+        <resource id="0" name="Michele SCHIO" function="Default:0" contacts="" phone="">
+            <custom-property definition-id="tpc0" value="MSO"/>
+        </resource>
         <resource id="1" name="TLS" function="Default:0" contacts="" phone=""/>
+        <resource id="2" name="Rémi FERRAND" function="Default:0" contacts="" phone="">
+            <custom-property definition-id="tpc0" value="RFD"/>
+        </resource>
+        <resource id="3" name="Robin NIERMARECHAL" function="Default:0" contacts="" phone="">
+            <custom-property definition-id="tpc0" value="RNL"/>
+        </resource>
+        <resource id="4" name="Raphaël CHARLET" function="Default:0" contacts="" phone="">
+            <custom-property definition-id="tpc0" value="RCT"/>
+        </resource>
+        <resource id="5" name="Matthieu CORNU" function="Default:0" contacts="" phone="">
+            <custom-property definition-id="tpc0" value="MCU"/>
+        </resource>
+        <resource id="6" name="Adèle LEFEVRE" function="Default:0" contacts="" phone="">
+            <custom-property definition-id="tpc0" value="ALE"/>
+        </resource>
+        <resource id="7" name="Pierre-Emmanuel ARIAUX" function="Default:0" contacts="" phone="">
+            <custom-property definition-id="tpc0" value="PAX"/>
+        </resource>
+        <resource id="8" name="Enzo POTTEZ" function="Default:0" contacts="" phone="">
+            <custom-property definition-id="tpc0" value="EPZ"/>
+        </resource>
+        <resource id="9" name="Sébastien GIROIX" function="Default:0" contacts="" phone="">
+            <custom-property definition-id="tpc0" value="SGX"/>
+        </resource>
+        <resource id="10" name="Martin KWCY" function="Default:0" contacts="" phone="">
+            <custom-property definition-id="tpc0" value="MKI"/>
+        </resource>
     </resources>
     <allocations>
-        <allocation task-id="2" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
-        <allocation task-id="3" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="254" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
     </allocations>
     <vacations/>
     <previous/>
