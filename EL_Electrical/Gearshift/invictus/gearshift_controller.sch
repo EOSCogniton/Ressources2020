@@ -13439,6 +13439,8 @@ In this library the device names are the same as the pin names of the symbols, t
 <part name="SUPPLY4" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND1" device="" value="GND_DTA"/>
 <part name="SUPPLY5" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND1" device="" value="GND_DTA"/>
 <part name="CONN_DTA" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="22-?-07" device="05-7078" package3d_urn="urn:adsk.eagle:package:8078654/1"/>
+<part name="R23" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="1k"/>
+<part name="+3V1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -14791,8 +14793,10 @@ www.watterott.com</text>
 <wire x1="10.16" y1="-2.54" x2="10.16" y2="25.4" width="0.1524" layer="97"/>
 <wire x1="10.16" y1="25.4" x2="66.04" y2="25.4" width="0.1524" layer="97"/>
 <wire x1="66.04" y1="25.4" x2="66.04" y2="-2.54" width="0.1524" layer="97"/>
-<text x="88.9" y="-17.78" size="1.778" layer="97" rot="R180">TODO: vérifier ce RESET, si l'on a besoin de connecter au Teensy 
- ou si l'on peut utiliser un capaciteur + diode (cf Datasheet 2515)</text>
+<text x="81.28" y="-12.7" size="1.778" layer="97" rot="R180">TODO: Le RESET peut soit être connecté au Teensy,
+ soit fait avec un circuit RC + diode,
+ soit fait par software, SPI Reset - Reset via SPI command 
+(cf. Datasheet 2515 p.57/94)</text>
 <wire x1="66.04" y1="-2.54" x2="10.16" y2="-2.54" width="0.1524" layer="97"/>
 </plain>
 <instances>
@@ -14814,16 +14818,16 @@ www.watterott.com</text>
 <instance part="QUARTZ_16_MHZ1" gate="G$1" x="22.86" y="45.72" smashed="yes" rot="R90">
 <attribute name="NAME" x="17.78" y="72.39" size="1.778" layer="95" rot="R270" align="center-left"/>
 </instance>
-<instance part="R19" gate="G$1" x="116.84" y="58.42" smashed="yes" rot="R270">
-<attribute name="NAME" x="118.3386" y="62.23" size="1.778" layer="95" rot="R270"/>
-<attribute name="VALUE" x="118.618" y="57.15" size="1.778" layer="96" rot="R270"/>
+<instance part="R19" gate="G$1" x="114.3" y="53.34" smashed="yes" rot="R270">
+<attribute name="NAME" x="115.7986" y="57.15" size="1.778" layer="95" rot="R270"/>
+<attribute name="VALUE" x="116.078" y="52.07" size="1.778" layer="96" rot="R270"/>
 </instance>
-<instance part="SW2" gate="G$1" x="116.84" y="45.72" smashed="yes" rot="R270">
-<attribute name="NAME" x="120.396" y="48.26" size="1.27" layer="95" rot="R270"/>
-<attribute name="VALUE" x="114.554" y="48.26" size="1.27" layer="96" rot="R270"/>
+<instance part="SW2" gate="G$1" x="114.3" y="43.18" smashed="yes" rot="R270">
+<attribute name="NAME" x="117.856" y="45.72" size="1.27" layer="95" rot="R270"/>
+<attribute name="VALUE" x="112.014" y="45.72" size="1.27" layer="96" rot="R270"/>
 </instance>
-<instance part="GND11" gate="1" x="127" y="63.5" smashed="yes">
-<attribute name="VALUE" x="124.46" y="60.96" size="1.778" layer="96"/>
+<instance part="GND11" gate="1" x="129.54" y="63.5" smashed="yes">
+<attribute name="VALUE" x="127" y="60.96" size="1.778" layer="96"/>
 </instance>
 <instance part="C1" gate="G$1" x="22.86" y="43.18" smashed="yes">
 <attribute name="NAME" x="16.764" y="43.561" size="1.778" layer="95"/>
@@ -14836,8 +14840,8 @@ www.watterott.com</text>
 <instance part="GND12" gate="1" x="33.02" y="73.66" smashed="yes">
 <attribute name="VALUE" x="30.48" y="71.12" size="1.778" layer="96"/>
 </instance>
-<instance part="GND13" gate="1" x="116.84" y="35.56" smashed="yes">
-<attribute name="VALUE" x="114.3" y="33.02" size="1.778" layer="96"/>
+<instance part="GND13" gate="1" x="114.3" y="35.56" smashed="yes">
+<attribute name="VALUE" x="111.76" y="33.02" size="1.778" layer="96"/>
 </instance>
 <instance part="FRAME2" gate="G$1" x="-60.96" y="-35.56" smashed="yes">
 <attribute name="DRAWING_NAME" x="157.48" y="-20.32" size="2.54" layer="94"/>
@@ -14846,6 +14850,13 @@ www.watterott.com</text>
 </instance>
 <instance part="+3V7" gate="G$1" x="119.38" y="78.74" smashed="yes">
 <attribute name="VALUE" x="116.84" y="73.66" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="R23" gate="G$1" x="121.92" y="53.34" smashed="yes" rot="R270">
+<attribute name="NAME" x="123.4186" y="57.15" size="1.778" layer="95" rot="R270"/>
+<attribute name="VALUE" x="123.698" y="52.07" size="1.778" layer="96" rot="R270"/>
+</instance>
+<instance part="+3V1" gate="G$1" x="121.92" y="63.5" smashed="yes">
+<attribute name="VALUE" x="119.38" y="58.42" size="1.778" layer="96" rot="R90"/>
 </instance>
 </instances>
 <busses>
@@ -14868,7 +14879,7 @@ www.watterott.com</text>
 <pinref part="C9" gate="G$1" pin="2"/>
 <wire x1="104.14" y1="66.04" x2="111.76" y2="66.04" width="0.1524" layer="91"/>
 <pinref part="GND11" gate="1" pin="GND"/>
-<wire x1="127" y1="66.04" x2="111.76" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="129.54" y1="66.04" x2="111.76" y2="66.04" width="0.1524" layer="91"/>
 <junction x="111.76" y="66.04"/>
 </segment>
 <segment>
@@ -14879,7 +14890,6 @@ www.watterott.com</text>
 <segment>
 <pinref part="SW2" gate="G$1" pin="P$2"/>
 <pinref part="GND13" gate="1" pin="GND"/>
-<wire x1="116.84" y1="40.64" x2="116.84" y2="38.1" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="CS" class="0">
@@ -14912,9 +14922,10 @@ www.watterott.com</text>
 </net>
 <net name="N$11" class="0">
 <segment>
-<wire x1="93.98" y1="63.5" x2="116.84" y2="63.5" width="0.1524" layer="91"/>
 <pinref part="IC2" gate="G$1" pin="!RESET"/>
 <pinref part="R19" gate="G$1" pin="1"/>
+<wire x1="114.3" y1="58.42" x2="114.3" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="114.3" y1="63.5" x2="93.98" y2="63.5" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="INT" class="0">
@@ -14928,10 +14939,12 @@ www.watterott.com</text>
 <segment>
 <pinref part="R19" gate="G$1" pin="2"/>
 <pinref part="SW2" gate="G$1" pin="P$1"/>
-<wire x1="116.84" y1="53.34" x2="116.84" y2="50.8" width="0.1524" layer="91"/>
-<label x="124.46" y="53.34" size="1.778" layer="95" xref="yes"/>
-<wire x1="116.84" y1="53.34" x2="124.46" y2="53.34" width="0.1524" layer="91"/>
-<junction x="116.84" y="53.34"/>
+<label x="124.46" y="48.26" size="1.778" layer="95" xref="yes"/>
+<wire x1="114.3" y1="48.26" x2="121.92" y2="48.26" width="0.1524" layer="91"/>
+<junction x="114.3" y="48.26"/>
+<pinref part="R23" gate="G$1" pin="2"/>
+<wire x1="121.92" y1="48.26" x2="124.46" y2="48.26" width="0.1524" layer="91"/>
+<junction x="121.92" y="48.26"/>
 </segment>
 </net>
 <net name="CAN-TXD-SOFTWARE" class="0">
@@ -14961,6 +14974,11 @@ www.watterott.com</text>
 <junction x="111.76" y="73.66"/>
 <wire x1="119.38" y1="73.66" x2="119.38" y2="76.2" width="0.1524" layer="91"/>
 <pinref part="+3V7" gate="G$1" pin="+3V3"/>
+</segment>
+<segment>
+<pinref part="R23" gate="G$1" pin="1"/>
+<pinref part="+3V1" gate="G$1" pin="+3V3"/>
+<wire x1="121.92" y1="58.42" x2="121.92" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$3" class="0">
