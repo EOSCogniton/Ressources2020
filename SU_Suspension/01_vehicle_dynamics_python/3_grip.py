@@ -25,7 +25,7 @@ def GRIP_total(ay,R_corner):
     
 
 
-R_corner = 0
+R_corner = 45
 
 ay=np.linspace(1,2.5,50)
 r=np.linspace(3,50,50)

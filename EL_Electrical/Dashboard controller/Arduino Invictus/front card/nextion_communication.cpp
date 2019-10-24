@@ -51,7 +51,7 @@ void startDisplay(int blueShiftPin,int redShiftPin){
   setShiftLight(redShiftPin,true);
   //Voir avec Bruno pour la commande d'affichage lumineux des boutons
   delay(2000);
-  //Sets the screen at its working page
+  //Sets the screen at its work state
   Serial2.print("Page ");
   Serial2.print(1);
   nextion_endMessage();
