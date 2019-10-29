@@ -61,13 +61,33 @@
             </task>
         </task>
         <task id="88" name="Motorisation" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
-            <task id="89" name="Admission" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-            <task id="94" name="Bride" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-            <task id="95" name="Guillotine" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-            <task id="90" name="Echappement" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-            <task id="92" name="Transmission secondaire" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-            <task id="91" name="Circuit d'essence" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-            <task id="93" name="Refroidissement" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            <task id="96" name="EN_A0100 : Moteur" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
+                <task id="109" name="tâche_108" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            </task>
+            <task id="97" name="EN_A0200 : Echappement" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
+                <task id="110" name="tâche_105" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            </task>
+            <task id="98" name="EN_A0300 : Admission" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
+                <task id="111" name="tâche_106" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            </task>
+            <task id="99" name="EN_A0400 : Bride / guillotine" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
+                <task id="117" name="tâche_107" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            </task>
+            <task id="100" name="EN_A0500 : Réservoir" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
+                <task id="118" name="tâche_112" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            </task>
+            <task id="101" name="EN_A0600 : Circuit d'essence" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
+                <task id="119" name="tâche_113" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            </task>
+            <task id="102" name="EN_A0700 : Catch cans" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
+                <task id="120" name="tâche_114" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            </task>
+            <task id="103" name="EN_A0800 : Refroidissement" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
+                <task id="121" name="tâche_115" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            </task>
+            <task id="104" name="EN_A0900 : Transmission secondaire" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
+                <task id="116" name="tâche_116" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            </task>
         </task>
     </tasks>
     <resources/>

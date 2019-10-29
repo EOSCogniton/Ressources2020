@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2019-10-21" view-index="0" gantt-divider-location="358" resource-divider-location="300" version="2.8.5" locale="fr">
     <description/>
     <view zooming-state="default:6" id="gantt-chart">
-        <field id="tpd3" name="Nom" width="186" order="0"/>
-        <field id="tpd4" name="Date de début" width="84" order="1"/>
-        <field id="tpd5" name="Date de fin" width="84" order="2"/>
+        <field id="tpd3" name="Nom" width="178" order="0"/>
+        <field id="tpd4" name="Date de début" width="81" order="1"/>
+        <field id="tpd5" name="Date de fin" width="80" order="2"/>
         <option id="taskLabelRight" value="resources"/>
         <option id="color.recent"><![CDATA[#000000 #ffff00 #ff0000 #3333ff]]></option>
     </view>
@@ -61,15 +61,36 @@
             </task>
         </task>
         <task id="88" name="Châssis équipé" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
-            <task id="89" name="Structure Tubulaire" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-            <task id="90" name="Pédalier" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-            <task id="91" name="Pare feu" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-            <task id="92" name="Impact attenuator plate" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-            <task id="93" name="Support batterie" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-            <task id="94" name="Poignée d'embrayage" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-            <task id="95" name="Crash box" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-            <task id="96" name="Ergonomie" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-            <task id="97" name="Appuie tête" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            <task id="93" name="EL_A0300 : Support batterie" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
+                <task id="110" name="tâche_100" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            </task>
+            <task id="98" name="FR_A0100 : Structure tubulaire" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
+                <task id="111" name="tâche_101" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            </task>
+            <task id="95" name="FR_A0200 : Crash box" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
+                <task id="112" name="tâche_102" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            </task>
+            <task id="90" name="FR_A0300 : Pédalier" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
+                <task id="113" name="tâche_103" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            </task>
+            <task id="99" name="FR_A0400 : Fond plat" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
+                <task id="114" name="tâche_104" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            </task>
+            <task id="94" name="FR_A0500 : Poignée d'embrayage" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
+                <task id="115" name="tâche_105" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            </task>
+            <task id="91" name="MS_A0100 : Pare feu" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
+                <task id="116" name="tâche_106" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            </task>
+            <task id="97" name="MS_A0300 : Appuie tête" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
+                <task id="117" name="tâche_107" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            </task>
+            <task id="92" name="Impact attenuator plate" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
+                <task id="118" name="tâche_108" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            </task>
+            <task id="96" name="Ergonomie" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
+                <task id="109" name="tâche_109" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            </task>
         </task>
     </tasks>
     <resources/>
