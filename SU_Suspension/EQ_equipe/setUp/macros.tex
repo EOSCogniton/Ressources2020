@@ -1,0 +1,20 @@
+
+% here figure
+\newcommand{\hfigure}[4][.8\linewidth]{
+\begin{minipage}{\textwidth}
+    \centering
+    \includegraphics[width=#1]{#2}
+    \captionof{figure}{#3}
+    \label{fig:#4}
+\end{minipage}
+}
+
+% here table
+\newcommand{\htable}[4][.8\linewidth]{
+\begin{minipage}{\textwidth}
+    \centering
+    \includegraphics[width=#1]{#2}
+    \captionof{table}{#3}
+    \label{tab:#4}
+\end{minipage}
+}

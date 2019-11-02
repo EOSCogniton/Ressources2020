@@ -1,0 +1,134 @@
+Name,Begin date,End date,Duration,Completion,Resources,Assignments,Notes
+SU_Suspension,21/10/19,21/10/19,1,0,,,"Devis, Budget, définitions des prioritées. répartition des taches aux membres de l'équipe ( bcp de pièces sont encore à commencer)"
+"  SU_A0100 A-Arms front upper",21/10/19,21/10/19,1,0,,,
+"    design",21/10/19,21/10/19,1,0,Michele SCHIO;Raphaël CHARLET,0:100.00;4:100.00,"Catia
+"
+"    devis",21/10/19,21/10/19,1,0,,,
+"    simulation",21/10/19,21/10/19,1,0,,,simulation EF
+"    rotules",21/10/19,21/10/19,1,0,,,
+"    collage triangles",21/10/19,21/10/19,1,0,Enzo POTTEZ,8:100.00,
+"    inserts",21/10/19,21/10/19,1,0,Raphaël CHARLET,4:100.00,
+"  SU_A0200 A-Arms front lower",21/10/19,21/10/19,1,0,,,same thing as in front upper
+"    design",21/10/19,21/10/19,1,0,Michele SCHIO;Raphaël CHARLET,0:100.00;4:100.00,
+"    simulation",21/10/19,21/10/19,1,0,,,
+"  SU_A0300 A-Arms rear upper",21/10/19,21/10/19,1,0,,,
+"    design",21/10/19,21/10/19,1,0,,,
+"    simulation",21/10/19,21/10/19,1,0,,,
+"  SU_A0400 A-Arms rear lower",21/10/19,21/10/19,1,0,,,
+"    design",21/10/19,21/10/19,1,0,,,
+"    simulation",21/10/19,21/10/19,1,0,,,
+"  SU_A05  A07 Shocks",21/10/19,21/10/19,1,0,,,
+"    maintenance kit",21/10/19,21/10/19,1,0,,,to repair the shocks from Optimus
+"    shock choice",21/10/19,21/10/19,1,0,,,"determiner la raideur des ressorts (parmi celles à disposition). Normalement c'est déjà fait par MKI --> fichiers de calcul dans le git Ressources2020 "
+"  SU_A0600 Bell Cranks Front",21/10/19,21/10/19,1,0,,,
+"    design",21/10/19,21/10/19,1,0,Robin NIERMARECHAL,3:100.00,
+"    simulation",21/10/19,21/10/19,1,0,,,
+"  SU_A0800 Bell Cranks Rear",21/10/19,21/10/19,1,0,,,
+"    design",21/10/19,21/10/19,1,0,Matthieu CORNU,5:100.00,
+"    simulation",21/10/19,21/10/19,1,0,,,
+"  SU_A0900 Tie Rod - Rear",21/10/19,21/10/19,1,0,,,
+"    design",21/10/19,21/10/19,1,0,,,
+"    simulation",21/10/19,21/10/19,1,0,,,
+"  SU_A1000 Front Uprights",21/10/19,21/10/19,1,0,,,
+"    design",21/10/19,21/10/19,1,0,Michele SCHIO,0:100.00,
+"    simulation",21/10/19,21/10/19,1,0,,,
+"  SU_A1100 Rear Uprights",21/10/19,21/10/19,1,0,,,
+"    design",21/10/19,21/10/19,1,0,Michele SCHIO,0:100.00,
+"    simulation",21/10/19,21/10/19,1,0,,,
+"  SU_A1200 Push/Pullrod Front",21/10/19,21/10/19,1,0,,,
+"    design",21/10/19,21/10/19,1,0,,,
+"    simulation",21/10/19,21/10/19,1,0,,,
+"  SU_A1300 Push/Pullrod Rear",21/10/19,21/10/19,1,0,,,
+"    design",21/10/19,21/10/19,1,0,,,
+"    simulation",21/10/19,21/10/19,1,0,,,
+"  SU_A1400 Anti Roll Bar Front",21/10/19,21/10/19,1,0,,,
+"    design",21/10/19,21/10/19,1,0,Pierre-Emmanuel ARIAUX,7:100.00,
+"    simulation",21/10/19,21/10/19,1,0,,,
+"  Rotules",21/10/19,21/10/19,1,0,Michele SCHIO,0:100.00,"pièces dans différents assemblages, il faut communiquer le choix aux respos"
+"    maker choice",21/10/19,21/10/19,1,0,,,
+"    model choice",21/10/19,21/10/19,1,0,,,
+Visserie,21/10/19,21/10/19,1,0,,,la macro de Brice n'a pas été mise en place
+"  rules critical fasteners",21/10/19,21/10/19,1,0,,,"detail du type de visserie à acheter
+"
+BR_BrakeSystem,21/10/19,21/10/19,1,0,,,
+"  BR_A0100 brake system front",21/10/19,21/10/19,1,0,,,
+"    budget",21/10/19,21/10/19,1,0,,,
+"    brake disc",21/10/19,21/10/19,1,0,,,
+"    brake caliper",21/10/19,21/10/19,1,0,,,
+"    plaquettes",21/10/19,21/10/19,1,0,,,
+"    frette",21/10/19,21/10/19,1,0,,,
+"    visserie",21/10/19,21/10/19,1,0,,,
+"  BR_A0200 brake system rear",21/10/19,21/10/19,1,0,,,
+"    budget",21/10/19,21/10/19,1,0,,,
+"    brake disc",21/10/19,21/10/19,1,0,,,
+"    brake caliper",21/10/19,21/10/19,1,0,,,
+"    plaquettes",21/10/19,21/10/19,1,0,,,
+"    frette",21/10/19,21/10/19,1,0,,,
+"    visserie",21/10/19,21/10/19,1,0,,,
+"  BR_A0300 master cylinder",21/10/19,21/10/19,1,0,,,
+"    budget",21/10/19,21/10/19,1,0,,,
+"  BR_A0400 balance bar",21/10/19,21/10/19,1,0,,,
+"    budget",21/10/19,21/10/19,1,0,,,
+WT_wheels,21/10/19,21/10/19,1,0,,,
+"  WT_A0100 Wheels",21/10/19,21/10/19,1,0,,,
+"    jantes",21/10/19,21/10/19,1,0,,,
+"    pneus compet",21/10/19,21/10/19,1,0,,,
+"    pneus rally",21/10/19,21/10/19,1,0,,,
+"  WT_A0200 Front Hub",21/10/19,21/10/19,1,0,,,
+"    design",21/10/19,21/10/19,1,0,,,
+"    visserie",21/10/19,21/10/19,1,0,,,
+"    simulation",21/10/19,21/10/19,1,0,,,
+"  WTA03 Rear Hub",21/10/19,21/10/19,1,0,,,
+"    design",21/10/19,21/10/19,1,0,,,
+"    visserie",21/10/19,21/10/19,1,0,,,
+"    simulation",21/10/19,21/10/19,1,0,,,
+ST_Steering,21/10/19,21/10/19,1,0,,,
+"  ST_A0100 Steering Wheel",21/10/19,21/10/19,1,0,,,
+"    budget",21/10/19,21/10/19,1,0,,,
+"  ST_A0200 Steering Shaft",21/10/19,21/10/19,1,0,,,
+"    budget",21/10/19,21/10/19,1,0,,,
+"  ST_A0300 Steering Rack",21/10/19,21/10/19,1,0,,,
+"    budget",21/10/19,21/10/19,1,0,,,
+"  ST_A0400 Tie Rods",21/10/19,21/10/19,1,0,,,
+"    design",21/10/19,21/10/19,1,0,,,
+"    simulation",21/10/19,21/10/19,1,0,,,
+Partenaires,21/10/19,21/10/19,1,0,,,
+Budget,21/10/19,07/11/19,18,0,,,
+"  suspension",21/10/19,21/10/19,1,0,,,
+"  brake",21/10/19,21/10/19,1,0,,,
+"  wheels",21/10/19,21/10/19,1,0,,,
+"  steering",21/10/19,21/10/19,1,0,,,
+"  envoyer devis à Romain",08/11/19,08/11/19,0,0,Michele SCHIO,0:100.00,tot depenses sur 2800 € centrale + 3000€ bron
+Vacances,26/10/19,08/03/20,135,0,,,
+"  La Gir",21/12/19,05/01/20,16,0,,,
+"    Noel",21/12/19,05/01/20,16,0,,,
+"  La Mache",21/12/19,05/01/20,16,0,,,
+"    Noel",21/12/19,05/01/20,16,0,,,
+"  Boisard",21/12/19,05/01/20,16,0,,,
+"    Noel",21/12/19,05/01/20,16,0,,,
+"  Centrale",26/10/19,08/03/20,135,0,,,
+"    Toussaint",26/10/19,03/11/19,9,0,,,
+"    Noël",21/12/19,05/01/20,16,0,,,
+"    Février",29/02/20,08/03/20,9,0,,,
+TOPs,16/10/19,16/03/20,153,0,,,
+"  Top Synthèse",16/10/19,16/10/19,0,0,,,
+"  Revues pré Top Copeau",18/11/19,01/12/19,14,0,,,
+"  Top Copeau",03/12/19,03/12/19,0,0,,,
+"  Limite TOP Copeau",11/12/19,11/12/19,0,0,,,
+"  Top Organe",05/02/20,05/02/20,0,0,,,
+"  Top Véhicule",26/02/20,26/02/20,0,0,,,
+"  Top Moteur",17/03/20,17/03/20,0,0,,,
+
+
+Name,Assignment role,trigramme
+Michele SCHIO,,MSO
+TLS,,
+Rémi FERRAND,,RFD
+Robin NIERMARECHAL,,RNL
+Raphaël CHARLET,,RCT
+Matthieu CORNU,,MCU
+Adèle LEFEVRE,,ALE
+Pierre-Emmanuel ARIAUX,,PAX
+Enzo POTTEZ,,EPZ
+Sébastien GIROIX,,SGX
+Martin KWCY,,MKI

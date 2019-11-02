@@ -1,0 +1,21 @@
+% left=2.5cm,right=2.5cm,top=3cm,bottom=2cm
+% define textwidth and textheight parameters
+\usepackage [a4paper, textwidth=16cm, textheight=24cm]{geometry} 
+
+% HEADERS
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+
+\pagestyle{fancy}
+\setlength{\headheight}{.7cm}
+%\fancyheadoffset{1cm}
+
+% top header: left, center and right
+\lhead{\includegraphics[height=.8\headheight]{logo}}
+\chead{}
+\rhead{}
+
+% bottom header: left, center and right
+\lfoot{\textsc{Team Invictus 2020}}
+\cfoot{}
+\rfoot{\thepage\ / \pageref{LastPage}}

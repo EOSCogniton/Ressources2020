@@ -1,0 +1,52 @@
+\documentclass[]{article} %twocolumn %report 
+% LANGUAGE
+\usepackage[french]{babel}
+\usepackage[utf8]{inputenc}
+
+% SETUP files
+\input{setUp/pageLayout}
+\input{setUp/textStructure}
+\input{setUp/textEnhance}
+\input{setUp/image}
+\input{setUp/links}
+\input{setUp/math}
+\input{setUp/attachments}
+\input{setUp/nomenclature}
+\input{setUp/biblio}
+\input{setUp/macros}
+
+
+\begin{document}
+% TITLE page
+\begin{titlepage}
+	
+	\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+	
+	\center % Center everything on the page
+	%	HEADING SECTIONS
+	    \includegraphics[height=1.2cm]{logo}
+	\\[1cm]
+	\textsc{\LARGE Management du projet} 
+	%	TITLE SECTION
+	\HRule \\[0.4cm]
+	{ \huge \bfseries Gantt département LAS}  \\[1cm] % Title of your document
+	
+	% version and date
+	 {\large v01 - \today}\\[1cm] 
+	%\tableofcontents
+
+\end{titlepage}
+
+\include{text/tasks}
+
+\include{text/team}
+
+
+
+%\newpage
+%\nocite{*}
+%\appendix
+%\include{text/appendix}
+
+\end{document}
+% controllare DOPPI SPAZI, SPAZI prima di : ; , . 
