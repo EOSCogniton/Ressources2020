@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2019-10-21" view-index="0" gantt-divider-location="779" resource-divider-location="958" version="2.8.10" locale="en_GB">
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2019-10-21" view-index="0" gantt-divider-location="975" resource-divider-location="958" version="2.8.10" locale="en_GB">
     <description/>
     <view zooming-state="default:4" id="gantt-chart">
-        <field id="tpd3" name="Name" width="360" order="0"/>
-        <field id="tpd4" name="Begin date" width="123" order="1"/>
-        <field id="tpd5" name="End date" width="105" order="2"/>
-        <field id="tpd13" name="Resources" width="106" order="3"/>
-        <field id="tpd7" name="Completion" width="66" order="4"/>
+        <field id="tpd3" name="Name" width="499" order="0"/>
+        <field id="tpd4" name="Begin date" width="97" order="1"/>
+        <field id="tpd5" name="End date" width="117" order="2"/>
+        <field id="tpd13" name="Resources" width="167" order="3"/>
+        <field id="tpd7" name="Completion" width="90" order="4"/>
         <option id="taskLabelUp" value=""/>
         <option id="taskLabelRight" value=""/>
         <option id="color.recent"><![CDATA[#ffff00 #ff6600 #3333ff #ff0000 #00cc66 #ff00cc #e1e1e1 #000000]]></option>
@@ -40,149 +40,256 @@
         </taskproperties>
         <task id="73" name="SU_Suspension" color="#3333ff" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
             <notes><![CDATA[Devis, Budget, définitions des prioritées. répartition des taches aux membres de l'équipe ( bcp de pièces sont encore à commencer)]]></notes>
-            <task id="79" name="SU_A0100 A-Arms front upper" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
-                <task id="148" name="design" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+            <task id="79" name="SU_A0100 A-Arms front upper" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
+                <task id="148" name="design rod-end support SU_A0100" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
                     <notes><![CDATA[Catia
 ]]></notes>
                 </task>
-                <task id="258" name="devis" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-                <task id="149" name="simulation" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                <task id="258" name="devis tubes SU_A0100" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
+                <task id="149" name="simulation inerts SU_A0100" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
                     <notes><![CDATA[simulation EF]]></notes>
                 </task>
-                <task id="155" name="rotules" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-                <task id="156" name="collage triangles" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
-                <task id="158" name="inserts" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
+                <task id="156" name="collage triangles" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[étude de fiabilité. Quelle colle utiliser. Longueur des inserts de collage. Etat de surface des inserts. Conditions critiques de foncionnement]]></notes>
+                </task>
+                <task id="158" name="design inserts collage triangles" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
             </task>
-            <task id="100" name="SU_A0200 A-Arms front lower" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+            <task id="100" name="SU_A0200 A-Arms front lower" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
                 <notes><![CDATA[same thing as in front upper]]></notes>
-                <task id="150" name="design" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
-                <task id="151" name="simulation" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="150" name="design rod-end support SU_A0200" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
+                <task id="151" name="simulation rod-end support SU_A0200" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[cas de charge MKI]]></notes>
+                </task>
             </task>
             <task id="101" name="SU_A0300 A-Arms rear upper" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
-                <task id="152" name="design" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-                <task id="153" name="simulation" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="152" name="design rod-end support SU_A0300" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
+                <task id="153" name="simulation rod-end support SU_A0300" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[cas de charge MKI]]></notes>
+                </task>
             </task>
             <task id="103" name="SU_A0400 A-Arms rear lower" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
-                <task id="160" name="design" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-                <task id="162" name="simulation" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="160" name="design rod-end support SU_A0400" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
+                <task id="162" name="simulation rod-end support SU_A0400" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[cas de charge MKI]]></notes>
+                </task>
             </task>
-            <task id="104" name="SU_A05  A07 Shocks" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
-                <task id="164" name="maintenance kit" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+            <task id="104" name="SU_A05  A07 Shocks" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
+                <task id="164" name="devis maintenance kit" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
                     <notes><![CDATA[to repair the shocks from Optimus]]></notes>
                 </task>
                 <task id="166" name="shock choice" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
                     <notes><![CDATA[determiner la raideur des ressorts (parmi celles à disposition). Normalement c'est déjà fait par MKI --> fichiers de calcul dans le git Ressources2020 ]]></notes>
                 </task>
             </task>
-            <task id="105" name="SU_A0600 Bell Cranks Front" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
-                <task id="168" name="design" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
-                <task id="170" name="simulation" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            <task id="105" name="SU_A0600 Bell Cranks Front" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
+                <task id="168" name="design rocker SU_A0600" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[utiliser les points de la géometrie LASauto]]></notes>
+                </task>
+                <task id="304" name="BOM rocker assy SU_A0600" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[determiner le type de roulements pour la liaison avec le chassis. les rotules seront comandée en lien avec les triangles et les pull bars. Choisir la visserie en s'inspirant d'Optimus]]></notes>
+                </task>
+                <task id="170" name="simulation rockers SU_A0600" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[cas de charge MKI]]></notes>
+                </task>
             </task>
-            <task id="107" name="SU_A0800 Bell Cranks Rear" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
-                <task id="180" name="design" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
-                <task id="182" name="simulation" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            <task id="107" name="SU_A0800 Bell Cranks Rear" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
+                <task id="180" name="design rocker SU_A0800" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
+                <task id="313" name="BOM rocker assy SU_A0800" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
+                <task id="182" name="simulation rockers SU_A0800" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[cas de charges MKI]]></notes>
+                </task>
             </task>
-            <task id="108" name="SU_A0900 Tie Rod - Rear" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
-                <task id="184" name="design" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-                <task id="186" name="simulation" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-            </task>
-            <task id="109" name="SU_A1000 Front Uprights" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
-                <task id="188" name="design" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
-                <task id="190" name="simulation" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-            </task>
-            <task id="110" name="SU_A1100 Rear Uprights" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
-                <task id="192" name="design" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
-                <task id="194" name="simulation" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-            </task>
-            <task id="111" name="SU_A1200 Push/Pullrod Front" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
-                <task id="196" name="design" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-                <task id="198" name="simulation" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-            </task>
-            <task id="112" name="SU_A1300 Push/Pullrod Rear" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
-                <task id="200" name="design" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-                <task id="202" name="simulation" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-            </task>
-            <task id="113" name="SU_A1400 Anti Roll Bar Front" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
-                <task id="204" name="design" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
-                <task id="206" name="simulation" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-            </task>
-            <task id="114" name="Rotules" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
-                <notes><![CDATA[pièces dans différents assemblages, il faut communiquer le choix aux respos]]></notes>
-                <task id="207" name="maker choice" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-                <task id="208" name="model choice" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-            </task>
-        </task>
-        <task id="259" name="Visserie" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
-            <notes><![CDATA[la macro de Brice n'a pas été mise en place]]></notes>
-            <task id="280" name="rules critical fasteners" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
-                <notes><![CDATA[detail du type de visserie à acheter
+            <task id="108" name="SU_A0900 Tie Rod - Rear" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
+                <task id="184" name="design rod-end support SU_A0900" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[threaded rod-end. Se reinsegner avec la commande des rotules]]></notes>
+                </task>
+                <task id="186" name="simulation rod-end SU_A0900" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[cas de charge MKI
 ]]></notes>
+                </task>
+            </task>
+            <task id="109" name="SU_A1000 Front Uprights" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
+                <task id="188" name="design front upright SU_A1000" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
+                <task id="190" name="simulation front upright SU_A1000" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[cas de charge MKI]]></notes>
+                </task>
+            </task>
+            <task id="110" name="SU_A1100 Rear Uprights" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
+                <task id="192" name="design rear upright SU_A1100" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[meme structure d'optimus
+]]></notes>
+                </task>
+                <task id="194" name="simulation rear upright SU_A1100" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[cas de charge MKI]]></notes>
+                </task>
+            </task>
+            <task id="111" name="SU_A12 A13 Push/Pullrods" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
+                <task id="196" name="design rod-end SU_A12 A_13" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
+                <task id="336" name="devis tubes pullrods SU_A12 A13" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="198" name="simulation rod-end SU_A12 A_13" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[cas de charge MKI]]></notes>
+                </task>
+            </task>
+            <task id="113" name="SU_A1400 Anti Roll Bar Front" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
+                <task id="204" name="design front arb SU_A1400" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
+                <task id="339" name="BOM front arb SU_A1400" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="206" name="simulation torsion bar SU_A1400" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
+                <task id="342" name="simulation arb blades SU_A1400" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
+            </task>
+            <task id="347" name="SU_A1500 Anti Roll Bar Rear" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false" cost-manual-value="0.0" cost-calculated="true">
+                <task id="349" name="design rear arb SU_A1500" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
+                <task id="351" name="BOM rear arb SU_A1500" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="353" name="simulation torsion bar SU_A1500" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
+                <task id="355" name="simulation arb blades SU_A1500" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
+            </task>
+            <task id="114" name="Rotules" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
+                <notes><![CDATA[pièces dans différents assemblages, il faut communiquer le choix aux respos]]></notes>
+                <task id="207" name="choisir fournisseur" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[skf, getecno ou askuball ??]]></notes>
+                </task>
+                <task id="415" name="devis rotules" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[commande unique pour tout le monde]]></notes>
+                </task>
+                <task id="208" name="taille rotules triangles front  SU_A01 A_02" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[cas de charge MKI Vs catalogue fournisseur]]></notes>
+                </task>
+                <task id="366" name="taille rotules traingles rear SU_A03 A_04" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[cas de charge MKI Vs catalogue fournisseur]]></notes>
+                </task>
+                <task id="370" name="taille rotules steering SU_A0900" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[cas de charge MKI Vs catalogue fournisseur]]></notes>
+                </task>
+                <task id="374" name="taille rotules pullbar SU_A12 A13" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[cas de charge MKI Vs catalogue fournisseur]]></notes>
+                </task>
             </task>
         </task>
-        <task id="74" name="BR_BrakeSystem" color="#ff0000" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
-            <task id="80" name="BR_A0100 brake system front" color="#ff0000" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
-                <task id="230" name="budget" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-                <task id="209" name="brake disc" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-                <task id="210" name="brake caliper" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-                <task id="211" name="plaquettes" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-                <task id="212" name="frette" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-                <task id="213" name="visserie" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+        <task id="259" name="Visserie" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
+            <notes><![CDATA[la macro de Brice n'a pas été mise en place. article reglement "Critical Fasteners"]]></notes>
+            <task id="413" name="devis visserie" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                <notes><![CDATA[une commande pour tout le monde. quantité extra ???]]></notes>
             </task>
-            <task id="81" name="BR_A0200 brake system rear" color="#ff0000" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
-                <task id="232" name="budget" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-                <task id="215" name="brake disc" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-                <task id="217" name="brake caliper" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-                <task id="219" name="plaquettes" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-                <task id="221" name="frette" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-                <task id="223" name="visserie" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            <task id="383" name="choix visserie triangles front  SU_A01 A_02" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                <notes><![CDATA[cas de charge MKI Vs catalogue fournisseur]]></notes>
+            </task>
+            <task id="385" name="choix visserie traingles rear SU_A03 A_04" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                <notes><![CDATA[cas de charge MKI Vs catalogue fournisseur]]></notes>
+            </task>
+            <task id="387" name="choix visserie steering SU_A0900" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                <notes><![CDATA[cas de charge MKI Vs catalogue fournisseur]]></notes>
+            </task>
+            <task id="389" name="choix visserie pullbar SU_A12 A13" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                <notes><![CDATA[cas de charge MKI Vs catalogue fournisseur]]></notes>
+            </task>
+            <task id="392" name="choix visserie rockers SU_A06 A08" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                <notes><![CDATA[cas de charge MKI Vs catalogue fournisseur]]></notes>
+            </task>
+            <task id="394" name="choix visserie étriers front + rear" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            <task id="409" name="choix visserie front hub WT_A0200" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                <notes><![CDATA[lock nut + washer ]]></notes>
+            </task>
+            <task id="410" name="choix visserie rear hub WT_A0300" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                <notes><![CDATA[k-nut tulipe]]></notes>
+            </task>
+        </task>
+        <task id="74" name="BR_BrakeSystem" color="#ff0000" meeting="false" start="2019-10-21" duration="1" complete="10" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
+            <task id="80" name="BR_A0100 brake system front" color="#ff0000" meeting="false" start="2019-10-21" duration="1" complete="20" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                <task id="230" name="devis freinage avant BR_A0100" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
+                <task id="209" name="choix brake disc front" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
+                <task id="210" name="choix brake caliper front" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="100" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
+                <task id="211" name="choix plaquettes front" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
+                <task id="212" name="étude frette front" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[ça depend du disque]]></notes>
+                </task>
+            </task>
+            <task id="81" name="BR_A0200 brake system rear" color="#ff0000" meeting="false" start="2019-10-21" duration="1" complete="20" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                <task id="232" name="devis freinage arrière BR_A0200" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
+                <task id="215" name="choix brake disc rear" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="217" name="choix brake caliper rear" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="100" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
+                <task id="219" name="choix plaquettes rear" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="221" name="étude frette" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[ça depende du disque]]></notes>
+                </task>
             </task>
             <task id="83" name="BR_A0300 master cylinder" color="#ff0000" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
-                <task id="233" name="budget" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="233" name="devis master cylinder BR_A0300" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
             </task>
             <task id="84" name="BR_A0400 balance bar" color="#ff0000" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
-                <task id="234" name="budget" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="234" name="devis balance bar BR_A0400" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
             </task>
         </task>
-        <task id="75" name="WT_wheels" color="#ffff00" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+        <task id="75" name="WT_wheels" color="#ffff00" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
             <task id="98" name="WT_A0100 Wheels" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
-                <task id="235" name="jantes" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-                <task id="236" name="pneus compet" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-                <task id="237" name="pneus rally" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="235" name="devis jantes" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[1 ou 3 jantes ?]]></notes>
+                </task>
+                <task id="236" name="devis pneus compet" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[continental C19 (9 slick + 4 wet) ]]></notes>
+                </task>
+                <task id="237" name="devis pneus rally" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[choix modèle d'abord]]></notes>
+                </task>
             </task>
-            <task id="131" name="WT_A0200 Front Hub" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
-                <task id="238" name="design" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
-                <task id="242" name="visserie" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-                <task id="241" name="simulation" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            <task id="131" name="WT_A0200 Front Hub" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                <task id="238" name="design fron hub WT_A0200" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
+                <task id="241" name="simulation front hub WT_A0200" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[cas de charge MKI
+]]></notes>
+                </task>
+                <task id="419" name="choix roulements front hub WT_A0200" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="420" name="devis roulements front hub WT_A0200" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
             </task>
-            <task id="132" name="WTA03 Rear Hub" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
-                <task id="244" name="design" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
-                <task id="246" name="visserie" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-                <task id="248" name="simulation" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-            </task>
-        </task>
-        <task id="76" name="ST_Steering" color="#ff6600" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
-            <task id="135" name="ST_A0100 Steering Wheel" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
-                <task id="249" name="budget" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-            </task>
-            <task id="136" name="ST_A0200 Steering Shaft" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
-                <task id="250" name="budget" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-            </task>
-            <task id="137" name="ST_A0300 Steering Rack" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
-                <task id="251" name="budget" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-            </task>
-            <task id="138" name="ST_A0400 Tie Rods" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
-                <task id="252" name="design" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-                <task id="253" name="simulation" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            <task id="132" name="WT_A0300 Rear Hub" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                <task id="244" name="design rear hub WT_A0300" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
+                <task id="248" name="simulation rear hub WT_0300" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[cas de charge MKI]]></notes>
+                </task>
+                <task id="421" name="choix roulements rear hub WT_A0300" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="422" name="devis roulements rear hub WT_A0300" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
             </task>
         </task>
-        <task id="78" name="Partenaires" color="#ff00cc" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
-        <task id="77" name="Budget" color="#00cc66" meeting="false" start="2019-10-21" duration="18" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
-            <task id="144" name="suspension" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-            <task id="145" name="brake" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-            <task id="146" name="wheels" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-            <task id="147" name="steering" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+        <task id="76" name="ST_Steering" color="#ff6600" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
+            <task id="135" name="ST_A0100 Steering Wheel" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                <task id="249" name="devis steering wheel" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[c'est à la LAS ou à l'ergo ??]]></notes>
+                </task>
+            </task>
+            <task id="136" name="ST_A0200 Steering Shaft" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                <task id="250" name="design steering shaft ST_A0200" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
+                <task id="426" name="devis steering shaft ST_A0200" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            </task>
+            <task id="137" name="ST_A0300 Steering Rack" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                <task id="251" name="devis steering rack ST_A0300" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            </task>
+            <task id="138" name="ST_A0400 Tie Rods" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                <task id="252" name="design rod-end ST_A0400" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="427" name="devis tubes steering  rods ST_A0400" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="253" name="simulation rod end ST_A0400" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[cas de charge MKI]]></notes>
+                </task>
+            </task>
+        </task>
+        <task id="77" name="Budget" color="#00cc66" meeting="false" start="2019-11-08" duration="18" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
             <task id="254" name="envoyer devis à Romain" color="#8cb6ce" meeting="true" start="2019-11-08" duration="0" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
                 <notes><![CDATA[tot depenses sur 2800 € centrale + 3000€ bron]]></notes>
+            </task>
+        </task>
+        <task id="326" name="Reunions techniques" meeting="false" start="2019-10-21" duration="1" complete="0" expand="false">
+            <task id="327" name="planning reu tech nAs" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            <task id="328" name="rapport techniques Simon Laurent" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            <task id="329" name="planning reu tech Janolin Houx A" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+        </task>
+        <task id="281" name="EQ_Equipe" meeting="false" start="2019-10-21" duration="1" complete="0" expand="false">
+            <task id="282" name="lire tutoriel BOM" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                <notes><![CDATA[des questions?]]></notes>
+            </task>
+            <task id="428" name="rediger tutorier Devis" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
+            <task id="429" name="rediger tutoriel Vues éclatéess" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
+            <task id="430" name="lire tutoriel Devis" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                <notes><![CDATA[des questions?]]></notes>
+            </task>
+            <task id="423" name="lire tutoriel Vue Eclatées" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                <notes><![CDATA[des questions ?]]></notes>
             </task>
         </task>
         <task id="8" name="Vacances" meeting="false" start="2019-10-26" duration="135" complete="0" expand="false">
@@ -252,13 +359,39 @@
         <allocation task-id="188" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="192" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="114" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="428" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="429" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="282" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="423" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="430" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="168" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="282" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="423" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="430" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="148" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="158" resource-id="4" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="150" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="282" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="423" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="430" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="180" resource-id="5" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="282" resource-id="5" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="423" resource-id="5" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="430" resource-id="5" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="282" resource-id="6" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="423" resource-id="6" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="430" resource-id="6" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="204" resource-id="7" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="282" resource-id="7" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="423" resource-id="7" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="430" resource-id="7" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="156" resource-id="8" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="282" resource-id="8" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="423" resource-id="8" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="430" resource-id="8" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="282" resource-id="9" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="423" resource-id="9" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="430" resource-id="9" function="Default:0" responsible="false" load="100.0"/>
     </allocations>
     <vacations/>
     <previous/>

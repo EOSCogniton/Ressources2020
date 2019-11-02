@@ -1,0 +1,161 @@
+Name,Begin date,End date,Duration,Completion,Resources,Assignments,Notes
+SU_Suspension,21/10/19,21/10/19,1,0,,,"Devis, Budget, définitions des prioritées. répartition des taches aux membres de l'équipe ( bcp de pièces sont encore à commencer)"
+"  SU_A0100 A-Arms front upper",21/10/19,21/10/19,1,0,,,
+"    design rod-end support SU_A0100",21/10/19,21/10/19,1,0,Michele SCHIO;Raphaël CHARLET,0:100.00;4:100.00,"Catia
+"
+"    devis tubes SU_A0100",21/10/19,21/10/19,1,0,,,
+"    simulation inerts SU_A0100",21/10/19,21/10/19,1,0,,,simulation EF
+"    collage triangles",21/10/19,21/10/19,1,0,Enzo POTTEZ,8:100.00,étude de fiabilité. Quelle colle utiliser. Longueur des inserts de collage. Etat de surface des inserts. Conditions critiques de foncionnement
+"    design inserts collage triangles",21/10/19,21/10/19,1,0,Raphaël CHARLET,4:100.00,
+"  SU_A0200 A-Arms front lower",21/10/19,21/10/19,1,0,,,same thing as in front upper
+"    design rod-end support SU_A0200",21/10/19,21/10/19,1,0,Michele SCHIO;Raphaël CHARLET,0:100.00;4:100.00,
+"    simulation rod-end support SU_A0200",21/10/19,21/10/19,1,0,,,cas de charge MKI
+"  SU_A0300 A-Arms rear upper",21/10/19,21/10/19,1,0,,,
+"    design rod-end support SU_A0300",21/10/19,21/10/19,1,0,,,
+"    simulation rod-end support SU_A0300",21/10/19,21/10/19,1,0,,,cas de charge MKI
+"  SU_A0400 A-Arms rear lower",21/10/19,21/10/19,1,0,,,
+"    design rod-end support SU_A0400",21/10/19,21/10/19,1,0,,,
+"    simulation rod-end support SU_A0400",21/10/19,21/10/19,1,0,,,cas de charge MKI
+"  SU_A05  A07 Shocks",21/10/19,21/10/19,1,0,,,
+"    devis maintenance kit",21/10/19,21/10/19,1,0,,,to repair the shocks from Optimus
+"    shock choice",21/10/19,21/10/19,1,0,,,"determiner la raideur des ressorts (parmi celles à disposition). Normalement c'est déjà fait par MKI --> fichiers de calcul dans le git Ressources2020 "
+"  SU_A0600 Bell Cranks Front",21/10/19,21/10/19,1,0,,,
+"    design rocker SU_A0600",21/10/19,21/10/19,1,0,Robin NIERMARECHAL,3:100.00,utiliser les points de la géometrie LASauto
+"    BOM rocker assy SU_A0600",21/10/19,21/10/19,1,0,,,determiner le type de roulements pour la liaison avec le chassis. les rotules seront comandée en lien avec les triangles et les pull bars. Choisir la visserie en s'inspirant d'Optimus
+"    simulation rockers SU_A0600",21/10/19,21/10/19,1,0,,,cas de charge MKI
+"  SU_A0800 Bell Cranks Rear",21/10/19,21/10/19,1,0,,,
+"    design rocker SU_A0800",21/10/19,21/10/19,1,0,Matthieu CORNU,5:100.00,
+"    BOM rocker assy SU_A0800",21/10/19,21/10/19,1,0,,,
+"    simulation rockers SU_A0800",21/10/19,21/10/19,1,0,,,cas de charges MKI
+"  SU_A0900 Tie Rod - Rear",21/10/19,21/10/19,1,0,,,
+"    design rod-end support SU_A0900",21/10/19,21/10/19,1,0,,,threaded rod-end. Se reinsegner avec la commande des rotules
+"    simulation rod-end SU_A0900",21/10/19,21/10/19,1,0,,,"cas de charge MKI
+"
+"  SU_A1000 Front Uprights",21/10/19,21/10/19,1,0,,,
+"    design front upright SU_A1000",21/10/19,21/10/19,1,0,Michele SCHIO,0:100.00,
+"    simulation front upright SU_A1000",21/10/19,21/10/19,1,0,,,cas de charge MKI
+"  SU_A1100 Rear Uprights",21/10/19,21/10/19,1,0,,,
+"    design rear upright SU_A1100",21/10/19,21/10/19,1,0,Michele SCHIO,0:100.00,"meme structure d'optimus
+"
+"    simulation rear upright SU_A1100",21/10/19,21/10/19,1,0,,,cas de charge MKI
+"  SU_A12 A13 Push/Pullrods",21/10/19,21/10/19,1,0,,,
+"    design rod-end SU_A12 A_13",21/10/19,21/10/19,1,0,,,
+"    devis tubes pullrods SU_A12 A13",21/10/19,21/10/19,1,0,,,
+"    simulation rod-end SU_A12 A_13",21/10/19,21/10/19,1,0,,,cas de charge MKI
+"  SU_A1400 Anti Roll Bar Front",21/10/19,21/10/19,1,0,,,
+"    design front arb SU_A1400",21/10/19,21/10/19,1,0,Pierre-Emmanuel ARIAUX,7:100.00,
+"    BOM front arb SU_A1400",21/10/19,21/10/19,1,0,,,
+"    simulation torsion bar SU_A1400",21/10/19,21/10/19,1,0,,,
+"    simulation arb blades SU_A1400",21/10/19,21/10/19,1,0,,,
+"  SU_A1500 Anti Roll Bar Rear",21/10/19,21/10/19,1,0,,,
+"    design rear arb SU_A1500",21/10/19,21/10/19,1,0,,,
+"    BOM rear arb SU_A1500",21/10/19,21/10/19,1,0,,,
+"    simulation torsion bar SU_A1500",21/10/19,21/10/19,1,0,,,
+"    simulation arb blades SU_A1500",21/10/19,21/10/19,1,0,,,
+"  Rotules",21/10/19,21/10/19,1,0,Michele SCHIO,0:100.00,"pièces dans différents assemblages, il faut communiquer le choix aux respos"
+"    choisir fournisseur",21/10/19,21/10/19,1,0,,,"skf, getecno ou askuball ??"
+"    devis rotules",21/10/19,21/10/19,1,0,,,commande unique pour tout le monde
+"    taille rotules triangles front  SU_A01 A_02",21/10/19,21/10/19,1,0,,,cas de charge MKI Vs catalogue fournisseur
+"    taille rotules traingles rear SU_A03 A_04",21/10/19,21/10/19,1,0,,,cas de charge MKI Vs catalogue fournisseur
+"    taille rotules steering SU_A0900",21/10/19,21/10/19,1,0,,,cas de charge MKI Vs catalogue fournisseur
+"    taille rotules pullbar SU_A12 A13",21/10/19,21/10/19,1,0,,,cas de charge MKI Vs catalogue fournisseur
+Visserie,21/10/19,21/10/19,1,0,,,"la macro de Brice n'a pas été mise en place. article reglement ""Critical Fasteners"""
+"  devis visserie",21/10/19,21/10/19,1,0,,,une commande pour tout le monde. quantité extra ???
+"  choix visserie triangles front  SU_A01 A_02",21/10/19,21/10/19,1,0,,,cas de charge MKI Vs catalogue fournisseur
+"  choix visserie traingles rear SU_A03 A_04",21/10/19,21/10/19,1,0,,,cas de charge MKI Vs catalogue fournisseur
+"  choix visserie steering SU_A0900",21/10/19,21/10/19,1,0,,,cas de charge MKI Vs catalogue fournisseur
+"  choix visserie pullbar SU_A12 A13",21/10/19,21/10/19,1,0,,,cas de charge MKI Vs catalogue fournisseur
+"  choix visserie rockers SU_A06 A08",21/10/19,21/10/19,1,0,,,cas de charge MKI Vs catalogue fournisseur
+"  choix visserie étriers front + rear",21/10/19,21/10/19,1,0,,,
+"  choix visserie front hub WT_A0200",21/10/19,21/10/19,1,0,,,"lock nut + washer "
+"  choix visserie rear hub WT_A0300",21/10/19,21/10/19,1,0,,,k-nut tulipe
+BR_BrakeSystem,21/10/19,21/10/19,1,10,,,
+"  BR_A0100 brake system front",21/10/19,21/10/19,1,20,,,
+"    devis freinage avant BR_A0100",21/10/19,21/10/19,1,0,,,
+"    choix brake disc front",21/10/19,21/10/19,1,0,,,
+"    choix brake caliper front",21/10/19,21/10/19,1,100,,,
+"    choix plaquettes front",21/10/19,21/10/19,1,0,,,
+"    étude frette front",21/10/19,21/10/19,1,0,,,ça depend du disque
+"  BR_A0200 brake system rear",21/10/19,21/10/19,1,20,,,
+"    devis freinage arrière BR_A0200",21/10/19,21/10/19,1,0,,,
+"    choix brake disc rear",21/10/19,21/10/19,1,0,,,
+"    choix brake caliper rear",21/10/19,21/10/19,1,100,,,
+"    choix plaquettes rear",21/10/19,21/10/19,1,0,,,
+"    étude frette",21/10/19,21/10/19,1,0,,,ça depende du disque
+"  BR_A0300 master cylinder",21/10/19,21/10/19,1,0,,,
+"    devis master cylinder BR_A0300",21/10/19,21/10/19,1,0,,,
+"  BR_A0400 balance bar",21/10/19,21/10/19,1,0,,,
+"    devis balance bar BR_A0400",21/10/19,21/10/19,1,0,,,
+WT_wheels,21/10/19,21/10/19,1,0,,,
+"  WT_A0100 Wheels",21/10/19,21/10/19,1,0,,,
+"    devis jantes",21/10/19,21/10/19,1,0,,,1 ou 3 jantes ?
+"    devis pneus compet",21/10/19,21/10/19,1,0,,,"continental C19 (9 slick + 4 wet) "
+"    devis pneus rally",21/10/19,21/10/19,1,0,,,choix modèle d'abord
+"  WT_A0200 Front Hub",21/10/19,21/10/19,1,0,,,
+"    design fron hub WT_A0200",21/10/19,21/10/19,1,0,,,
+"    simulation front hub WT_A0200",21/10/19,21/10/19,1,0,,,"cas de charge MKI
+"
+"    choix roulements front hub WT_A0200",21/10/19,21/10/19,1,0,,,
+"    devis roulements front hub WT_A0200",21/10/19,21/10/19,1,0,,,
+"  WT_A0300 Rear Hub",21/10/19,21/10/19,1,0,,,
+"    design rear hub WT_A0300",21/10/19,21/10/19,1,0,,,
+"    simulation rear hub WT_0300",21/10/19,21/10/19,1,0,,,cas de charge MKI
+"    choix roulements rear hub WT_A0300",21/10/19,21/10/19,1,0,,,
+"    devis roulements rear hub WT_A0300",21/10/19,21/10/19,1,0,,,
+ST_Steering,21/10/19,21/10/19,1,0,,,
+"  ST_A0100 Steering Wheel",21/10/19,21/10/19,1,0,,,
+"    devis steering wheel",21/10/19,21/10/19,1,0,,,c'est à la LAS ou à l'ergo ??
+"  ST_A0200 Steering Shaft",21/10/19,21/10/19,1,0,,,
+"    design steering shaft ST_A0200",21/10/19,21/10/19,1,0,,,
+"    devis steering shaft ST_A0200",21/10/19,21/10/19,1,0,,,
+"  ST_A0300 Steering Rack",21/10/19,21/10/19,1,0,,,
+"    devis steering rack ST_A0300",21/10/19,21/10/19,1,0,,,
+"  ST_A0400 Tie Rods",21/10/19,21/10/19,1,0,,,
+"    design rod-end ST_A0400",21/10/19,21/10/19,1,0,,,
+"    devis tubes steering  rods ST_A0400",21/10/19,21/10/19,1,0,,,
+"    simulation rod end ST_A0400",21/10/19,21/10/19,1,0,,,cas de charge MKI
+Budget,08/11/19,25/11/19,18,0,,,
+"  envoyer devis à Romain",08/11/19,08/11/19,0,0,Michele SCHIO,0:100.00,tot depenses sur 2800 € centrale + 3000€ bron
+Reunions techniques,21/10/19,21/10/19,1,0,,,
+"  planning reu tech nAs",21/10/19,21/10/19,1,0,,,
+"  rapport techniques Simon Laurent",21/10/19,21/10/19,1,0,,,
+"  planning reu tech Janolin Houx A",21/10/19,21/10/19,1,0,,,
+EQ_Equipe,21/10/19,21/10/19,1,0,,,
+"  lire tutoriel BOM",21/10/19,21/10/19,1,0,Rémi FERRAND;Robin NIERMARECHAL;Raphaël CHARLET;Matthieu CORNU;Adèle LEFEVRE;Pierre-Emmanuel ARIAUX;Enzo POTTEZ;Sébastien GIROIX,2:100.00;3:100.00;4:100.00;5:100.00;6:100.00;7:100.00;8:100.00;9:100.00,des questions?
+"  rediger tutorier Devis",21/10/19,21/10/19,1,0,Michele SCHIO,0:100.00,
+"  rediger tutoriel Vues éclatéess",21/10/19,21/10/19,1,0,Michele SCHIO,0:100.00,
+"  lire tutoriel Devis",21/10/19,21/10/19,1,0,Rémi FERRAND;Robin NIERMARECHAL;Raphaël CHARLET;Matthieu CORNU;Adèle LEFEVRE;Pierre-Emmanuel ARIAUX;Enzo POTTEZ;Sébastien GIROIX,2:100.00;3:100.00;4:100.00;5:100.00;6:100.00;7:100.00;8:100.00;9:100.00,des questions?
+"  lire tutoriel Vue Eclatées",21/10/19,21/10/19,1,0,Rémi FERRAND;Robin NIERMARECHAL;Raphaël CHARLET;Matthieu CORNU;Adèle LEFEVRE;Pierre-Emmanuel ARIAUX;Enzo POTTEZ;Sébastien GIROIX,2:100.00;3:100.00;4:100.00;5:100.00;6:100.00;7:100.00;8:100.00;9:100.00,des questions ?
+Vacances,26/10/19,08/03/20,135,0,,,
+"  La Gir",21/12/19,05/01/20,16,0,,,
+"    Noel",21/12/19,05/01/20,16,0,,,
+"  La Mache",21/12/19,05/01/20,16,0,,,
+"    Noel",21/12/19,05/01/20,16,0,,,
+"  Boisard",21/12/19,05/01/20,16,0,,,
+"    Noel",21/12/19,05/01/20,16,0,,,
+"  Centrale",26/10/19,08/03/20,135,0,,,
+"    Toussaint",26/10/19,03/11/19,9,0,,,
+"    Noël",21/12/19,05/01/20,16,0,,,
+"    Février",29/02/20,08/03/20,9,0,,,
+TOPs,16/10/19,16/03/20,153,0,,,
+"  Top Synthèse",16/10/19,16/10/19,0,0,,,
+"  Revues pré Top Copeau",18/11/19,01/12/19,14,0,,,
+"  Top Copeau",03/12/19,03/12/19,0,0,,,
+"  Limite TOP Copeau",11/12/19,11/12/19,0,0,,,
+"  Top Organe",05/02/20,05/02/20,0,0,,,
+"  Top Véhicule",26/02/20,26/02/20,0,0,,,
+"  Top Moteur",17/03/20,17/03/20,0,0,,,
+
+
+Name,Assignment role,trigramme
+Michele SCHIO,,MSO
+TLS,,
+Rémi FERRAND,,RFD
+Robin NIERMARECHAL,,RNL
+Raphaël CHARLET,,RCT
+Matthieu CORNU,,MCU
+Adèle LEFEVRE,,ALE
+Pierre-Emmanuel ARIAUX,,PAX
+Enzo POTTEZ,,EPZ
+Sébastien GIROIX,,SGX
+Martin KWCY,,MKI
