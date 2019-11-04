@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2019-10-21" view-index="0" gantt-divider-location="358" resource-divider-location="300" version="2.8.5" locale="fr">
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2019-10-21" view-index="0" gantt-divider-location="932" resource-divider-location="300" version="2.8.5" locale="fr">
     <description/>
     <view zooming-state="default:6" id="gantt-chart">
-        <field id="tpd3" name="Nom" width="186" order="0"/>
-        <field id="tpd4" name="Date de début" width="84" order="1"/>
-        <field id="tpd5" name="Date de fin" width="84" order="2"/>
+        <field id="tpd3" name="Nom" width="803" order="0"/>
+        <field id="tpd4" name="Date de début" width="53" order="1"/>
+        <field id="tpd5" name="Date de fin" width="57" order="2"/>
         <option id="taskLabelRight" value="resources"/>
-        <option id="color.recent"><![CDATA[#000000 #ffff00 #ff0000 #3333ff]]></option>
+        <option id="color.recent"><![CDATA[#f4f4f4 #ffffff #000000 #ffff00 #ff0000 #3333ff]]></option>
     </view>
     <view id="resource-table">
         <field id="0" name="Nom" width="210" order="0"/>
@@ -44,8 +44,8 @@
             <task id="42" name="Top Véhicule" color="#000000" meeting="true" start="2020-02-26" duration="0" complete="0" expand="true"/>
             <task id="43" name="Top Moteur" color="#000000" meeting="true" start="2020-03-17" duration="0" complete="0" expand="true"/>
         </task>
-        <task id="8" name="Vacances" meeting="false" start="2019-10-26" duration="135" complete="0" expand="true">
-            <task id="17" name="Centrale" meeting="false" start="2019-10-26" duration="135" complete="0" expand="true">
+        <task id="8" name="Vacances" color="#ffffff" meeting="false" start="2019-10-26" duration="135" complete="0" expand="false">
+            <task id="17" name="Centrale" color="#f4f4f4" meeting="false" start="2019-10-26" duration="135" complete="0" expand="true">
                 <task id="58" name="Toussaint" color="#8cb6ce" meeting="false" start="2019-10-26" duration="9" complete="0" expand="true"/>
                 <task id="21" name="Noël" color="#8cb6ce" meeting="false" start="2019-12-21" duration="16" complete="0" expand="true"/>
                 <task id="59" name="Février" color="#8cb6ce" meeting="false" start="2020-02-29" duration="9" complete="0" expand="true"/>
@@ -62,16 +62,41 @@
         </task>
         <task id="88" name="Motorisation" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
             <task id="96" name="EN_A0100 : Moteur" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
-                <task id="109" name="tâche_108" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="109" name="Kart Cross" meeting="false" start="2019-10-21" duration="1" complete="0" expand="false">
+                    <task id="123" name="Anti dribble" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                    <task id="124" name="Axe pignon shifter" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                </task>
+                <task id="125" name="Embrayage" meeting="false" start="2019-10-21" duration="1" complete="0" expand="false">
+                    <task id="126" name="Acheter des disques" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                </task>
             </task>
             <task id="97" name="EN_A0200 : Echappement" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
-                <task id="110" name="tâche_105" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="110" name="Tubulures" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
+                    <task id="128" name="Dessiner sortie collecteur" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                    <task id="129" name="Modification (Bery Inox)" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                </task>
+                <task id="127" name="Attache" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
+                    <task id="130" name="Dessiner fixation échappement" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                </task>
             </task>
             <task id="98" name="EN_A0300 : Admission" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
                 <task id="111" name="tâche_106" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
             </task>
-            <task id="99" name="EN_A0400 : Bride / guillotine" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
-                <task id="117" name="tâche_107" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            <task id="135" name="EN_A0400 : Bride" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
+                <task id="136" name="Fixer diamètre" color="#8cb6ce" meeting="true" start="2019-10-21" duration="0" complete="0" expand="true"/>
+                <task id="137" name="Fixer diamètre" color="#8cb6ce" meeting="true" start="2019-10-21" duration="0" complete="0" expand="true"/>
+                <task id="138" name="Dimensionner" color="#8cb6ce" meeting="true" start="2019-10-21" duration="0" complete="0" expand="true"/>
+            </task>
+            <task id="99" name="EN_A0400 : Guillotine" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
+                <task id="117" name="Conception" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
+                    <task id="133" name="Valider l'architecture" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                    <task id="144" name="Valider le système de commande" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                    <task id="134" name="Choisir les matériaux" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                </task>
+                <task id="142" name="Dessin" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
+                    <task id="143" name="Dessiner partie guillotine" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                    <task id="145" name="Dessiner actionneur" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                </task>
             </task>
             <task id="100" name="EN_A0500 : Réservoir" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
                 <task id="118" name="tâche_112" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
@@ -90,7 +115,21 @@
             </task>
         </task>
     </tasks>
-    <resources/>
+    <resources>
+        <resource id="12" name="2As" function="Default:0" contacts="" phone=""/>
+        <resource id="0" name="Aimery SAULIERE" function="Default:0" contacts="" phone=""/>
+        <resource id="2" name="Come ARCHINARD" function="Default:0" contacts="" phone=""/>
+        <resource id="3" name="Vincent BARREAU" function="Default:0" contacts="" phone=""/>
+        <resource id="1" name="Mathieu JACQUET" function="Default:0" contacts="" phone=""/>
+        <resource id="4" name="Ghislain KONATE" function="Default:0" contacts="" phone=""/>
+        <resource id="8" name="0As" function="Default:0" contacts="" phone=""/>
+        <resource id="5" name="Louise ANDRE-MATAHRI" function="Default:0" contacts="" phone=""/>
+        <resource id="10" name="Ibrahima BALDE" function="Default:0" contacts="" phone=""/>
+        <resource id="9" name="Fabien DUPUIS" function="Default:0" contacts="" phone=""/>
+        <resource id="11" name="Marcos GOMES" function="Default:0" contacts="" phone=""/>
+        <resource id="6" name="Leon MARGRAFF" function="Default:0" contacts="" phone=""/>
+        <resource id="7" name="Henrique SENHORINI KATRIP" function="Default:0" contacts="" phone=""/>
+    </resources>
     <allocations/>
     <vacations/>
     <previous/>
