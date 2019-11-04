@@ -1,18 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2019-10-21" view-index="0" gantt-divider-location="975" resource-divider-location="958" version="2.8.10" locale="en_GB">
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2019-10-21" view-index="0" gantt-divider-location="1234" resource-divider-location="958" version="2.8.10" locale="en_GB">
     <description/>
     <view zooming-state="default:4" id="gantt-chart">
-        <field id="tpd3" name="Name" width="499" order="0"/>
-        <field id="tpd4" name="Begin date" width="97" order="1"/>
-        <field id="tpd5" name="End date" width="117" order="2"/>
-        <field id="tpd13" name="Resources" width="167" order="3"/>
-        <field id="tpd7" name="Completion" width="90" order="4"/>
+        <field id="tpd3" name="Name" width="523" order="0"/>
+        <field id="tpd4" name="Begin date" width="145" order="1"/>
+        <field id="tpd5" name="End date" width="89" order="2"/>
+        <field id="tpd13" name="Resources" width="284" order="3"/>
+        <field id="tpd7" name="Completion" width="138" order="4"/>
+        <field id="tpd1" name="Priority" width="51" order="5"/>
         <option id="taskLabelUp" value=""/>
         <option id="taskLabelRight" value=""/>
         <option id="color.recent"><![CDATA[#ffff00 #ff6600 #3333ff #ff0000 #00cc66 #ff00cc #e1e1e1 #000000]]></option>
     </view>
     <view id="resource-table">
-        <field id="0" name="Name" width="674" order="0"/>
-        <field id="tpc0" name="trigramme" width="280" order="1"/>
+        <field id="0" name="Name" width="609" order="0"/>
+        <field id="tpc0" name="trigramme" width="254" order="1"/>
+        <field id="tpc1" name="note perso" width="91" order="2"/>
     </view>
     <!-- -->
     <calendars>
@@ -38,52 +40,83 @@
             <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
             <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
         </taskproperties>
-        <task id="73" name="SU_Suspension" color="#3333ff" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+        <task id="73" name="SU_Suspension" color="#3333ff" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
             <notes><![CDATA[Devis, Budget, définitions des prioritées. répartition des taches aux membres de l'équipe ( bcp de pièces sont encore à commencer)]]></notes>
-            <task id="79" name="SU_A0100 A-Arms front upper" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
-                <task id="148" name="design rod-end support SU_A0100" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
-                    <notes><![CDATA[Catia
-]]></notes>
+            <task id="435" name="Points LAS et dynamique" color="#000000" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
+                <task id="436" name="placement toe rod rear" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
+                <task id="493" name="placement crémaillère et biellette direction" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[placer les points Lotus]]></notes>
                 </task>
-                <task id="258" name="devis tubes SU_A0100" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
+                <task id="587" name="determiner raideur BAR" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[modèle et calculs de MKI python]]></notes>
+                </task>
+                <task id="589" name="determiner efforts BAR" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[en utilisant le ARB ratio pour le déplacement]]></notes>
+                </task>
+                <task id="487" name="iterations cellule arrière" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[message Calixthe slack: reculer de 20mm en Y le Front Upper A Arm Point  des Rear A-Arms,]]></notes>
+                </task>
+                <task id="437" name="collision study bump front" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="438" name="collision study steer front" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="439" name="collision study roll front" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="440" name="collision study bump rear" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="441" name="collision study roll rear" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            </task>
+            <task id="534" name="fiabilisation collage triangles et biellettes" color="#000000" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                <task id="535" name="verifier avec le fournisseur la colle" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" priority="2" expand="true">
+                    <notes><![CDATA[collage alu - carbone. Optimus avait utilisé la colle DP490 de 3M. Demander des conseils directement à 3M en leur explicant le notre application. est ce que la temperature est importante ?]]></notes>
+                </task>
+                <task id="537" name="revoir process de collage triangles" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" priority="4" expand="true">
+                    <notes><![CDATA[donner un protocole de collage des triangles en adaptant les méthodes d'Atomix, Vulcanix et Optimus. 
+1- Sillons dans la surfca alu des cylindres ( avec la vitesse d'avance de l'outi de coupe) 
+2- Sablage des pièce alus pour mieux nettoyer
+3- Ponçage tubes carbone intérieur (quel papirer à ponser?)
+4- Nettoyage pièces ( 3 poduits - voir Atomix) + séchage
+5- Ajout de postilles rond en plastique pour empecher à la colle de déscendre ( Atomix)
+6- Ajout colle sur les inserts + enfoncer en tournant
+7- Laisser secher 7 jours à temp ambiente
+RQ - Augmenter la surface de collage en passant de 30 mm (Optimus) à 35 mm et en augmentant le diamètre des tubes de carbone. Il faut obtenir 1.5 - 2 fois la surface de collage d'optimus avec ces deux modif.
+RQ - Pour les essais réutiliser les rotules d'Optimus ( reprendre les inserts d'optimus)
+RQ - pour les insert du coté porte-moyeu on usine directement le cylindre sur l'insert pour augmenter la fiabilité (le décollages d'Optimus étaient à cet endroit là)
+RQ - Aurelien Bienner (Reedom) a donné sa disponibilité pour toutes questions]]></notes>
+                </task>
+                <task id="564" name="essai rupture collage triangles" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[essai en rupture pour comparaison avec la méthode du passée ( Atomix, Vulcanix et Optimus). Essai en fatigue: à vérifier si c'est faisable. L'essai en faitigue pour envoron 1000 cycles permettrait de voir l'évolution de la charge de rupture avec 1000 cycles. Les essais seront faits au laboratoir LTDS de l'école. Démander à Aurelien Bienner la ref du prof à contacter]]></notes>
+                </task>
+            </task>
+            <task id="555" name="fabrication" meeting="false" start="2019-10-21" duration="1" complete="0" expand="false">
+                <task id="557" name="traitement surface pièce en acier" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[brunissage, pas de painture! Ex: basculeurs, entretoises]]></notes>
+                </task>
+            </task>
+            <task id="552" name="entretorises" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
+                <task id="553" name="normaliser la taille des entretoises" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[distance basculerus = distance chape chassis = distance chape porte-moyeu = distance chapes triangles. porte moyeu AV et AR SU_A10 et SU_A11]]></notes>
+                </task>
+            </task>
+            <task id="79" name="SU_A01 A_02 A_03 A_04 A-Arms" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                <task id="148" name="design rod-end support" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[buttée mécanique pour les inserts porte-moyeu qui reprennent la suspension ( avec circlip). Du coté chassis les inserts n'ont pas besion des circlips, la butée mécanique (cf Optimus) est souffisante. Les rotules sont montées serrées sur les inserts ( cf ajoustement mécanique Optimus). Aurelien Binner est disponible pour toutes questions.]]></notes>
+                </task>
                 <task id="149" name="simulation inerts SU_A0100" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
-                    <notes><![CDATA[simulation EF]]></notes>
-                </task>
-                <task id="156" name="collage triangles" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
-                    <notes><![CDATA[étude de fiabilité. Quelle colle utiliser. Longueur des inserts de collage. Etat de surface des inserts. Conditions critiques de foncionnement]]></notes>
-                </task>
-                <task id="158" name="design inserts collage triangles" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
-            </task>
-            <task id="100" name="SU_A0200 A-Arms front lower" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
-                <notes><![CDATA[same thing as in front upper]]></notes>
-                <task id="150" name="design rod-end support SU_A0200" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
-                <task id="151" name="simulation rod-end support SU_A0200" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
-                    <notes><![CDATA[cas de charge MKI]]></notes>
+                    <notes><![CDATA[simulation EF des inserts avec les cas de chage Mécamaster]]></notes>
                 </task>
             </task>
-            <task id="101" name="SU_A0300 A-Arms rear upper" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
-                <task id="152" name="design rod-end support SU_A0300" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
-                <task id="153" name="simulation rod-end support SU_A0300" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
-                    <notes><![CDATA[cas de charge MKI]]></notes>
-                </task>
-            </task>
-            <task id="103" name="SU_A0400 A-Arms rear lower" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
-                <task id="160" name="design rod-end support SU_A0400" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
-                <task id="162" name="simulation rod-end support SU_A0400" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
-                    <notes><![CDATA[cas de charge MKI]]></notes>
-                </task>
-            </task>
-            <task id="104" name="SU_A05  A07 Shocks" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
-                <task id="164" name="devis maintenance kit" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
-                    <notes><![CDATA[to repair the shocks from Optimus]]></notes>
-                </task>
+            <task id="104" name="SU_A05  A07 Shocks" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
                 <task id="166" name="shock choice" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
                     <notes><![CDATA[determiner la raideur des ressorts (parmi celles à disposition). Normalement c'est déjà fait par MKI --> fichiers de calcul dans le git Ressources2020 ]]></notes>
                 </task>
+                <task id="550" name="état ressorts Optimus" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[quels ressorts sont disponibles d'après le crash d'Optimus ?]]></notes>
+                </task>
             </task>
-            <task id="105" name="SU_A0600 Bell Cranks Front" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
-                <task id="168" name="design rocker SU_A0600" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
-                    <notes><![CDATA[utiliser les points de la géometrie LASauto]]></notes>
+            <task id="105" name="SU_A06 A_08  Bell Cranks" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                <notes><![CDATA[modifier l'assemblage de pivot pour enlever les jeux mécanique. Utiliser la solition proporsé par Jacques dans l'assemblage du pédalier (butée à touleaux, bagues en laiton, vis épaulé + rondelle)]]></notes>
+                <task id="168" name="design rocker SU_A0600 SU_A0800" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[proposer un assemblage pour la liaison pivot en suivant la solution utlisée par Jacques dans le pédalier (butée à rouleaux + bague en laiton + vis épaulée + rondelle) Voir photo. Choisir les composants et les rentrer dans la maquette en modifiant la nomenclature si necessaire.]]></notes>
+                </task>
+                <task id="547" name="sourveiller les chapes des basculeurs" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[elles serond déssinées par le departement du chassis. Suivre l'avancement des chapes afin de bien les intégrer dans l'assemblage des basculeurs]]></notes>
                 </task>
                 <task id="304" name="BOM rocker assy SU_A0600" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
                     <notes><![CDATA[determiner le type de roulements pour la liaison avec le chassis. les rotules seront comandée en lien avec les triangles et les pull bars. Choisir la visserie en s'inspirant d'Optimus]]></notes>
@@ -92,69 +125,80 @@
                     <notes><![CDATA[cas de charge MKI]]></notes>
                 </task>
             </task>
-            <task id="107" name="SU_A0800 Bell Cranks Rear" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
-                <task id="180" name="design rocker SU_A0800" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
-                <task id="313" name="BOM rocker assy SU_A0800" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
-                <task id="182" name="simulation rockers SU_A0800" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
-                    <notes><![CDATA[cas de charges MKI]]></notes>
-                </task>
-            </task>
-            <task id="108" name="SU_A0900 Tie Rod - Rear" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
+            <task id="108" name="SU_A0900 Tie Rod - Rear" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
                 <task id="184" name="design rod-end support SU_A0900" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
-                    <notes><![CDATA[threaded rod-end. Se reinsegner avec la commande des rotules]]></notes>
+                    <notes><![CDATA[threaded rod-end. Se reinsegner avec la commande des rotules. Collage alu - carbone comme dans le triangles]]></notes>
                 </task>
                 <task id="186" name="simulation rod-end SU_A0900" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
                     <notes><![CDATA[cas de charge MKI
 ]]></notes>
                 </task>
             </task>
-            <task id="109" name="SU_A1000 Front Uprights" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
-                <task id="188" name="design front upright SU_A1000" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
+            <task id="109" name="SU_A1000 Front Uprights" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                <task id="188" name="design front upright SU_A1000" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[definir la position de létrier et des biellettes de direction ]]></notes>
+                </task>
                 <task id="190" name="simulation front upright SU_A1000" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
                     <notes><![CDATA[cas de charge MKI]]></notes>
                 </task>
+                <task id="497" name="entretoise" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[ a standardisaer avec celles du A-Arms: utiliser la taille imposée par le chassis (20 mm). Démander à Calixthe la nouvelle distance des chapes chassis ]]></notes>
+                </task>
             </task>
-            <task id="110" name="SU_A1100 Rear Uprights" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
+            <task id="110" name="SU_A1100 Rear Uprights" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
                 <task id="192" name="design rear upright SU_A1100" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
-                    <notes><![CDATA[meme structure d'optimus
+                    <notes><![CDATA[meme structure d'optimus ( enlever le parallelogramme) Placement de l'étrier. Placement de la toe rod.
 ]]></notes>
                 </task>
                 <task id="194" name="simulation rear upright SU_A1100" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
                     <notes><![CDATA[cas de charge MKI]]></notes>
                 </task>
             </task>
-            <task id="111" name="SU_A12 A13 Push/Pullrods" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
+            <task id="111" name="SU_A12 A13 Push/Pullrods" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
                 <task id="196" name="design rod-end SU_A12 A_13" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
                 <task id="336" name="devis tubes pullrods SU_A12 A13" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
                 <task id="198" name="simulation rod-end SU_A12 A_13" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
                     <notes><![CDATA[cas de charge MKI]]></notes>
                 </task>
             </task>
-            <task id="113" name="SU_A1400 Anti Roll Bar Front" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
-                <task id="204" name="design front arb SU_A1400" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
-                <task id="339" name="BOM front arb SU_A1400" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            <task id="113" name="SU_A1400 Anti Roll Bar Front" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                <task id="434" name="placement front ARB chassis" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
+                <task id="204" name="design front ARB SU_A14" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[barre de torsion + liaison avec le chassis (palier laiton ?). tube acier Optimus CD45 diamètre ext 15 mm ( La Gir)]]></notes>
+                </task>
+                <task id="594" name="design front ARB SU_A14" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[couteaux tournants et support de fixation des coutaux à la barre de torsion. Biellette de liaison avec le basculeurs ( assemblage avec rotules)]]></notes>
+                </task>
+                <task id="339" name="BOM front arb SU_A1400" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
                 <task id="206" name="simulation torsion bar SU_A1400" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
                 <task id="342" name="simulation arb blades SU_A1400" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
             </task>
-            <task id="347" name="SU_A1500 Anti Roll Bar Rear" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false" cost-manual-value="0.0" cost-calculated="true">
-                <task id="349" name="design rear arb SU_A1500" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
+            <task id="347" name="SU_A1500 Anti Roll Bar Rear" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                <task id="453" name="placement rear ARB chassis" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[utiliser le tube moteur pour se fixer avec la barre de torsion]]></notes>
+                </task>
+                <task id="349" name="design rear ARB SU_A15" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
+                    <notes><![CDATA[barre de torsion + liaison avec le chassis (palier laiton ?). tube acier Optimus CD45 diamètre ext 15 mm ( La Gir)]]></notes>
+                </task>
+                <task id="601" name="design rear ARB SU_A15" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[couteaux tournants et support de fixation des coutaux à la barre de torsion. Biellette de liaison avec le basculeurs ( assemblage avec rotules)]]></notes>
+                </task>
                 <task id="351" name="BOM rear arb SU_A1500" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
                 <task id="353" name="simulation torsion bar SU_A1500" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
                 <task id="355" name="simulation arb blades SU_A1500" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
             </task>
-            <task id="114" name="Rotules" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
+            <task id="114" name="Rotules" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
                 <notes><![CDATA[pièces dans différents assemblages, il faut communiquer le choix aux respos]]></notes>
                 <task id="207" name="choisir fournisseur" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
-                    <notes><![CDATA[skf, getecno ou askuball ??]]></notes>
+                    <notes><![CDATA[skf, getecno ou askuball ?? mettre les catalogues à disposition de l'équipe pour choisir les modèles et faire les devis. rentrer les rotules dans le fichier de gestion LAS . Askubal est mieux car ils proposent déjà une selection de prodiits spécifique pour le FS. ]]></notes>
                 </task>
+                <task id="483" name="rotules ARB front et rear" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
+                <task id="484" name="roulements rockers front + rear" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
                 <task id="415" name="devis rotules" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
                     <notes><![CDATA[commande unique pour tout le monde]]></notes>
                 </task>
-                <task id="208" name="taille rotules triangles front  SU_A01 A_02" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
-                    <notes><![CDATA[cas de charge MKI Vs catalogue fournisseur]]></notes>
-                </task>
-                <task id="366" name="taille rotules traingles rear SU_A03 A_04" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
-                    <notes><![CDATA[cas de charge MKI Vs catalogue fournisseur]]></notes>
+                <task id="208" name="taille rotules triangles front  SU_A01 A_02 A_03 A_04" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[cas de charge MKI Vs catalogue fournisseur. Choisir le pir de cas dans la fauille des calcul des cas de charge. Coeff de sécurité sur la charge max d'au moins 2]]></notes>
                 </task>
                 <task id="370" name="taille rotules steering SU_A0900" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
                     <notes><![CDATA[cas de charge MKI Vs catalogue fournisseur]]></notes>
@@ -169,122 +213,210 @@
             <task id="413" name="devis visserie" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
                 <notes><![CDATA[une commande pour tout le monde. quantité extra ???]]></notes>
             </task>
-            <task id="383" name="choix visserie triangles front  SU_A01 A_02" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
-                <notes><![CDATA[cas de charge MKI Vs catalogue fournisseur]]></notes>
+            <task id="455" name="collision montage visserie sur le chassis" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                <notes><![CDATA[macro visserie Brice]]></notes>
             </task>
-            <task id="385" name="choix visserie traingles rear SU_A03 A_04" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
-                <notes><![CDATA[cas de charge MKI Vs catalogue fournisseur]]></notes>
-            </task>
-            <task id="387" name="choix visserie steering SU_A0900" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
-                <notes><![CDATA[cas de charge MKI Vs catalogue fournisseur]]></notes>
-            </task>
-            <task id="389" name="choix visserie pullbar SU_A12 A13" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
-                <notes><![CDATA[cas de charge MKI Vs catalogue fournisseur]]></notes>
-            </task>
-            <task id="392" name="choix visserie rockers SU_A06 A08" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
-                <notes><![CDATA[cas de charge MKI Vs catalogue fournisseur]]></notes>
-            </task>
-            <task id="394" name="choix visserie étriers front + rear" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-            <task id="409" name="choix visserie front hub WT_A0200" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
-                <notes><![CDATA[lock nut + washer ]]></notes>
-            </task>
-            <task id="410" name="choix visserie rear hub WT_A0300" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
-                <notes><![CDATA[k-nut tulipe]]></notes>
+            <task id="486" name="choix visserie" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
+                <task id="383" name="choix visserie triangles front  SU_A01 A_02 A_03 A_04" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[garder la meme que Optimus]]></notes>
+                </task>
+                <task id="387" name="choix visserie steering SU_A0900" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[garder la meme que optimus]]></notes>
+                </task>
+                <task id="389" name="choix visserie pullbar SU_A12 A13" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[garder les visses d'optimus (cf reglement)]]></notes>
+                </task>
+                <task id="392" name="choix visserie rockers SU_A06 A08" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[gardere la meme que optimus
+]]></notes>
+                </task>
+                <task id="394" name="choix visserie étriers front + rear" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[garder la meme que optimus
+]]></notes>
+                </task>
+                <task id="409" name="choix visserie front hub WT_A0200" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[lock nut + washer ]]></notes>
+                </task>
+                <task id="492" name="choix k-nut tulipe" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
             </task>
         </task>
-        <task id="74" name="BR_BrakeSystem" color="#ff0000" meeting="false" start="2019-10-21" duration="1" complete="10" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
+        <task id="74" name="BR_BrakeSystem" color="#ff0000" meeting="false" start="2019-10-21" duration="1" complete="6" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
+            <task id="501" name="integration" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
+                <task id="502" name="etude raccords en alu" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[gain masse/euro. enlever les raccords en acier et laiton]]></notes>
+                </task>
+                <task id="504" name="tube gavage maitre cylindre" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[au liei du revervoir en plastique.]]></notes>
+                </task>
+                <task id="506" name="rondelle cuivre" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[different epaisseurs pour les raccords. en commander par avance ]]></notes>
+                </task>
+                <task id="508" name="consommables braking" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[joints, huile, plaquette de frein, ]]></notes>
+                </task>
+            </task>
+            <task id="625" name="justification disques de frein perçés" color="#000000" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                <task id="627" name="planning campagne d'essai" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[avec vulcanix.]]></notes>
+                </task>
+                <task id="630" name="étude disque de frein perçés" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[1- gain de masse eur/gram gagné
+2- compatibilité disques entre plein et perçé et Vulcanix
+3 - Approvisionnement disques: fournisseurs ? devis ?
+4- definir un protocole d'essai avec Vulcanix
+]]></notes>
+                </task>
+                <task id="632" name="moidèle de freinage" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[verifier les calculs et les hypothèses du modèle de freinage. présenter ce qui à été fait aux nAs]]></notes>
+                </task>
+            </task>
             <task id="80" name="BR_A0100 brake system front" color="#ff0000" meeting="false" start="2019-10-21" duration="1" complete="20" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
                 <task id="230" name="devis freinage avant BR_A0100" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
-                <task id="209" name="choix brake disc front" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
-                <task id="210" name="choix brake caliper front" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="100" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
+                <task id="209" name="choix brake disc front" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[trouvel l'équivalent disque plein de Optimus (disque avec frette). Trouver un disque persé qui soit compatible avec le discque plein. Il faout que le tout soit intégrable sur les moyeu de Vultanix pour la phase de test]]></notes>
+                </task>
+                <task id="210" name="placement brake caliper front" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="100" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[front upright. definir la position de l'étrier par rapport au disque]]></notes>
+                </task>
                 <task id="211" name="choix plaquettes front" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
-                <task id="212" name="étude frette front" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
-                    <notes><![CDATA[ça depend du disque]]></notes>
+                <task id="212" name="design frette de frein avant" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[maquette catia et structure du git]]></notes>
                 </task>
             </task>
             <task id="81" name="BR_A0200 brake system rear" color="#ff0000" meeting="false" start="2019-10-21" duration="1" complete="20" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
                 <task id="232" name="devis freinage arrière BR_A0200" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
-                <task id="215" name="choix brake disc rear" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-                <task id="217" name="choix brake caliper rear" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="100" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
-                <task id="219" name="choix plaquettes rear" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-                <task id="221" name="étude frette" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
-                    <notes><![CDATA[ça depende du disque]]></notes>
+                <task id="215" name="choix brake disc rear" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[trouvel l'équivalent disque plein de Optimus (disque avec frette). Trouver un disque persé qui soit compatible avec le discque plein. Il faout que le tout soit intégrable sur les moyeu de Vultanix pour la phase de test]]></notes>
+                </task>
+                <task id="217" name="placement brake caliper rear" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="100" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[rear upright. definir la position de l'étrier par rapport au disque]]></notes>
+                </task>
+                <task id="219" name="choix plaquettes rear" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
+                <task id="221" name="design frette de frein arrière" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[maquette et structure du git. s'inspirer d'optimus]]></notes>
                 </task>
             </task>
             <task id="83" name="BR_A0300 master cylinder" color="#ff0000" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
-                <task id="233" name="devis master cylinder BR_A0300" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="233" name="devis master cylinder BR_A0300" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
             </task>
             <task id="84" name="BR_A0400 balance bar" color="#ff0000" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
-                <task id="234" name="devis balance bar BR_A0400" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="234" name="devis balance bar BR_A0400" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
             </task>
         </task>
-        <task id="75" name="WT_wheels" color="#ffff00" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
-            <task id="98" name="WT_A0100 Wheels" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
-                <task id="235" name="devis jantes" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
-                    <notes><![CDATA[1 ou 3 jantes ?]]></notes>
-                </task>
-                <task id="236" name="devis pneus compet" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
-                    <notes><![CDATA[continental C19 (9 slick + 4 wet) ]]></notes>
-                </task>
-                <task id="237" name="devis pneus rally" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
-                    <notes><![CDATA[choix modèle d'abord]]></notes>
+        <task id="75" name="WT_wheels" color="#ffff00" meeting="false" start="2019-10-21" duration="1" complete="16" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
+            <task id="511" name="itegration" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
+                <task id="513" name="choix roulements WT_A02 A_03" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[On ne change pas les roulements, on ne refait pas le calcul de vies des roulements. Les soucis d'optimus étaient liés à un mauvais montage ou à une manque de precharge. On va commander un douille speciale pour les écrous à encoche pour Invictus de telle façon à maitriser la précharge (demarche classique par essai). Démander à NGO la ref de la commande.]]></notes>
+                    <depend id="509" type="2" difference="0" hardness="Strong"/>
                 </task>
             </task>
-            <task id="131" name="WT_A0200 Front Hub" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
-                <task id="238" name="design fron hub WT_A0200" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
+            <task id="98" name="WT_A0100 Wheels" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
+                <task id="237" name="choix pneus rally" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[choix modèle d'abord, il faut que le fanc soit le plus proche possible des Continental C19]]></notes>
+                </task>
+            </task>
+            <task id="131" name="WT_A0200 Front Hub" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="40" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                <task id="238" name="design fron hub WT_A0200" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="80" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
                 <task id="241" name="simulation front hub WT_A0200" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
                     <notes><![CDATA[cas de charge MKI
 ]]></notes>
                 </task>
-                <task id="419" name="choix roulements front hub WT_A0200" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-                <task id="420" name="devis roulements front hub WT_A0200" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
             </task>
-            <task id="132" name="WT_A0300 Rear Hub" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
-                <task id="244" name="design rear hub WT_A0300" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
+            <task id="132" name="WT_A0300 Rear Hub" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="26" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                <task id="244" name="design rear hub WT_A0300" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="80" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[gain de perfo goujon Ti (> 1 eur/gram gagné ?). pièce de FsaeParts.com. Vérifier reglement pour les goujons. Fournisseur + devis ?]]></notes>
+                </task>
+                <task id="494" name="ecrou tulipe" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[nilstop verifier ? aeronut (UK) conv TLS slack --> 23 filet nilstop. Reglement 2 fillets dépassants --< longueur de l'écrou]]></notes>
+                </task>
                 <task id="248" name="simulation rear hub WT_0300" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
                     <notes><![CDATA[cas de charge MKI]]></notes>
                 </task>
-                <task id="421" name="choix roulements rear hub WT_A0300" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-                <task id="422" name="devis roulements rear hub WT_A0300" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
             </task>
         </task>
         <task id="76" name="ST_Steering" color="#ff6600" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
-            <task id="135" name="ST_A0100 Steering Wheel" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
-                <task id="249" name="devis steering wheel" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
-                    <notes><![CDATA[c'est à la LAS ou à l'ergo ??]]></notes>
+            <task id="135" name="ST_A0100 Steering Wheel" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
+            <task id="136" name="ST_A0200 Steering Shaft" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                <task id="250" name="design steering shaft ST_A0200" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[crèation de la maquette et structure du git. joint de cardan simple.Cinématique régler collisions. Conception liasion pivot de la colonne avec le chassis (verifiier solution de Optimus). Liaison colonne - crémaillère: quel type de joint ? On va utiliser une solution acier optimisé en masse pour garder la fiabilité des soudures.]]></notes>
+                </task>
+                <task id="426" name="devis steering shaft ST_A0200" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[quels joints entre la colonne et la crémaillère ? est ce qu'il y a qqch à commander ?]]></notes>
                 </task>
             </task>
-            <task id="136" name="ST_A0200 Steering Shaft" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
-                <task id="250" name="design steering shaft ST_A0200" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
-                <task id="426" name="devis steering shaft ST_A0200" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-            </task>
             <task id="137" name="ST_A0300 Steering Rack" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
-                <task id="251" name="devis steering rack ST_A0300" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="251" name="design steering rack cover ST_A0300" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
             </task>
             <task id="138" name="ST_A0400 Tie Rods" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
-                <task id="252" name="design rod-end ST_A0400" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-                <task id="427" name="devis tubes steering  rods ST_A0400" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="252" name="design rod-end ST_A0400" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
+                <task id="427" name="devis tubes steering  rods ST_A0400" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
                 <task id="253" name="simulation rod end ST_A0400" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
                     <notes><![CDATA[cas de charge MKI]]></notes>
                 </task>
             </task>
         </task>
-        <task id="77" name="Budget" color="#00cc66" meeting="false" start="2019-11-08" duration="18" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="false">
-            <task id="254" name="envoyer devis à Romain" color="#8cb6ce" meeting="true" start="2019-11-08" duration="0" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
-                <notes><![CDATA[tot depenses sur 2800 € centrale + 3000€ bron]]></notes>
+        <task id="77" name="Budget" color="#00cc66" meeting="false" start="2019-10-21" duration="18" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+            <task id="254" name="envoyer devis à Romain" color="#8cb6ce" meeting="true" start="2019-11-08" duration="0" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" priority="4" expand="true">
+                <notes><![CDATA[deux budgets : 1 centrale et 1 Bron. Tu doit leur avoir envoyé toutes tes commandes le 15 novembre (considère le 8 novembre pour avoir de la marge).
+Centrale : 2,8k€ à utiliser
+Bron : 3k€ à utiliser
+Pour les deux, les commandes doivent être payées avant les vacances de noël, cad avant le 21 décembre 2019.
+Cad :
+- soit payées en avance, dans ce cas c'est bon
+- soit livrées avant le 21 décembre 2019.]]></notes>
+            </task>
+            <task id="509" name="devis wheel bearing" color="#8cb6ce" meeting="false" start="2019-10-22" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" priority="4" expand="true">
+                <notes><![CDATA[ 6 roulements (2 extra) en utilisant les 4 qui sont dejà à Bron. envoron 1500 eur ttc. ]]></notes>
+            </task>
+            <task id="517" name="devis jantes" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" priority="4" expand="true">
+                <notes><![CDATA[2 jantes Oz Mg R13 chez Reverchon environ /%= eur ttc. valider le nombre de jante avec MKI et TLS]]></notes>
+            </task>
+            <task id="523" name="devis pneus compet" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" priority="4" expand="true">
+                <notes><![CDATA[9 pneus slick + 4 pneus wet (environ 2400 eur ttc). nouveau fournisseur]]></notes>
+            </task>
+            <task id="525" name="devis kit reparation Ohlins" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" priority="4" expand="true">
+                <notes><![CDATA[se reinsegner sur le kit de réparation des amortisseurs Ohlink Mk II. Combien faut-il en acheter pour reparer 4 (+1 vulcanix) amortisseurs d'Optimus? Quel fournisseur ? Effectuer le devis ]]></notes>
+            </task>
+            <task id="527" name="devis steering rack" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" priority="4" expand="true">
+                <notes><![CDATA[crémaillère Narrco (environ 500 eur ttc). Dèmarche nouveau fournisseur à démander à Romain Martin. Ne pas avancer sur la maquette si le devis n'as pas été envoyé. Utiliser le modèle de devis en anglais]]></notes>
+            </task>
+            <task id="529" name="devis tubes essai triangles" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" priority="4" expand="true">
+                <notes><![CDATA[fournisseur: Mateduc composites (environ 500 eur ttc avec decoupe). Estimer d'abord la longueur nécessaire à effectuer 20 essay sur des tubes de 20 cm. grandir la surface de collage (et donc le diamètre des tubes) en suivant la démarche du protocole d'essai]]></notes>
             </task>
         </task>
-        <task id="326" name="Reunions techniques" meeting="false" start="2019-10-21" duration="1" complete="0" expand="false">
-            <task id="327" name="planning reu tech nAs" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-            <task id="328" name="rapport techniques Simon Laurent" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-            <task id="329" name="planning reu tech Janolin Houx A" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+        <task id="326" name="Reunions techniques" color="#000000" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+            <notes><![CDATA[conseil technique nAs, Academiciens EPSAC et Prof de Centrale]]></notes>
+            <task id="327" name="planning reu tech nAs" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
+            <task id="499" name="reu tech roue équipée" color="#8cb6ce" meeting="true" start="2019-10-21" duration="0" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                <notes><![CDATA[monoh, reedom, jacques, ]]></notes>
+            </task>
+            <task id="328" name="rapport techniques Simon Laurent" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
+            <task id="329" name="planning reu tech Janolin Houx A" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
         </task>
-        <task id="281" name="EQ_Equipe" meeting="false" start="2019-10-21" duration="1" complete="0" expand="false">
+        <task id="431" name="Partenaires" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
+            <task id="432" name="OptimumG dynamics no report" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                <notes><![CDATA[repondre à Rouelle en lui disant que on a pas pu utiliser son logiciel (la licence à été activée ??)]]></notes>
+            </task>
+            <task id="643" name="pièce titane" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                <notes><![CDATA[choisir une pièce titane non critique pour la fabrication en additif. support fixage BAR couteaux ? entretoise volant ?]]></notes>
+            </task>
+        </task>
+        <task id="281" name="EQ_Equipe" meeting="false" start="2019-10-21" duration="1" complete="21" expand="true">
             <task id="282" name="lire tutoriel BOM" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
                 <notes><![CDATA[des questions?]]></notes>
             </task>
-            <task id="428" name="rediger tutorier Devis" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
-            <task id="429" name="rediger tutoriel Vues éclatéess" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
+            <task id="490" name="jalons scolarité" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                <notes><![CDATA[lister ses propres dates des examens ou des soutenances pour une maj du gantt]]></notes>
+            </task>
+            <task id="451" name="cas de charge et coeff de secu" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                <notes><![CDATA[nominale limite ultime ? coeff de secu ?]]></notes>
+            </task>
+            <task id="445" name="rediger tutoriel Contraintes" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="30" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
+            <task id="447" name="rediger tutoriel Simulation FEA" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="30" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
+                <notes><![CDATA[discuter de la methode avec Calixte]]></notes>
+            </task>
+            <task id="428" name="rediger tutorier Devis" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="100" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
+            <task id="429" name="rediger tutoriel Vues éclatéess" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="30" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true"/>
             <task id="430" name="lire tutoriel Devis" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" thirdDate="2019-10-21" thirdDate-constraint="0" expand="true">
                 <notes><![CDATA[des questions?]]></notes>
             </task>
@@ -320,10 +452,13 @@
     </tasks>
     <resources>
         <custom-property-definition id="tpc0" name="trigramme" type="text"/>
+        <custom-property-definition id="tpc1" name="note perso" type="text"/>
         <resource id="0" name="Michele SCHIO" function="Default:0" contacts="" phone="">
             <custom-property definition-id="tpc0" value="MSO"/>
         </resource>
-        <resource id="1" name="TLS" function="Default:0" contacts="" phone=""/>
+        <resource id="1" name="Thibaud LASSUS" function="Default:0" contacts="" phone="">
+            <custom-property definition-id="tpc0" value="TLS"/>
+        </resource>
         <resource id="2" name="Rémi FERRAND" function="Default:0" contacts="" phone="">
             <custom-property definition-id="tpc0" value="RFD"/>
         </resource>
@@ -354,44 +489,115 @@
     </resources>
     <allocations>
         <allocation task-id="254" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
-        <allocation task-id="148" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
-        <allocation task-id="150" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="188" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="192" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
-        <allocation task-id="114" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="428" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="429" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="445" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="447" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="436" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="207" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="409" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="238" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="241" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="244" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="248" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="432" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="487" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="490" resource-id="0" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="494" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="497" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="513" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="517" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="509" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="523" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="587" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="589" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="166" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="190" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="194" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="434" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="453" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="455" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="492" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="643" resource-id="0" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="327" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="329" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="499" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="328" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="643" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="282" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
-        <allocation task-id="423" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="430" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
-        <allocation task-id="168" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="490" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="209" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="210" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="627" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="630" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="215" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="217" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="282" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
-        <allocation task-id="423" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="430" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="490" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="594" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="342" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="601" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="355" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="483" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="148" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
-        <allocation task-id="158" resource-id="4" function="Default:0" responsible="true" load="100.0"/>
-        <allocation task-id="150" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="282" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
-        <allocation task-id="423" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="430" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
-        <allocation task-id="180" resource-id="5" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="149" resource-id="4" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="208" resource-id="4" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="383" resource-id="4" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="490" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="184" resource-id="4" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="196" resource-id="4" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="374" resource-id="4" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="389" resource-id="4" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="252" resource-id="4" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="282" resource-id="5" function="Default:0" responsible="false" load="100.0"/>
-        <allocation task-id="423" resource-id="5" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="430" resource-id="5" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="484" resource-id="5" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="392" resource-id="5" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="490" resource-id="5" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="525" resource-id="5" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="550" resource-id="5" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="168" resource-id="5" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="547" resource-id="5" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="304" resource-id="5" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="170" resource-id="5" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="282" resource-id="6" function="Default:0" responsible="false" load="100.0"/>
-        <allocation task-id="423" resource-id="6" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="430" resource-id="6" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="490" resource-id="6" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="212" resource-id="6" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="221" resource-id="6" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="204" resource-id="7" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="282" resource-id="7" function="Default:0" responsible="false" load="100.0"/>
-        <allocation task-id="423" resource-id="7" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="430" resource-id="7" function="Default:0" responsible="false" load="100.0"/>
-        <allocation task-id="156" resource-id="8" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="206" resource-id="7" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="490" resource-id="7" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="349" resource-id="7" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="353" resource-id="7" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="282" resource-id="8" function="Default:0" responsible="false" load="100.0"/>
-        <allocation task-id="423" resource-id="8" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="430" resource-id="8" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="490" resource-id="8" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="529" resource-id="8" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="535" resource-id="8" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="537" resource-id="8" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="564" resource-id="8" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="632" resource-id="8" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="282" resource-id="9" function="Default:0" responsible="false" load="100.0"/>
-        <allocation task-id="423" resource-id="9" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="430" resource-id="9" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="387" resource-id="9" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="250" resource-id="9" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="426" resource-id="9" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="251" resource-id="9" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="490" resource-id="9" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="527" resource-id="9" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="370" resource-id="9" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="451" resource-id="10" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="493" resource-id="10" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="643" resource-id="10" function="Default:0" responsible="false" load="100.0"/>
     </allocations>
     <vacations/>
     <previous/>

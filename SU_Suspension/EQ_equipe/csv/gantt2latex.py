@@ -69,7 +69,7 @@ def task(name, note, peopleList = []):
     if peopleList !=[] :
         # fromat list to str
         peopleList = ", ".join(peopleList)
-        text = "\\paragraph{{{}}} \\footnote{{avec {}}} {}".format(clearTitle(name), peopleList,  clearNote(note))
+        text = "\\paragraph{{{}}} (avec {}) {}".format(clearTitle(name), peopleList,  clearNote(note))
     else:
         text = "\\paragraph{{{}}} {}".format(clearTitle(name), clearNote(note))
     return text

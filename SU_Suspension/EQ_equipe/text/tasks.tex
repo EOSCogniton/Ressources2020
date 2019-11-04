@@ -1,191 +1,284 @@
 \newpage 
  \section*{SU\_Suspension} 
  \par Devis, Budget, définitions des prioritées. répartition des taches aux membres de l'équipe ( bcp de pièces sont encore à commencer)
-	\subsection*{SU\_A0100 A-Arms front upper} 
+		\subsubsection*{Points LAS et dynamique} 
  \par 
-		\paragraph{design rod-end support SU\_A0100} Catia
+			\paragraph{placement toe rod rear} 
+			\paragraph{placement crémaillère et biellette direction} placer les points Lotus
+			\paragraph{determiner raideur BAR} modèle et calculs de MKI python
+			\paragraph{determiner efforts BAR} en utilisant le ARB ratio pour le déplacement
+			\paragraph{iterations cellule arrière} message Calixthe slack: reculer de 20mm en Y le Front Upper A Arm Point  des Rear A-Arms,
+			\paragraph{collision study bump front} 
+			\paragraph{collision study steer front} 
+			\paragraph{collision study roll front} 
+			\paragraph{collision study bump rear} 
+			\paragraph{collision study roll rear} 
+		\subsubsection*{fiabilisation collage triangles et biellettes} 
+ \par 
+			\paragraph{$\bigstar$ verifier avec le fournisseur la colle} collage alu - carbone. Optimus avait utilisé la colle DP490 de 3M. Demander des conseils directement à 3M en leur explicant le notre application. est ce que la temperature est importante ?
+			\paragraph{$\bigstar$ revoir process de collage triangles} donner un protocole de collage des triangles en adaptant les méthodes d'Atomix, Vulcanix et Optimus. 
+1- Sillons dans la surfca alu des cylindres ( avec la vitesse d'avance de l'outi de coupe) 
+2- Sablage des pièce alus pour mieux nettoyer
+3- Ponçage tubes carbone intérieur (quel papirer à ponser?)
+4- Nettoyage pièces ( 3 poduits - voir Atomix) + séchage
+5- Ajout de postilles rond en plastique pour empecher à la colle de déscendre ( Atomix)
+6- Ajout colle sur les inserts + enfoncer en tournant
+7- Laisser secher 7 jours à temp ambiente
+RQ - Augmenter la surface de collage en passant de 30 mm (Optimus) à 35 mm et en augmentant le diamètre des tubes de carbone. Il faut obtenir 1.5 - 2 fois la surface de collage d'optimus avec ces deux modif.
+RQ - Pour les essais réutiliser les rotules d'Optimus ( reprendre les inserts d'optimus)
+RQ - pour les insert du coté porte-moyeu on usine directement le cylindre sur l'insert pour augmenter la fiabilité (le décollages d'Optimus étaient à cet endroit là)
+RQ - Aurelien Bienner (Reedom) a donné sa disponibilité pour toutes questions
+			\paragraph{essai rupture collage triangles} essai en rupture pour comparaison avec la méthode du passée ( Atomix, Vulcanix et Optimus). Essai en fatigue: à vérifier si c'est faisable. L'essai en faitigue pour envoron 1000 cycles permettrait de voir l'évolution de la charge de rupture avec 1000 cycles. Les essais seront faits au laboratoir LTDS de l'école. Démander à Aurelien Bienner la ref du prof à contacter
+		\subsubsection*{fabrication} 
+ \par 
+			\paragraph{traitement surface pièce en acier} brunissage, pas de painture! Ex: basculeurs, entretoises
+		\subsubsection*{entretorises} 
+ \par 
+			\paragraph{normaliser la taille des entretoises} distance basculerus = distance chape chassis = distance chape porte-moyeu = distance chapes triangles. porte moyeu AV et AR SU\_A10 et SU\_A11
+		\subsubsection*{SU\_A01 A\_02 A\_03 A\_04 A-Arms} 
+ \par 
+			\paragraph{design rod-end support} buttée mécanique pour les inserts porte-moyeu qui reprennent la suspension ( avec circlip). Du coté chassis les inserts n'ont pas besion des circlips, la butée mécanique (cf Optimus) est souffisante. Les rotules sont montées serrées sur les inserts ( cf ajoustement mécanique Optimus). Aurelien Binner est disponible pour toutes questions.
+			\paragraph{simulation inerts SU\_A0100} simulation EF des inserts avec les cas de chage Mécamaster
+		\subsubsection*{SU\_A05A07 Shocks} 
+ \par 
+			\paragraph{shock choice} determiner la raideur des ressorts (parmi celles à disposition). Normalement c'est déjà fait par MKI --> fichiers de calcul dans le git Ressources2020 
+			\paragraph{état ressorts Optimus} quels ressorts sont disponibles d'après le crash d'Optimus ?
+		\subsubsection*{SU\_A06 A\_08Bell Cranks} 
+ \par modifier l'assemblage de pivot pour enlever les jeux mécanique. Utiliser la solition proporsé par Jacques dans l'assemblage du pédalier (butée à touleaux, bagues en laiton, vis épaulé + rondelle)
+			\paragraph{design rocker SU\_A0600 SU\_A0800} proposer un assemblage pour la liaison pivot en suivant la solution utlisée par Jacques dans le pédalier (butée à rouleaux + bague en laiton + vis épaulée + rondelle) Voir photo. Choisir les composants et les rentrer dans la maquette en modifiant la nomenclature si necessaire.
+			\paragraph{sourveiller les chapes des basculeurs} elles serond déssinées par le departement du chassis. Suivre l'avancement des chapes afin de bien les intégrer dans l'assemblage des basculeurs
+			\paragraph{BOM rocker assy SU\_A0600} determiner le type de roulements pour la liaison avec le chassis. les rotules seront comandée en lien avec les triangles et les pull bars. Choisir la visserie en s'inspirant d'Optimus
+			\paragraph{simulation rockers SU\_A0600} cas de charge MKI
+		\subsubsection*{SU\_A0900 Tie Rod - Rear} 
+ \par 
+			\paragraph{design rod-end support SU\_A0900} threaded rod-end. Se reinsegner avec la commande des rotules. Collage alu - carbone comme dans le triangles
+			\paragraph{simulation rod-end SU\_A0900} cas de charge MKI
 
-		\paragraph{devis tubes SU\_A0100} 
-		\paragraph{simulation inerts SU\_A0100} simulation EF
-		\paragraph{collage triangles} étude de fiabilité. Quelle colle utiliser. Longueur des inserts de collage. Etat de surface des inserts. Conditions critiques de foncionnement
-		\paragraph{design inserts collage triangles} 
-	\subsection*{SU\_A0200 A-Arms front lower} 
- \par same thing as in front upper
-		\paragraph{design rod-end support SU\_A0200} 
-		\paragraph{simulation rod-end support SU\_A0200} cas de charge MKI
-	\subsection*{SU\_A0300 A-Arms rear upper} 
+		\subsubsection*{SU\_A1000 Front Uprights} 
  \par 
-		\paragraph{design rod-end support SU\_A0300} 
-		\paragraph{simulation rod-end support SU\_A0300} cas de charge MKI
-	\subsection*{SU\_A0400 A-Arms rear lower} 
+			\paragraph{design front upright SU\_A1000} definir la position de létrier et des biellettes de direction 
+			\paragraph{simulation front upright SU\_A1000} cas de charge MKI
+			\paragraph{entretoise}  a standardisaer avec celles du A-Arms: utiliser la taille imposée par le chassis (20 mm). Démander à Calixthe la nouvelle distance des chapes chassis 
+		\subsubsection*{SU\_A1100 Rear Uprights} 
  \par 
-		\paragraph{design rod-end support SU\_A0400} 
-		\paragraph{simulation rod-end support SU\_A0400} cas de charge MKI
-	\subsection*{SU\_A05A07 Shocks} 
- \par 
-		\paragraph{devis maintenance kit} to repair the shocks from Optimus
-		\paragraph{shock choice} determiner la raideur des ressorts (parmi celles à disposition). Normalement c'est déjà fait par MKI --> fichiers de calcul dans le git Ressources2020 
-	\subsection*{SU\_A0600 Bell Cranks Front} 
- \par 
-		\paragraph{design rocker SU\_A0600} utiliser les points de la géometrie LASauto
-		\paragraph{BOM rocker assy SU\_A0600} determiner le type de roulements pour la liaison avec le chassis. les rotules seront comandée en lien avec les triangles et les pull bars. Choisir la visserie en s'inspirant d'Optimus
-		\paragraph{simulation rockers SU\_A0600} cas de charge MKI
-	\subsection*{SU\_A0800 Bell Cranks Rear} 
- \par 
-		\paragraph{design rocker SU\_A0800} 
-		\paragraph{BOM rocker assy SU\_A0800} 
-		\paragraph{simulation rockers SU\_A0800} cas de charges MKI
-	\subsection*{SU\_A0900 Tie Rod - Rear} 
- \par 
-		\paragraph{design rod-end support SU\_A0900} threaded rod-end. Se reinsegner avec la commande des rotules
-		\paragraph{simulation rod-end SU\_A0900} cas de charge MKI
+			\paragraph{design rear upright SU\_A1100} meme structure d'optimus ( enlever le parallelogramme) Placement de l'étrier. Placement de la toe rod.
 
-	\subsection*{SU\_A1000 Front Uprights} 
+			\paragraph{simulation rear upright SU\_A1100} cas de charge MKI
+		\subsubsection*{SU\_A12 A13 Push/Pullrods} 
  \par 
-		\paragraph{design front upright SU\_A1000} 
-		\paragraph{simulation front upright SU\_A1000} cas de charge MKI
-	\subsection*{SU\_A1100 Rear Uprights} 
+			\paragraph{design rod-end SU\_A12 A\_13} 
+			\paragraph{devis tubes pullrods SU\_A12 A13} 
+			\paragraph{simulation rod-end SU\_A12 A\_13} cas de charge MKI
+		\subsubsection*{SU\_A1400 Anti Roll Bar Front} 
  \par 
-		\paragraph{design rear upright SU\_A1100} meme structure d'optimus
-
-		\paragraph{simulation rear upright SU\_A1100} cas de charge MKI
-	\subsection*{SU\_A12 A13 Push/Pullrods} 
+			\paragraph{placement front ARB chassis} 
+			\paragraph{design front ARB SU\_A14} barre de torsion + liaison avec le chassis (palier laiton ?). tube acier Optimus CD45 diamètre ext 15 mm ( La Gir)
+			\paragraph{design front ARB SU\_A14} couteaux tournants et support de fixation des coutaux à la barre de torsion. Biellette de liaison avec le basculeurs ( assemblage avec rotules)
+			\paragraph{BOM front arb SU\_A1400} 
+			\paragraph{simulation torsion bar SU\_A1400} 
+			\paragraph{simulation arb blades SU\_A1400} 
+		\subsubsection*{SU\_A1500 Anti Roll Bar Rear} 
  \par 
-		\paragraph{design rod-end SU\_A12 A\_13} 
-		\paragraph{devis tubes pullrods SU\_A12 A13} 
-		\paragraph{simulation rod-end SU\_A12 A\_13} cas de charge MKI
-	\subsection*{SU\_A1400 Anti Roll Bar Front} 
- \par 
-		\paragraph{design front arb SU\_A1400} 
-		\paragraph{BOM front arb SU\_A1400} 
-		\paragraph{simulation torsion bar SU\_A1400} 
-		\paragraph{simulation arb blades SU\_A1400} 
-	\subsection*{SU\_A1500 Anti Roll Bar Rear} 
- \par 
-		\paragraph{design rear arb SU\_A1500} 
-		\paragraph{BOM rear arb SU\_A1500} 
-		\paragraph{simulation torsion bar SU\_A1500} 
-		\paragraph{simulation arb blades SU\_A1500} 
-	\subsection*{Rotules} 
+			\paragraph{placement rear ARB chassis} utiliser le tube moteur pour se fixer avec la barre de torsion
+			\paragraph{design rear ARB SU\_A15} barre de torsion + liaison avec le chassis (palier laiton ?). tube acier Optimus CD45 diamètre ext 15 mm ( La Gir)
+			\paragraph{design rear ARB SU\_A15} couteaux tournants et support de fixation des coutaux à la barre de torsion. Biellette de liaison avec le basculeurs ( assemblage avec rotules)
+			\paragraph{BOM rear arb SU\_A1500} 
+			\paragraph{simulation torsion bar SU\_A1500} 
+			\paragraph{simulation arb blades SU\_A1500} 
+		\subsubsection*{Rotules} 
  \par pièces dans différents assemblages, il faut communiquer le choix aux respos
-		\paragraph{choisir fournisseur} skf, getecno ou askuball ??
-		\paragraph{devis rotules} commande unique pour tout le monde
-		\paragraph{taille rotules triangles frontSU\_A01 A\_02} cas de charge MKI Vs catalogue fournisseur
-		\paragraph{taille rotules traingles rear SU\_A03 A\_04} cas de charge MKI Vs catalogue fournisseur
-		\paragraph{taille rotules steering SU\_A0900} cas de charge MKI Vs catalogue fournisseur
-		\paragraph{taille rotules pullbar SU\_A12 A13} cas de charge MKI Vs catalogue fournisseur
+			\paragraph{choisir fournisseur} skf, getecno ou askuball ?? mettre les catalogues à disposition de l'équipe pour choisir les modèles et faire les devis. rentrer les rotules dans le fichier de gestion LAS . Askubal est mieux car ils proposent déjà une selection de prodiits spécifique pour le FS. 
+			\paragraph{rotules ARB front et rear} 
+			\paragraph{roulements rockers front + rear} 
+			\paragraph{devis rotules} commande unique pour tout le monde
+			\paragraph{taille rotules triangles frontSU\_A01 A\_02 A\_03 A\_04} cas de charge MKI Vs catalogue fournisseur. Choisir le pir de cas dans la fauille des calcul des cas de charge. Coeff de sécurité sur la charge max d'au moins 2
+			\paragraph{taille rotules steering SU\_A0900} cas de charge MKI Vs catalogue fournisseur
+			\paragraph{taille rotules pullbar SU\_A12 A13} cas de charge MKI Vs catalogue fournisseur
 \newpage 
  \section*{Visserie} 
  \par la macro de Brice n'a pas été mise en place. article reglement "Critical Fasteners"
-	\subsection*{devis visserie} 
+		\subsubsection*{devis visserie} 
  \par une commande pour tout le monde. quantité extra ???
-	\subsection*{choix visserie triangles frontSU\_A01 A\_02} 
- \par cas de charge MKI Vs catalogue fournisseur
-	\subsection*{choix visserie traingles rear SU\_A03 A\_04} 
- \par cas de charge MKI Vs catalogue fournisseur
-	\subsection*{choix visserie steering SU\_A0900} 
- \par cas de charge MKI Vs catalogue fournisseur
-	\subsection*{choix visserie pullbar SU\_A12 A13} 
- \par cas de charge MKI Vs catalogue fournisseur
-	\subsection*{choix visserie rockers SU\_A06 A08} 
- \par cas de charge MKI Vs catalogue fournisseur
-	\subsection*{choix visserie étriers front + rear} 
+		\subsubsection*{collision montage visserie sur le chassis} 
+ \par macro visserie Brice
+		\subsubsection*{choix visserie} 
  \par 
-	\subsection*{choix visserie front hub WT\_A0200} 
- \par lock nut + washer 
-	\subsection*{choix visserie rear hub WT\_A0300} 
- \par k-nut tulipe
+			\paragraph{choix visserie triangles frontSU\_A01 A\_02 A\_03 A\_04} garder la meme que Optimus
+			\paragraph{choix visserie steering SU\_A0900} garder la meme que optimus
+			\paragraph{choix visserie pullbar SU\_A12 A13} garder les visses d'optimus (cf reglement)
+			\paragraph{choix visserie rockers SU\_A06 A08} gardere la meme que optimus
+
+			\paragraph{choix visserie étriers front + rear} garder la meme que optimus
+
+			\paragraph{choix visserie front hub WT\_A0200} lock nut + washer 
+			\paragraph{choix k-nut tulipe} 
 \newpage 
  \section*{BR\_BrakeSystem} 
  \par 
-	\subsection*{BR\_A0100 brake system front} 
+		\subsubsection*{integration} 
  \par 
-		\paragraph{devis freinage avant BR\_A0100} 
-		\paragraph{choix brake disc front} 
-		\paragraph{choix brake caliper front} 
-		\paragraph{choix plaquettes front} 
-		\paragraph{étude frette front} ça depend du disque
-	\subsection*{BR\_A0200 brake system rear} 
+			\paragraph{etude raccords en alu} gain masse/euro. enlever les raccords en acier et laiton
+			\paragraph{tube gavage maitre cylindre} au liei du revervoir en plastique.
+			\paragraph{rondelle cuivre} different epaisseurs pour les raccords. en commander par avance 
+			\paragraph{consommables braking} joints, huile, plaquette de frein, 
+		\subsubsection*{justification disques de frein perçés} 
  \par 
-		\paragraph{devis freinage arrière BR\_A0200} 
-		\paragraph{choix brake disc rear} 
-		\paragraph{choix brake caliper rear} 
-		\paragraph{choix plaquettes rear} 
-		\paragraph{étude frette} ça depende du disque
-	\subsection*{BR\_A0300 master cylinder} 
+			\paragraph{planning campagne d'essai} avec vulcanix.
+			\paragraph{étude disque de frein perçés} 1- gain de masse eur/gram gagné
+2- compatibilité disques entre plein et perçé et Vulcanix
+3 - Approvisionnement disques: fournisseurs ? devis ?
+4- definir un protocole d'essai avec Vulcanix
+
+			\paragraph{moidèle de freinage} verifier les calculs et les hypothèses du modèle de freinage. présenter ce qui à été fait aux nAs
+		\subsubsection*{BR\_A0100 brake system front} 
  \par 
-		\paragraph{devis master cylinder BR\_A0300} 
-	\subsection*{BR\_A0400 balance bar} 
+			\paragraph{devis freinage avant BR\_A0100} 
+			\paragraph{choix brake disc front} trouvel l'équivalent disque plein de Optimus (disque avec frette). Trouver un disque persé qui soit compatible avec le discque plein. Il faout que le tout soit intégrable sur les moyeu de Vultanix pour la phase de test
+			\paragraph{placement brake caliper front} front upright. definir la position de l'étrier par rapport au disque
+			\paragraph{choix plaquettes front} 
+			\paragraph{design frette de frein avant} maquette catia et structure du git
+		\subsubsection*{BR\_A0200 brake system rear} 
  \par 
-		\paragraph{devis balance bar BR\_A0400} 
+			\paragraph{devis freinage arrière BR\_A0200} 
+			\paragraph{choix brake disc rear} trouvel l'équivalent disque plein de Optimus (disque avec frette). Trouver un disque persé qui soit compatible avec le discque plein. Il faout que le tout soit intégrable sur les moyeu de Vultanix pour la phase de test
+			\paragraph{placement brake caliper rear} rear upright. definir la position de l'étrier par rapport au disque
+			\paragraph{choix plaquettes rear} 
+			\paragraph{design frette de frein arrière} maquette et structure du git. s'inspirer d'optimus
+		\subsubsection*{BR\_A0300 master cylinder} 
+ \par 
+			\paragraph{devis master cylinder BR\_A0300} 
+		\subsubsection*{BR\_A0400 balance bar} 
+ \par 
+			\paragraph{devis balance bar BR\_A0400} 
 \newpage 
  \section*{WT\_wheels} 
  \par 
-	\subsection*{WT\_A0100 Wheels} 
+		\subsubsection*{itegration} 
  \par 
-		\paragraph{devis jantes} 1 ou 3 jantes ?
-		\paragraph{devis pneus compet} continental C19 (9 slick + 4 wet) 
-		\paragraph{devis pneus rally} choix modèle d'abord
-	\subsection*{WT\_A0200 Front Hub} 
+			\paragraph{choix roulements WT\_A02 A\_03} On ne change pas les roulements, on ne refait pas le calcul de vies des roulements. Les soucis d'optimus étaient liés à un mauvais montage ou à une manque de precharge. On va commander un douille speciale pour les écrous à encoche pour Invictus de telle façon à maitriser la précharge (demarche classique par essai). Démander à NGO la ref de la commande.
+		\subsubsection*{WT\_A0100 Wheels} 
  \par 
-		\paragraph{design fron hub WT\_A0200} 
-		\paragraph{simulation front hub WT\_A0200} cas de charge MKI
+			\paragraph{choix pneus rally} choix modèle d'abord, il faut que le fanc soit le plus proche possible des Continental C19
+		\subsubsection*{WT\_A0200 Front Hub} 
+ \par 
+			\paragraph{design fron hub WT\_A0200} 
+			\paragraph{simulation front hub WT\_A0200} cas de charge MKI
 
-		\paragraph{choix roulements front hub WT\_A0200} 
-		\paragraph{devis roulements front hub WT\_A0200} 
-	\subsection*{WT\_A0300 Rear Hub} 
+		\subsubsection*{WT\_A0300 Rear Hub} 
  \par 
-		\paragraph{design rear hub WT\_A0300} 
-		\paragraph{simulation rear hub WT\_0300} cas de charge MKI
-		\paragraph{choix roulements rear hub WT\_A0300} 
-		\paragraph{devis roulements rear hub WT\_A0300} 
+			\paragraph{design rear hub WT\_A0300} gain de perfo goujon Ti (> 1 eur/gram gagné ?). pièce de FsaeParts.com. Vérifier reglement pour les goujons. Fournisseur + devis ?
+			\paragraph{ecrou tulipe} nilstop verifier ? aeronut (UK) conv TLS slack --> 23 filet nilstop. Reglement 2 fillets dépassants --< longueur de l'écrou
+			\paragraph{simulation rear hub WT\_0300} cas de charge MKI
 \newpage 
  \section*{ST\_Steering} 
  \par 
-	\subsection*{ST\_A0100 Steering Wheel} 
+		\subsubsection*{ST\_A0100 Steering Wheel} 
  \par 
-		\paragraph{devis steering wheel} c'est à la LAS ou à l'ergo ??
-	\subsection*{ST\_A0200 Steering Shaft} 
+		\subsubsection*{ST\_A0200 Steering Shaft} 
  \par 
-		\paragraph{design steering shaft ST\_A0200} 
-		\paragraph{devis steering shaft ST\_A0200} 
-	\subsection*{ST\_A0300 Steering Rack} 
+			\paragraph{design steering shaft ST\_A0200} crèation de la maquette et structure du git. joint de cardan simple.Cinématique régler collisions. Conception liasion pivot de la colonne avec le chassis (verifiier solution de Optimus). Liaison colonne - crémaillère: quel type de joint ? On va utiliser une solution acier optimisé en masse pour garder la fiabilité des soudures.
+			\paragraph{devis steering shaft ST\_A0200} quels joints entre la colonne et la crémaillère ? est ce qu'il y a qqch à commander ?
+		\subsubsection*{ST\_A0300 Steering Rack} 
  \par 
-		\paragraph{devis steering rack ST\_A0300} 
-	\subsection*{ST\_A0400 Tie Rods} 
+			\paragraph{design steering rack cover ST\_A0300} 
+		\subsubsection*{ST\_A0400 Tie Rods} 
  \par 
-		\paragraph{design rod-end ST\_A0400} 
-		\paragraph{devis tubes steeringrods ST\_A0400} 
-		\paragraph{simulation rod end ST\_A0400} cas de charge MKI
+			\paragraph{design rod-end ST\_A0400} 
+			\paragraph{devis tubes steeringrods ST\_A0400} 
+			\paragraph{simulation rod end ST\_A0400} cas de charge MKI
 \newpage 
  \section*{Budget} 
  \par 
-	\subsection*{envoyer devis à Romain} 
- \par tot depenses sur 2800 € centrale + 3000€ bron
+		\subsubsection*{$\bigstar$ envoyer devis à Romain} 
+ \par deux budgets : 1 centrale et 1 Bron. Tu doit leur avoir envoyé toutes tes commandes le 15 novembre (considère le 8 novembre pour avoir de la marge).
+Centrale : 2,8k€ à utiliser
+Bron : 3k€ à utiliser
+Pour les deux, les commandes doivent être payées avant les vacances de noël, cad avant le 21 décembre 2019.
+Cad :
+- soit payées en avance, dans ce cas c'est bon
+- soit livrées avant le 21 décembre 2019.
+		\subsubsection*{$\bigstar$ devis wheel bearing} 
+ \par  6 roulements (2 extra) en utilisant les 4 qui sont dejà à Bron. envoron 1500 eur ttc. 
+		\subsubsection*{$\bigstar$ devis jantes} 
+ \par 2 jantes Oz Mg R13 chez Reverchon environ /%= eur ttc. valider le nombre de jante avec MKI et TLS
+		\subsubsection*{$\bigstar$ devis pneus compet} 
+ \par 9 pneus slick + 4 pneus wet (environ 2400 eur ttc). nouveau fournisseur
+		\subsubsection*{$\bigstar$ devis kit reparation Ohlins} 
+ \par se reinsegner sur le kit de réparation des amortisseurs Ohlink Mk II. Combien faut-il en acheter pour reparer 4 (+1 vulcanix) amortisseurs d'Optimus? Quel fournisseur ? Effectuer le devis 
+		\subsubsection*{$\bigstar$ devis steering rack} 
+ \par crémaillère Narrco (environ 500 eur ttc). Dèmarche nouveau fournisseur à démander à Romain Martin. Ne pas avancer sur la maquette si le devis n'as pas été envoyé. Utiliser le modèle de devis en anglais
+		\subsubsection*{$\bigstar$ devis tubes essai triangles} 
+ \par fournisseur: Mateduc composites (environ 500 eur ttc avec decoupe). Estimer d'abord la longueur nécessaire à effectuer 20 essay sur des tubes de 20 cm. grandir la surface de collage (et donc le diamètre des tubes) en suivant la démarche du protocole d'essai
 \newpage 
  \section*{Reunions techniques} 
+ \par conseil technique nAs, Academiciens EPSAC et Prof de Centrale
+		\subsubsection*{planning reu tech nAs} 
  \par 
-	\subsection*{planning reu tech nAs} 
+		\subsubsection*{reu tech roue équipée} 
+ \par monoh, reedom, jacques, 
+		\subsubsection*{rapport techniques Simon Laurent} 
  \par 
-	\subsection*{rapport techniques Simon Laurent} 
+		\subsubsection*{planning reu tech Janolin Houx A} 
  \par 
-	\subsection*{planning reu tech Janolin Houx A} 
+\newpage 
+ \section*{Partenaires} 
  \par 
+		\subsubsection*{OptimumG dynamics no report} 
+ \par repondre à Rouelle en lui disant que on a pas pu utiliser son logiciel (la licence à été activée ??)
+		\subsubsection*{pièce titane} 
+ \par choisir une pièce titane non critique pour la fabrication en additif
 \newpage 
  \section*{EQ\_Equipe} 
  \par 
-	\subsection*{lire tutoriel BOM} 
+		\subsubsection*{lire tutoriel BOM} 
  \par des questions?
-	\subsection*{rediger tutorier Devis} 
+		\subsubsection*{jalons scolarité} 
+ \par lister ses propres dates des examens ou des soutenances pour une maj du gantt
+		\subsubsection*{cas de charge et coeff de secu} 
+ \par nominale limite ultime ? coeff de secu ?
+		\subsubsection*{rediger tutoriel Contraintes} 
  \par 
-	\subsection*{rediger tutoriel Vues éclatéess} 
+		\subsubsection*{rediger tutoriel Simulation FEA} 
+ \par discuter de la methode avec Calixte
+		\subsubsection*{rediger tutorier Devis} 
  \par 
-	\subsection*{lire tutoriel Devis} 
+		\subsubsection*{rediger tutoriel Vues éclatéess} 
+ \par 
+		\subsubsection*{lire tutoriel Devis} 
  \par des questions?
-	\subsection*{lire tutoriel Vue Eclatées} 
+		\subsubsection*{lire tutoriel Vue Eclatées} 
  \par des questions ?
 \newpage 
  \section*{Vacances} 
  \par 
-	\subsection*{La Gir} 
+		\subsubsection*{La Gir} 
+ \par 
+			\paragraph{Noel} 
+		\subsubsection*{La Mache} 
+ \par 
+			\paragraph{Noel} 
+		\subsubsection*{Boisard} 
+ \par 
+			\paragraph{Noel} 
+		\subsubsection*{Centrale} 
+ \par 
+			\paragraph{Toussaint} 
+			\paragraph{Noël} 
+			\paragraph{Février} 
+\newpage 
+ \section*{TOPs} 
+ \par 
+		\subsubsection*{Top Synthèse} 
+ \par 
+		\subsubsection*{Revues pré Top Copeau} 
+ \par 
+		\subsubsection*{Top Copeau} 
+ \par 
+		\subsubsection*{Limite TOP Copeau} 
+ \par 
+		\subsubsection*{Top Organe} 
+ \par 
+		\subsubsection*{Top Véhicule} 
+ \par 
+		\subsubsection*{Top Moteur} 
  \par 

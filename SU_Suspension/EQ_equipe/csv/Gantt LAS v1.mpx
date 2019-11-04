@@ -1,0 +1,523 @@
+MPX,Microsoft Project for Windows,4.0,ANSI
+10,$,1,2,",",.
+11,2,0,1,8.00,40.00,$10.00/h,$15.00/h,1,0
+12,1,0,480,/,:,am,pm,20,20
+20,Standard,1,1,1,1,1,1,1
+25,1,08:00 am,12:00 pm,01:00 pm,05:00 pm
+25,2,08:00 am,12:00 pm,01:00 pm,05:00 pm
+25,3,08:00 am,12:00 pm,01:00 pm,05:00 pm
+25,4,08:00 am,12:00 pm,01:00 pm,05:00 pm
+25,5,08:00 am,12:00 pm,01:00 pm,05:00 pm
+25,6,08:00 am,12:00 pm,01:00 pm,05:00 pm
+25,7,08:00 am,12:00 pm,01:00 pm,05:00 pm
+30,Project1,,,Standard,16/10/2019,17/03/2020,0,03/11/2019,,$0.00,$0.00,$0.00,0h,0h,0h,0%,0d,0d,0d,0%,,,,,0d,0d
+40,Name,Text1,Email Address,ID,Unique ID
+41,1,5,11,40,49
+50,Michele SCHIO,MSO,,1,1
+50,Thibaud LASSUS,TLS,,2,2
+50,Rémi FERRAND,RFD,,3,3
+50,Robin NIERMARECHAL,RNL,,4,4
+50,Raphaël CHARLET,RCT,,5,5
+50,Matthieu CORNU,MCU,,6,6
+50,Adèle LEFEVRE,ALE,,7,7
+50,Pierre-Emmanuel ARIAUX,PAX,,8,8
+50,Enzo POTTEZ,EPZ,,9,9
+50,Sébastien GIROIX,SGX,,10,10
+50,Martin KWCY,MKI,,11,11
+60,Name,WBS,Outline Level,Cost,Duration,Actual Duration,Remaining Duration,% Complete,Start,Finish,Fixed,Milestone,ID,Constraint Type,Priority,Unique ID,Outline Number,Summary
+61,1,2,3,30,40,42,43,44,50,51,80,81,90,91,95,98,99,120
+70,,0,0,,153d,,,,16/10/2019,16/03/2020,No,,0,As Soon As Possible,,0,0
+70,SU_Suspension,1,1,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,1,As Soon As Possible,Medium,73,1,Yes
+71,"Devis, Budget, définitions des prioritées. répartition des taches aux membres de l'équipe ( bcp de pièces sont encore à commencer)"
+70,Points LAS,1.1,2,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,2,As Soon As Possible,Medium,435,1.1,Yes
+70,placement toe rod rear,1.1.1,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,3,As Soon As Possible,Medium,436,1.1.1
+75,1,1,1d,,0d,,,,,21/10/2019,21/10/2019,,1
+76,,0,0,NA,NA
+70,iterations cellule arrière,1.1.2,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,4,As Soon As Possible,Medium,487,1.1.2
+71,"message Calixthe slack: reculer de 20mm en Y le Front Upper A Arm Point  des Rear A-Arms,"
+75,1,1,1d,,0d,,,,,21/10/2019,21/10/2019,,1
+76,,0,0,NA,NA
+70,placement crèmaillère + steering rods,1.1.3,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,5,As Soon As Possible,Medium,449,1.1.3
+71,collision disque de frein avec PM front SU_A10
+75,1,1,1d,,0d,,,,,21/10/2019,21/10/2019,,1
+76,,0,0,NA,NA
+70,collision study bump front,1.1.4,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,6,As Soon As Possible,Medium,437,1.1.4
+70,collision study steer front,1.1.5,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,7,As Soon As Possible,Medium,438,1.1.5
+70,collision study roll front,1.1.6,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,8,As Soon As Possible,Medium,439,1.1.6
+70,collision study bump rear,1.1.7,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,9,As Soon As Possible,Medium,440,1.1.7
+70,collision study roll rear,1.1.8,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,10,As Soon As Possible,Medium,441,1.1.8
+70,SU_A0100 A-Arms front upper,1.2,2,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,11,As Soon As Possible,Medium,79,1.2,Yes
+70,design rod-end support SU_A0100,1.2.1,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,12,As Soon As Possible,Medium,148,1.2.1
+71,Catia
+75,5,1,1d,,0d,,,,,21/10/2019,21/10/2019,,5
+76,,0,0,NA,NA
+70,devis tubes SU_A0100,1.2.2,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,13,As Soon As Possible,Medium,258,1.2.2
+75,9,1,1d,,0d,,,,,21/10/2019,21/10/2019,,9
+76,,0,0,NA,NA
+70,simulation inerts SU_A0100,1.2.3,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,14,As Soon As Possible,Medium,149,1.2.3
+71,simulation EF
+75,5,1,1d,,0d,,,,,21/10/2019,21/10/2019,,5
+76,,0,0,NA,NA
+70,collage triangles,1.2.4,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,15,As Soon As Possible,Medium,156,1.2.4
+71,étude de fiabilité. Quelle colle utiliser. Longueur des inserts de collage. Etat de surface des inserts. Conditions critiques de foncionnement
+75,9,1,1d,,0d,,,,,21/10/2019,21/10/2019,,9
+76,,0,0,NA,NA
+70,design inserts collage triangles,1.2.5,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,16,As Soon As Possible,Medium,158,1.2.5
+75,5,1,1d,,0d,,,,,21/10/2019,21/10/2019,,5
+76,,0,0,NA,NA
+70,SU_A0200 A-Arms front lower,1.3,2,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,17,As Soon As Possible,Medium,100,1.3,Yes
+71,same thing as in front upper
+70,design rod-end support SU_A0200,1.3.1,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,18,As Soon As Possible,Medium,150,1.3.1
+75,5,1,1d,,0d,,,,,21/10/2019,21/10/2019,,5
+76,,0,0,NA,NA
+70,simulation rod-end support SU_A0200,1.3.2,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,19,As Soon As Possible,Medium,151,1.3.2
+71,cas de charge MKI
+75,5,1,1d,,0d,,,,,21/10/2019,21/10/2019,,5
+76,,0,0,NA,NA
+70,SU_A0300 A-Arms rear upper,1.4,2,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,20,As Soon As Possible,Medium,101,1.4,Yes
+70,design rod-end support SU_A0300,1.4.1,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,21,As Soon As Possible,Medium,152,1.4.1
+75,7,1,1d,,0d,,,,,21/10/2019,21/10/2019,,7
+76,,0,0,NA,NA
+70,simulation rod-end support SU_A0300,1.4.2,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,22,As Soon As Possible,Medium,153,1.4.2
+71,cas de charge MKI
+75,7,1,1d,,0d,,,,,21/10/2019,21/10/2019,,7
+76,,0,0,NA,NA
+70,SU_A0400 A-Arms rear lower,1.5,2,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,23,As Soon As Possible,Medium,103,1.5,Yes
+70,design rod-end support SU_A0400,1.5.1,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,24,As Soon As Possible,Medium,160,1.5.1
+75,7,1,1d,,0d,,,,,21/10/2019,21/10/2019,,7
+76,,0,0,NA,NA
+70,simulation rod-end support SU_A0400,1.5.2,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,25,As Soon As Possible,Medium,162,1.5.2
+71,cas de charge MKI
+75,7,1,1d,,0d,,,,,21/10/2019,21/10/2019,,7
+76,,0,0,NA,NA
+70,SU_A05  A07 Shocks,1.6,2,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,26,As Soon As Possible,Medium,104,1.6,Yes
+70,devis maintenance kit,1.6.1,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,27,As Soon As Possible,Medium,164,1.6.1
+71,to repair the shocks from Optimus
+70,shock choice,1.6.2,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,28,As Soon As Possible,Medium,166,1.6.2
+71,determiner la raideur des ressorts (parmi celles à disposition). Normalement c'est déjà fait par MKI --> fichiers de calcul dans le git Ressources2020 
+70,SU_A0600 Bell Cranks Front,1.7,2,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,29,As Soon As Possible,Medium,105,1.7,Yes
+70,design rocker SU_A0600,1.7.1,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,30,As Soon As Possible,Medium,168,1.7.1
+71,utiliser les points de la géometrie LASauto
+75,4,1,1d,,0d,,,,,21/10/2019,21/10/2019,,4
+76,,0,0,NA,NA
+70,BOM rocker assy SU_A0600,1.7.2,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,31,As Soon As Possible,Medium,304,1.7.2
+71,determiner le type de roulements pour la liaison avec le chassis. les rotules seront comandée en lien avec les triangles et les pull bars. Choisir la visserie en s'inspirant d'Optimus
+75,4,1,1d,,0d,,,,,21/10/2019,21/10/2019,,4
+76,,0,0,NA,NA
+70,simulation rockers SU_A0600,1.7.3,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,32,As Soon As Possible,Medium,170,1.7.3
+71,cas de charge MKI
+75,4,1,1d,,0d,,,,,21/10/2019,21/10/2019,,4
+76,,0,0,NA,NA
+70,SU_A0800 Bell Cranks Rear,1.8,2,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,33,As Soon As Possible,Medium,107,1.8,Yes
+70,design rocker SU_A0800,1.8.1,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,34,As Soon As Possible,Medium,180,1.8.1
+75,6,1,1d,,0d,,,,,21/10/2019,21/10/2019,,6
+76,,0,0,NA,NA
+70,BOM rocker assy SU_A0800,1.8.2,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,35,As Soon As Possible,Medium,313,1.8.2
+71,determiner le type de roulements pour la liaison avec le chassis. les rotules seront comandée en lien avec les triangles et les pull bars. Choisir la visserie en s'inspirant d'Optimus
+75,6,1,1d,,0d,,,,,21/10/2019,21/10/2019,,6
+76,,0,0,NA,NA
+70,simulation rockers SU_A0800,1.8.3,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,36,As Soon As Possible,Medium,182,1.8.3
+71,cas de charges MKI
+75,6,1,1d,,0d,,,,,21/10/2019,21/10/2019,,6
+76,,0,0,NA,NA
+70,SU_A0900 Tie Rod - Rear,1.9,2,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,37,As Soon As Possible,Medium,108,1.9,Yes
+70,design rod-end support SU_A0900,1.9.1,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,38,As Soon As Possible,Medium,184,1.9.1
+71,threaded rod-end. Se reinsegner avec la commande des rotules
+70,simulation rod-end SU_A0900,1.9.2,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,39,As Soon As Possible,Medium,186,1.9.2
+71,cas de charge MKI
+70,SU_A1000 Front Uprights,1.10,2,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,40,As Soon As Possible,Medium,109,1.10,Yes
+70,design front upright SU_A1000,1.10.1,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,41,As Soon As Possible,Medium,188,1.10.1
+75,1,1,1d,,0d,,,,,21/10/2019,21/10/2019,,1
+76,,0,0,NA,NA
+70,simulation front upright SU_A1000,1.10.2,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,42,As Soon As Possible,Medium,190,1.10.2
+71,cas de charge MKI
+70,SU_A1100 Rear Uprights,1.11,2,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,43,As Soon As Possible,Medium,110,1.11,Yes
+70,design rear upright SU_A1100,1.11.1,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,44,As Soon As Possible,Medium,192,1.11.1
+71,"meme structure d'optimus, placement de l'étrier et de la toe rod"
+75,1,1,1d,,0d,,,,,21/10/2019,21/10/2019,,1
+76,,0,0,NA,NA
+70,simulation rear upright SU_A1100,1.11.2,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,45,As Soon As Possible,Medium,194,1.11.2
+71,cas de charge MKI
+70,SU_A12 A13 Push/Pullrods,1.12,2,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,46,As Soon As Possible,Medium,111,1.12,Yes
+70,design rod-end SU_A12 A_13,1.12.1,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,47,As Soon As Possible,Medium,196,1.12.1
+70,devis tubes pullrods SU_A12 A13,1.12.2,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,48,As Soon As Possible,Medium,336,1.12.2
+70,simulation rod-end SU_A12 A_13,1.12.3,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,49,As Soon As Possible,Medium,198,1.12.3
+71,cas de charge MKI
+70,SU_A1400 Anti Roll Bar Front,1.13,2,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,50,As Soon As Possible,Medium,113,1.13,Yes
+70,placement front ARB chassis,1.13.1,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,51,As Soon As Possible,Medium,434,1.13.1
+70,design front arb SU_A1400,1.13.2,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,52,As Soon As Possible,Medium,204,1.13.2
+75,8,1,1d,,0d,,,,,21/10/2019,21/10/2019,,8
+76,,0,0,NA,NA
+70,BOM front arb SU_A1400,1.13.3,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,53,As Soon As Possible,Medium,339,1.13.3
+75,8,1,1d,,0d,,,,,21/10/2019,21/10/2019,,8
+76,,0,0,NA,NA
+70,simulation torsion bar SU_A1400,1.13.4,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,54,As Soon As Possible,Medium,206,1.13.4
+75,8,1,1d,,0d,,,,,21/10/2019,21/10/2019,,8
+76,,0,0,NA,NA
+70,simulation arb blades SU_A1400,1.13.5,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,55,As Soon As Possible,Medium,342,1.13.5
+75,8,1,1d,,0d,,,,,21/10/2019,21/10/2019,,8
+76,,0,0,NA,NA
+70,SU_A1500 Anti Roll Bar Rear,1.14,2,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,56,As Soon As Possible,Medium,347,1.14,Yes
+70,placement rear ARB chassis,1.14.1,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,57,As Soon As Possible,Medium,453,1.14.1
+71,utiliser le tube moteur pour se fixer avec la barre de torsion
+70,design rear arb SU_A1500,1.14.2,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,58,As Soon As Possible,Medium,349,1.14.2
+70,BOM rear arb SU_A1500,1.14.3,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,59,As Soon As Possible,Medium,351,1.14.3
+70,simulation torsion bar SU_A1500,1.14.4,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,60,As Soon As Possible,Medium,353,1.14.4
+70,simulation arb blades SU_A1500,1.14.5,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,61,As Soon As Possible,Medium,355,1.14.5
+70,Rotules et roulements,1.15,2,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,62,As Soon As Possible,Medium,114,1.15,Yes
+71,"pièces dans différents assemblages, il faut communiquer le choix aux respos"
+70,choisir fournisseur,1.15.1,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,63,As Soon As Possible,Medium,207,1.15.1
+71,"skf, getecno ou askuball ?? mettre les catalogues à disposition de l'équipe pour choisir les modèles et faire les devis. rentrer les rotules dans le fichier de gestion LAS "
+75,1,1,1d,,0d,,,,,21/10/2019,21/10/2019,,1
+76,,0,0,NA,NA
+70,rotules ARB front et rear,1.15.2,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,64,As Soon As Possible,Medium,483,1.15.2
+70,roulements rockers front + rear,1.15.3,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,65,As Soon As Possible,Medium,484,1.15.3
+75,4,1,1d,,0d,,,,,21/10/2019,21/10/2019,,4
+76,,0,0,NA,NA
+75,6,1,1d,,0d,,,,,21/10/2019,21/10/2019,,6
+76,,0,0,NA,NA
+70,roulements WT_A02 A03,1.15.4,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,66,As Soon As Possible,Medium,485,1.15.4
+75,1,1,1d,,0d,,,,,21/10/2019,21/10/2019,,1
+76,,0,0,NA,NA
+70,devis rotules,1.15.5,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,67,As Soon As Possible,Medium,415,1.15.5
+71,commande unique pour tout le monde
+75,4,1,1d,,0d,,,,,21/10/2019,21/10/2019,,4
+76,,0,0,NA,NA
+75,5,1,1d,,0d,,,,,21/10/2019,21/10/2019,,5
+76,,0,0,NA,NA
+75,6,1,1d,,0d,,,,,21/10/2019,21/10/2019,,6
+76,,0,0,NA,NA
+75,7,1,1d,,0d,,,,,21/10/2019,21/10/2019,,7
+76,,0,0,NA,NA
+70,taille rotules triangles front  SU_A01 A_02,1.15.6,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,68,As Soon As Possible,Medium,208,1.15.6
+71,cas de charge MKI Vs catalogue fournisseur
+75,5,1,1d,,0d,,,,,21/10/2019,21/10/2019,,5
+76,,0,0,NA,NA
+70,taille rotules traingles rear SU_A03 A_04,1.15.7,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,69,As Soon As Possible,Medium,366,1.15.7
+71,cas de charge MKI Vs catalogue fournisseur
+75,7,1,1d,,0d,,,,,21/10/2019,21/10/2019,,7
+76,,0,0,NA,NA
+70,taille rotules steering SU_A0900,1.15.8,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,70,As Soon As Possible,Medium,370,1.15.8
+71,cas de charge MKI Vs catalogue fournisseur
+75,3,1,1d,,0d,,,,,21/10/2019,21/10/2019,,3
+76,,0,0,NA,NA
+70,taille rotules pullbar SU_A12 A13,1.15.9,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,71,As Soon As Possible,Medium,374,1.15.9
+71,cas de charge MKI Vs catalogue fournisseur
+70,Visserie,2,1,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,72,As Soon As Possible,Medium,259,2,Yes
+71,"la macro de Brice n'a pas été mise en place. article reglement ""Critical Fasteners"""
+70,devis visserie,2.1,2,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,73,As Soon As Possible,Medium,413,2.1
+71,une commande pour tout le monde. quantité extra ???
+75,3,1,1d,,0d,,,,,21/10/2019,21/10/2019,,3
+76,,0,0,NA,NA
+75,4,1,1d,,0d,,,,,21/10/2019,21/10/2019,,4
+76,,0,0,NA,NA
+75,5,1,1d,,0d,,,,,21/10/2019,21/10/2019,,5
+76,,0,0,NA,NA
+75,6,1,1d,,0d,,,,,21/10/2019,21/10/2019,,6
+76,,0,0,NA,NA
+75,7,1,1d,,0d,,,,,21/10/2019,21/10/2019,,7
+76,,0,0,NA,NA
+75,9,1,1d,,0d,,,,,21/10/2019,21/10/2019,,9
+76,,0,0,NA,NA
+75,10,1,1d,,0d,,,,,21/10/2019,21/10/2019,,10
+76,,0,0,NA,NA
+70,collision montage visserie sur le chassis,2.2,2,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,74,As Soon As Possible,Medium,455,2.2
+71,macro visserie
+70,choix visserie,2.3,2,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,75,As Soon As Possible,Medium,486,2.3,Yes
+70,choix visserie triangles front  SU_A01 A_02,2.3.1,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,76,As Soon As Possible,Medium,383,2.3.1
+71,cas de charge MKI Vs catalogue fournisseur
+75,5,1,1d,,0d,,,,,21/10/2019,21/10/2019,,5
+76,,0,0,NA,NA
+70,choix visserie traingles rear SU_A03 A_04,2.3.2,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,77,As Soon As Possible,Medium,385,2.3.2
+71,cas de charge MKI Vs catalogue fournisseur
+75,7,1,1d,,0d,,,,,21/10/2019,21/10/2019,,7
+76,,0,0,NA,NA
+70,choix visserie steering SU_A0900,2.3.3,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,78,As Soon As Possible,Medium,387,2.3.3
+71,cas de charge MKI Vs catalogue fournisseur
+75,3,1,1d,,0d,,,,,21/10/2019,21/10/2019,,3
+76,,0,0,NA,NA
+75,10,1,1d,,0d,,,,,21/10/2019,21/10/2019,,10
+76,,0,0,NA,NA
+70,choix visserie pullbar SU_A12 A13,2.3.4,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,79,As Soon As Possible,Medium,389,2.3.4
+71,cas de charge MKI Vs catalogue fournisseur
+70,choix visserie rockers SU_A06 A08,2.3.5,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,80,As Soon As Possible,Medium,392,2.3.5
+71,cas de charge MKI Vs catalogue fournisseur
+75,4,1,1d,,0d,,,,,21/10/2019,21/10/2019,,4
+76,,0,0,NA,NA
+75,6,1,1d,,0d,,,,,21/10/2019,21/10/2019,,6
+76,,0,0,NA,NA
+70,choix visserie étriers front + rear,2.3.6,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,81,As Soon As Possible,Medium,394,2.3.6
+75,9,1,1d,,0d,,,,,21/10/2019,21/10/2019,,9
+76,,0,0,NA,NA
+70,choix visserie front hub WT_A0200,2.3.7,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,82,As Soon As Possible,Medium,409,2.3.7
+71,lock nut + washer 
+75,1,1,1d,,0d,,,,,21/10/2019,21/10/2019,,1
+76,,0,0,NA,NA
+70,choix visserie rear hub WT_A0300,2.3.8,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,83,As Soon As Possible,Medium,410,2.3.8
+71,k-nut tulipe
+75,1,1,1d,,0d,,,,,21/10/2019,21/10/2019,,1
+76,,0,0,NA,NA
+70,BR_BrakeSystem,3,1,$0.00,1d,0.1d,0.9d,10%,21/10/2019,21/10/2019,No,No,84,As Soon As Possible,Medium,74,3,Yes
+70,BR_A0100 brake system front,3.1,2,$0.00,1d,0.2d,0.8d,20%,21/10/2019,21/10/2019,No,No,85,As Soon As Possible,Medium,80,3.1,Yes
+70,devis freinage avant BR_A0100,3.1.1,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,86,As Soon As Possible,Medium,230,3.1.1
+75,5,1,1d,,0d,,,,,21/10/2019,21/10/2019,,5
+76,,0,0,NA,NA
+75,9,1,1d,,0d,,,,,21/10/2019,21/10/2019,,9
+76,,0,0,NA,NA
+70,choix brake disc front,3.1.2,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,87,As Soon As Possible,Medium,209,3.1.2
+75,9,1,1d,,0d,,,,,21/10/2019,21/10/2019,,9
+76,,0,0,NA,NA
+70,placement brake caliper front,3.1.3,3,$0.00,1d,1d,0d,100%,21/10/2019,21/10/2019,No,No,88,As Soon As Possible,Medium,210,3.1.3
+71,front upright. definir la position de l'étrier par rapport au disque
+75,1,1,1d,,1d,,,,,21/10/2019,21/10/2019,,1
+76,,0,0,NA,NA
+75,9,1,1d,,1d,,,,,21/10/2019,21/10/2019,,9
+76,,0,0,NA,NA
+70,choix plaquettes front,3.1.4,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,89,As Soon As Possible,Medium,211,3.1.4
+75,9,1,1d,,0d,,,,,21/10/2019,21/10/2019,,9
+76,,0,0,NA,NA
+70,étude frette front,3.1.5,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,90,As Soon As Possible,Medium,212,3.1.5
+71,ça depend du disque
+75,9,1,1d,,0d,,,,,21/10/2019,21/10/2019,,9
+76,,0,0,NA,NA
+70,BR_A0200 brake system rear,3.2,2,$0.00,1d,0.2d,0.8d,20%,21/10/2019,21/10/2019,No,No,91,As Soon As Possible,Medium,81,3.2,Yes
+70,devis freinage arrière BR_A0200,3.2.1,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,92,As Soon As Possible,Medium,232,3.2.1
+75,5,1,1d,,0d,,,,,21/10/2019,21/10/2019,,5
+76,,0,0,NA,NA
+75,9,1,1d,,0d,,,,,21/10/2019,21/10/2019,,9
+76,,0,0,NA,NA
+70,choix brake disc rear,3.2.2,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,93,As Soon As Possible,Medium,215,3.2.2
+75,9,1,1d,,0d,,,,,21/10/2019,21/10/2019,,9
+76,,0,0,NA,NA
+70,placement brake caliper rear,3.2.3,3,$0.00,1d,1d,0d,100%,21/10/2019,21/10/2019,No,No,94,As Soon As Possible,Medium,217,3.2.3
+71,rear upright. definir la position de l'étrier par rapport au disque
+75,1,1,1d,,1d,,,,,21/10/2019,21/10/2019,,1
+76,,0,0,NA,NA
+75,9,1,1d,,1d,,,,,21/10/2019,21/10/2019,,9
+76,,0,0,NA,NA
+70,choix plaquettes rear,3.2.4,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,95,As Soon As Possible,Medium,219,3.2.4
+75,9,1,1d,,0d,,,,,21/10/2019,21/10/2019,,9
+76,,0,0,NA,NA
+70,étude frette,3.2.5,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,96,As Soon As Possible,Medium,221,3.2.5
+71,ça depende du disque
+75,9,1,1d,,0d,,,,,21/10/2019,21/10/2019,,9
+76,,0,0,NA,NA
+70,BR_A0300 master cylinder,3.3,2,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,97,As Soon As Possible,Medium,83,3.3,Yes
+70,devis master cylinder BR_A0300,3.3.1,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,98,As Soon As Possible,Medium,233,3.3.1
+75,5,1,1d,,0d,,,,,21/10/2019,21/10/2019,,5
+76,,0,0,NA,NA
+75,9,1,1d,,0d,,,,,21/10/2019,21/10/2019,,9
+76,,0,0,NA,NA
+70,BR_A0400 balance bar,3.4,2,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,99,As Soon As Possible,Medium,84,3.4,Yes
+70,devis balance bar BR_A0400,3.4.1,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,100,As Soon As Possible,Medium,234,3.4.1
+75,5,1,1d,,0d,,,,,21/10/2019,21/10/2019,,5
+76,,0,0,NA,NA
+75,9,1,1d,,0d,,,,,21/10/2019,21/10/2019,,9
+76,,0,0,NA,NA
+70,WT_wheels,4,1,$0.00,1d,0.13d,0.87d,13%,21/10/2019,21/10/2019,No,No,101,As Soon As Possible,Medium,75,4,Yes
+70,WT_A0100 Wheels,4.1,2,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,102,As Soon As Possible,Medium,98,4.1,Yes
+70,devis jantes,4.1.1,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,103,As Soon As Possible,Medium,235,4.1.1
+71,1 ou 3 jantes ?
+70,devis pneus compet,4.1.2,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,104,As Soon As Possible,Medium,236,4.1.2
+71,continental C19 (9 slick + 4 wet) 
+70,devis pneus rally,4.1.3,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,105,As Soon As Possible,Medium,237,4.1.3
+71,choix modèle d'abord
+70,WT_A0200 Front Hub,4.2,2,$0.00,1d,0.2d,0.8d,20%,21/10/2019,21/10/2019,No,No,106,As Soon As Possible,Medium,131,4.2,Yes
+70,design fron hub WT_A0200,4.2.1,3,$0.00,1d,0.8d,0.2d,80%,21/10/2019,21/10/2019,No,No,107,As Soon As Possible,Medium,238,4.2.1
+75,1,1,1d,,0.8d,,,,,21/10/2019,21/10/2019,,1
+76,,0,0,NA,NA
+70,simulation front hub WT_A0200,4.2.2,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,108,As Soon As Possible,Medium,241,4.2.2
+71,cas de charge MKI
+75,1,1,1d,,0d,,,,,21/10/2019,21/10/2019,,1
+76,,0,0,NA,NA
+70,choix roulements front hub WT_A0200,4.2.3,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,109,As Soon As Possible,Medium,419,4.2.3
+75,1,1,1d,,0d,,,,,21/10/2019,21/10/2019,,1
+76,,0,0,NA,NA
+70,devis roulements front hub WT_A0200,4.2.4,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,110,As Soon As Possible,Medium,420,4.2.4
+70,WT_A0300 Rear Hub,4.3,2,$0.00,1d,0.2d,0.8d,20%,21/10/2019,21/10/2019,No,No,111,As Soon As Possible,Medium,132,4.3,Yes
+70,design rear hub WT_A0300,4.3.1,3,$0.00,1d,0.8d,0.2d,80%,21/10/2019,21/10/2019,No,No,112,As Soon As Possible,Medium,244,4.3.1
+75,1,1,1d,,0.8d,,,,,21/10/2019,21/10/2019,,1
+76,,0,0,NA,NA
+70,simulation rear hub WT_0300,4.3.2,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,113,As Soon As Possible,Medium,248,4.3.2
+71,cas de charge MKI
+75,1,1,1d,,0d,,,,,21/10/2019,21/10/2019,,1
+76,,0,0,NA,NA
+70,choix roulements rear hub WT_A0300,4.3.3,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,114,As Soon As Possible,Medium,421,4.3.3
+75,1,1,1d,,0d,,,,,21/10/2019,21/10/2019,,1
+76,,0,0,NA,NA
+70,devis roulements rear hub WT_A0300,4.3.4,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,115,As Soon As Possible,Medium,422,4.3.4
+70,ST_Steering,5,1,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,116,As Soon As Possible,Medium,76,5,Yes
+70,ST_A0100 Steering Wheel,5.1,2,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,117,As Soon As Possible,Medium,135,5.1,Yes
+70,devis steering wheel,5.1.1,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,118,As Soon As Possible,Medium,249,5.1.1
+71,c'est à la LAS ou à l'ergo ??
+75,3,1,1d,,0d,,,,,21/10/2019,21/10/2019,,3
+76,,0,0,NA,NA
+75,10,1,1d,,0d,,,,,21/10/2019,21/10/2019,,10
+76,,0,0,NA,NA
+70,ST_A0200 Steering Shaft,5.2,2,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,119,As Soon As Possible,Medium,136,5.2,Yes
+70,design steering shaft ST_A0200,5.2.1,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,120,As Soon As Possible,Medium,250,5.2.1
+71,crèation de la maquette et structure du git
+75,3,1,1d,,0d,,,,,21/10/2019,21/10/2019,,3
+76,,0,0,NA,NA
+75,10,1,1d,,0d,,,,,21/10/2019,21/10/2019,,10
+76,,0,0,NA,NA
+70,devis steering shaft ST_A0200,5.2.2,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,121,As Soon As Possible,Medium,426,5.2.2
+75,3,1,1d,,0d,,,,,21/10/2019,21/10/2019,,3
+76,,0,0,NA,NA
+75,10,1,1d,,0d,,,,,21/10/2019,21/10/2019,,10
+76,,0,0,NA,NA
+70,ST_A0300 Steering Rack,5.3,2,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,122,As Soon As Possible,Medium,137,5.3,Yes
+70,devis steering rack ST_A0300,5.3.1,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,123,As Soon As Possible,Medium,251,5.3.1
+75,3,1,1d,,0d,,,,,21/10/2019,21/10/2019,,3
+76,,0,0,NA,NA
+75,10,1,1d,,0d,,,,,21/10/2019,21/10/2019,,10
+76,,0,0,NA,NA
+70,ST_A0400 Tie Rods,5.4,2,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,124,As Soon As Possible,Medium,138,5.4,Yes
+70,design rod-end ST_A0400,5.4.1,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,125,As Soon As Possible,Medium,252,5.4.1
+75,3,1,1d,,0d,,,,,21/10/2019,21/10/2019,,3
+76,,0,0,NA,NA
+75,10,1,1d,,0d,,,,,21/10/2019,21/10/2019,,10
+76,,0,0,NA,NA
+70,devis tubes steering  rods ST_A0400,5.4.2,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,126,As Soon As Possible,Medium,427,5.4.2
+75,3,1,1d,,0d,,,,,21/10/2019,21/10/2019,,3
+76,,0,0,NA,NA
+75,10,1,1d,,0d,,,,,21/10/2019,21/10/2019,,10
+76,,0,0,NA,NA
+70,simulation rod end ST_A0400,5.4.3,3,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,127,As Soon As Possible,Medium,253,5.4.3
+71,cas de charge MKI
+75,3,1,1d,,0d,,,,,21/10/2019,21/10/2019,,3
+76,,0,0,NA,NA
+75,10,1,1d,,0d,,,,,21/10/2019,21/10/2019,,10
+76,,0,0,NA,NA
+70,Budget,6,1,$0.00,18d,0d,18d,0%,08/11/2019,25/11/2019,No,No,128,As Soon As Possible,Medium,77,6,Yes
+70,envoyer devis à Romain,6.1,2,$0.00,0d,0d,0d,0%,08/11/2019,08/11/2019,No,Yes,129,As Soon As Possible,Highest,254,6.1
+71,"deux budgets : 1 centrale et 1 Bron. Tu doit leur avoir envoyé toutes tes commandes le 15 novembre (considère le 8 novembre pour avoir de la marge).Centrale : 2,8k€ à utiliserBron : 3k€ à utiliserPour les deux, les commandes doivent être payées avant les vacances de noël, cad avant le 21 décembre 2019.Cad :- soit payées en avance, dans ce cas c'est bon- soit livrées avant le 21 décembre 2019."
+75,1,1,0d,,0d,,,,,08/11/2019,08/11/2019,,1
+76,,0,0,NA,NA
+70,Reunions techniques,7,1,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,130,As Soon As Possible,Medium,326,7,Yes
+71,"conseil technique nAs, Academiciens EPSAC et Prof de Centrale"
+70,planning reu tech nAs,7.1,2,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,131,As Soon As Possible,Medium,327,7.1
+75,2,1,1d,,0d,,,,,21/10/2019,21/10/2019,,2
+76,,0,0,NA,NA
+70,rapport techniques Simon Laurent,7.2,2,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,132,As Soon As Possible,Medium,328,7.2
+75,1,1,1d,,0d,,,,,21/10/2019,21/10/2019,,1
+76,,0,0,NA,NA
+70,planning reu tech Janolin Houx A,7.3,2,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,133,As Soon As Possible,Medium,329,7.3
+75,2,1,1d,,0d,,,,,21/10/2019,21/10/2019,,2
+76,,0,0,NA,NA
+70,Partenaires,8,1,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,134,As Soon As Possible,Medium,431,8,Yes
+70,OptimumG dynamics no report,8.1,2,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,135,As Soon As Possible,Medium,432,8.1
+71,repondre à Rouelle en lui disant que on a pas pu utiliser son logiciel (la licence à été activée ??)
+75,1,1,1d,,0d,,,,,21/10/2019,21/10/2019,,1
+76,,0,0,NA,NA
+70,EQ_Equipe,9,1,$0.00,1d,0.21d,0.79d,21%,21/10/2019,21/10/2019,No,No,136,As Soon As Possible,Medium,281,9,Yes
+70,lire tutoriel BOM,9.1,2,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,137,As Soon As Possible,Medium,282,9.1
+71,des questions?
+75,3,1,1d,,0d,,,,,21/10/2019,21/10/2019,,3
+76,,0,0,NA,NA
+75,4,1,1d,,0d,,,,,21/10/2019,21/10/2019,,4
+76,,0,0,NA,NA
+75,5,1,1d,,0d,,,,,21/10/2019,21/10/2019,,5
+76,,0,0,NA,NA
+75,6,1,1d,,0d,,,,,21/10/2019,21/10/2019,,6
+76,,0,0,NA,NA
+75,7,1,1d,,0d,,,,,21/10/2019,21/10/2019,,7
+76,,0,0,NA,NA
+75,8,1,1d,,0d,,,,,21/10/2019,21/10/2019,,8
+76,,0,0,NA,NA
+75,9,1,1d,,0d,,,,,21/10/2019,21/10/2019,,9
+76,,0,0,NA,NA
+75,10,1,1d,,0d,,,,,21/10/2019,21/10/2019,,10
+76,,0,0,NA,NA
+70,jalons scolarité,9.2,2,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,138,As Soon As Possible,Medium,490,9.2
+71,lister ses propres dates des examens ou des soutenances pour une maj du gantt
+75,1,1,1d,,0d,,,,,21/10/2019,21/10/2019,,1
+76,,0,0,NA,NA
+75,3,1,1d,,0d,,,,,21/10/2019,21/10/2019,,3
+76,,0,0,NA,NA
+75,4,1,1d,,0d,,,,,21/10/2019,21/10/2019,,4
+76,,0,0,NA,NA
+75,5,1,1d,,0d,,,,,21/10/2019,21/10/2019,,5
+76,,0,0,NA,NA
+75,6,1,1d,,0d,,,,,21/10/2019,21/10/2019,,6
+76,,0,0,NA,NA
+75,7,1,1d,,0d,,,,,21/10/2019,21/10/2019,,7
+76,,0,0,NA,NA
+75,8,1,1d,,0d,,,,,21/10/2019,21/10/2019,,8
+76,,0,0,NA,NA
+75,9,1,1d,,0d,,,,,21/10/2019,21/10/2019,,9
+76,,0,0,NA,NA
+75,10,1,1d,,0d,,,,,21/10/2019,21/10/2019,,10
+76,,0,0,NA,NA
+70,cas de charge et coeff de secu,9.3,2,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,139,As Soon As Possible,Medium,451,9.3
+71,nominale limite ultime ? coeff de secu ?
+75,11,1,1d,,0d,,,,,21/10/2019,21/10/2019,,11
+76,,0,0,NA,NA
+70,rediger tutoriel Contraintes,9.4,2,$0.00,1d,0.3d,0.7d,30%,21/10/2019,21/10/2019,No,No,140,As Soon As Possible,Medium,445,9.4
+75,1,1,1d,,0.3d,,,,,21/10/2019,21/10/2019,,1
+76,,0,0,NA,NA
+70,rediger tutoriel Simulation FEA,9.5,2,$0.00,1d,0.3d,0.7d,30%,21/10/2019,21/10/2019,No,No,141,As Soon As Possible,Medium,447,9.5
+71,discuter de la methode avec Calixte
+75,1,1,1d,,0.3d,,,,,21/10/2019,21/10/2019,,1
+76,,0,0,NA,NA
+70,rediger tutorier Devis,9.6,2,$0.00,1d,1d,0d,100%,21/10/2019,21/10/2019,No,No,142,As Soon As Possible,Medium,428,9.6
+75,1,1,1d,,1d,,,,,21/10/2019,21/10/2019,,1
+76,,0,0,NA,NA
+70,rediger tutoriel Vues éclatéess,9.7,2,$0.00,1d,0.3d,0.7d,30%,21/10/2019,21/10/2019,No,No,143,As Soon As Possible,Medium,429,9.7
+75,1,1,1d,,0.3d,,,,,21/10/2019,21/10/2019,,1
+76,,0,0,NA,NA
+70,lire tutoriel Devis,9.8,2,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,144,As Soon As Possible,Medium,430,9.8
+71,des questions?
+75,3,1,1d,,0d,,,,,21/10/2019,21/10/2019,,3
+76,,0,0,NA,NA
+75,4,1,1d,,0d,,,,,21/10/2019,21/10/2019,,4
+76,,0,0,NA,NA
+75,5,1,1d,,0d,,,,,21/10/2019,21/10/2019,,5
+76,,0,0,NA,NA
+75,6,1,1d,,0d,,,,,21/10/2019,21/10/2019,,6
+76,,0,0,NA,NA
+75,7,1,1d,,0d,,,,,21/10/2019,21/10/2019,,7
+76,,0,0,NA,NA
+75,8,1,1d,,0d,,,,,21/10/2019,21/10/2019,,8
+76,,0,0,NA,NA
+75,9,1,1d,,0d,,,,,21/10/2019,21/10/2019,,9
+76,,0,0,NA,NA
+75,10,1,1d,,0d,,,,,21/10/2019,21/10/2019,,10
+76,,0,0,NA,NA
+70,lire tutoriel Vue Eclatées,9.9,2,$0.00,1d,0d,1d,0%,21/10/2019,21/10/2019,No,No,145,As Soon As Possible,Medium,423,9.9
+71,des questions ?
+75,3,1,1d,,0d,,,,,21/10/2019,21/10/2019,,3
+76,,0,0,NA,NA
+75,4,1,1d,,0d,,,,,21/10/2019,21/10/2019,,4
+76,,0,0,NA,NA
+75,5,1,1d,,0d,,,,,21/10/2019,21/10/2019,,5
+76,,0,0,NA,NA
+75,6,1,1d,,0d,,,,,21/10/2019,21/10/2019,,6
+76,,0,0,NA,NA
+75,7,1,1d,,0d,,,,,21/10/2019,21/10/2019,,7
+76,,0,0,NA,NA
+75,8,1,1d,,0d,,,,,21/10/2019,21/10/2019,,8
+76,,0,0,NA,NA
+75,9,1,1d,,0d,,,,,21/10/2019,21/10/2019,,9
+76,,0,0,NA,NA
+75,10,1,1d,,0d,,,,,21/10/2019,21/10/2019,,10
+76,,0,0,NA,NA
+70,Vacances,10,1,$0.00,135d,0d,135d,0%,26/10/2019,08/03/2020,No,No,146,As Soon As Possible,Medium,8,10,Yes
+70,La Gir,10.1,2,$0.00,16d,0d,16d,0%,21/12/2019,05/01/2020,No,No,147,As Soon As Possible,Medium,18,10.1,Yes
+70,Noel,10.1.1,3,$0.00,16d,0d,16d,0%,21/12/2019,05/01/2020,No,No,148,As Soon As Possible,Medium,63,10.1.1
+70,La Mache,10.2,2,$0.00,16d,0d,16d,0%,21/12/2019,05/01/2020,No,No,149,As Soon As Possible,Medium,19,10.2,Yes
+70,Noel,10.2.1,3,$0.00,16d,0d,16d,0%,21/12/2019,05/01/2020,No,No,150,As Soon As Possible,Medium,70,10.2.1
+70,Boisard,10.3,2,$0.00,16d,0d,16d,0%,21/12/2019,05/01/2020,No,No,151,As Soon As Possible,Medium,20,10.3,Yes
+70,Noel,10.3.1,3,$0.00,16d,0d,16d,0%,21/12/2019,05/01/2020,No,No,152,As Soon As Possible,Medium,72,10.3.1
+70,Centrale,10.4,2,$0.00,135d,0d,135d,0%,26/10/2019,08/03/2020,No,No,153,As Soon As Possible,Medium,17,10.4,Yes
+70,Toussaint,10.4.1,3,$0.00,9d,0d,9d,0%,26/10/2019,03/11/2019,No,No,154,As Soon As Possible,Medium,58,10.4.1
+70,Noël,10.4.2,3,$0.00,16d,0d,16d,0%,21/12/2019,05/01/2020,No,No,155,As Soon As Possible,Medium,21,10.4.2
+70,Février,10.4.3,3,$0.00,9d,0d,9d,0%,29/02/2020,08/03/2020,No,No,156,As Soon As Possible,Medium,59,10.4.3
+70,TOPs,11,1,$0.00,153d,0d,153d,0%,16/10/2019,16/03/2020,No,No,157,As Soon As Possible,Medium,7,11,Yes
+70,Top Synthèse,11.1,2,$0.00,0d,0d,0d,0%,16/10/2019,16/10/2019,No,Yes,158,As Soon As Possible,Medium,12,11.1
+70,Revues pré Top Copeau,11.2,2,$0.00,14d,0d,14d,0%,18/11/2019,01/12/2019,No,No,159,As Soon As Possible,Medium,14,11.2
+70,Top Copeau,11.3,2,$0.00,0d,0d,0d,0%,03/12/2019,03/12/2019,No,Yes,160,As Soon As Possible,Medium,10,11.3
+70,Limite TOP Copeau,11.4,2,$0.00,0d,0d,0d,0%,11/12/2019,11/12/2019,No,Yes,161,As Soon As Possible,Medium,9,11.4
+70,Top Organe,11.5,2,$0.00,0d,0d,0d,0%,05/02/2020,05/02/2020,No,Yes,162,As Soon As Possible,Medium,41,11.5
+70,Top Véhicule,11.6,2,$0.00,0d,0d,0d,0%,26/02/2020,26/02/2020,No,Yes,163,As Soon As Possible,Medium,42,11.6
+70,Top Moteur,11.7,2,$0.00,0d,0d,0d,0%,17/03/2020,17/03/2020,No,Yes,164,As Soon As Possible,Medium,43,11.7
