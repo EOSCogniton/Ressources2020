@@ -91,10 +91,13 @@ Cette pièce est un backup de la confing expérimentale]]></notes>
                 <task id="162" name="Dessiner admission &quot;Expérimentale&quot;" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
             </task>
             <task id="135" name="EN_A0400 : Bride" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
-                <task id="136" name="Finaliser design" color="#8cb6ce" meeting="true" start="2019-10-21" duration="0" complete="0" expand="true">
+                <task id="136" name="Fixer le design" color="#8cb6ce" meeting="true" start="2019-10-21" duration="0" complete="0" expand="true">
                     <notes><![CDATA[Fixer les diamètres d'entrée et de sortie. Le communiquer à Côme pour la guillotine]]></notes>
                 </task>
                 <task id="138" name="Dimensionner" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="196" name="Fixer la plaque de protection" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
+                    <notes><![CDATA[Prévoir une attache légère pour la plaque.]]></notes>
+                </task>
                 <task id="179" name="Backup Papillon" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
                     <notes><![CDATA[Trouver un papillon en remplacement (si problème de fonctionnement sur la guillotine)]]></notes>
                 </task>
@@ -137,7 +140,17 @@ Attention : un filetage est mort sur la pompe d'Optimus, il en faut une nouvelle
                 <task id="120" name="tâche_114" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
             </task>
             <task id="103" name="EN_A0800 : Refroidissement" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
-                <task id="121" name="tâche_115" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="121" name="Radiateur" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
+                    <notes><![CDATA[Placer le radiateur : le plus reculé possible (en respectant le règlement par rapport à la roue).
+Prévoir les fixations]]></notes>
+                </task>
+                <task id="185" name="Réparation radiateur" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
+                    <notes><![CDATA[Prendre contact avec Bery Inox pour ses disponibilités.]]></notes>
+                </task>
+                <task id="183" name="Plaque de protection" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
+                    <notes><![CDATA[Déterminer le matériau de la plaque.
+En déduire la forme qu'elle aura.]]></notes>
+                </task>
             </task>
             <task id="104" name="EN_A0900 : Transmission secondaire" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
                 <task id="116" name="Dessiner support Drexler" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
@@ -147,6 +160,9 @@ Attention : un filetage est mort sur la pompe d'Optimus, il en faut une nouvelle
                 <task id="178" name="Dimensionnement porte couronne (récup Optimus ?)" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
             </task>
         </task>
+        <task id="180" name="Autres" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
+            <task id="181" name="Banc d'injecteurs" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+        </task>
     </tasks>
     <resources>
         <resource id="0" name="Aimery SAULIERE" function="Default:0" contacts="" phone=""/>
@@ -154,12 +170,13 @@ Attention : un filetage est mort sur la pompe d'Optimus, il en faut une nouvelle
         <resource id="3" name="Vincent BARREAU" function="Default:0" contacts="" phone=""/>
         <resource id="1" name="Mathieu JACQUET" function="Default:0" contacts="" phone=""/>
         <resource id="4" name="Ghislain KONATE" function="Default:0" contacts="" phone=""/>
-        <resource id="5" name="Louise ANDRE-MATAHRI" function="Default:0" contacts="" phone=""/>
-        <resource id="10" name="Ibrahima BALDE" function="Default:0" contacts="" phone=""/>
+        <resource id="12" name="Axel VOLTA" function="Default:0" contacts="" phone=""/>
         <resource id="9" name="Fabien DUPUIS" function="Default:0" contacts="" phone=""/>
-        <resource id="11" name="Marcos GOMES" function="Default:0" contacts="" phone=""/>
-        <resource id="6" name="Leon MARGRAFF" function="Default:0" contacts="" phone=""/>
         <resource id="7" name="Henrique SENHORINI KATRIP" function="Default:0" contacts="" phone=""/>
+        <resource id="10" name="Ibrahima BALDE" function="Default:0" contacts="" phone=""/>
+        <resource id="6" name="Leon MARGRAFF" function="Default:0" contacts="" phone=""/>
+        <resource id="5" name="Louise ANDRE-MATAHRI" function="Default:0" contacts="" phone=""/>
+        <resource id="11" name="Marcos GOMES" function="Default:0" contacts="" phone=""/>
     </resources>
     <allocations>
         <allocation task-id="111" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
@@ -173,6 +190,11 @@ Attention : un filetage est mort sur la pompe d'Optimus, il en faut une nouvelle
         <allocation task-id="176" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="177" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="178" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="121" resource-id="12" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="185" resource-id="12" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="183" resource-id="12" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="196" resource-id="12" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="181" resource-id="9" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="162" resource-id="6" function="Default:0" responsible="true" load="100.0"/>
     </allocations>
     <vacations/>
