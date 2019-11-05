@@ -60,7 +60,7 @@
                 <task id="72" name="Noel" color="#8cb6ce" meeting="false" start="2019-12-21" duration="16" complete="0" expand="true"/>
             </task>
         </task>
-        <task id="88" name="Motorisation" meeting="false" start="2019-10-21" duration="2" complete="0" expand="true">
+        <task id="88" name="EN_Engine" meeting="false" start="2019-10-21" duration="2" complete="0" expand="true">
             <task id="96" name="EN_A0100 : Moteur" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
                 <task id="123" name="Anti dribble" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
                     <notes><![CDATA[Acheter un anti dribble pour le moteur de Kart Cross]]></notes>
@@ -134,7 +134,11 @@ Cette pièce est un backup de la confing expérimentale]]></notes>
                 <task id="121" name="tâche_115" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
             </task>
             <task id="104" name="EN_A0900 : Transmission secondaire" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
-                <task id="116" name="tâche_116" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="116" name="Dessiner support Drexler" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="175" name="Dimensionner les cales" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="176" name="Jonction arbre / LAS" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="177" name="Liste matériel à récupérer sur Optimus" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="178" name="Dimensionnement porte couronne (récup Optimus ?)" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
             </task>
         </task>
     </tasks>
@@ -158,6 +162,11 @@ Cette pièce est un backup de la confing expérimentale]]></notes>
         <allocation task-id="134" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="143" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="145" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="116" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="175" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="176" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="177" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="178" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="162" resource-id="6" function="Default:0" responsible="true" load="100.0"/>
     </allocations>
     <vacations/>
