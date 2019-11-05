@@ -60,7 +60,7 @@
                 <task id="72" name="Noel" color="#8cb6ce" meeting="false" start="2019-12-21" duration="16" complete="0" expand="true"/>
             </task>
         </task>
-        <task id="88" name="EN_Engine" meeting="false" start="2019-10-21" duration="2" complete="0" expand="true">
+        <task id="88" name="EN_Engine" meeting="false" start="2019-10-21" duration="36" complete="0" expand="true">
             <task id="96" name="EN_A0100 : Moteur" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
                 <task id="123" name="Anti dribble" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
                     <notes><![CDATA[Acheter un anti dribble pour le moteur de Kart Cross]]></notes>
@@ -94,7 +94,10 @@ Cette pièce est un backup de la confing expérimentale]]></notes>
                 <task id="136" name="Finaliser design" color="#8cb6ce" meeting="true" start="2019-10-21" duration="0" complete="0" expand="true">
                     <notes><![CDATA[Fixer les diamètres d'entrée et de sortie. Le communiquer à Côme pour la guillotine]]></notes>
                 </task>
-                <task id="138" name="Dimensionner" color="#8cb6ce" meeting="true" start="2019-10-21" duration="0" complete="0" expand="true"/>
+                <task id="138" name="Dimensionner" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="179" name="Backup Papillon" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
+                    <notes><![CDATA[Trouver un papillon en remplacement (si problème de fonctionnement sur la guillotine)]]></notes>
+                </task>
             </task>
             <task id="99" name="EN_A0400 : Guillotine" meeting="false" start="2019-10-21" duration="2" complete="0" expand="true">
                 <task id="133" name="Valider l'architecture" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
@@ -109,18 +112,21 @@ Cette pièce est un backup de la confing expérimentale]]></notes>
                 </task>
                 <task id="145" name="Dessiner actionneur" color="#8cb6ce" meeting="false" start="2019-10-22" duration="1" complete="0" expand="true"/>
             </task>
-            <task id="100" name="EN_A0500 : Réservoir" meeting="false" start="2019-10-21" duration="2" complete="0" expand="true">
-                <task id="118" name="Définir le volume enveloppe du réservoir" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
+            <task id="100" name="EN_A0500 : Réservoir" meeting="false" start="2019-10-21" duration="36" complete="0" expand="true">
+                <task id="118" name="Définir le volume enveloppe du réservoir" color="#8cb6ce" meeting="false" start="2019-10-21" duration="29" complete="0" expand="true">
                     <notes><![CDATA[Dans "Part design" de Catia, créer un réservoir avec le volume demandé, et le placer dans Invictus entre le pilote et l'échappement.]]></notes>
                     <depend id="167" type="2" difference="0" hardness="Strong"/>
                 </task>
-                <task id="167" name="Dessiner le réservoir dans en tôlerie" color="#8cb6ce" meeting="false" start="2019-10-22" duration="1" complete="0" expand="true">
+                <task id="167" name="Dessiner le réservoir dans en tôlerie" color="#8cb6ce" meeting="false" start="2019-11-19" duration="7" complete="0" expand="true">
                     <notes><![CDATA[Dans "Sheet Metal Design", dessiner un réservoir respectant le volume enveloppe et fabricable : attention pièces pliées. Si questions, voir avec le Dir Tech]]></notes>
                 </task>
             </task>
             <task id="101" name="EN_A0600 : Circuit d'essence" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
                 <task id="119" name="Choisir les composants du circuits d'essence" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
-                    <notes><![CDATA[La pompe et le régulateur de pression, le type de durites et de raccords, la rampe d'injection et la fixation sur l'admission.]]></notes>
+                    <notes><![CDATA[La pompe et le régulateur de pression, le type de durites et de raccords, la rampe d'injection et la fixation sur l'admission.
+
+
+Attention : un filetage est mort sur la pompe d'Optimus, il en faut une nouvelle.]]></notes>
                 </task>
                 <task id="174" name="Placer le circuit d'essence sur catia" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
                     <notes><![CDATA[Définir la position des éléments, le passage des durites et leurs accroches.
