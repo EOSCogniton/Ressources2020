@@ -13421,7 +13421,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="10k"/>
 <part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="4k7"/>
 <part name="P+1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
-<part name="Q8" library="transistor-small-signal" library_urn="urn:adsk.eagle:library:401" deviceset="BSS123" device="" package3d_urn="urn:adsk.eagle:package:28738/2"/>
+<part name="Q8" library="transistor-small-signal" library_urn="urn:adsk.eagle:library:401" deviceset="BSS123" device="" package3d_urn="urn:adsk.eagle:package:28738/2" value="BSS138"/>
 <part name="R24" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="10k"/>
 <part name="R25" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="330"/>
 <part name="Q9" library="transistor-small-signal" library_urn="urn:adsk.eagle:library:401" deviceset="BSS123" device="" package3d_urn="urn:adsk.eagle:package:28738/2" value="BSS138"/>
@@ -14635,13 +14635,6 @@ v0.1</text>
 </net>
 <net name="TRACTION_CONTROL_5V" class="0">
 <segment>
-<pinref part="Q8" gate="G$1" pin="D"/>
-<wire x1="215.9" y1="134.62" x2="215.9" y2="137.16" width="0.1524" layer="91"/>
-<wire x1="220.98" y1="137.16" x2="215.9" y2="137.16" width="0.1524" layer="91"/>
-<label x="220.98" y="137.16" size="1.778" layer="95" xref="yes"/>
-<label x="297.18" y="50.8" size="1.778" layer="95" rot="R180" xref="yes"/>
-</segment>
-<segment>
 <pinref part="CONN_DTA" gate="-4" pin="S"/>
 <wire x1="302.26" y1="50.8" x2="297.18" y2="50.8" width="0.1524" layer="91"/>
 </segment>
@@ -14657,19 +14650,6 @@ v0.1</text>
 <wire x1="59.69" y1="85.09" x2="40.64" y2="85.09" width="0.1524" layer="91"/>
 <wire x1="40.64" y1="85.09" x2="40.64" y2="81.28" width="0.1524" layer="91"/>
 <label x="40.64" y="81.28" size="1.778" layer="95" rot="R180" xref="yes"/>
-</segment>
-</net>
-<net name="LAUNCH_CONTROL_5V" class="0">
-<segment>
-<label x="297.18" y="45.72" size="1.778" layer="95" rot="R180" xref="yes"/>
-<pinref part="CONN_DTA" gate="-5" pin="S"/>
-<wire x1="302.26" y1="45.72" x2="297.18" y2="45.72" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<wire x1="220.98" y1="104.14" x2="215.9" y2="104.14" width="0.1524" layer="91"/>
-<pinref part="Q9" gate="G$1" pin="D"/>
-<wire x1="215.9" y1="101.6" x2="215.9" y2="104.14" width="0.1524" layer="91"/>
-<label x="220.98" y="104.14" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="WET/DRY_3.3V" class="0">
@@ -14759,7 +14739,20 @@ v0.1</text>
 <junction x="205.74" y="58.42"/>
 </segment>
 </net>
-<net name="WET/DRY_5V" class="0">
+<net name="LAUNCH_CONTROL" class="0">
+<segment>
+<wire x1="220.98" y1="104.14" x2="215.9" y2="104.14" width="0.1524" layer="91"/>
+<pinref part="Q9" gate="G$1" pin="D"/>
+<wire x1="215.9" y1="101.6" x2="215.9" y2="104.14" width="0.1524" layer="91"/>
+<label x="220.98" y="104.14" size="1.778" layer="95" xref="yes"/>
+</segment>
+<segment>
+<label x="297.18" y="45.72" size="1.778" layer="95" rot="R180" xref="yes"/>
+<pinref part="CONN_DTA" gate="-5" pin="S"/>
+<wire x1="302.26" y1="45.72" x2="297.18" y2="45.72" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="WET/DRY" class="0">
 <segment>
 <pinref part="Q10" gate="G$1" pin="D"/>
 <wire x1="215.9" y1="66.04" x2="215.9" y2="68.58" width="0.1524" layer="91"/>
@@ -14770,6 +14763,15 @@ v0.1</text>
 <pinref part="CONN_DTA" gate="-6" pin="S"/>
 <wire x1="297.18" y1="40.64" x2="302.26" y2="40.64" width="0.1524" layer="91"/>
 <label x="297.18" y="40.64" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="TRACTION_CONTROL" class="0">
+<segment>
+<pinref part="Q8" gate="G$1" pin="D"/>
+<wire x1="215.9" y1="134.62" x2="215.9" y2="137.16" width="0.1524" layer="91"/>
+<wire x1="220.98" y1="137.16" x2="215.9" y2="137.16" width="0.1524" layer="91"/>
+<label x="220.98" y="137.16" size="1.778" layer="95" xref="yes"/>
+<label x="297.18" y="50.8" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 </nets>
