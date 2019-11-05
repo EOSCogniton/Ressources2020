@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2019-10-21" view-index="0" gantt-divider-location="358" resource-divider-location="300" version="2.8.5" locale="fr">
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2019-10-21" view-index="1" gantt-divider-location="358" resource-divider-location="300" version="2.8.5" locale="fr">
     <description/>
     <view zooming-state="default:6" id="gantt-chart">
         <field id="tpd3" name="Nom" width="186" order="0"/>
@@ -84,7 +84,17 @@
             </task>
         </task>
     </tasks>
-    <resources/>
+    <resources>
+        <resource id="0" name="Corentin LEPAIS" function="Default:0" contacts="" phone=""/>
+        <resource id="1" name="Arthur RODRIGUEZ" function="Default:0" contacts="" phone=""/>
+        <resource id="2" name="Bruno MOREIRA" function="Default:0" contacts="" phone=""/>
+        <resource id="3" name="Romain MARTIN" function="Default:0" contacts="" phone=""/>
+        <resource id="4" name="Ariel RODRIGUEZ ALANIS" function="Default:0" contacts="" phone=""/>
+        <resource id="6" name="Mathieu LEDOUX" function="Default:0" contacts="" phone=""/>
+        <resource id="5" name="Pavlo BOZHOK" function="Default:0" contacts="" phone=""/>
+        <resource id="7" name="Raphaël VIUDES" function="Default:0" contacts="" phone=""/>
+        <resource id="8" name="Rémi HAMON" function="Default:0" contacts="" phone=""/>
+    </resources>
     <allocations/>
     <vacations/>
     <previous/>
