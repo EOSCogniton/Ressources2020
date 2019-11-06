@@ -131,6 +131,9 @@ Cette pièce est un backup de la confing expérimentale]]></notes>
 
 Attention : un filetage est mort sur la pompe d'Optimus, il en faut une nouvelle.]]></notes>
                 </task>
+                <task id="197" name="Rampe d'injection" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
+                    <notes><![CDATA[La rampe du PC40 (moteur qu'on utilise) est en plastique, donc plus légère que celle en métal. Elle n'est pas modélisée sous catia -> à faire.]]></notes>
+                </task>
                 <task id="174" name="Placer le circuit d'essence sur catia" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
                     <notes><![CDATA[Définir la position des éléments, le passage des durites et leurs accroches.
 ]]></notes>
