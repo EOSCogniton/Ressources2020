@@ -31,7 +31,7 @@
 #include "can_interface.h"
 
 //initialisation Canbus
-#include <SPI.h>
+#include <SPI.h>  // ¿¿Importation redondante?? __ARS
 
 //Definition of key-word
 #define ERREUR -1 //Use to transmit that the motor is in error
@@ -41,18 +41,26 @@ boolean statePaletteIncrease;
 boolean statePaletteIncreaseBefore;
 boolean statePaletteDecrease;
 boolean statePaletteDecreaseBefore;
+
 int positionEngager; // Contain what motor position is currently engaged
 int wantedPosition;// Contain the motor position wanted so the speed rapport of the bike
+
 boolean stateHoming; // Will contain the state of the homing button
 boolean stateHomingBefore;
+
 boolean outMotor1; //Info return by the motor
 boolean outMotor2;//Info return by the motor
+
 boolean stateNeutre;
 boolean stateNeutreBefore;
+
 boolean error;
+
 const int neutrePosition = 2;
 const int homingPosition=1;
+
 boolean positionReached=true;
+
 unsigned long T_D_Millis; //Containt the passed time
 
 //Table which will contain the combination of the motor input for each speed
@@ -74,16 +82,17 @@ void setup()
   pinMode(shiftCut, OUTPUT); 
   pinMode(gearPot, OUTPUT);
 
-  pinMode(paletteIncrease, INPUT_PULLUP);
-  pinMode(paletteDecrease, INPUT_PULLUP);
+  pinMode(paletteIncrease, INPUT_PULLUP);  //  !! Il me semble qu'il y a deja des résistance de tirages sur le shield pour les pallettes !!__ARS
+  pinMode(paletteDecrease, INPUT_PULLUP);  
   pinMode(neutre, INPUT_PULLUP);
   
-  digitalWrite(motorInput0, LOW);
+  digitalWrite(motorInput0, LOW); // Initialisation de la position du moteur sur "Clear error and Stop" ¿Pourquoi? __ARS
   digitalWrite(motorInput1, LOW);
   digitalWrite(motorInput2, LOW);
   digitalWrite(motorInput3, LOW);
   digitalWrite(motorInput4, LOW);
-  digitalWrite(shiftCut, HIGH);
+  
+  digitalWrite(shiftCut, HIGH); //Pas d'injection moteur
 
   //Initialization of the variables
   statePaletteIncreaseBefore = HIGH; //The pallets mode is INPUT_PULLUP, so the pin level is HIGH when it is inactive
@@ -92,7 +101,9 @@ void setup()
   wantedPosition = 2;
   error = false;
   stateNeutreBefore=HIGH;
-  T_D_Millis=millis();
+  
+  
+  T_D_Millis=millis();  //   ¿¿¿Variable de stckage tu temps???  __ARS
   
   {//Initialization of the table. We use only the position 1-6, clear error and start Homing
     
@@ -284,12 +295,14 @@ void loop()
         positionReached=false;
       }
     }
+    
     if (positionReached) //We change the current speed only if we have reached the position
     {
       positionEngager=wantedPosition; //We save the engaged position
     }
     digitalWrite(shiftCut, HIGH);//Open the injection
   }
+  
   if (CAN.Transmit(positionEngager-2, T_D_Millis)); //We sent the engaged speed to the CAN (Speed= PositionEngager-2)
   {
      T_D_Millis=millis(); // We save the time of last transmit
