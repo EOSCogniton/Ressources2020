@@ -28,6 +28,8 @@ void setRPM(int RPM);
 
 void setLaunch(bool launch_active);
 
+void setRaceCapture(bool RaceOn);
+
 void nextion_endMessage();
 
 #endif

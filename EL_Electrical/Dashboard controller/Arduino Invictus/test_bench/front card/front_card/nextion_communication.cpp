@@ -108,7 +108,7 @@ void setRPM(int RPM){
   nextion_endMessage();
 }
 
-void setResCapture(bool resOn){
+void setRaceCapture(bool raceOn){
   if resOn{
     Serial2.print("racecapt.bco=");
     Serial2.print(1441);

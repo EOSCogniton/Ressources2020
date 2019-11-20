@@ -30,4 +30,6 @@ void setLaunch(bool launch_active);
 
 void nextion_endMessage();
 
+void setRaceCapture(bool raceOn);
+
 #endif
