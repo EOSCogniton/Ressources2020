@@ -14,7 +14,7 @@
 /**************************************************************************/
 
 void setShiftLight(int Pin,bool enable){
-  if enable{
+  if(enable){
     digitalWrite(Pin,HIGH);
   }
   else{
