@@ -22210,7 +22210,6 @@ v0.1</text>
 <text x="177.8" y="158.75" size="1.27" layer="97">S</text>
 <text x="181.61" y="161.29" size="1.27" layer="97">G</text>
 <text x="186.69" y="158.75" size="1.27" layer="97">D</text>
-<text x="109.22" y="93.98" size="1.778" layer="94">GEAR_POT_ANALOG</text>
 <wire x1="228.6" y1="223.52" x2="152.4" y2="223.52" width="0.1524" layer="97"/>
 <wire x1="152.4" y1="223.52" x2="152.4" y2="27.94" width="0.1524" layer="97"/>
 <text x="153.67" y="210.82" size="1.778" layer="249">CONVERTISSEUR DE TENSION</text>
@@ -22663,6 +22662,7 @@ v0.1</text>
 <pinref part="Q4" gate="G$1" pin="S"/>
 <wire x1="203.2" y1="96.52" x2="203.2" y2="105.41" width="0.1524" layer="91"/>
 <pinref part="GND3" gate="1" pin="GND"/>
+<junction x="203.2" y="96.52"/>
 </segment>
 <segment>
 <pinref part="R15" gate="G$1" pin="1"/>
@@ -22671,6 +22671,7 @@ v0.1</text>
 <pinref part="Q5" gate="G$1" pin="S"/>
 <wire x1="203.2" y1="53.34" x2="203.2" y2="62.23" width="0.1524" layer="91"/>
 <pinref part="GND4" gate="1" pin="GND"/>
+<junction x="203.2" y="53.34"/>
 </segment>
 <segment>
 <pinref part="GND5" gate="1" pin="GND"/>
@@ -22876,15 +22877,6 @@ v0.1</text>
 <pinref part="IC1" gate="G$1" pin="TXD"/>
 <wire x1="53.34" y1="30.48" x2="50.8" y2="30.48" width="0.1524" layer="91"/>
 <label x="50.8" y="30.48" size="2.54" layer="95" rot="R180" xref="yes"/>
-</segment>
-</net>
-<net name="GEAR_POT" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="A14/DAC"/>
-<wire x1="105.41" y1="97.79" x2="109.22" y2="97.79" width="0.1524" layer="91"/>
-<wire x1="109.22" y1="97.79" x2="109.22" y2="99.06" width="0.1524" layer="91"/>
-<wire x1="109.22" y1="99.06" x2="111.76" y2="99.06" width="0.1524" layer="91"/>
-<label x="111.76" y="99.06" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="SC1_3.3V" class="0">

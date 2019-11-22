@@ -22529,6 +22529,8 @@ In this library the device names are the same as the pin names of the symbols, t
 <part name="TEST_CAN" library="test_pin_DTA" deviceset="PINHD-1X2" device="" package3d_urn="urn:adsk.eagle:package:22435/2"/>
 <part name="TEST_PALETTE" library="test_pin_DTA" deviceset="PINHD-1X2" device="" package3d_urn="urn:adsk.eagle:package:22435/2"/>
 <part name="C2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="CPOL-EU" device="E25-10AXIAL" package3d_urn="urn:adsk.eagle:package:23352/1" value="1000uF"/>
+<part name="P+6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
+<part name="5V" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X1" device="" package3d_urn="urn:adsk.eagle:package:22485/2"/>
 </parts>
 <sheets>
 <sheet>
@@ -23000,6 +23002,13 @@ v0.1</text>
 <instance part="C2" gate="G$1" x="53.34" y="203.2" smashed="yes" rot="MR0">
 <attribute name="NAME" x="52.197" y="203.6826" size="1.778" layer="95" rot="MR0"/>
 <attribute name="VALUE" x="52.197" y="198.6026" size="1.778" layer="96" rot="MR0"/>
+</instance>
+<instance part="P+6" gate="1" x="106.68" y="210.82" smashed="yes">
+<attribute name="VALUE" x="104.14" y="210.82" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="5V" gate="G$1" x="116.84" y="208.28" smashed="yes">
+<attribute name="NAME" x="110.49" y="211.455" size="1.778" layer="95"/>
+<attribute name="VALUE" x="110.49" y="203.2" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -23550,6 +23559,11 @@ v0.1</text>
 <pinref part="R2" gate="G$1" pin="2"/>
 <wire x1="218.44" y1="201.93" x2="218.44" y2="205.74" width="0.1524" layer="91"/>
 <pinref part="P+1" gate="1" pin="+5V"/>
+</segment>
+<segment>
+<pinref part="5V" gate="G$1" pin="1"/>
+<pinref part="P+6" gate="1" pin="+5V"/>
+<wire x1="114.3" y1="208.28" x2="106.68" y2="208.28" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="CAN-TXD-SOFTWARE" class="0">

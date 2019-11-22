@@ -6,9 +6,9 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="0.1" altunitdist="mm" altunit="mm"/>
+<grid distance="0.1" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="0.1" altunitdist="mm" altunit="mm"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="no" active="yes"/>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="yes" active="yes"/>
 <layer number="3" name="Route3" color="17" fill="1" visible="no" active="no"/>
 <layer number="4" name="Route4" color="18" fill="1" visible="no" active="no"/>
@@ -22,8 +22,8 @@
 <layer number="12" name="Route12" color="20" fill="1" visible="no" active="no"/>
 <layer number="13" name="Route13" color="21" fill="1" visible="no" active="no"/>
 <layer number="14" name="Route14" color="22" fill="1" visible="no" active="no"/>
-<layer number="15" name="Route15" color="23" fill="1" visible="no" active="yes"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="yes"/>
+<layer number="15" name="Route15" color="23" fill="1" visible="yes" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
@@ -3799,6 +3799,11 @@ design rules under a new name.</description>
 <attribute name="SPICEPREFIX" value="C" x="50.6" y="62.7" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" x="54.6386" y="65.1892" size="1.778" layer="27" ratio="10" rot="R180"/>
 </element>
+<element name="5V" library="pinhead" library_urn="urn:adsk.eagle:library:325" package="1X01" package3d_urn="urn:adsk.eagle:package:22485/2" value="" x="37.9" y="54.7" smashed="yes">
+<attribute name="NAME" x="36.5538" y="56.5288" size="1.27" layer="25" ratio="10"/>
+<attribute name="POPULARITY" value="64" x="37.9" y="54.7" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="36.63" y="51.525" size="1.27" layer="27"/>
+</element>
 </elements>
 <signals>
 <signal name="AGND">
@@ -3862,9 +3867,9 @@ design rules under a new name.</description>
 <wire x1="64.7225" y1="61.2775" x2="63.3" y2="62.7" width="0.6096" layer="1"/>
 <polygon width="0.6096" layer="1">
 <vertex x="63.3" y="62.8"/>
-<vertex x="60.95" y="62.8"/>
-<vertex x="55.2" y="57.05"/>
-<vertex x="55.2" y="56.1"/>
+<vertex x="60.85" y="62.8"/>
+<vertex x="54.7" y="56.65"/>
+<vertex x="54.7" y="56.1"/>
 <vertex x="55.9" y="56.1"/>
 <vertex x="57.5" y="54.5"/>
 <vertex x="57.5" y="53.5"/>
@@ -4160,11 +4165,10 @@ design rules under a new name.</description>
 <vertex x="49.3" y="53.95"/>
 <vertex x="49.3" y="54.6"/>
 <vertex x="50.4" y="55.7"/>
-<vertex x="52.1" y="55.7"/>
-<vertex x="52.15" y="55.65"/>
-<vertex x="60.55" y="64.05"/>
-<vertex x="60.55" y="66.6"/>
-<vertex x="60.15" y="67"/>
+<vertex x="52.5" y="55.7"/>
+<vertex x="60.55" y="63.75"/>
+<vertex x="60.55" y="64.1"/>
+<vertex x="57.65" y="67"/>
 <vertex x="8.9555625" y="67"/>
 </polygon>
 <polygon width="0.6096" layer="2">
@@ -4243,15 +4247,12 @@ design rules under a new name.</description>
 <vertex x="62.56749375" y="25.5"/>
 <vertex x="55.758803125" y="25.5"/>
 </polygon>
-<wire x1="54.2925" y1="20.32" x2="54.3075" y2="20.34" width="0" layer="19" extent="1-2"/>
-<wire x1="55.7325" y1="20.64" x2="54.3075" y2="20.34" width="0" layer="19" extent="1-2"/>
+<wire x1="54.2925" y1="20.64" x2="55.7325" y2="20.64" width="0" layer="19" extent="1-1"/>
 <wire x1="55.7325" y1="11.75" x2="54.2925" y2="11.75" width="0" layer="19" extent="1-1"/>
 <wire x1="55.7325" y1="7.305" x2="54.2925" y2="7.305" width="0" layer="19" extent="1-1"/>
 <wire x1="52.3875" y1="20.64" x2="54.2925" y2="20.64" width="0" layer="19" extent="1-1"/>
 <wire x1="52.3875" y1="11.75" x2="54.2925" y2="11.75" width="0" layer="19" extent="1-1"/>
 <wire x1="52.3875" y1="7.305" x2="54.2925" y2="7.305" width="0" layer="19" extent="1-1"/>
-<wire x1="60.6" y1="8.4" x2="55.7325" y2="7.305" width="0" layer="19" extent="1-1"/>
-<wire x1="33.02" y1="7.3025" x2="52.3875" y2="7.305" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="IN0_3.3V">
 <contactref element="R11" pad="1"/>
@@ -4432,8 +4433,8 @@ design rules under a new name.</description>
 <vertex x="55.5" y="26.9"/>
 <vertex x="62.2" y="26.9"/>
 <vertex x="62.5" y="27.2"/>
-<vertex x="62.5" y="65.9"/>
-<vertex x="61.3" y="67.1"/>
+<vertex x="62.5" y="59.4"/>
+<vertex x="54.8" y="67.1"/>
 <vertex x="6.7" y="67.1"/>
 <vertex x="6.7" y="39.6"/>
 <vertex x="8.7" y="37.6"/>
@@ -4442,6 +4443,10 @@ design rules under a new name.</description>
 <vertex x="6.7" y="25.5"/>
 <vertex x="8" y="24.2"/>
 </polygon>
+<contactref element="5V" pad="1"/>
+<wire x1="37.9" y1="54.7" x2="41.3" y2="54.7" width="0.6096" layer="15"/>
+<wire x1="41.5925" y1="54.4075" x2="41.5925" y2="53.975" width="0.6096" layer="15"/>
+<wire x1="41.3" y1="54.7" x2="41.5925" y2="54.4075" width="0.6096" layer="15"/>
 <wire x1="60.6425" y1="28.255" x2="60.1675" y2="28.575" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="CAN-TXD-SOFTWARE">
