@@ -1289,6 +1289,70 @@ for trimmer refence see : &lt;u&gt;www.electrospec-inc.com/cross_references/trim
 <rectangle x1="-1.0668" y1="-0.6985" x2="-0.4168" y2="0.7015" layer="51"/>
 <rectangle x1="-0.1999" y1="-0.5001" x2="0.1999" y2="0.5001" layer="35"/>
 </package>
+<package name="E25-10" urn="urn:adsk.eagle:footprint:22855/1" library_version="11">
+<description>&lt;b&gt;ELECTROLYTIC CAPACITOR&lt;/b&gt;&lt;p&gt;
+grid 25.4 mm, diameter 10 mm</description>
+<wire x1="-10.16" y1="4.826" x2="-9.906" y2="5.08" width="0.1524" layer="21"/>
+<wire x1="-9.906" y1="5.08" x2="-9.017" y2="5.08" width="0.1524" layer="21"/>
+<wire x1="-9.017" y1="5.08" x2="-8.763" y2="4.826" width="0.1524" layer="21"/>
+<wire x1="-7.747" y1="5.08" x2="9.906" y2="5.08" width="0.1524" layer="21"/>
+<wire x1="-9.906" y1="-5.08" x2="-9.017" y2="-5.08" width="0.1524" layer="21"/>
+<wire x1="-7.747" y1="-5.08" x2="9.906" y2="-5.08" width="0.1524" layer="21"/>
+<wire x1="-10.16" y1="4.826" x2="-10.16" y2="-4.826" width="0.1524" layer="21"/>
+<wire x1="9.906" y1="5.08" x2="10.16" y2="4.826" width="0.1524" layer="21"/>
+<wire x1="9.906" y1="-5.08" x2="10.033" y2="-4.953" width="0.1524" layer="21"/>
+<wire x1="10.16" y1="-4.826" x2="10.16" y2="4.826" width="0.1524" layer="21"/>
+<wire x1="-7.747" y1="5.08" x2="-8.001" y2="4.826" width="0.1524" layer="21"/>
+<wire x1="-8.763" y1="4.826" x2="-8.763" y2="4.572" width="0.1524" layer="21"/>
+<wire x1="-8.001" y1="4.826" x2="-8.001" y2="4.572" width="0.1524" layer="21"/>
+<wire x1="-8.001" y1="4.826" x2="10.16" y2="4.826" width="0.1524" layer="21"/>
+<wire x1="-10.16" y1="4.826" x2="-8.763" y2="4.826" width="0.1524" layer="21"/>
+<wire x1="-8.001" y1="4.826" x2="-8.763" y2="4.826" width="0.1524" layer="21"/>
+<wire x1="-8.763" y1="4.572" x2="-8.001" y2="4.572" width="0.1524" layer="21"/>
+<wire x1="-7.747" y1="4.953" x2="9.906" y2="4.953" width="0.3048" layer="21"/>
+<wire x1="-9.906" y1="4.953" x2="-9.017" y2="4.953" width="0.3048" layer="21"/>
+<wire x1="-8.763" y1="-4.826" x2="-8.763" y2="-4.7752" width="0.1524" layer="21"/>
+<wire x1="-8.001" y1="-4.826" x2="-8.001" y2="-4.7752" width="0.1524" layer="21"/>
+<wire x1="-8.763" y1="-4.699" x2="-8.763" y2="4.572" width="0.1524" layer="21"/>
+<wire x1="-8.001" y1="-4.699" x2="-8.001" y2="4.572" width="0.1524" layer="21"/>
+<wire x1="-8.001" y1="-4.826" x2="-8.763" y2="-4.826" width="0.1524" layer="21"/>
+<wire x1="-8.763" y1="-4.699" x2="-8.001" y2="-4.699" width="0.1524" layer="21"/>
+<wire x1="-6.35" y1="-1.524" x2="-5.842" y2="-1.524" width="0.1524" layer="21"/>
+<wire x1="-5.842" y1="-1.524" x2="-5.842" y2="1.524" width="0.1524" layer="21"/>
+<wire x1="-5.842" y1="1.524" x2="-6.35" y2="1.524" width="0.1524" layer="21"/>
+<wire x1="-7.112" y1="1.27" x2="-7.112" y2="0.508" width="0.1524" layer="21"/>
+<wire x1="-7.493" y1="0.889" x2="-6.731" y2="0.889" width="0.1524" layer="21"/>
+<wire x1="-6.35" y1="1.524" x2="-6.35" y2="0" width="0.1524" layer="21"/>
+<wire x1="-6.35" y1="0" x2="-6.35" y2="-1.524" width="0.1524" layer="21"/>
+<wire x1="-4.953" y1="0" x2="9.652" y2="0" width="0.1524" layer="21"/>
+<wire x1="-7.493" y1="0" x2="-6.35" y2="0" width="0.1524" layer="21"/>
+<wire x1="-10.16" y1="-4.826" x2="-10.033" y2="-4.953" width="0.1524" layer="21"/>
+<wire x1="-10.033" y1="-4.953" x2="-9.906" y2="-5.08" width="0.1524" layer="21"/>
+<wire x1="-9.017" y1="-5.08" x2="-8.89" y2="-4.953" width="0.1524" layer="21"/>
+<wire x1="-8.89" y1="-4.953" x2="-8.763" y2="-4.826" width="0.1524" layer="21"/>
+<wire x1="-10.033" y1="-4.953" x2="-8.89" y2="-4.953" width="0.1524" layer="21"/>
+<wire x1="-9.906" y1="-5.0292" x2="-9.017" y2="-5.0292" width="0.1524" layer="21"/>
+<wire x1="-9.017" y1="-5.0292" x2="-9.017" y2="-5.08" width="0.1524" layer="21"/>
+<wire x1="-8.763" y1="-4.7752" x2="-8.001" y2="-4.7752" width="0.1524" layer="21"/>
+<wire x1="-8.763" y1="-4.7752" x2="-8.763" y2="-4.699" width="0.1524" layer="21"/>
+<wire x1="-8.001" y1="-4.7752" x2="-8.001" y2="-4.699" width="0.1524" layer="21"/>
+<wire x1="-7.747" y1="-5.08" x2="-7.874" y2="-4.953" width="0.1524" layer="21"/>
+<wire x1="-7.874" y1="-4.953" x2="-8.001" y2="-4.826" width="0.1524" layer="21"/>
+<wire x1="-7.747" y1="-5.08" x2="-7.747" y2="-5.0292" width="0.1524" layer="21"/>
+<wire x1="-7.747" y1="-5.0292" x2="9.906" y2="-5.0292" width="0.1524" layer="21"/>
+<wire x1="-7.874" y1="-4.953" x2="10.033" y2="-4.953" width="0.1524" layer="21"/>
+<wire x1="10.033" y1="-4.953" x2="10.16" y2="-4.826" width="0.1524" layer="21"/>
+<wire x1="-8.636" y1="4.699" x2="-8.128" y2="4.699" width="0.3048" layer="21"/>
+<wire x1="12.7" y1="0" x2="11.049" y2="0" width="0.762" layer="51"/>
+<wire x1="-12.7" y1="0" x2="-11.049" y2="0" width="0.762" layer="51"/>
+<pad name="+" x="-12.7" y="0" drill="1.1176" diameter="3.1496"/>
+<pad name="-" x="12.7" y="0" drill="1.1176" diameter="3.1496" shape="octagon"/>
+<text x="-9.906" y="5.334" size="1.778" layer="25" ratio="10">&gt;NAME</text>
+<text x="-4.0386" y="-2.4892" size="1.778" layer="27" ratio="10">&gt;VALUE</text>
+<rectangle x1="-5.334" y1="-1.524" x2="-4.826" y2="1.524" layer="21"/>
+<rectangle x1="-11.049" y1="-0.381" x2="-10.16" y2="0.381" layer="21"/>
+<rectangle x1="10.16" y1="-0.381" x2="11.049" y2="0.381" layer="21"/>
+</package>
 </packages>
 <packages3d>
 <package3d name="C0805" urn="urn:adsk.eagle:package:23617/2" type="model" library_version="3">
@@ -1301,6 +1365,13 @@ for trimmer refence see : &lt;u&gt;www.electrospec-inc.com/cross_references/trim
 <description>RESISTOR</description>
 <packageinstances>
 <packageinstance name="R0805"/>
+</packageinstances>
+</package3d>
+<package3d name="E25-10" urn="urn:adsk.eagle:package:23352/1" type="box" library_version="11">
+<description>ELECTROLYTIC CAPACITOR
+grid 25.4 mm, diameter 10 mm</description>
+<packageinstances>
+<packageinstance name="E25-10"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -3534,6 +3605,12 @@ design rules under a new name.</description>
 <attribute name="POPULARITY" value="67" x="43.225" y="19.05" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="VALUE" x="40.05" y="29.21" size="1.27" layer="27" rot="R270"/>
 </element>
+<element name="C2" library="rcl" library_urn="urn:adsk.eagle:library:334" package="E25-10" package3d_urn="urn:adsk.eagle:package:23352/1" value="1000uF" x="6.775" y="-9.675" smashed="yes">
+<attribute name="NAME" x="-3.131" y="-4.341" size="1.778" layer="25" ratio="10"/>
+<attribute name="POPULARITY" value="0" x="6.775" y="-9.675" size="1.778" layer="27" display="off"/>
+<attribute name="SPICEPREFIX" value="C" x="6.775" y="-9.675" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="2.7364" y="-12.1642" size="1.778" layer="27" ratio="10"/>
+</element>
 </elements>
 <signals>
 <signal name="AGND">
@@ -3546,8 +3623,6 @@ design rules under a new name.</description>
 <contactref element="I105" pad="3"/>
 <contactref element="C107" pad="1"/>
 <contactref element="C106" pad="1"/>
-<contactref element="ALIM" pad="2"/>
-<wire x1="64.7225" y1="41.5225" x2="63.7225" y2="41.5225" width="0.8128" layer="1"/>
 <wire x1="63.7225" y1="41.5225" x2="62.5375" y2="40.3375" width="0.8128" layer="1"/>
 <wire x1="62.5375" y1="40.3375" x2="61.365" y2="40.3375" width="0.8128" layer="1"/>
 <wire x1="58.039" y1="40.5178" x2="57.4929" y2="40.5178" width="0.6096" layer="1"/>
@@ -3567,7 +3642,11 @@ design rules under a new name.</description>
 <wire x1="58.5" y1="40.4929" x2="58.5" y2="40.3375" width="0.6096" layer="1"/>
 <wire x1="58.825" y1="40.2375" x2="57.7732" y2="40.2375" width="0.6096" layer="1"/>
 <wire x1="57.7732" y1="40.2375" x2="57.6732" y2="40.3375" width="0.6096" layer="1"/>
-<wire x1="58.825" y1="40.2375" x2="57.5" y2="40.5107" width="0" layer="19" extent="1-15"/>
+<contactref element="C2" pad="+"/>
+<contactref element="ALIM" pad="2"/>
+<wire x1="63.7225" y1="41.5225" x2="64.7225" y2="41.5225" width="0" layer="19" extent="1-1"/>
+<wire x1="57.5" y1="40.5107" x2="58.825" y2="40.2375" width="0" layer="19" extent="1-15"/>
+<wire x1="-5.925" y1="-9.675" x2="55.2563" y2="41.9689" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="+3V3">
 <contactref element="IC1" pad="5"/>
@@ -3767,14 +3846,16 @@ design rules under a new name.</description>
 <wire x1="22.975" y1="40.935" x2="21.1025" y2="40.935" width="0.6096" layer="1"/>
 <wire x1="25.0825" y1="40.64" x2="23.27" y2="40.64" width="0.6096" layer="1"/>
 <wire x1="23.27" y1="40.64" x2="22.975" y2="40.935" width="0.6096" layer="1"/>
+<contactref element="C2" pad="-"/>
 <wire x1="55.275" y1="23.025" x2="55.2563" y2="37.3461" width="0" layer="19" extent="1-1"/>
 <wire x1="55.325" y1="18.65" x2="55.275" y2="23.025" width="0" layer="19" extent="1-1"/>
 <wire x1="41.5" y1="3.5" x2="52.32" y2="6.46" width="0" layer="19" extent="1-1"/>
 <wire x1="29.6025" y1="2.8575" x2="32.7025" y2="7.62" width="0" layer="19" extent="1-1"/>
 <wire x1="20.3225" y1="17.4625" x2="32.7025" y2="7.62" width="0" layer="19" extent="1-1"/>
 <wire x1="15.6" y1="27" x2="20.3225" y2="20.32" width="0" layer="19" extent="1-1"/>
-<wire x1="15.875" y1="32.7175" x2="11.9975" y2="40.9325" width="0" layer="19" extent="1-1"/>
+<wire x1="11.9975" y1="40.9325" x2="15.875" y2="32.7175" width="0" layer="19" extent="1-1"/>
 <wire x1="6.985" y1="10.475" x2="20.3225" y2="17.4625" width="0" layer="19" extent="1-1"/>
+<wire x1="19.475" y1="-9.675" x2="29.6025" y2="2.8575" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="+5V">
 <contactref element="C3" pad="2"/>
