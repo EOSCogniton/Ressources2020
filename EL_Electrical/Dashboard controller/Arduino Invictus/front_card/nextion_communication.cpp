@@ -17,6 +17,8 @@
               setLaunch(bool launch_active)
                     Changes display depending on launch control activation: screen
                     turns green if launch control is active, else it turns normal
+              setRaceCapture(bool raceOn)
+                    Indicator zone turns green if race capture is on, else it turns red
               nextion_endMessage()
                     Sends a message which has to be sent at the end of each communication
                     with Nextion (it's a protocol)
@@ -122,15 +124,12 @@ void setRaceCapture(bool raceOn){
 }
 void setLaunch(int page,bool launch_active){
   if(launch_active){
-    Serial2.print("launch_state.val=");
-    Serial2.print(1);
-    nextion_endMessage();
-    //The screen turns green if launch control is active
+    //The screen turns blue if launch control is active
     Serial2.print(pageName[page]);
     Serial2.print(".bco=");
     Serial2.print(23583);
     nextion_endMessage();
-    //Font backgrounds turn green too
+    //Font backgrounds turn blue too
     Serial2.print("oil_temp.bco=");
     Serial2.print(23583);
     nextion_endMessage();
@@ -152,9 +151,6 @@ void setLaunch(int page,bool launch_active){
     nextion_endMessage();
   }
   else{
-    Serial2.print("launch_state.val=");
-    Serial2.print(0);
-    nextion_endMessage();
     //The screen turns black if launch control is inactive
     Serial2.print(pageName[page]);
     Serial2.print(".bco=");
