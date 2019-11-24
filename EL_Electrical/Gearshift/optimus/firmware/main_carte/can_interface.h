@@ -20,9 +20,9 @@
 #ifndef CAN_INTERFACE_H
 #define CAN_INTERFACE_H
 
-#include <SPI.h>
+#include <SPI.h>          // ¿¿Importation redondante?? __ARS
 #include <mcp_can.h>
-#include <mcp_can_dfs.h>
+#include <mcp_can_dfs.h>  //¿¿Importation redondante?? __ARS
 
 #include "projectconfig.h" 
 
@@ -48,7 +48,7 @@ class can_interface
 private:
     void Data_MAJ();
 public:
-    can_interface();
+    can_interface();  
     void Recieve();
     boolean Transmit(int Data,unsigned long T_D_millis);
     boolean getResetState();

@@ -1,9 +1,9 @@
 #ifndef shiftlight
-#def shiftlight
+#define shiftlight
 
 /**************************************************************************/
 //    Functions
 /**************************************************************************/
-void setShiftLight(int Pin,bool enable)
+void setShiftLight(int Pin,bool enable);
 
 #endif
