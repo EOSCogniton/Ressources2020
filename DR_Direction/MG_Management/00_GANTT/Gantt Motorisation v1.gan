@@ -60,77 +60,146 @@
                 <task id="72" name="Noel" color="#8cb6ce" meeting="false" start="2019-12-21" duration="16" complete="0" expand="true"/>
             </task>
         </task>
-        <task id="88" name="Motorisation" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
+        <task id="88" name="EN_Engine" meeting="false" start="2019-10-21" duration="31" complete="0" expand="true">
             <task id="96" name="EN_A0100 : Moteur" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
-                <task id="109" name="Kart Cross" meeting="false" start="2019-10-21" duration="1" complete="0" expand="false">
-                    <task id="123" name="Anti dribble" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-                    <task id="124" name="Axe pignon shifter" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="123" name="Anti dribble" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
+                    <notes><![CDATA[Acheter un anti dribble pour le moteur de Kart Cross]]></notes>
                 </task>
-                <task id="125" name="Embrayage" meeting="false" start="2019-10-21" duration="1" complete="0" expand="false">
-                    <task id="126" name="Acheter des disques" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="124" name="Axe pignon shifter" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
+                    <notes><![CDATA[Il y en a un disponible à Bron. Vérifier qu'il convient et le monter sur le moteur de Kart Cross.]]></notes>
                 </task>
+                <task id="126" name="Acheter des disques d'embrayage" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
             </task>
             <task id="97" name="EN_A0200 : Echappement" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
-                <task id="110" name="Tubulures" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
-                    <task id="128" name="Dessiner sortie collecteur" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-                    <task id="129" name="Modification (Bery Inox)" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="128" name="Dessiner sortie collecteur" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
+                    <notes><![CDATA[On reprend l'échappement d'Optimus. Il faut s'assurer qu'il n'entre pas en collision avec le chassis : la fin du collecteur jusqu'au silencieux va probablement être modifiée.]]></notes>
                 </task>
-                <task id="127" name="Attache" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
-                    <task id="130" name="Dessiner fixation échappement" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="129" name="Modification (Bery Inox)" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
+                    <notes><![CDATA[Les changements apportés sur l'échappement sont faits par Bery Inox, il faut convenir d'une date/prix/délai, lui porter l'échappement et aller le récupérer.]]></notes>
+                </task>
+                <task id="130" name="Dessiner fixation échappement" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
+                    <notes><![CDATA[L'échappement se fixe sur un tube de la cellule arrière. Il faut soit utiliser une fixation existante (akrapovic) ou la faire nous même.
+Le pot vient d'une Kawasaki Z1000SX (2014 et +), la fixation d'origine est au dessus -> ça ne va pas pour nous.
+La fixation d'Optimus était sheitan]]></notes>
                 </task>
             </task>
             <task id="98" name="EN_A0300 : Admission" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
-                <task id="111" name="tâche_106" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="111" name="Dessiner admission &quot;Safe&quot;" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
+                    <notes><![CDATA[Dessiner une admission type Dynamix (rateau) avec optimisation de la CFD.
+Cette pièce est un backup de la confing expérimentale]]></notes>
+                </task>
+                <task id="162" name="Dessiner admission &quot;Expérimentale&quot;" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
             </task>
             <task id="135" name="EN_A0400 : Bride" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
-                <task id="136" name="Fixer diamètre" color="#8cb6ce" meeting="true" start="2019-10-21" duration="0" complete="0" expand="true"/>
-                <task id="137" name="Fixer diamètre" color="#8cb6ce" meeting="true" start="2019-10-21" duration="0" complete="0" expand="true"/>
-                <task id="138" name="Dimensionner" color="#8cb6ce" meeting="true" start="2019-10-21" duration="0" complete="0" expand="true"/>
-            </task>
-            <task id="99" name="EN_A0400 : Guillotine" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
-                <task id="117" name="Conception" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
-                    <task id="133" name="Valider l'architecture" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-                    <task id="144" name="Valider le système de commande" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-                    <task id="134" name="Choisir les matériaux" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="136" name="Fixer le design" color="#8cb6ce" meeting="true" start="2019-10-21" duration="0" complete="0" expand="true">
+                    <notes><![CDATA[Fixer les diamètres d'entrée et de sortie. Le communiquer à Côme pour la guillotine]]></notes>
                 </task>
-                <task id="142" name="Dessin" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
-                    <task id="143" name="Dessiner partie guillotine" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
-                    <task id="145" name="Dessiner actionneur" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="138" name="Dimensionner" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="196" name="Fixer la plaque de protection" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
+                    <notes><![CDATA[Prévoir une attache légère pour la plaque.]]></notes>
+                </task>
+                <task id="179" name="Backup Papillon" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
+                    <notes><![CDATA[Trouver un papillon en remplacement (si problème de fonctionnement sur la guillotine)]]></notes>
                 </task>
             </task>
-            <task id="100" name="EN_A0500 : Réservoir" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
-                <task id="118" name="tâche_112" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+            <task id="99" name="EN_A0400 : Guillotine" meeting="false" start="2019-10-21" duration="2" complete="0" expand="true">
+                <task id="133" name="Valider l'architecture" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
+                    <depend id="143" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="144" name="Valider le système de commande" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
+                    <depend id="143" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="134" name="Choisir les matériaux" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="143" name="Dessiner partie guillotine" color="#8cb6ce" meeting="false" start="2019-10-22" duration="1" complete="0" expand="true">
+                    <depend id="145" type="1" difference="0" hardness="Strong"/>
+                </task>
+                <task id="145" name="Dessiner actionneur" color="#8cb6ce" meeting="false" start="2019-10-22" duration="1" complete="0" expand="true"/>
+            </task>
+            <task id="100" name="EN_A0500 : Réservoir" meeting="false" start="2019-11-12" duration="9" complete="0" expand="true">
+                <task id="118" name="Définir le volume enveloppe du réservoir" color="#8cb6ce" meeting="false" start="2019-11-12" duration="7" complete="0" expand="true">
+                    <notes><![CDATA[Dans "Part design" de Catia, créer un réservoir avec le volume demandé, et le placer dans Invictus entre le pilote et l'échappement.]]></notes>
+                    <depend id="167" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="167" name="Dessiner le réservoir dans en tôlerie" color="#8cb6ce" meeting="false" start="2019-11-19" duration="2" complete="0" expand="true">
+                    <notes><![CDATA[Dans "Sheet Metal Design", dessiner un réservoir respectant le volume enveloppe et fabricable : attention pièces pliées. Si questions, voir avec le Dir Tech]]></notes>
+                </task>
             </task>
             <task id="101" name="EN_A0600 : Circuit d'essence" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
-                <task id="119" name="tâche_113" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="119" name="Choisir les composants du circuits d'essence" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
+                    <notes><![CDATA[La pompe et le régulateur de pression, le type de durites et de raccords, la rampe d'injection et la fixation sur l'admission.
+
+
+Attention : un filetage est mort sur la pompe d'Optimus, il en faut une nouvelle.]]></notes>
+                </task>
+                <task id="197" name="Rampe d'injection" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
+                    <notes><![CDATA[La rampe du PC40 (moteur qu'on utilise) est en plastique, donc plus légère que celle en métal. Elle n'est pas modélisée sous catia -> à faire.]]></notes>
+                </task>
+                <task id="174" name="Placer le circuit d'essence sur catia" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
+                    <notes><![CDATA[Définir la position des éléments, le passage des durites et leurs accroches.
+]]></notes>
+                </task>
             </task>
             <task id="102" name="EN_A0700 : Catch cans" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
                 <task id="120" name="tâche_114" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
             </task>
             <task id="103" name="EN_A0800 : Refroidissement" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
-                <task id="121" name="tâche_115" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="121" name="Radiateur" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
+                    <notes><![CDATA[Placer le radiateur : le plus reculé possible (en respectant le règlement par rapport à la roue).
+Prévoir les fixations]]></notes>
+                </task>
+                <task id="185" name="Réparation radiateur" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
+                    <notes><![CDATA[Prendre contact avec Bery Inox pour ses disponibilités.]]></notes>
+                </task>
+                <task id="183" name="Plaque de protection" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
+                    <notes><![CDATA[Déterminer le matériau de la plaque.
+En déduire la forme qu'elle aura.]]></notes>
+                </task>
             </task>
             <task id="104" name="EN_A0900 : Transmission secondaire" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
-                <task id="116" name="tâche_116" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="116" name="Dessiner support Drexler" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="175" name="Dimensionner les cales" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="176" name="Jonction arbre / LAS" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="177" name="Liste matériel à récupérer sur Optimus" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
+                <task id="178" name="Dimensionnement porte couronne (récup Optimus ?)" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
             </task>
+        </task>
+        <task id="180" name="Autres" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true">
+            <task id="181" name="Banc d'injecteurs" color="#8cb6ce" meeting="false" start="2019-10-21" duration="1" complete="0" expand="true"/>
         </task>
     </tasks>
     <resources>
-        <resource id="12" name="2As" function="Default:0" contacts="" phone=""/>
         <resource id="0" name="Aimery SAULIERE" function="Default:0" contacts="" phone=""/>
         <resource id="2" name="Come ARCHINARD" function="Default:0" contacts="" phone=""/>
         <resource id="3" name="Vincent BARREAU" function="Default:0" contacts="" phone=""/>
         <resource id="1" name="Mathieu JACQUET" function="Default:0" contacts="" phone=""/>
         <resource id="4" name="Ghislain KONATE" function="Default:0" contacts="" phone=""/>
-        <resource id="8" name="0As" function="Default:0" contacts="" phone=""/>
-        <resource id="5" name="Louise ANDRE-MATAHRI" function="Default:0" contacts="" phone=""/>
-        <resource id="10" name="Ibrahima BALDE" function="Default:0" contacts="" phone=""/>
+        <resource id="12" name="Axel VOLTA" function="Default:0" contacts="" phone=""/>
         <resource id="9" name="Fabien DUPUIS" function="Default:0" contacts="" phone=""/>
-        <resource id="11" name="Marcos GOMES" function="Default:0" contacts="" phone=""/>
-        <resource id="6" name="Leon MARGRAFF" function="Default:0" contacts="" phone=""/>
         <resource id="7" name="Henrique SENHORINI KATRIP" function="Default:0" contacts="" phone=""/>
+        <resource id="10" name="Ibrahima BALDE" function="Default:0" contacts="" phone=""/>
+        <resource id="6" name="Leon MARGRAFF" function="Default:0" contacts="" phone=""/>
+        <resource id="5" name="Louise ANDRE-MATAHRI" function="Default:0" contacts="" phone=""/>
+        <resource id="11" name="Marcos GOMES" function="Default:0" contacts="" phone=""/>
     </resources>
-    <allocations/>
+    <allocations>
+        <allocation task-id="111" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="133" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="144" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="134" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="143" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="145" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="116" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="175" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="176" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="177" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="178" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="121" resource-id="12" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="185" resource-id="12" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="183" resource-id="12" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="196" resource-id="12" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="181" resource-id="9" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="162" resource-id="6" function="Default:0" responsible="true" load="100.0"/>
+    </allocations>
     <vacations/>
     <previous/>
     <roles roleset-name="Default"/>

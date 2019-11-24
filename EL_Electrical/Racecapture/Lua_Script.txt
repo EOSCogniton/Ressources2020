@@ -1,0 +1,21 @@
+-- https://wiki.autosportlabs.com/RaceCapturePro_Lua_Scripting
+
+
+function onTick()
+	if isLogging() -- Si le Logging est actif alors on envoie un message CAN
+	
+		-- txCAN(channel, 0x1008=4104, isExtended, data, [timeout] )
+		txCAN(0,4104,1,{11,11,11,11,11,11,11,11})
+		
+	else -- Si le Logging n'est pas actif, on regarde si le moteur est démarré
+	
+		RPM=getTimerRpm(0) -- Je ne comprends pas ce truc
+		Speed=getGpsSpeed() -- En MPH
+
+		if RPM>600 or Speed>1-- Si le moteur est démarré (RPM>600) ou que la vitesse est sup à 1 MPH, on démarre le Logging
+			startLogging()
+		end
+	
+	end
+
+end
