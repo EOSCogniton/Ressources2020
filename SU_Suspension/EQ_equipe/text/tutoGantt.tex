@@ -1,0 +1,17 @@
+\section{Tutoriel Gantt Latex}
+
+\subsection{Conversion du gantt en latex}
+
+\begin{enumerate}
+	\item Une fois le gantt ouvert, Projet/Export et sélectionner le bon type de fichier \\ \rfigure{5cm}{img/gantt0}{}
+	\item suivre la procedure et enregistrer le fichier dans le même dossier du script python \texttt{gant2latex.py}
+	\item ouvrire le fichier \texttt{.xml} exporté avec le bloc note et enlever le tag \texttt{xmls=""} %TODO
+	 de la premier ligne, puis enregistrer
+	\item ouvrir le script python3 \texttt{gantt2latex.py} avec votre éditeur préféré et saisir le bon fichier \texttt{.xml} dans la première cellule, puis exécuter le code
+	\item deux fichiers ont été crées dans le dossier de travail \texttt{tasks.tex} et \texttt{team.tex}. charger ce deux fichiers sur l'overleaf \\ \rfigure{5cm}{img/gantt1}{}
+\end{enumerate}
+
+\subsection{Personnalisation de la do-list}
+
+\par dans le fichier \texttt{text/team.tex} vous pouvez éditer les note perso de chaque équipier en modifiant le paragraphe juste après son nom. voici un exemple: \\
+\rfigure{10cm}{img/gantt2}{}
