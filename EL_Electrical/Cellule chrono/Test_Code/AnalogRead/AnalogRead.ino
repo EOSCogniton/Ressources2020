@@ -11,7 +11,7 @@ void loop() {
   // put your main code here, to run repeatedly:
     digitalWrite(A1,HIGH);
   
-   int Sel=digitalRead(A4);
+   int Sel=digitalRead(A0);
    Serial.println(Sel);
 
    delay(1000);
