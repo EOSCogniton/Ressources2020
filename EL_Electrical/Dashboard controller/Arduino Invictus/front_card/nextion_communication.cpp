@@ -111,70 +111,29 @@ void setRPM(int RPM){
 }
 
 void setRaceCapture(bool raceOn){
-  if resOn{
-    Serial2.print("racecapt.bco=");
-    Serial2.print(1441);
+  if raceOn{
+    Serial2.print("racecapt.pic=");
+    Serial2.print(5);
     nextion_endMessage();
   }
   else{
-    Serial2.print("racecapt.bco=");
-    Serial2.print(63521);
+    Serial2.print("racecapt.pic=");
+    Serial2.print(4);
     nextion_endMessage();
   }
 }
 void setLaunch(int page,bool launch_active){
   if(launch_active){
-    //The screen turns blue if launch control is active
+    //The screen turns green if launch control is active
     Serial2.print(pageName[page]);
     Serial2.print(".bco=");
-    Serial2.print(23583);
+    Serial2.print(1441);
     nextion_endMessage();
-    //Font backgrounds turn blue too
-    Serial2.print("oil_temp.bco=");
-    Serial2.print(23583);
-    nextion_endMessage();
-    Serial2.print("voltage.bco=");
-    Serial2.print(23583);
-    nextion_endMessage();
-    Serial2.print("gear.bco=");
-    Serial2.print(23583);
-    nextion_endMessage();
-    //Font colors turn black
-    Serial2.print("oil_temp.pco=");
-    Serial2.print(0);
-    nextion_endMessage();
-    Serial2.print("voltage.pco=");
-    Serial2.print(0);
-    nextion_endMessage();
-    Serial2.print("gear.pco=");
-    Serial2.print(0);
-    nextion_endMessage();
-  }
   else{
     //The screen turns black if launch control is inactive
     Serial2.print(pageName[page]);
     Serial2.print(".bco=");
-    Serial2.print(4258);
-    nextion_endMessage();
-    //Font backgrounds turn black
-    Serial2.print("oil_temp.bco=");
-    Serial2.print(4258);
-    nextion_endMessage();
-    Serial2.print("voltage.bco=");
-    Serial2.print(4258);
-    nextion_endMessage();
-    Serial2.print("gear.bco=");
-    Serial2.print(4258);
-    nextion_endMessage();
-    //Font colors turn white
-    Serial2.print("oil_temp.pco=");
-    Serial2.print(65535);
-    nextion_endMessage();
-    Serial2.print("voltage.pco=");
-    Serial2.print(65535);
-    nextion_endMessage();
-    Serial2.print("gear.pco=");
-    Serial2.print(65535);
+    Serial2.print(0);
     nextion_endMessage();
     }
 }
