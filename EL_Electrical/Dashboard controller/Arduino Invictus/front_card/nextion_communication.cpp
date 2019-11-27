@@ -8,8 +8,8 @@
   @functions: setGear(char gear)
                     Updates the gear display on the screen according to
                     char gear(e.g. N,1,2,3,..)
-              setOilTemp(int oilTemp)
-                    Updates the display of oil temperature in Celsius degrees
+              setWaterTemp(int waterTemp)
+                    Updates the display of water temperature in Celsius degrees
               setVoltage(int voltage)
                     Updates the battery voltage(in diciVolts)
               setRPM(int RPM)
@@ -40,6 +40,12 @@
 /**************************************************************************/
 
 char pageName[4]={'start','display_pro','display_diag','display_fun'};
+bool oilWarning=false;
+bool nvOilBlinking=false;
+bool precOilBlinking=false;
+int minOilPress=0;
+unsigned long t=0;
+unsigned long tdt=0;
 
 /**************************************************************************/
 //    Functions
@@ -84,6 +90,49 @@ void updateDisplay(int page,char gear,int oilTemp, float voltage,int rpm, bool l
   }
 }
 
+void setOil(int oilPressure){
+  if(oilPressure<minOilPress) and not(oilWarning){
+    //Oil problem begins : variables should be initiated
+    oilWarning=true;
+    t=millis();
+    tdt=millis();
+    nvOilBlinking=true;
+  }
+  if(oilPressure<minOilPress) and oilWarning{
+    //Oil problem continues : should the oil logo be displayed?
+    tdt=millis();
+    if(tdt-t)%400<200{
+      //In this phase, the oil logo is displayed
+      nvOilBlinking=true;
+    }
+    else{
+      //In this one... It's not
+      nvOilBlinking=false;
+    }
+  }
+  if(oilPressure>minOilPress){
+    //Everything is fine! 
+    tdt=0;
+    t=0;
+    nvOilBlinking=false;
+    oilWarning=false;
+  }
+  if(nvOilBlinking!=precOilBlinking){
+    precOilBlinking=nvOilBlinking;
+    if(nvOilBlinking){
+    //Oil logo is diplayed
+    Serial2.print("oil.pic=");
+    Serial2.print(7);
+    nextion_endMessage();
+  }
+  else{
+    //There is no oil logo displayed
+    Serial2.print("oil.pic=");
+    Serial2.print(5);
+    nextion_endMessage();
+  }
+  }
+}
 void setGear(char gear){
   Serial2.print("gear.txt=");
   Serial2.print("\"");
@@ -92,10 +141,14 @@ void setGear(char gear){
   nextion_endMessage();
 }
 
-void setOilTemp(int oilTemp){
-  Serial2.print("oil_temp.val=");
-  Serial2.print(oilTemp);
+void setWaterTemp(int waterTemp){
+  Serial2.print("water_temp.val=");
+  Serial2.print(waterTemp);
   nextion_endMessage();
+}
+
+void setOilPress(int oilPress){
+  
 }
 
 void setVoltage(int voltage){
