@@ -44,8 +44,13 @@ void setup() {
     // Init SD Card
     SD_Card_Init();
 
+    // Init 7 Seg
+    Seg_Init();
+
     // Init des variables
     End();
+
+    Serial.println("  ");
 }
 
 void loop() {

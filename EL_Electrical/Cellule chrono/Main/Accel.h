@@ -1,7 +1,12 @@
-#ifndef Accel
-#define Accel
+#ifndef Acceleration
+#define Acceleration
 
 // Libraries
+#include "Arduino.h"
+#include "End.h"
+#include "SD_Card.h"
+#include "SegDisp.h"
+
 
 // Variables
 
@@ -15,6 +20,6 @@ extern unsigned long Time;
 
 // Functions
 
-void Accel;
+void Accel();
 
 #endif
