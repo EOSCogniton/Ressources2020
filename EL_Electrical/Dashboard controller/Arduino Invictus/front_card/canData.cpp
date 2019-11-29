@@ -26,18 +26,22 @@ void receive() {
     case 0x1008:
     
       logRaceCap = msg.buf[0];
-
+      break;
+      
     case 0x1002:
       
       Gear = msg.buf[0];
       ErrMotored = msg.buf[1];
-
+      break;
+      
     case 0x2000:
     
       Rpm = msg.buf[0]+256*msg.buf[1];
       TPS = msg.buf[2]+256*msg.buf[3];
       W_Temp = msg.buf[4]+256*msg.buf[5];
       A_Temp = msg.buf[6]+256*msg.buf[7];
+      break;
+      
       
     case 0x2001:
 
@@ -48,7 +52,8 @@ void receive() {
       
       Lambda *= 0.001;
       Kph *= 0.1;
-      
+      break;
+            
     
     case 0x2002:
 
@@ -59,7 +64,8 @@ void receive() {
       
       Volts *= 0.1;
       FuelConHR *= 0.1;
-     
+      break;
+           
     case 0x2003:
 
       Gear = msg.buf[0]+256*msg.buf[1];
@@ -70,7 +76,8 @@ void receive() {
       AdvanceDeg *= 0.1;
       Inject *= 0.01;
       FuelConKM *= 0.1;      
-    
+      break;
+          
     case 0x2004:
 
       Ana1 = msg.buf[0]+256*msg.buf[1];
@@ -79,7 +86,8 @@ void receive() {
       CamAdv = msg.buf[6]+256*msg.buf[7];
 
       CamAdv *= 0.1;
-    
+      break;
+          
     case 0x2005:
 
       CamTarg = msg.buf[0]+256*msg.buf[1];
@@ -89,7 +97,8 @@ void receive() {
 
       CamTarg *= 0.1;
       CamPWM *= 0.1;
-    
+      break;
+          
     case 0x2006:
 
       Cam2Adv = msg.buf[0]+256*msg.buf[1];
@@ -100,14 +109,16 @@ void receive() {
       Cam2Adv *= 0.1;
       Cam2Targ *= 0.1;
       Cam2PWM *= 0.1;
-
+      break;
+      
     case 0x2007:
 
       InjDutyCycle = msg.buf[0]+256*msg.buf[1];
       LambdaPIDTarg = msg.buf[2]+256*msg.buf[3];
       LambdaPIDAdj = msg.buf[4]+256*msg.buf[5];  
       ECU = msg.buf[6]+256*msg.buf[7] 
-    
+      break;
+          
     }
  
   }
@@ -116,8 +127,8 @@ void sendData() {
   Switch_H=digitalRead(H_PIN);
   Switch_N=digitalRead(N_PIN);
   Switch_L=digitalRead(L_PIN);
-  Switch_N=digitalRead(C_PIN);
-  Switch_C=digitalRead(W_PIN);
+  Switch_C=digitalRead(C_PIN);
+  Switch_W=digitalRead(W_PIN);
   Switch_G=digitalRead(G_PIN);
 
   byte Modif[8]={0x11, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
