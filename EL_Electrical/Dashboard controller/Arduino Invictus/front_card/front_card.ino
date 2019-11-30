@@ -28,6 +28,9 @@ bool nvlaunch;
 bool ancrace;
 bool nvrace;
 int oilPressure;
+int throttle;
+int plenum;
+int lambda;
 
 void setup() {
   Serial2.begin(9600);
@@ -50,7 +53,11 @@ void setup() {
   nvlaunch=false;
   ancrace=false;
   nvrace=false;
+  //Values should be initiated through a CAN inquiry
   oilPressure=0;
+  throttle=0;
+  plenum=0;
+  lambda=0;
 }
 
 void loop() {
@@ -78,8 +85,15 @@ void loop() {
     ancrace=nvrace;
     setRaceCapture(nvrace);
   }
+  if(nvlaunch!=anclaunch){
+    anclaunch=nvlaunch;
+    setLaunch(launch);
+  }
   setWaterTemp(waterTemp);
   setVoltage(voltage);
   setRPM(RPM);
   setOil(oilPressure);
+  setThrottle(throttle);
+  setPlenum(plenum);
+  setLambda(lambda);
 }

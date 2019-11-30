@@ -8,12 +8,30 @@
   @functions: setGear(char gear)
                     Updates the gear display on the screen according to
                     char gear(e.g. N,1,2,3,..)
+              setOil(int oilPress)
+                    Updates oil pressure in kPa and displays:
+                        - Oil pressure in kPa for motor_bench page
+                        - A red oil logo if oil pressure is below 1.3 bar while motor is working, or 1.0 bar if it isn't
               setWaterTemp(int waterTemp)
-                    Updates the display of water temperature in Celsius degrees
+                    Updates water temperature in Celsius degrees and displays:
+                        - The water temperature in °C for every page
+                        - An orange water temperature logo if water temperature is between 100°C and 108°C
+                        - A red water temperature logo if water temperature is above 108°C
               setVoltage(int voltage)
-                    Updates the battery voltage(in diciVolts)
+                    Updates battery voltage(in diciVolts)and displays :
+                        - The battery voltage in V for every page
+                        - An orange battery logo if voltage is below 11.2V
+                        - A red battery logo if voltage is below 10.5V
               setRPM(int RPM)
-                    Updates the RPM display
+                    Updates the RPM display and does the following :
+                        - Puts on the blue shiftlight if RPM is above critical value
+                        - Puts on the red shiftlight if RPM is above danger value
+              setThrottle(int throttle)
+                    Updates the throttle display (in degrees)
+              setPlenum(int plenum)
+                    Updates the plenum pressure display (in kPa)
+              setLambda(int lambda)
+                    Updates the lambda value display (in percentage)
               setLaunch(bool launch_active)
                     Changes display depending on launch control activation: screen
                     turns green if launch control is active, else it turns normal
@@ -43,7 +61,14 @@ char pageName[4]={'start','display_pro','display_diag','display_fun'};
 bool oilWarning=false;
 bool nvOilBlinking=false;
 bool precOilBlinking=false;
-int minOilPress=0;
+int min1OilPress=130;
+int min2oilPress=100;
+int min1WaterTemp=108;
+int min2WaterTemp=100;
+int min1Voltage=11.2;
+int min2Voltage=10.5;
+int min1Rpm=500;
+int min2Rpm=500;
 unsigned long t=0;
 unsigned long tdt=0;
 
@@ -91,6 +116,10 @@ void updateDisplay(int page,char gear,int oilTemp, float voltage,int rpm, bool l
 }
 
 void setOil(int oilPressure){
+  //Oil value is sent to Nextion
+  Serial2.print("oil_v.val=");
+  Serial2.print(oilPressure);
+  nextion_endMessage();
   if(oilPressure<minOilPress) and not(oilWarning){
     //Oil problem begins : variables should be initiated
     oilWarning=true;
@@ -142,27 +171,126 @@ void setGear(char gear){
 }
 
 void setWaterTemp(int waterTemp){
+  //Water temp value is sent to Nextion
   Serial2.print("water_temp.val=");
   Serial2.print(waterTemp);
   nextion_endMessage();
+  if(waterTemp<min2WaterTemp){
+    //Water temp is below critical value
+    Serial2.print("water.pic=");
+    Serial2.print(7);
+    nextion_endMessage();
+  }
+  else{
+    //Water temp is not below critical value
+    if(waterTemp<min1WaterTemp){
+      //Water temp can still be dangerous
+      Serial2.print("water.pic=");
+      Serial2.print(8);
+      nextion_endMessage();
+    }
+    else{
+      //Water temp is normal
+      Serial2.print("water.pic=");
+      Serial2.print(5);
+      nextion_endMessage();
+    }
+  }
 }
 
 void setOilPress(int oilPress){
-  
+  //Oil press value is sent to Nextion
+  Serial2.print("oil_v.val=");
+  Serial2.print(oilPress);
+  nextion_endMessage();
+  if(oilPress<min2OilPress){
+    //Oil press is below critical value
+    Serial2.print("oil.pic=");
+    Serial2.print(9);
+    nextion_endMessage();
+  }
+  else{
+    //Oil press is not below critical value
+    if(oilPress<min1OilPress){
+      //Oil press can still be dangerous
+      Serial2.print("oil.pic=");
+      Serial2.print(10);
+      nextion_endMessage();
+    }
+    else{
+      //Oil press is normal
+      Serial2.print("oil.pic=");
+      Serial2.print(5);
+      nextion_endMessage();
+    }
+  }
 }
 
 void setVoltage(int voltage){
   Serial2.print("voltage.val=");
   Serial2.print(voltage);
   nextion_endMessage();
+  if(voltage<min2Voltage){
+    //Voltage is below critical value
+    Serial2.print("volt.pic=");
+    Serial2.print(11);
+    nextion_endMessage();
+  }
+  else{
+    //Voltage is not below critical value
+    if(voltage<min1Voltage){
+      //Voltage can still be dangerous
+      Serial2.print("volt.pic=");
+      Serial2.print(12);
+      nextion_endMessage();
+    }
+    else{
+      //Voltage is normal
+      Serial2.print("volt.pic=");
+      Serial2.print(5);
+      nextion_endMessage();
+    }
+  }
 }
 
 void setRPM(int RPM){
   Serial2.print("rpm.val=");
   Serial2.print(RPM);
   nextion_endMessage();
+  if(RPM<min2Rpm){
+    //RPM is below critical value
+    setShiftlight(BLUE_SHIFT_PIN,true);
+  }
+  else{
+    setShiftlight(BLUE_SHIFT_PIN,false);
+  }
+  if(RPM<min1Rpm){
+    //RPM can be dangerous
+    SetShiftlight(RED_SHIFT_PIN,true);
+  }
+  else{
+    //Water temp is normal
+    SetShiftlight(RED_SHIFT_PIN,false);
+  }
 }
 
+void setThrottle(int throttle){
+  Serial2.print("throttle.val=");
+  Serial2.print(throttle);
+  nextion_endMessage();
+}
+
+void setPlenum(int plenum){
+  Serial2.print("plenum.val=");
+  Serial2.print(plenum);
+  nextion_endMessage();
+}
+
+void setLambda(int lambda){
+  Serial2.print("lambda.val=");
+  Serial2.print(lambda);
+  nextion_endMessage();
+}
 void setRaceCapture(bool raceOn){
   if raceOn{
     Serial2.print("racecapt.pic=");
@@ -192,7 +320,7 @@ void setLaunch(int page,bool launch_active){
 }
 
 void nextion_endMessage(){
-  //This message must be sent as a confirmation of the end of the message
+  //This message must be sent to confirm the end of the message
   Serial2.write(0xff);
   Serial2.write(0xff);
   Serial2.write(0xff);

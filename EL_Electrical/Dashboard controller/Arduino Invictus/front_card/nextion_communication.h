@@ -30,6 +30,12 @@ void setVoltage(int voltage);
 
 void setRPM(int RPM);
 
+void setOil(int oilPress);
+
+void setPlenum(int plenum);
+
+void setLambda(int lambda);
+
 void setLaunch(bool launch_active);
 
 void nextion_endMessage();

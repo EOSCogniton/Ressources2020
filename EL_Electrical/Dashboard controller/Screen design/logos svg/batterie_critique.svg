@@ -15,10 +15,10 @@
    version="1.1"
    id="svg8"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
-   sodipodi:docname="batterie.svg"
-   inkscape:export-filename="D:\EPSA\GIT\Ressources2020\EL_Electrical\Dashboard controller\Screen design\logos svg\batterie3.png"
-   inkscape:export-xdpi="17.627573"
-   inkscape:export-ydpi="17.627573">
+   sodipodi:docname="batterie_critique.svg"
+   inkscape:export-filename="D:\EPSA\GIT\Ressources2020\EL_Electrical\Dashboard controller\Screen design\logos svg\batterie_critique.png"
+   inkscape:export-xdpi="17.763578"
+   inkscape:export-ydpi="17.763578">
   <defs
      id="defs2" />
   <sodipodi:namedview
@@ -47,7 +47,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -121,7 +121,7 @@
            style="-inkscape-font-specification:'sans-serif Bold';font-family:sans-serif;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;" /></flowRegion><flowPara
          id="flowPara1438" /></flowRoot>    <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:5.64444447px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:5.64444447px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332;"
        x="74.16729"
        y="102.82868"
        id="text1442"><tspan
@@ -129,7 +129,7 @@
          id="tspan1440"
          x="74.16729"
          y="102.82868"
-         style="font-size:50.79999924px;stroke-width:0.26458332">V</tspan></text>
+         style="font-size:50.79999924px;stroke-width:0.26458332;fill:#000000;fill-opacity:1;">V</tspan></text>
     <rect
        style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.83180535;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect2165"
@@ -142,5 +142,11 @@
        d="M 57.646415,84.20542 V 58.013006 h 4.81085 4.810853 v -1.870885 -1.870887 h 4.677216 4.677217 v 1.870887 1.870885 h 15.367997 15.368002 v -1.870885 -1.870887 h 4.54358 4.54358 v 1.870887 1.870885 h 4.94449 4.94448 V 84.20542 110.39783 H 91.990548 57.646415 Z m 43.276745,2.203434 c 3.29595,-9.076293 6.33154,-17.434454 6.74574,-18.573692 l 0.75311,-2.071338 h -2.6329 -2.63289 l -5.716472,16.013872 c -3.144057,8.807629 -5.767163,15.96319 -5.829117,15.901249 -0.06196,-0.06194 -2.652798,-7.238119 -5.757418,-15.947057 l -5.644769,-15.834431 -2.762105,-0.07654 c -2.543656,-0.07049 -2.751476,-0.03878 -2.627709,0.400905 0.118801,0.422042 12.705434,35.042338 13.169953,36.224738 0.161549,0.41122 0.591976,0.46754 3.562839,0.46619 l 3.379092,-0.002 5.992646,-16.502358 z"
        id="path2167"
        inkscape:connector-curvature="0" />
+    <path
+       style="fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:11.45369816;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 217.87622,318.25672 v -98.99495 h 18.18274 18.18275 v -7.07107 -7.07107 h 17.67767 17.67767 v 7.07107 7.07107 h 58.08377 58.08377 v -7.07107 -7.07107 h 17.17259 17.17259 v 7.07107 7.07107 h 18.68783 18.68782 v 98.99495 98.99494 h -129.8046 -129.8046 z m 166.76992,1.01705 c 13.83748,-38.0537 25.15906,-69.54848 25.15906,-69.9884 0,-0.43992 -4.63046,-0.67031 -10.28991,-0.51198 l -10.28991,0.28788 -9.38817,26.26396 c -25.51572,71.38179 -33.01187,91.47247 -33.82605,90.65828 -0.72566,-0.72565 -42.27198,-115.73988 -42.27198,-117.0231 0,-0.22232 -4.77297,-0.40422 -10.6066,-0.40422 -8.0531,0 -10.6066,0.31753 -10.6066,1.31894 0,1.33631 48.85883,136.23154 50.02807,138.12342 0.39194,0.63417 5.65928,0.9189 13.78369,0.74508 l 13.14932,-0.28131 z"
+       id="path2169"
+       inkscape:connector-curvature="0"
+       transform="scale(0.26458333)" />
   </g>
 </svg>
