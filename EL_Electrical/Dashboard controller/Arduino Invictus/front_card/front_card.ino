@@ -21,12 +21,16 @@ int nvpage;
 int ancpage;
 int choixPage;
 char vitesse[7]={'N','1','2','3','4','5'};
-int oilTemp;
+int waterTemp;
 int voltage;
 bool anclaunch;
 bool nvlaunch;
 bool ancrace;
 bool nvrace;
+int oilPressure;
+int throttle;
+int plenum;
+int lambda;
 
 void setup() {
   Serial2.begin(9600);
@@ -43,12 +47,17 @@ void setup() {
   ancpage=1;
   nvpage=1;
   choixPage=0;
-  oilTemp=0;
+  waterTemp=0;
   voltage=0;
   anclaunch=false;
   nvlaunch=false;
   ancrace=false;
   nvrace=false;
+  //Values should be initiated through a CAN inquiry
+  oilPressure=0;
+  throttle=0;
+  plenum=0;
+  lambda=0;
 }
 
 void loop() {
@@ -76,7 +85,15 @@ void loop() {
     ancrace=nvrace;
     setRaceCapture(nvrace);
   }
-  setOilTemp(OilTemp);
+  if(nvlaunch!=anclaunch){
+    anclaunch=nvlaunch;
+    setLaunch(launch);
+  }
+  setWaterTemp(waterTemp);
   setVoltage(voltage);
   setRPM(RPM);
+  setOil(oilPressure);
+  setThrottle(throttle);
+  setPlenum(plenum);
+  setLambda(lambda);
 }

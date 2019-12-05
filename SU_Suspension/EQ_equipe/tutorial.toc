@@ -1,0 +1,6 @@
+\select@language {french}
+\contentsline {section}{\numberline {1}Tutoriel Devis}{1}{section.1}
+\contentsline {subsection}{\numberline {1.1}Acc\IeC {\'e}der au fichier de Synth\IeC {\`e}se}{1}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Enregistrer l'avancement d'un devis}{1}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}Mod\IeC {\`e}le devis fran\IeC {\c c}ais}{2}{subsection.1.3}
+\contentsline {subsection}{\numberline {1.4}Mod\IeC {\`e}le devis anglais}{2}{subsection.1.4}

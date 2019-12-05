@@ -46,17 +46,17 @@ void SD_Card_Test() {
     }
 }
 
-void SD_Card_Write(int ID, String Time) {
+void SD_Card_Write(int ID, unsigned long Time) {
     TimingFile = SD.open("Time.txt", FILE_WRITE);
     if(ID==1){
-        TimingFile.print("Accel : ")
+        TimingFile.print("Accel : ");
     } if(ID==2){
-        TimingFile.print("Skid  : ")
+        TimingFile.print("Skid  : ");
     } if(ID==3){
-        TimingFile.print("AutoX : ")
+        TimingFile.print("AutoX : ");
     } if(ID==4){
-        TimingFile.print("Accel : ")
+        TimingFile.print("Accel : ");
     }
-    TimingFile.println("Time");
+    TimingFile.println(Time);
     TimingFile.close();
 }
