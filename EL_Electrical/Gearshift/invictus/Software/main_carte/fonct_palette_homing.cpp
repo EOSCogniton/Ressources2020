@@ -15,7 +15,7 @@
 
 
 #include "fonct_palette_homing.h" //Header contenant les prototypes
-#include "projectconfig.h" // ¿¿Importation redondante?? __ARS
+
 
 boolean PassageVitesseIsPossible(int rapportEngager)  //cette fonction me semble pas ok __ARS
 {

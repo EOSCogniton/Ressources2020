@@ -30,8 +30,7 @@
 #include "fonct_mot.h"
 #include "can_interface.h"
 
-//initialisation Canbus
-#include <SPI.h>  // ¿¿Importation redondante?? __ARS
+
 
 //Definition of key-word
 #define ERREUR -1 //Use to transmit that the motor is in error
@@ -63,7 +62,7 @@ boolean positionReached=true;
 
 unsigned long T_D_Millis; //Containt the passed time
 
-int valAnalog[7];
+int valAnalog[9];
 
 //Table which will contain the combination of the motor input for each speed
 boolean motorPosition[9][4];//We use only 4 input motor to command it. The 5 is always 0
@@ -86,7 +85,6 @@ void setup()
 
   pinMode(paletteIncrease, INPUT_PULLUP);  //  !! Il me semble qu'il y a deja des résistance de tirages sur le shield pour les pallettes !!__ARS
   pinMode(paletteDecrease, INPUT_PULLUP);  
-  pinMode(neutre, INPUT_PULLUP);
   
   digitalWrite(motorInput0, LOW); // Initialisation de la position du moteur sur "Clear error and Stop" ¿Pourquoi? __ARS
   digitalWrite(motorInput1, LOW);
@@ -107,9 +105,17 @@ void setup()
   
   T_D_Millis=millis();  //   time of last transmit 
 
-
- 
-  for(int i=0;i<7;i++) {valAnalog[i]=0.2+0.8*i;} //mappage des valeurs de tensions envoyés au DTA en fonction de la vitesse (0->0.2V .... 6->5V)
+  {//
+    valAnalog[0]=0;
+    valAnalog[1]=0;
+    valAnalog[2]=43;
+    valAnalog[3]=77;
+    valAnalog[4]=110;
+    valAnalog[5]=143;
+    valAnalog[6]=176;
+    valAnalog[7]=209;
+    valAnalog[8]=242;
+  }
   
   {//Initialization of the table. We use only the position 3-8, clear error and start Homing
     
@@ -214,17 +220,6 @@ void loop()
     statePaletteIncreaseBefore = statePaletteIncrease;
   }
 
-  //Gestion du neutre
-  stateNeutre = digitalRead(neutre);
-  if(stateNeutre != stateNeutreBefore)
-  {
-    if(!stateNeutre)
-    {
-      digitalWrite(shiftCut, LOW); //Redondant __ARS
-      wantedPosition = neutrePosition;
-    }
-    stateNeutreBefore = !stateNeutre;
-  }
   
   //Gestion bouton homing
   stateHoming=CAN.getHomingState(); //We have the state of the homing thank to the can attribut

@@ -20,9 +20,8 @@
 #ifndef CAN_INTERFACE_H
 #define CAN_INTERFACE_H
 
-#include <SPI.h>          // ¿¿Importation redondante?? __ARS
 #include <mcp_can.h>
-#include <mcp_can_dfs.h>  //¿¿Importation redondante?? __ARS
+
 
 #include "projectconfig.h" 
 
