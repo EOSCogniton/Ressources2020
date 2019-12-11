@@ -22232,7 +22232,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <part name="Q10" library="transistor-small-signal" library_urn="urn:adsk.eagle:library:401" deviceset="BSS123" device="" package3d_urn="urn:adsk.eagle:package:28738/2" value="BSS138"/>
 <part name="R28" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="10k"/>
 <part name="R29" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="330"/>
-<part name="ALIM" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="22-?-02" device="27-2021" package3d_urn="urn:adsk.eagle:package:8078645/1"/>
+<part name="POWER" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="22-?-02" device="27-2021" package3d_urn="urn:adsk.eagle:package:8078645/1"/>
 <part name="CONN_MOTOR" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="22-?-06" device="27-2061" package3d_urn="urn:adsk.eagle:package:8078653/1" value="22-27-2061-06"/>
 <part name="SUPPLY1" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND1" device="" value="GND_DTA"/>
 <part name="SUPPLY2" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND1" device="" value="GND_DTA"/>
@@ -22630,11 +22630,11 @@ v0.1</text>
 <attribute name="NAME" x="198.12" y="80.2386" size="1.778" layer="95"/>
 <attribute name="VALUE" x="198.12" y="75.438" size="1.778" layer="96"/>
 </instance>
-<instance part="ALIM" gate="-1" x="50.8" y="213.36" smashed="yes" rot="R180">
+<instance part="POWER" gate="-1" x="50.8" y="213.36" smashed="yes" rot="R180">
 <attribute name="NAME" x="48.26" y="214.122" size="1.524" layer="95" rot="R180"/>
 <attribute name="VALUE" x="51.562" y="211.963" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="ALIM" gate="-2" x="50.8" y="224.79" smashed="yes" rot="R180">
+<instance part="POWER" gate="-2" x="50.8" y="224.79" smashed="yes" rot="R180">
 <attribute name="NAME" x="48.26" y="225.552" size="1.524" layer="95" rot="R180"/>
 </instance>
 <instance part="CONN_MOTOR" gate="-1" x="353.06" y="93.98" smashed="yes">
@@ -22763,7 +22763,7 @@ v0.1</text>
 <wire x1="63.5" y1="228.6" x2="63.5" y2="226.06" width="0.1524" layer="91"/>
 <junction x="63.5" y="226.06"/>
 <pinref part="P+11" gate="1" pin="+12V"/>
-<pinref part="ALIM" gate="-2" pin="S"/>
+<pinref part="POWER" gate="-2" pin="S"/>
 <wire x1="53.34" y1="224.79" x2="53.34" y2="226.06" width="0.1524" layer="91"/>
 <wire x1="53.34" y1="226.06" x2="55.88" y2="226.06" width="0.1524" layer="91"/>
 <pinref part="C2" gate="G$1" pin="+"/>
@@ -23036,7 +23036,7 @@ v0.1</text>
 <pinref part="C109" gate="G$1" pin="1"/>
 <pinref part="C108" gate="G$1" pin="2"/>
 <pinref part="C106" gate="G$1" pin="2"/>
-<pinref part="ALIM" gate="-1" pin="S"/>
+<pinref part="POWER" gate="-1" pin="S"/>
 <wire x1="63.5" y1="213.36" x2="55.88" y2="213.36" width="0.1524" layer="91"/>
 <junction x="63.5" y="213.36"/>
 <pinref part="C2" gate="G$1" pin="-"/>
