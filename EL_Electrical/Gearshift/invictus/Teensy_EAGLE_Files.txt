@@ -1,5 +1,0 @@
-https://www.pjrc.com/teensy/eagle_lib.html
-
-https://forum.pjrc.com/threads/935-Eagle-library-with-Teensy-3-0-footprint?p=20178&viewfull=1#post20178
-    File Type: zip Teensy_3_and_LC_Series_Boards_v1.4.zip (9.4 KB, 2052 views)
-    File Type: zip Teensy_DIY_v1.0.zip (11.2 KB, 765 views) 

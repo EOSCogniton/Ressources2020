@@ -1,5 +1,5 @@
-#ifndef End
-#define End
+#ifndef Ending
+#define Ending
 
 // Libraries
 
@@ -14,6 +14,6 @@ extern unsigned long Time;
 
 // Functions
 
-void End;
+void End();
 
 #endif
