@@ -1,0 +1,75 @@
+= <span style="background-color:#ffffff;">Conception, Configuration et Dimensionnement </span> =
+
+[[Image:|top]]
+
+<span style="color:#2e74b5;">Choix de conception</span> ( fonctionnement, position des capteurs...)
+
+Le véhicule invictus intègres les pneus 13&nbsp;pouces Continental C19 sous jantes magnésium. Le système de suspension présente une architecture pull rod pour le train avant et une architecture push rod pour le train arrière. Ce système présente également deux barres antiroulis pour la maitrise du comportement en roulis. Les triangles utilisent la technologie en tube de carbone et aluminium. Enfin, une nouvelle crémaillère a été choisie pour améliorer la qualité su sous-système de direction.
+
+<span style="color:#2e74b5;">Cas de charge</span> (par ex virage 2G) : pas besoin des efforts appliqués sur catia.
+
+Le dimensionnement du système S311 a été fait par rapport aux cas de charges suivants&nbsp;:* virage 2.2 G
+* bump 3G
+* freinage 1G + virage 1G
+
+
+
+== Coefficients de sécurité pour le dimensionnement ==
+
+Le système S311 étant critique pour le bon fonctionnement du système S0, des coefficients de d’environ 2-3 ont été appliquées lors des choix de conception et du dimensionnement. Se référer au CCD des différents sous-systèmes pour connaitre le coefficient de sécurité appliqué pendant la conception.
+
+== Matériaux choisis ==
+
+Les matériaux de choix pour la réalisation des pièces su système S311 sont&nbsp;:* Aluminium série 7075 T6 ( porte- moyeu et moyeu, inserts des triangles)
+* Aluminium série 2017 (différents support à faible reprise d’éfforts)
+* Acier 25Cd4 ( barre de torsion et colonne de direction)
+* Tubes de carbones (filaire des triangles et des biellettes)
+* Acier S335 (autres éléments peu volumiques à haute reprise d’effort)
+
+
+
+
+
+= <span style="background-color:#f8f9fa;">PROM (Processus de Montage)</span> =
+
+Le système de suspensions S311 se compose de plusieurs sous-systèmes. Il est nécessaire d’avois intégré les triangles pour pouvoir fixer les roués équipées au véhicule.
+
+
+Se référer au PROM de chaque sous –système pour plus de détail.
+
+
+= <span style="background-color:#f8f9fa;">PROC (Processus de Contrôle)</span> =
+
+Le système de suspensions S311 se compose de plusieurs sous-systèmes, néanmoins la performance de ce système dépende de l’interaction entre plusieurs organes. C’est pourquoi le contrôle du S311 se fait principalement en utilisant un banc de géométrie automobile. Il s’agit d’un système de capteurs d’inclinaison et longueur numériques qui s’accrochent de façon provisoire sur le véhicule en permettant de mesurer et contrôler le mouvement des différent sous-systèmes du S311.
+
+
+= Roue équipée =
+
+== <span style="background-color:#f8f9fa;">CCD (Conception Configuration et Dimensionnement)</span> ==
+
+[[Image:|top]][[Image:|top]]
+
+=== Choix de conception  ===
+
+Le système intègre les pneus Continental C10 470/205 –R13 avec une jante 13 pouces Oz Magnésium. Le système de freinage, les roulements, le capteur de vitesse ont été repris du véhicule Optimus. Les moyeux et les porte-moyeux ont été conçus en ligne avec la philosophie d’Optimus. La majeure nouveauté dans le train avant est l’introduction d’une cale supplémentaire afin de respecter la géométrie Ackermann demandé par le modèle de pneu. La biellette de pince au train arrière ainsi que l’étrier arrière ont été déplacés vers l’avant du véhicule pour diminuer l’inertie en lacet du système S0.
+
+=== Cas de charge : ===
+
+Les cas de charges classiques ont été appliqués pour le dimensionnement de pièces&nbsp;:* turn 2.2G
+* bump 3G
+* braking 1G + turn 1G 
+
+
+
+
+
+
+
+=== Coefficient de sécurité ===
+
+L’ordre de grandeur le coefficient de sécurité pour ce sous-système est de 2-3. En fonction du matériau choisi il est aussi nécessaire de s’intéresser au phénomène de fatigue mécanique.
+
+
+=== Matériaux choisis ===
+
+Le matériau principale de choix pour la roue équipée est l’aluminium série 7000, et en particulier l’aluminium 7075 T6 (nom commercial ''Ergal'')&nbsp;. Toute visserie est en acier et de classe 12.9. D’autres matériaux présents dans ce sous-système sont&nbsp;: la gomme (pneu) et l’alliage de magnésium (jante)
