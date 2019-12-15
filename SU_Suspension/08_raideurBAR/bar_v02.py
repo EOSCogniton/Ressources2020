@@ -23,21 +23,22 @@ u_sF=473e-3 #m/rad
 s_tF=627e-3 #m
 k_tF=90000 #N/m
 s_bF=245e-3 #m
-u_bF = 6.56e-3*180/np.pi #m/rad
+u_bF = 6e-3*180/np.pi #m/rad
 s_sR=340e-3 #N
 k_sR=43818 #N/m
-u_sR=505e-3 #m/rad
+u_sR=6.8e-3*180/np.pi #m/rad
 s_tR=600e-3 #m
 k_tR=90000 #N/m
 s_bR=228e-3 #m
 u_bR = 6.8e-3*180/np.pi #m/rad
 h_1 = 195e-3 #m
 
+
 #%%
 p_max = 2 *deg #rad
-m = np.linspace(250, 350) #kg
+m = np.linspace(220+50, 230+90) #kg
 a = np.linspace(0.4,0.6)
-a_y = 2.2 #g m/s^2
+a_y = 1.9 #g m/s^2
 
 #%% raideurs statiques
 k_spF = 2*s_sF*k_sF*u_sF
@@ -64,7 +65,7 @@ k_bR = k_bpR/(2*s_bR*u_bR)
 fig = plt.figure(); pos = gridspec.GridSpec(1, 1)[0]
 ax0 = fig.add_subplot(pos)
 
-fig.suptitle('a_y = 2.2 g, phi_max = 2 deg, h_1 = 195 mm \nbar stiffness in N/mm (front is red)')
+fig.suptitle('a_y = {} g, phi_max = 2 deg, h_1 = 195 mm \nbar stiffness in N/mm (front is red)'.format(a_y))
 
 #ax0.plot(m, fk_p(a), label='{} g'.format(str(a)))
 
