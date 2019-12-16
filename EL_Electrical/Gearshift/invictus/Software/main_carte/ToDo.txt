@@ -1,3 +1,6 @@
 -Changer la classe can-interface
 -vérifier les pins paletteIncrease… par rapport aux résistances de tirages 
 -Réfléchir à des intéruptions dans le main pour la connectivité avec le DTA
+-Vérifier le neutre
+-Vérifier la fonction TransmetToDTATheGear
+-Vérifier la fonction EngageVitesse
