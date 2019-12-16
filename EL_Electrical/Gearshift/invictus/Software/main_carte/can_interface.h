@@ -20,10 +20,9 @@
 #ifndef CAN_INTERFACE_H
 #define CAN_INTERFACE_H
 
-#include <mcp_can.h>
-
-
+#include "FlexCAN.h"
 #include "projectconfig.h" 
+
 
 // Defintion of the pins
 // Set INT to pin intPinCAN (projectconfig.h)

@@ -75,11 +75,12 @@ void setup()
   //Initialization of the pins
   pinMode(motorState1, INPUT);
   pinMode(motorState2, INPUT);
+
   pinMode(motorInput0, OUTPUT);
   pinMode(motorInput1, OUTPUT);
   pinMode(motorInput2, OUTPUT);
   pinMode(motorInput3, OUTPUT);
-  pinMode(motorInput4, OUTPUT);
+ 
   pinMode(shiftCut, OUTPUT); 
   pinMode(gearPot, OUTPUT);
 
@@ -90,9 +91,9 @@ void setup()
   digitalWrite(motorInput1, LOW);
   digitalWrite(motorInput2, LOW);
   digitalWrite(motorInput3, LOW);
-  digitalWrite(motorInput4, LOW);
   
-  digitalWrite(shiftCut, HIGH); //Pas d'injection moteur
+  
+  digitalWrite(shiftCut, HIGH); //injection moteur
 
   //Initialization of the variables
   statePaletteIncreaseBefore = HIGH; //The pallets mode is INPUT_PULLUP, so the pin level is HIGH when it is inactive
@@ -137,7 +138,7 @@ void setup()
     motorPosition[2][2] = 0;
     motorPosition[2][3] = 0;
 
-    //Position 3 : vitesse 1 de la moto
+    //Position 3 : vitesse 1
     motorPosition[3][0] = 1;
     motorPosition[3][1] = 1;
     motorPosition[3][2] = 0;
@@ -180,7 +181,7 @@ void setup()
 
 void loop() 
 { 
-  CAN.Recieve();//MAJ of the can attributs by recieving the last datas
+  CAN.Recieve();//MAJ of the can attributs by recieving the last data
   
   //Control of pallet+
   statePaletteIncrease = digitalRead(paletteIncrease);
@@ -194,7 +195,7 @@ void loop()
     {
       if(PassageVitesseIsPossible(positionEngager)) 
       {
-        digitalWrite(shiftCut, LOW); //Stop injection //Redondant __ARS
+        
         wantedPosition = positionEngager+1;
       }
     }
@@ -213,7 +214,7 @@ void loop()
     {
       if(PassageVitesseIsPossible(positionEngager))
       {
-        digitalWrite(shiftCut, LOW); //Stop injection //Redondant __ARS
+        
         wantedPosition = positionEngager-1;
       }
     }
@@ -277,15 +278,10 @@ void loop()
 
 void EngageVitesse(int wantedPosition) //Function which pass the speed
 {
-  digitalWrite(motorInput0,LOW);
-  digitalWrite(motorInput1, motorPosition[wantedPosition][0]);
-  digitalWrite(motorInput2, motorPosition[wantedPosition][1]);
-  digitalWrite(motorInput3, motorPosition[wantedPosition][2]);
-  digitalWrite(motorInput4, motorPosition[wantedPosition][3]);
+  digitalWrite(motorInput0, motorPosition[wantedPosition][0]);
+  digitalWrite(motorInput1, motorPosition[wantedPosition][1]);
+  digitalWrite(motorInput2, motorPosition[wantedPosition][2]);
+  digitalWrite(motorInput3, motorPosition[wantedPosition][3]);
 }
 
-void TransmetToDTATheGear(int rapportEngager)
-{
-  
-  analogWrite(gearPot,valAnalog[rapportEngager]);
-}
+void TransmetToDTATheGear(int rapportEngager){analogWrite(gearPot,valAnalog[rapportEngager]);}
