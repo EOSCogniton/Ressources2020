@@ -208,7 +208,7 @@
 <hole x="2.675" y="59.8325" drill="3.2"/>
 <dimension x1="66.5475" y1="63.36" x2="0" y2="63.36" x3="33.27375" y3="66.26" textsize="1.778" layer="47" dtype="horizontal"/>
 <text x="41.3" y="0.75" size="1.4224" layer="27">Gearbox_controller
-INVICTUS v1.0</text>
+INVICTUS</text>
 <text x="65.78" y="25.89" size="0.6096" layer="27" rot="R90">SENSOR
 NEUTRE</text>
 <dimension x1="0.28" y1="0" x2="0.4" y2="62.36" x3="-7.38" y3="31.18" textsize="1.778" layer="47" dtype="vertical"/>
