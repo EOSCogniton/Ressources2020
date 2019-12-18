@@ -24,6 +24,8 @@ void updateDisplay(int page,char gear,int oilTemp, float voltage,int rpm, bool l
 
 void setGear(char gear);
 
+void setFuel(int fuel);
+
 void setWaterTemp(int waterTemp);
 
 void setVoltage(int voltage);

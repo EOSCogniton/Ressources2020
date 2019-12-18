@@ -12,6 +12,8 @@
                     Updates oil pressure in kPa and displays:
                         - Oil pressure in kPa for motor_bench page
                         - A red oil logo if oil pressure is below 1.3 bar while motor is working, or 1.0 bar if it isn't
+			  setFuel(int fuel)
+					Updates fuel pressure display
               setWaterTemp(int waterTemp)
                     Updates water temperature in Celsius degrees and displays:
                         - The water temperature in °C for every page
@@ -162,12 +164,19 @@ void setOil(int oilPressure){
   }
   }
 }
+
 void setGear(char gear){
   Serial2.print("gear.txt=");
   Serial2.print("\"");
   Serial2.print(gear);
   Serial2.print("\"");
   nextion_endMessage();
+}
+
+void setFuel(int fuel){
+	Serial2.print("fuel.val=");
+	Serial2.print(fuel);
+	nextion_endMessage();
 }
 
 void setWaterTemp(int waterTemp){
