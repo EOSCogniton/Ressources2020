@@ -1992,7 +1992,10 @@ einem neuen Namen ab.</description>
 <via x="17.6" y="15.6" extent="1-16" drill="0.35"/>
 <via x="12.4" y="20.3" extent="1-16" drill="0.35"/>
 <wire x1="13.45" y1="20.3" x2="12.4" y2="20.3" width="0.6096" layer="1"/>
-<wire x1="35.9" y1="20.705" x2="30.7" y2="16.895" width="0" layer="19" extent="1-1"/>
+<wire x1="32.645" y1="16.895" x2="30.7" y2="16.895" width="0.6096" layer="1"/>
+<wire x1="33.9" y1="20.3" x2="34.3" y2="20.7" width="0.6096" layer="1"/>
+<wire x1="33.85" y1="18.1" x2="32.645" y2="16.895" width="0.6096" layer="1"/>
+<wire x1="33.85" y1="21.15" x2="33.85" y2="18.1" width="0.6096" layer="1"/>
 </signal>
 <signal name="N$9">
 <contactref element="C3" pad="2"/>
