@@ -1,5 +1,5 @@
-int laserPin = 13;
-int diodePin = 6;
+int laserPin = 2;
+int diodePin = 5;
 
 bool val;
 
@@ -19,6 +19,7 @@ void loop() {
   delay(1000); // Delay one second
   
   digitalWrite(laserPin, LOW); // Close the laser head
+  delay(20);
 
   val=digitalRead(diodePin);
   Serial.println(val);
