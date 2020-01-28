@@ -1,0 +1,1329 @@
+{
+  "rcpCfg": {
+    "analogCfg": {
+      "0": {
+        "alpha": 1.0,
+        "map": {
+          "raw": [
+            0.4,
+            0.87,
+            1.88,
+            3.2,
+            4.72
+          ],
+          "scal": [
+            302.0,
+            239.0,
+            176.0,
+            122.0,
+            32.0
+          ]
+        },
+        "max": 300,
+        "min": 0,
+        "nm": "FB_p",
+        "offset": -5.5944,
+        "prec": 0,
+        "scalMod": 1,
+        "scaling": 46.7179985,
+        "sr": 50,
+        "ut": "bar"
+      },
+      "1": {
+        "alpha": 1.0,
+        "map": {
+          "raw": [
+            0.4,
+            0.87,
+            1.88,
+            3.2,
+            4.72
+          ],
+          "scal": [
+            302.0,
+            239.0,
+            176.0,
+            122.0,
+            32.0
+          ]
+        },
+        "max": 300.0,
+        "min": 0.0,
+        "nm": "Volant",
+        "offset": 0.0,
+        "prec": 2,
+        "scalMod": 0,
+        "scaling": 1.0,
+        "sr": 50,
+        "ut": "F"
+      },
+      "2": {
+        "alpha": 1.0,
+        "map": {
+          "raw": [
+            0.5,
+            4.5,
+            4.5,
+            4.5,
+            4.5
+          ],
+          "scal": [
+            0.0,
+            150.0,
+            150.0,
+            150.0,
+            150.0
+          ]
+        },
+        "max": 5.0,
+        "min": 0.0,
+        "nm": "xFR",
+        "offset": 0.0,
+        "prec": 2,
+        "scalMod": 1,
+        "scaling": 1.0,
+        "sr": 50,
+        "ut": "mm"
+      },
+      "3": {
+        "alpha": 1.0,
+        "map": {
+          "raw": [
+            0.0,
+            1.25,
+            2.5,
+            3.75,
+            5.0
+          ],
+          "scal": [
+            0.0,
+            1.25,
+            2.5,
+            3.75,
+            5.0
+          ]
+        },
+        "max": 5.0,
+        "min": 0.0,
+        "nm": "xRR",
+        "offset": 0.0,
+        "prec": 2,
+        "scalMod": 1,
+        "scaling": 1.0,
+        "sr": 50,
+        "ut": "mm"
+      },
+      "4": {
+        "alpha": 1.0,
+        "map": {
+          "raw": [
+            0.0,
+            1.25,
+            2.5,
+            3.75,
+            5.0
+          ],
+          "scal": [
+            0.0,
+            1.25,
+            2.5,
+            3.75,
+            5.0
+          ]
+        },
+        "max": 5.0,
+        "min": 0.0,
+        "nm": "xFL",
+        "offset": 0.0,
+        "prec": 2,
+        "scalMod": 1,
+        "scaling": 1.0,
+        "sr": 50,
+        "ut": "mm"
+      },
+      "5": {
+        "alpha": 1.0,
+        "map": {
+          "raw": [
+            0.0,
+            1.25,
+            2.5,
+            3.75,
+            5.0
+          ],
+          "scal": [
+            0.0,
+            1.25,
+            2.5,
+            3.75,
+            5.0
+          ]
+        },
+        "max": 5.0,
+        "min": 0.0,
+        "nm": "xRL",
+        "offset": 0.0,
+        "prec": 2,
+        "scalMod": 1,
+        "scaling": 1.0,
+        "sr": 50,
+        "ut": "mm"
+      },
+      "6": {
+        "alpha": 1.0,
+        "map": {
+          "raw": [
+            0.0,
+            1.25,
+            2.5,
+            3.75,
+            5.0
+          ],
+          "scal": [
+            0.0,
+            1.25,
+            2.5,
+            3.75,
+            5.0
+          ]
+        },
+        "max": 5.0,
+        "min": 0.0,
+        "nm": "Analog7",
+        "offset": 0.0,
+        "prec": 2,
+        "scalMod": 1,
+        "scaling": 1.0,
+        "sr": 0,
+        "ut": "Volts"
+      },
+      "7": {
+        "alpha": 1.0,
+        "map": {
+          "raw": [
+            0.0,
+            1.25,
+            2.5,
+            3.75,
+            5.0
+          ],
+          "scal": [
+            0.0,
+            1.25,
+            2.5,
+            3.75,
+            5.0
+          ]
+        },
+        "max": 20.0,
+        "min": 0.0,
+        "nm": "Battery",
+        "offset": 0.0,
+        "prec": 2,
+        "scalMod": 1,
+        "scaling": 1.0,
+        "sr": 0,
+        "ut": "Volts"
+      },
+      "8": {
+        "alpha": 1.0,
+        "map": {
+          "raw": [
+            0.0,
+            1.25,
+            2.5,
+            3.75,
+            5.0
+          ],
+          "scal": [
+            0.0,
+            1.25,
+            2.5,
+            3.75,
+            5.0
+          ]
+        },
+        "max": 20.0,
+        "min": 0.0,
+        "nm": "Battery",
+        "offset": 0.0,
+        "prec": 2,
+        "scalMod": 1,
+        "scaling": 1.0,
+        "sr": 0,
+        "ut": "Volts"
+      }
+    },
+    "camCtrlCfg": {
+      "channel": "RPM",
+      "en": false,
+      "makeModel": 0,
+      "start": {
+        "gt": true,
+        "thresh": 600.0,
+        "time": 0
+      },
+      "stop": {
+        "gt": false,
+        "thresh": 10.0,
+        "time": 10
+      }
+    },
+    "canCfg": {
+      "baud": [
+        1000000,
+        1000000
+      ],
+      "en": 1,
+      "term": [
+        0,
+        0
+      ]
+    },
+    "canChanCfg": {
+      "chans": [
+        {
+          "add": 0.0,
+          "bigEndian": false,
+          "bm": true,
+          "bus": 0,
+          "div": 1.0,
+          "filtId": 0,
+          "id": 8192,
+          "idMask": 0,
+          "len": 16,
+          "max": 14000,
+          "min": 0,
+          "mult": 1.0,
+          "nm": "RPM",
+          "offset": 0,
+          "prec": 0,
+          "sr": 50,
+          "subId": -1,
+          "type": 1,
+          "ut": ""
+        },
+        {
+          "add": 0.0,
+          "bigEndian": false,
+          "bm": true,
+          "bus": 0,
+          "div": 1.0,
+          "filtId": 0,
+          "id": 8192,
+          "idMask": 0,
+          "len": 16,
+          "max": 100,
+          "min": 0,
+          "mult": 1.0,
+          "nm": "TPS",
+          "offset": 16,
+          "prec": 0,
+          "sr": 50,
+          "subId": -1,
+          "type": 1,
+          "ut": "%"
+        },
+        {
+          "add": 0.0,
+          "bigEndian": false,
+          "bm": true,
+          "bus": 0,
+          "div": 1.0,
+          "filtId": 0,
+          "id": 8192,
+          "idMask": 0,
+          "len": 16,
+          "max": 300,
+          "min": 0,
+          "mult": 1.0,
+          "nm": "WaterTemp",
+          "offset": 32,
+          "prec": 0,
+          "sr": 50,
+          "subId": -1,
+          "type": 1,
+          "ut": "?C"
+        },
+        {
+          "add": 0.0,
+          "bigEndian": false,
+          "bm": true,
+          "bus": 0,
+          "div": 1.0,
+          "filtId": 0,
+          "id": 8192,
+          "idMask": 0,
+          "len": 16,
+          "max": 1000,
+          "min": -1000,
+          "mult": 1.0,
+          "nm": "AirTemp",
+          "offset": 48,
+          "prec": 0,
+          "sr": 50,
+          "subId": -1,
+          "type": 1,
+          "ut": "?C"
+        },
+        {
+          "add": 0.0,
+          "bigEndian": false,
+          "bm": true,
+          "bus": 0,
+          "div": 1.0,
+          "filtId": 0,
+          "id": 8193,
+          "idMask": 0,
+          "len": 16,
+          "max": 255,
+          "min": 0,
+          "mult": 1.0,
+          "nm": "MAP",
+          "offset": 0,
+          "prec": 0,
+          "sr": 50,
+          "subId": -1,
+          "type": 1,
+          "ut": "KPa"
+        },
+        {
+          "add": 0.0,
+          "bigEndian": false,
+          "bm": true,
+          "bus": 0,
+          "div": 1.0,
+          "filtId": 0,
+          "id": 8193,
+          "idMask": 0,
+          "len": 16,
+          "max": 1024,
+          "min": 0,
+          "mult": 1.0,
+          "nm": "Lambda",
+          "offset": 16,
+          "prec": 0,
+          "sr": 50,
+          "subId": -1,
+          "type": 1,
+          "ut": ""
+        },
+        {
+          "add": 0.0,
+          "bigEndian": false,
+          "bm": true,
+          "bus": 0,
+          "div": 1.0,
+          "filtId": 0,
+          "id": 8193,
+          "idMask": 0,
+          "len": 16,
+          "max": 150.0,
+          "min": 0.0,
+          "mult": 1.0,
+          "nm": "WheelSpeed",
+          "offset": 32,
+          "prec": 2,
+          "sr": 50,
+          "subId": -1,
+          "type": 1,
+          "ut": "MPH"
+        },
+        {
+          "add": 0.0,
+          "bigEndian": false,
+          "bm": true,
+          "bus": 0,
+          "div": 1.0,
+          "filtId": 0,
+          "id": 8193,
+          "idMask": 0,
+          "len": 16,
+          "max": 150,
+          "min": 0,
+          "mult": 1.0,
+          "nm": "OilPress",
+          "offset": 48,
+          "prec": 0,
+          "sr": 50,
+          "subId": -1,
+          "type": 1,
+          "ut": "PSI"
+        },
+        {
+          "add": 0.0,
+          "bigEndian": false,
+          "bm": true,
+          "bus": 0,
+          "div": 1.0,
+          "filtId": 0,
+          "id": 8194,
+          "idMask": 0,
+          "len": 16,
+          "max": 150,
+          "min": 0,
+          "mult": 1.0,
+          "nm": "FuelPress",
+          "offset": 0,
+          "prec": 0,
+          "sr": 50,
+          "subId": -1,
+          "type": 1,
+          "ut": "PSI"
+        },
+        {
+          "add": 0.0,
+          "bigEndian": false,
+          "bm": true,
+          "bus": 0,
+          "div": 1.0,
+          "filtId": 0,
+          "id": 8194,
+          "idMask": 0,
+          "len": 16,
+          "max": 300,
+          "min": 0,
+          "mult": 1.0,
+          "nm": "OilTemp",
+          "offset": 16,
+          "prec": 0,
+          "sr": 50,
+          "subId": -1,
+          "type": 1,
+          "ut": "F"
+        },
+        {
+          "add": 0.0,
+          "bigEndian": false,
+          "bm": true,
+          "bus": 0,
+          "div": 1.0,
+          "filtId": 0,
+          "id": 8194,
+          "idMask": 0,
+          "len": 16,
+          "max": 20.0,
+          "min": 0.0,
+          "mult": 1.0,
+          "nm": "Battery",
+          "offset": 32,
+          "prec": 2,
+          "sr": 50,
+          "subId": -1,
+          "type": 1,
+          "ut": "Volts"
+        },
+        {
+          "add": 0.0,
+          "bigEndian": false,
+          "bm": true,
+          "bus": 0,
+          "div": 1.0,
+          "filtId": 0,
+          "id": 8194,
+          "idMask": 0,
+          "len": 16,
+          "max": 1000,
+          "min": -1000,
+          "mult": 1.0,
+          "nm": "FuelCon",
+          "offset": 48,
+          "prec": 0,
+          "sr": 50,
+          "subId": -1,
+          "type": 1,
+          "ut": "L/h"
+        },
+        {
+          "add": 0.0,
+          "bigEndian": false,
+          "bm": true,
+          "bus": 0,
+          "div": 1.0,
+          "filtId": 0,
+          "id": 8195,
+          "idMask": 0,
+          "len": 16,
+          "max": 10,
+          "min": 0,
+          "mult": 1.0,
+          "nm": "Gear",
+          "offset": 0,
+          "prec": 0,
+          "sr": 50,
+          "subId": -1,
+          "type": 1,
+          "ut": ""
+        },
+        {
+          "add": 0.0,
+          "bigEndian": false,
+          "bm": true,
+          "bus": 0,
+          "div": 1.0,
+          "filtId": 0,
+          "id": 8195,
+          "idMask": 0,
+          "len": 16,
+          "max": 360,
+          "min": -360,
+          "mult": 1.0,
+          "nm": "Advance",
+          "offset": 16,
+          "prec": 0,
+          "sr": 50,
+          "subId": -1,
+          "type": 1,
+          "ut": "Deg"
+        },
+        {
+          "add": 0.0,
+          "bigEndian": false,
+          "bm": true,
+          "bus": 0,
+          "div": 1.0,
+          "filtId": 0,
+          "id": 8195,
+          "idMask": 0,
+          "len": 16,
+          "max": 1000,
+          "min": -1000,
+          "mult": 1.0,
+          "nm": "Injection",
+          "offset": 32,
+          "prec": 0,
+          "sr": 50,
+          "subId": -1,
+          "type": 1,
+          "ut": "ms"
+        },
+        {
+          "add": 0.0,
+          "bigEndian": false,
+          "bm": true,
+          "bus": 0,
+          "div": 1.0,
+          "filtId": 0,
+          "id": 8195,
+          "idMask": 0,
+          "len": 16,
+          "max": 1000,
+          "min": -1000,
+          "mult": 1.0,
+          "nm": "FuelCon",
+          "offset": 48,
+          "prec": 0,
+          "sr": 50,
+          "subId": -1,
+          "type": 1,
+          "ut": "L/100km"
+        },
+        {
+          "add": 0.0,
+          "bigEndian": false,
+          "bm": true,
+          "bus": 0,
+          "div": 1.0,
+          "filtId": 0,
+          "id": 8199,
+          "idMask": 0,
+          "len": 1,
+          "max": 1000,
+          "min": -1000,
+          "mult": 1.0,
+          "nm": "LC_But_Pres",
+          "offset": 48,
+          "prec": 0,
+          "sr": 50,
+          "subId": -1,
+          "type": 1,
+          "ut": ""
+        },
+        {
+          "add": 0.0,
+          "bigEndian": false,
+          "bm": true,
+          "bus": 0,
+          "div": 1.0,
+          "filtId": 0,
+          "id": 8199,
+          "idMask": 0,
+          "len": 1,
+          "max": 1000,
+          "min": -1000,
+          "mult": 1.0,
+          "nm": "LC_Active",
+          "offset": 49,
+          "prec": 0,
+          "sr": 50,
+          "subId": -1,
+          "type": 1,
+          "ut": ""
+        },
+        {
+          "add": 0.0,
+          "bigEndian": false,
+          "bm": true,
+          "bus": 0,
+          "div": 1.0,
+          "filtId": 0,
+          "id": 8200,
+          "idMask": 0,
+          "len": 16,
+          "max": 1000,
+          "min": -1000,
+          "mult": 1.0,
+          "nm": "RD_Speed",
+          "offset": 0,
+          "prec": 0,
+          "sr": 50,
+          "subId": -1,
+          "type": 1,
+          "ut": ""
+        },
+        {
+          "add": 0.0,
+          "bigEndian": false,
+          "bm": true,
+          "bus": 0,
+          "div": 1.0,
+          "filtId": 0,
+          "id": 8200,
+          "idMask": 0,
+          "len": 16,
+          "max": 1000,
+          "min": -1000,
+          "mult": 1.0,
+          "nm": "RUD_Speed",
+          "offset": 16,
+          "prec": 0,
+          "sr": 50,
+          "subId": -1,
+          "type": 1,
+          "ut": ""
+        },
+        {
+          "add": 0.0,
+          "bigEndian": false,
+          "bm": true,
+          "bus": 0,
+          "div": 1.0,
+          "filtId": 0,
+          "id": 8200,
+          "idMask": 0,
+          "len": 16,
+          "max": 1000,
+          "min": -1000,
+          "mult": 1.0,
+          "nm": "LD_Speed",
+          "offset": 32,
+          "prec": 0,
+          "sr": 50,
+          "subId": -1,
+          "type": 1,
+          "ut": ""
+        },
+        {
+          "add": 0.0,
+          "bigEndian": false,
+          "bm": true,
+          "bus": 0,
+          "div": 1.0,
+          "filtId": 0,
+          "id": 8200,
+          "idMask": 0,
+          "len": 16,
+          "max": 1000,
+          "min": -1000,
+          "mult": 1.0,
+          "nm": "LUD_Speed",
+          "offset": 48,
+          "prec": 0,
+          "sr": 50,
+          "subId": -1,
+          "type": 1,
+          "ut": ""
+        },
+        {
+          "add": -5.5944,
+          "bigEndian": false,
+          "bm": true,
+          "bus": 0,
+          "div": 1.0,
+          "filtId": 0,
+          "id": 8196,
+          "idMask": 0,
+          "len": 16,
+          "max": 1000.0,
+          "min": -1000.0,
+          "mult": 46.718,
+          "nm": "Ana1",
+          "offset": 0,
+          "prec": 2,
+          "sr": 50,
+          "subId": -1,
+          "type": 0,
+          "ut": "bar"
+        }
+      ],
+      "en": 1
+    },
+    "capabilities": {
+      "channels": {
+        "analog": 9,
+        "can": 2,
+        "canChan": 100,
+        "gpio": 3,
+        "imu": 6,
+        "pwm": 0,
+        "timer": 4
+      },
+      "db": {
+        "script": 16384,
+        "tracks": 50
+      },
+      "flags": [
+        "activetrack",
+        "adc",
+        "bt",
+        "can",
+        "can_term",
+        "cell",
+        "gpio",
+        "gps",
+        "imu",
+        "lua",
+        "obd2",
+        "telemstream",
+        "timer",
+        "tracks",
+        "usb",
+        "wifi",
+        "sd",
+        "camctl"
+      ],
+      "sampleRates": {
+        "gps": 50,
+        "sensor": 1000
+      }
+    },
+    "connCfg": {
+      "btCfg": {
+        "btEn": 1,
+        "name": "",
+        "pass": ""
+      },
+      "cellCfg": {
+        "apnHost": "fp.com.attz",
+        "apnPass": "",
+        "apnUser": "",
+        "cellEn": 0
+      },
+      "telCfg": {
+        "bgStream": 1,
+        "deviceId": "1SQS1BW"
+      }
+    },
+    "gpioCfg": {
+      "0": {
+        "max": 1.0,
+        "min": 0.0,
+        "mode": 0,
+        "nm": "GPIO1",
+        "prec": 1,
+        "sr": 0,
+        "ut": ""
+      },
+      "1": {
+        "max": 1.0,
+        "min": 0.0,
+        "mode": 0,
+        "nm": "GPIO2",
+        "prec": 1,
+        "sr": 0,
+        "ut": ""
+      },
+      "2": {
+        "max": 1.0,
+        "min": 0.0,
+        "mode": 0,
+        "nm": "GPIO3",
+        "prec": 1,
+        "sr": 0,
+        "ut": ""
+      }
+    },
+    "gpsCfg": {
+      "alt": 1,
+      "dist": 0,
+      "dop": 0,
+      "pos": 1,
+      "qual": 0,
+      "sats": 0,
+      "speed": 1,
+      "sr": 10
+    },
+    "imuCfg": {
+      "0": {
+        "alpha": 0.1,
+        "chan": 0,
+        "max": 3.0,
+        "min": -3.0,
+        "mode": 1,
+        "nm": "AccelX",
+        "prec": 2,
+        "sr": 50,
+        "ut": "G",
+        "zeroVal": -308
+      },
+      "1": {
+        "alpha": 0.1,
+        "chan": 1,
+        "max": 3.0,
+        "min": -3.0,
+        "mode": 1,
+        "nm": "AccelY",
+        "prec": 2,
+        "sr": 50,
+        "ut": "G",
+        "zeroVal": 108
+      },
+      "2": {
+        "alpha": 0.1,
+        "chan": 2,
+        "max": 3.0,
+        "min": -3.0,
+        "mode": 1,
+        "nm": "AccelZ",
+        "prec": 2,
+        "sr": 50,
+        "ut": "G",
+        "zeroVal": 328
+      },
+      "3": {
+        "alpha": 0.1,
+        "chan": 3,
+        "max": 120,
+        "min": -120,
+        "mode": 1,
+        "nm": "Yaw",
+        "prec": 0,
+        "sr": 50,
+        "ut": "Deg/Sec",
+        "zeroVal": -8
+      },
+      "4": {
+        "alpha": 0.1,
+        "chan": 4,
+        "max": 120,
+        "min": -120,
+        "mode": 1,
+        "nm": "Pitch",
+        "prec": 0,
+        "sr": 50,
+        "ut": "Deg/Sec",
+        "zeroVal": 171
+      },
+      "5": {
+        "alpha": 0.1,
+        "chan": 5,
+        "max": 120,
+        "min": -120,
+        "mode": 1,
+        "nm": "Roll",
+        "prec": 0,
+        "sr": 50,
+        "ut": "Deg/Sec",
+        "zeroVal": -50
+      }
+    },
+    "lapCfg": {
+      "currentLap": {
+        "max": 0,
+        "min": 0,
+        "nm": "CurrentLap",
+        "prec": 0,
+        "sr": 0,
+        "ut": ""
+      },
+      "elapsedTime": {
+        "max": 0,
+        "min": 0,
+        "nm": "ElapsedTime",
+        "prec": 4,
+        "sr": 0,
+        "ut": "Min"
+      },
+      "lapCount": {
+        "max": 0,
+        "min": 0,
+        "nm": "LapCount",
+        "prec": 0,
+        "sr": 0,
+        "ut": ""
+      },
+      "lapTime": {
+        "max": 0,
+        "min": 0,
+        "nm": "LapTime",
+        "prec": 4,
+        "sr": 0,
+        "ut": "Min"
+      },
+      "predTime": {
+        "max": 0,
+        "min": 0,
+        "nm": "PredTime",
+        "prec": 4,
+        "sr": 0,
+        "ut": "Min"
+      },
+      "sector": {
+        "max": 0,
+        "min": 0,
+        "nm": "Sector",
+        "prec": 0,
+        "sr": 0,
+        "ut": ""
+      },
+      "sectorTime": {
+        "max": 0,
+        "min": 0,
+        "nm": "SectorTime",
+        "prec": 4,
+        "sr": 0,
+        "ut": "Min"
+      }
+    },
+    "obd2Cfg": {
+      "en": 0,
+      "pids": []
+    },
+    "pwmCfg": {
+      "0": {
+        "logMode": 0,
+        "max": 1000,
+        "min": -1000,
+        "nm": "Unknown",
+        "outMode": 0,
+        "prec": 0,
+        "sr": 0,
+        "stDutyCyc": 0,
+        "stPeriod": 0,
+        "ut": ""
+      },
+      "1": {
+        "logMode": 0,
+        "max": 1000,
+        "min": -1000,
+        "nm": "Unknown",
+        "outMode": 0,
+        "prec": 0,
+        "sr": 0,
+        "stDutyCyc": 0,
+        "stPeriod": 0,
+        "ut": ""
+      },
+      "2": {
+        "logMode": 0,
+        "max": 1000,
+        "min": -1000,
+        "nm": "Unknown",
+        "outMode": 0,
+        "prec": 0,
+        "sr": 0,
+        "stDutyCyc": 0,
+        "stPeriod": 0,
+        "ut": ""
+      },
+      "3": {
+        "logMode": 0,
+        "max": 1000,
+        "min": -1000,
+        "nm": "Unknown",
+        "outMode": 0,
+        "prec": 0,
+        "sr": 0,
+        "stDutyCyc": 0,
+        "stPeriod": 0,
+        "ut": ""
+      }
+    },
+    "scriptCfg": {
+      "data": "-- https://wiki.autosportlabs.com/RaceCapturePro_Lua_Scripting\n\n\nfunction onTick()\n if isLogging() -- Si le Logging est actif alors on envoie un message CAN\n \n  -- txCAN(channel, 0x1008=4104, isExtended, data, [timeout] )\n  txCAN(0,4104,1,{11,11,11,11,11,11,11,11})\n  \n else -- Si le Logging n'est pas actif, on regarde si le moteur est demarre\n \n  RPM=getTimerRpm(0) -- Je ne comprends pas ce truc\n  Speed=getGpsSpeed() -- En MPH\n\n  if RPM>600 or Speed>1-- Si le moteur est demarre (RPM>600) ou si la vitesse est sup a 1 MPH, on demarre le Logging\n   startLogging()\n  end\n \n end\n\nend",
+      "page": null
+    },
+    "sdLogCtrlCfg": {
+      "channel": "RPM",
+      "en": true,
+      "start": {
+        "gt": true,
+        "thresh": 600.0,
+        "time": 0
+      },
+      "stop": {
+        "gt": false,
+        "thresh": 10.0,
+        "time": 10
+      }
+    },
+    "timerCfg": {
+      "0": {
+        "alpha": 1.0,
+        "max": 10000,
+        "min": 0,
+        "mode": 0,
+        "nm": "RPM",
+        "ppr": 1.0,
+        "prec": 0,
+        "speed": 1,
+        "sr": 0,
+        "st": 0,
+        "ut": ""
+      },
+      "1": {
+        "alpha": 1.0,
+        "max": 8000,
+        "min": 0,
+        "mode": 0,
+        "nm": "RPM2",
+        "ppr": 1.0,
+        "prec": 0,
+        "speed": 1,
+        "sr": 0,
+        "st": 0,
+        "ut": "rpm"
+      },
+      "2": {
+        "alpha": 1.0,
+        "max": 10000,
+        "min": 0,
+        "mode": 0,
+        "nm": "RPM3",
+        "ppr": 1.0,
+        "prec": 0,
+        "speed": 1,
+        "sr": 0,
+        "st": 0,
+        "ut": ""
+      },
+      "3": {
+        "alpha": 1.0,
+        "max": 8000,
+        "min": 0,
+        "mode": 0,
+        "nm": "RPM4",
+        "ppr": 1.0,
+        "prec": 0,
+        "speed": 1,
+        "sr": 0,
+        "st": 0,
+        "ut": "rpm"
+      }
+    },
+    "trackCfg": {
+      "autoDetect": 0,
+      "rad": 0.0001,
+      "track": {
+        "id": 1560598525,
+        "sec": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "sf": [
+          45.700268,
+          4.909347
+        ],
+        "type": 0
+      }
+    },
+    "trackDb": {
+      "size": 1,
+      "tracks": [
+        {
+          "id": 1427687685,
+          "sec": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "sf": [
+            46.197552,
+            0.63378
+          ],
+          "type": 0
+        }
+      ]
+    },
+    "ver": {
+      "bugfix": 0,
+      "fname": "RaceCapture/Pro MK3",
+      "git_info": "2.16.0",
+      "major": 2,
+      "minor": 16,
+      "name": "RCP_MK3"
+    },
+    "wifiCfg": {
+      "active": true,
+      "ap": {
+        "active": true,
+        "channel": 11,
+        "encryption": "none",
+        "password": "",
+        "ssid": "RaceCapture/Pro MK3 934"
+      },
+      "client": {
+        "active": false,
+        "password": "",
+        "ssid": ""
+      }
+    }
+  }
+}

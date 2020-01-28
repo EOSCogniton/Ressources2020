@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="156.10417mm"
+   height="144.00893mm"
+   viewBox="0 0 156.10417 144.00893"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="rpm.svg"
+   inkscape:export-filename="D:\EPSA\GIT\Ressources2020\EL_Electrical\Dashboard controller\Screen design\logos svg\rpm.png"
+   inkscape:export-xdpi="5.2913384"
+   inkscape:export-ydpi="5.2913384">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.12374369"
+     inkscape:cx="3699.4919"
+     inkscape:cy="1059.5482"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-36.663689,-79.663696)">
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect821"
+       width="156.10417"
+       height="144.00893"
+       x="36.663689"
+       y="79.663696" />
+    <circle
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path826"
+       cx="113.77083"
+       cy="153.36905"
+       r="62.36607" />
+    <circle
+       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path828"
+       cx="113.58185"
+       cy="153.936"
+       r="53.483627" />
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect830"
+       width="136.07143"
+       height="68.035713"
+       x="40.065475"
+       y="150.72321" />
+    <path
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.18045114px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 110.52689,150.37592 32.36404,-32.03207 7.01221,-3.94241"
+       id="path832"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.18045114px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 110.52689,150.37592 35.06105,-29.56807 4.3152,-6.4064"
+       id="path832-1"
+       inkscape:connector-curvature="0" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot849"
+       style="font-style:normal;font-weight:normal;font-size:21.33333397px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none"
+       transform="matrix(0.26458333,0,0,0.26458333,13.796131,-0.56696429)"><flowRegion
+         id="flowRegion851"
+         style="fill:#ffffff"><rect
+           id="rect853"
+           width="526.42859"
+           height="227.14285"
+           x="174.28572"
+           y="599.66254"
+           style="fill:#ffffff" /></flowRegion><flowPara
+         id="flowPara855"
+         style="font-size:192px">RPM</flowPara></flowRoot>  </g>
+</svg>

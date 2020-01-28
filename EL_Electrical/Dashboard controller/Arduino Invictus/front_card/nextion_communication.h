@@ -10,6 +10,10 @@
 #include <Arduino.h>
 
 /**************************************************************************/
+//    Variables
+/**************************************************************************/
+
+/**************************************************************************/
 //    Functions
 /**************************************************************************/
 void changePage(int page);
@@ -20,11 +24,19 @@ void updateDisplay(int page,char gear,int oilTemp, float voltage,int rpm, bool l
 
 void setGear(char gear);
 
-void setOilTemp(int oilTemp);
+void setFuel(int fuel);
+
+void setWaterTemp(int waterTemp);
 
 void setVoltage(int voltage);
 
 void setRPM(int RPM);
+
+void setOil(int oilPress);
+
+void setPlenum(int plenum);
+
+void setLambda(int lambda);
 
 void setLaunch(bool launch_active);
 

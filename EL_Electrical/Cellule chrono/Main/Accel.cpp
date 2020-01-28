@@ -1,11 +1,8 @@
 // Libraries
 #include "Accel.h"
-#include "Arduino.h"
-#include "End.h"
-#include "SegDisp.h"
+
 
 // Variables
-String Data;
 
 // Function
 
@@ -18,19 +15,29 @@ void Accel(){
 
         // Si Start==0
         if(Start==0){
+          
+            Serial.print("Start : ");
+            Serial.println(Start);
+            
             // Allumage de la LED de détection si réception d'un signal d'un détecteur
             if(digitalRead(5)==HIGH || digitalRead(6)==HIGH){
-                Detection=1
-                digitalWrite(,255);
+                Detection=1;
+                digitalWrite(A1,255);
             } else {
-                Detection=0
-                digitalWrite(,0);
+                Detection=0;
+                digitalWrite(A1,0);
             }
+
+            Serial.print("Detection : ");
+            Serial.println(Detection);
     
             // Démarrage du chrono si possible
             if(Detection==0 && digitalRead(A0)==HIGH){
                 Start=1;
-
+                
+                Serial.print("Start : ");
+                Serial.println(Start);
+                
                 delay(200);
             }
         }
@@ -40,6 +47,9 @@ void Accel(){
             if(digitalRead(5)==HIGH || digitalRead(6)==HIGH){
                 // Démarrage du chrono
                 Instant=millis();
+                
+                Serial.print("Instant : ");
+                Serial.println(Instant);
 
                 // Affichage de "Run" sur le 2ème 7 Seg
 
@@ -51,14 +61,14 @@ void Accel(){
                 if(digitalRead(5)==HIGH || digitalRead(6)==HIGH){
                     // Fin du chrono
                     Time=millis()-Instant;
-
-                    // Conversion de Time en String ("Data")
-                    Data=String(Time)
+                    
+                    Serial.print("Time : ");
+                    Serial.println(Time);
 
                     // Affichage du temps sur le 2ème 7 Seg
 
                     // On enregistre le temps sur la SD
-                    SD_Card_Write(int 1, String Data)
+                    SD_Card_Write(1, Time);
 
                     // Fin du Run
                     Finish=1;
