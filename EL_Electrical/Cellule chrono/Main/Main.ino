@@ -11,6 +11,9 @@
   Pin A1
 - Selector
   Pin A7
+- Signal Out
+  Pin 2
+  Pin 3
 - Signal In
   Pin 5
   Pin 6
@@ -19,6 +22,10 @@
   Pin 11 : MOSI
   Pin 12 : MISO
   Pin 13 : SCK
+- 7 Seg Disp
+  Pin 7  : CLK
+  Pin 8  : DIO1
+  Pin 9  : DIO2 
 */
 
 

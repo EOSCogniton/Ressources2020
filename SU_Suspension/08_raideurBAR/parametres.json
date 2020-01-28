@@ -1,0 +1,15 @@
+s_sF = 270e-3 #m
+k_sF=43818 #N/m
+u_sF=473e-3 #m/rad
+s_tF=627e-3 #m
+k_tF=90000 #N/m
+s_bF=245e-3 #m
+u_bF = 5.4e-3*180/np.pi #m/rad
+s_sR=340e-3 #N
+k_sR=43818 #N/m
+u_sR=6.8e-3*180/np.pi #m/rad
+s_tR=600e-3 #m
+k_tR=90000 #N/m
+s_bR=228e-3 #m
+u_bR = 6.8e-3*180/np.pi #m/rad
+h_1 = 195e-3 #m
