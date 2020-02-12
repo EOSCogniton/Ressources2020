@@ -18,7 +18,7 @@
 // Set CS to pin chipSelect (projectconfig.h) to object CAN0 (class MCP_CAN) 
 
 FlexCAN CANbus(1000000);// Initialize the bus to 1000kb/s
-static CAN_message_t rmsg,tmsg; // Creates a struc of the r messages (received) et t messages (Transmitted)
+//static CAN_message_t rmsg,tmsg; // Creates a struc of the r messages (received) et t messages (Transmitted)
 
 unsigned long tmillis=millis();
 
@@ -58,6 +58,26 @@ int can_interface::getRPM()
   return RPM;
 }
 
+boolean can_interface::getShiftcutState()
+{
+  return shiftcutState;
+}
+
+boolean can_interface::getGearpotState()
+{
+  return gearpotState;
+}
+
+boolean can_interface::getLunchcontrolState()
+{
+  return lunchcontrolState;
+}
+
+boolean can_interface::getWetdryState()
+{
+  return wetdryState;
+}
+
 void can_interface::Receive()
 {
     //Implémenter les masques __ARS
@@ -67,7 +87,7 @@ void can_interface::Receive()
     }
     
     
-}
+
 
 /**************************************************************************/
 /*!
@@ -76,8 +96,8 @@ void can_interface::Receive()
 */
 /**************************************************************************/
 void can_interface::Data_MAJ()
-{   //Serial.print("\n");
-    if(R_ID==0x1001){ // Homing
+{   
+    if(rmsg.id==0x1001){ // Homing
         if (rmsg.buf[0]==17){
             // Le bouton n'est pas appuyé (there is a pullup resistor on this button)
             homingState = false;
@@ -89,7 +109,7 @@ void can_interface::Data_MAJ()
             //Serial.print("1");
         }
     }
-    if(R_ID==0x1002){ // Neutre
+    if(rmsg.id==0x1002){ // Neutre
         if (rmsg.buf[0]==17){
             // Le bouton n'est pas appuyé
             neutreState = false;
@@ -101,8 +121,8 @@ void can_interface::Data_MAJ()
             //Serial.print("1");
         }
     }
-    if(R_ID==0x2000){ //RPM
-        RPM=msg.buf[0]+256*msg.buf[1];
+    if(rmsg.id==0x2000){ //RPM
+        RPM=rmsg.buf[0]+256*rmsg.buf[1];
     }
 }
 
@@ -118,12 +138,15 @@ unsigned long T_Time=100;
 
 void can_interface::Transmit(int gear, int error, boolean Auto)
 {  
+  
+  
     tmsg.buf=[gear, error, Auto, 0x00, 0x00, 0x00, 0x00, 0x00];
+    tmsg.id=0x1100;
     tmillis=millis();
     if(tmillis>(T_D_millis+T_Time)){ // Envoie discret de période T_Time
         
         T_D_millis=millis();
-        CANbus.write()
-        //CAN0.sendMsgBuf(0x1002, 1, 8, Data_msg);
+        CANbus.write(tmsg);
+        
     }
 }

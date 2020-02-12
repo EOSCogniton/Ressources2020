@@ -39,7 +39,7 @@ boolean statePaletteIncreaseBefore;
 boolean statePaletteDecrease;
 boolean statePaletteDecreaseBefore;
 
-int positionEngager; // Contain what motor position is currently engaged
+int positionEngagee; // Contain what motor position is currently engaged
 int wantedPosition;// Contain the motor position wanted so the speed rapport of the bike
 
 boolean stateHoming; // Will contain the state of the homing button
@@ -85,7 +85,6 @@ void setup()
   //Initialization of the pins
   pinMode(motorState1, INPUT);
   pinMode(motorState2, INPUT);
-  pinMode(motorInput0, OUTPUT);
   pinMode(motorInput1, OUTPUT);
   pinMode(motorInput2, OUTPUT);
   pinMode(motorInput3, OUTPUT);
@@ -97,7 +96,6 @@ void setup()
   pinMode(paletteIncrease, INPUT);
   pinMode(paletteDecrease, INPUT);
   
-  digitalWrite(motorInput0, LOW);
   digitalWrite(motorInput1, LOW);
   digitalWrite(motorInput2, LOW);
   digitalWrite(motorInput3, LOW);
@@ -109,7 +107,7 @@ void setup()
   statePaletteIncreaseBefore = LOW; //The pallets mode is INPUT but there is a PULL Down resistor on the shield so the inactive state is low
   statePaletteDecreaseBefore = LOW;
   
-  positionEngager = 0; // We don't know but this normaly not the homming position
+  positionEngagee = 0; // We don't know but this normaly not the homming position
   wantedPosition = 1; // First we want to do the homming of the motor
   error = false; // we suppose that there is no error 
   T_Descente = millis();
@@ -235,7 +233,7 @@ void setup()
          outMotor1 = digitalRead(motorState1);
          outMotor2 = digitalRead(motorState2);
     }
-    positionEngager = wantedPosition; 
+    positionEngagee = wantedPosition; 
     //wantedPosition = 2; //on débute au neutre comme ça pas de surprise
    analogWrite(gearPot, 255);
   
@@ -268,19 +266,19 @@ void loop()
             wantedPosition = 1; //On fait le homming
           }
       }
-      else if(PassageVitesseIsPossible(positionEngager+1)) 
+      else if(PassageVitesseIsPossible(positionEngagee+1)) 
       {
         if ((millis() - T_Montee) > 200)
         {
         digitalWrite(shiftCut, LOW);//Close the injection
-        wantedPosition = positionEngager+1;
+        wantedPosition = positionEngagee+1;
         T_Montee = millis();
         }
        }
-       else if (positionEngager == 1)
+       else if (positionEngagee == 1)
        {  if ((millis() - T_Montee) > 200)
           {
-          wantedPosition = positionEngager+2;
+          wantedPosition = positionEngagee+2;
           T_Montee = millis();
           }
        }
@@ -296,17 +294,17 @@ void loop()
   {
     if (statePaletteDecrease) // Check if state changed to 1, so we have the rising edge 0 -> 1
     {
-      if(PassageVitesseIsPossible(positionEngager-1)) //on vérifie que la vitesse à laquelle on veut passer est atteignable
+      if(PassageVitesseIsPossible(positionEngagee-1)) //on vérifie que la vitesse à laquelle on veut passer est atteignable
       {
         if ((millis() - T_Descente) > 200)
         {
           Auto = false;
-          wantedPosition = positionEngager-1;
+          wantedPosition = positionEngagee-1;
           T_Descente = millis();
           T_Auto = millis();
         }
       }
-       else if (positionEngager == 3 and wantedPosition != positionEngager-1){
+       else if (positionEngagee == 3 and wantedPosition != positionEngagee-1){
         if (Auto==0 and (millis() - T_Auto) >1000){
           Auto = true;
         }
@@ -350,17 +348,17 @@ if (Auto==true)
    {
     RPM=CAN.getRPM();
     if (millis()-T_ShiftAuto>500) {
-      wantedPosition = CalculAuto(positionEngager,RPM);
+      wantedPosition = CalculAuto(positionEngagee,RPM);
     }
-    if (wantedPosition!=positionEngager) {
+    if (wantedPosition!=positionEngagee) {
       T_ShiftAuto = millis();
     }
    }
 
   // MOVE
-  if (wantedPosition!=positionEngager) //We try to change speed only if the pilot demands it
+  if (wantedPosition!=positionEngagee) //We try to change speed only if the pilot demands it
   {
-    if (wantedPosition == positionEngager-1) {
+    if (wantedPosition == positionEngagee-1) {
       delay(20);
       }
     else {
@@ -386,26 +384,25 @@ if (Auto==true)
     }
     if (PositionReachedOrHomingDone(outMotor1,outMotor2)) //We change the current speed only if we have reached the position
     {
-      positionEngager=wantedPosition; //We save the engaged position
+      positionEngagee=wantedPosition; //We save the engaged position
     }
     digitalWrite(shiftCut, HIGH);//Open the injection
-    TransmetToDTATheGear(positionEngager-2); // We send to the DTA the engaged gear
+    TransmetToDTATheGear(positionEngagee-2); // We send to the DTA the engaged gear
   }
 
   // Transmission des erreurs : le moteur est en erreur, le moteur veut encore tourner ou le moteur veut faire son homming
   if ((MotorIsLost(outMotor1,outMotor2)) or (MotorIsTurning(outMotor1,outMotor2)) or (NeedHoming(outMotor1,outMotor2)))
       {
-        CAN.Transmit(positionEngager-2, ERREUR,Auto);
+        CAN.Transmit(positionEngagee-2, ERREUR,Auto);
       }
   else 
   {
-    CAN.Transmit(positionEngager-2, 0,Auto);
+    CAN.Transmit(positionEngagee-2, 0,Auto);
   }
 }
 
 void EngageVitesse(int wantedPosition) //Function which pass the speed
 {
-  digitalWrite(motorInput0,LOW);
   digitalWrite(motorInput1, motorPosition[wantedPosition][0]);
   digitalWrite(motorInput2, motorPosition[wantedPosition][1]);
   digitalWrite(motorInput3, motorPosition[wantedPosition][2]);

@@ -28,18 +28,24 @@
 // Set INT to pin intPinCAN (projectconfig.h)
 #define CAN0_INT intPinCAN 
 // Set CS to pin chipSelect (projectconfig.h) to object CAN0 (class MCP_CAN) 
-extern MCP_CAN CAN0; 
+extern FlexCAN CANbus; 
 
 class can_interface
 {
-    private:
-    //MCP_CAN CAN0(10); 
+    private: //Trouver un moyen de rajouter tmsg et rmsg __ARS
+    struct CAN_message_t tmsg;
+    struct CAN_message_t rmsg;
     boolean homingState;
     boolean neutreState;
     int RPM;
     long unsigned int R_ID_Mask;
-    long unsigned int R_ID;
-    // Recieve variables init
+    
+
+    boolean shiftcutState;
+    boolean gearpotState;
+    boolean lunchcontrolState;
+    boolean wetdryState;     
+   
     
 
 private:
@@ -51,6 +57,10 @@ public:
     boolean getHomingState();
     boolean getNeutreState();
     int getRPM();
+    boolean getShiftcutState();
+    boolean getGearpotState();
+    boolean getLunchcontrolState();
+    boolean getWetdryState();
 };
 
 
