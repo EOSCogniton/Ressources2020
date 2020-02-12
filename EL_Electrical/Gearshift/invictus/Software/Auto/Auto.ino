@@ -38,19 +38,27 @@ boolean statePaletteIncrease;
 boolean statePaletteIncreaseBefore;
 boolean statePaletteDecrease;
 boolean statePaletteDecreaseBefore;
+
 int positionEngager; // Contain what motor position is currently engaged
 int wantedPosition;// Contain the motor position wanted so the speed rapport of the bike
+
 boolean stateHoming; // Will contain the state of the homing button
+
 boolean outMotor1; //Info return by the motor
 boolean outMotor2;//Info return by the motor
 boolean neutreState; // Will contain the state of the neutral button
+
 boolean error;
 const int neutrePosition = 2;
 const int homingPosition=1;
+
 boolean positionReached=true;
+
 unsigned long T_Descente;
 unsigned long T_Montee;
+
 int valAnalog[7];
+
 
 int canStable;
 
@@ -73,19 +81,6 @@ can_interface CAN;
 void setup() 
 { 
   
-  //CAN Init
-  if(CAN0.begin(MCP_ANY, CAN_1000KBPS, MCP_16MHZ) == CAN_OK){
-      Serial.println("CAN Init Successfully!");
-      digitalWrite(13,HIGH);
-      }
-  else{
-      Serial.println("CAN Init Failure");}
-  // Set operation mode to normal so the MCP2515 sends acks to received data
-  CAN0.setMode(MCP_NORMAL);                  
-  // Configuring pin for /INT input
-  pinMode(CAN0_INT, INPUT); 
-
-    
   //Serial.begin(115200);
   //Initialization of the pins
   pinMode(motorState1, INPUT);
@@ -148,7 +143,7 @@ void setup()
     motorPosition[2][2] = 0;
     motorPosition[2][3] = 0;
 
-    //Position 2 : vitesse 1 de la moto
+    //Position 2 : vitesse 1 
     motorPosition[3][0] = 1;
     motorPosition[3][1] = 1;
     motorPosition[3][2] = 0;
@@ -249,8 +244,8 @@ void setup()
 
 void loop() 
 { 
-  //MAJ of attributs by recieving the last datas
-  CAN.Recieve();
+  //MAJ of attributs by receiving the last datas
+  CAN.Receive();
   outMotor1 = digitalRead(motorState1);
   outMotor2 = digitalRead(motorState2);
 

@@ -16,38 +16,22 @@
 #include "can_interface.h"
 
 // Set CS to pin chipSelect (projectconfig.h) to object CAN0 (class MCP_CAN) 
-MCP_CAN CAN0(chipSelect); 
+
+FlexCAN CANbus(1000000);// Initialize the bus to 1000kb/s
+static CAN_message_t rmsg,tmsg; // Creates a struc of the r messages (received) et t messages (Transmitted)
 
 unsigned long tmillis=millis();
 
 /**************************************************************************/
 /*!
-    @brief   Initialize MCP2515 running at 16MHz with a baudrate of 
-               1000kb/s and the masks and filters disabled
-             Set operation mode to normal so the MCP2515 sends acks to
-                received data
-             Configuring pin intPinCAN for /INT input
+    @brief   Initialize the bus to 1000kb/s
 */
 /**************************************************************************/
 can_interface::can_interface()
 {   
-    Len = 0;
-  
-    // Initialize MCP2515 running at 16MHz with a baudrate of 1000kb/s and the masks and filters disabled
-    if(CAN0.begin(MCP_ANY, CAN_1000KBPS, MCP_16MHZ) == CAN_OK){
-        //Serial.println("Init Successfully!");
-        digitalWrite(13,HIGH);
-    }
-    else{
-        //Serial.println("Init Failure");
-    }
-
-    // Set operation mode to normal so the MCP2515 sends acks to received data
-    CAN0.setMode(MCP_NORMAL);                  
-
-    // Configuring pin for /INT input
-    pinMode(CAN0_INT, INPUT);   
-
+    CANbus.begin();
+    digitalWrite(13,HIGH);
+                    
    // Initialisation of each attribut
    homingState = true;
    neutreState = true;
@@ -74,23 +58,15 @@ int can_interface::getRPM()
   return RPM;
 }
 
-void can_interface::Recieve()
+void can_interface::Receive()
 {
-    //Serial.print("\n");
-    // Read data: Len = data length, Data = data byte(s)
-    CAN0.readMsgBuf(&R_ID_Mask, &Len, Data);      
-
-    // Determine if R_ID_Mask is standard (11 bits) or extended (29 bits)
-    if((R_ID_Mask & 0x80000000) == 0x80000000){
-        //Serial.print("\n");
-        //Serial.print("Extended");
-        R_ID=(R_ID_Mask & 0x0000FFFF);
-        Data_MAJ();
+    //Implémenter les masques __ARS
+    
+    CANbus.read(rmsg);    
+    Data_MAJ();
     }
-    else{
-        //Serial.print("\n");
-        //Serial.print("Standart");
-    }
+    
+    
 }
 
 /**************************************************************************/
@@ -101,32 +77,32 @@ void can_interface::Recieve()
 /**************************************************************************/
 void can_interface::Data_MAJ()
 {   //Serial.print("\n");
-    if(R_ID==0x1000){ // Homing
-        if (Data[0]==17){
+    if(R_ID==0x1001){ // Homing
+        if (rmsg.buf[0]==17){
             // Le bouton n'est pas appuyé (there is a pullup resistor on this button)
             homingState = false;
             //Serial.print("0");       
         }
-        if (Data[0]==0){
+        if (rmsg.buf[0]==0){
             // le bouton est appuyé
             homingState = true;
             //Serial.print("1");
         }
     }
-    if(R_ID==0x1001){ // Neutre
-        if (Data[0]==17){
+    if(R_ID==0x1002){ // Neutre
+        if (rmsg.buf[0]==17){
             // Le bouton n'est pas appuyé
             neutreState = false;
             //Serial.print("0");
         }
-        if (Data[0]==0){
+        if (rmsg.buf[0]==0){
             // le bouton est appuyé
             neutreState = true;
             //Serial.print("1");
         }
     }
     if(R_ID==0x2000){ //RPM
-        RPM=Data[0]+256*Data[1];
+        RPM=msg.buf[0]+256*msg.buf[1];
     }
 }
 
@@ -142,10 +118,12 @@ unsigned long T_Time=100;
 
 void can_interface::Transmit(int gear, int error, boolean Auto)
 {  
-    byte Data_msg[8]={gear, error, Auto, 0x00, 0x00, 0x00, 0x00, 0x00};
+    tmsg.buf=[gear, error, Auto, 0x00, 0x00, 0x00, 0x00, 0x00];
     tmillis=millis();
     if(tmillis>(T_D_millis+T_Time)){ // Envoie discret de période T_Time
+        
         T_D_millis=millis();
-        CAN0.sendMsgBuf(0x1002, 1, 8, Data_msg);
+        CANbus.write()
+        //CAN0.sendMsgBuf(0x1002, 1, 8, Data_msg);
     }
 }

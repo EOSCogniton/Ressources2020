@@ -20,9 +20,7 @@
 #ifndef CAN_INTERFACE_H
 #define CAN_INTERFACE_H
 
-#include <SPI.h>
-#include <mcp_can.h>
-#include <mcp_can_dfs.h>
+#include "FlexCAN.h"
 
 #include "projectconfig.h" 
 
@@ -41,15 +39,14 @@ class can_interface
     int RPM;
     long unsigned int R_ID_Mask;
     long unsigned int R_ID;
-    unsigned char Data[8];
     // Recieve variables init
-    unsigned char Len; 
+    
 
 private:
     void Data_MAJ();
 public:
     can_interface();
-    void Recieve();
+    void Receive();
     void Transmit(int gear, int error, boolean Auto);
     boolean getHomingState();
     boolean getNeutreState();
