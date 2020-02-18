@@ -76,7 +76,22 @@ int rpm_old;
 int rpm_new;
 int oil_new;
 int oil_old;
-// Il reste du travail à faire sur la détection de discontinuité
+int tps_old;
+int tps_new;
+int map_old;
+int map_new;
+int lambda_old;
+int lambda_new;
+int drpm;
+int doil;
+int dtps;
+int dmap;
+int dlambda;
+int seuildrpm=100;
+int seuildoil=100;
+int seuildlambda=100;
+int seuildmap=100;
+int seuildtps=100;
 unsigned long t=0;
 unsigned long tdt=0;
 
@@ -128,6 +143,12 @@ void setOil(int oilPressure, int rpm){
   Serial2.print("oil_v.val=");
   Serial2.print(oilPressure);
   nextion_endMessage();
+  oil_old=oil_new;
+  oil_new=oilPressure;
+  doil=abs(oil_new-oil_old)/dt;
+  if(doil>seuildoil){
+	  Serial2.print("problem.txt=oil");
+  }
   if(rpm<500){
 	  minOilPress=min2OilPress;
   }
@@ -269,6 +290,12 @@ void setRPM(int RPM){
   Serial2.print("rpm.val=");
   Serial2.print(RPM);
   nextion_endMessage();
+  rpm_old=rpm_new;
+  rpm_new=RPM;
+  drpm=abs(oil_new-oil_old)/dt;
+  if(drpm>seuildrpm){
+	  Serial2.print("problem.txt=rpm");
+  }
   if(RPM<min2Rpm){
     //RPM is below critical value
     setShiftlight(BLUE_SHIFT_PIN,true);
@@ -287,12 +314,24 @@ void setRPM(int RPM){
 }
 
 void setThrottle(int throttle){
+  tps_old=tps_new;
+  tps_new=throttle;
+  dtps=abs(tps_new-tps_old)/dt;
+  if(dtps>seuildtps){
+	  Serial2.print("problem.txt=oil");
+  }
   Serial2.print("throttle.val=");
   Serial2.print(throttle);
   nextion_endMessage();
 }
 
 void setPlenum(int plenum){
+  map_old=map_new;
+  map_new=plenum;
+  dmap=abs(map_new-map_old)/dt;
+  if(dmap>seuildmap){
+	  Serial2.print("problem.txt=MAP");
+  }
   Serial2.print("plenum.val=");
   Serial2.print(plenum);
   nextion_endMessage();
@@ -302,7 +341,14 @@ void setLambda(int lambda){
   Serial2.print("lambda.val=");
   Serial2.print(lambda);
   nextion_endMessage();
+  lambda_old=lambda_new;
+  lambda_new=lambda;
+  dlambda=abs(lambda_new-lambda_old)/dt;
+  if(dlambda>seuildlambda){
+	  Serial2.print("problem.txt=lambda");
+  }
 }
+
 void setRaceCapture(bool raceOn){
   if raceOn{
     Serial2.print("racecapt.pic=");
