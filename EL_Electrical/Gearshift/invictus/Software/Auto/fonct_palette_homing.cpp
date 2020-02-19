@@ -21,7 +21,7 @@ boolean PassageVitesseIsPossible(int rapportEngager)
 {
   //On passe le rapport supérieur que si la vitesse est inférieur ou égale à 6
   //On passe le rapport inférieur que si la vitesse est supérieur ou égale à 1 
-  if(rapportEngager<9 and rapportEngager>2) 
+  if(rapportEngager<9 and rapportEngager>1) 
   {
     return true;
   }

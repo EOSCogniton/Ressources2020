@@ -57,7 +57,7 @@ boolean positionReached=true;
 unsigned long T_Descente;
 unsigned long T_Montee;
 
-int valAnalog[7];
+int valAnalog[9];
 
 
 int canStable;
@@ -112,15 +112,17 @@ void setup()
   error = false; // we suppose that there is no error 
   T_Descente = millis();
   T_Montee = millis();
+  
     //mappage des valeurs de tensions envoyés au DTA en fonction de la vitesse (0->0.2V .... 6->5V)
-  valAnalog[0] = 10;
-  valAnalog[1] = 51;
-  valAnalog[2] = 92;
-  valAnalog[3] = 133;
-  valAnalog[4] = 174;
-  valAnalog[5] = 215;
-  valAnalog[6] = 255;
-
+  valAnalog[0] = 0;
+  valAnalog[1] = 0;
+  valAnalog[2] = 43;
+  valAnalog[3] = 77;
+  valAnalog[4] = 110;
+  valAnalog[5] = 143;
+  valAnalog[6] = 176;
+  valAnalog[7] = 209;
+  valAnalog[8] = 242;
     //Initialization of the table. We use only the position 1-6, clear error and start Homing
     
     //Clear error and Stop
