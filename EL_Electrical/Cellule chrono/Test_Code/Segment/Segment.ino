@@ -1,92 +1,53 @@
-#include <TM1637Display.h>
-
-int CLK=7;
-int DIO1=8;
-int DIO2=9;
-
-TM1637Display display1 = TM1637Display(CLK, DIO1);
-TM1637Display display2 = TM1637Display(CLK, DIO2);
-
-const uint8_t Done[] = {
-    SEG_A | SEG_B | SEG_C | SEG_D | SEG_E | SEG_F,   // D
-    SEG_C | SEG_D | SEG_E | SEG_G,                   // o
-    SEG_C | SEG_E | SEG_G,                           // n
-    SEG_D | SEG_E | SEG_G                            // e
-};
-
-const uint8_t Strt[] = {
-    SEG_A | SEG_C | SEG_D | SEG_F | SEG_G,           // S
-    SEG_E | SEG_F | SEG_G,                           // t
-    SEG_E | SEG_G,                                   // r
-    SEG_E | SEG_F | SEG_G,                           // t
-};
-
-const uint8_t Run[] = {                              // 
-    SEG_A | SEG_B | SEG_C | SEG_E | SEG_F | SEG_G,   // R
-    SEG_C | SEG_D | SEG_E,                           // u
-    SEG_C | SEG_E | SEG_G,                           // n
-    0x00
-};
-
-const uint8_t Acc[] = {                              // 
-    SEG_A | SEG_B | SEG_C | SEG_E | SEG_F | SEG_G,   // A
-    SEG_D | SEG_E | SEG_G,                           // c
-    SEG_D | SEG_E | SEG_G,                           // c
-    0x00
-};
-
-const uint8_t Skid[] = {
-    SEG_A | SEG_C | SEG_D | SEG_F | SEG_G,           // S
-    SEG_C | SEG_E | SEG_F | SEG_G,                   // k
-    SEG_E,                                           // i
-    SEG_B | SEG_C | SEG_D | SEG_E | SEG_G            // d
-};
-
-const uint8_t AutX[] = {
-    SEG_A | SEG_B | SEG_C | SEG_E | SEG_F | SEG_G,   // A
-    SEG_C | SEG_D | SEG_E,                           // u
-    SEG_E | SEG_F | SEG_G,                           // t
-    SEG_B | SEG_C | SEG_E | SEG_F | SEG_G            // X
-};
-
-const uint8_t End[] = {                              // 
-    SEG_A | SEG_D | SEG_E | SEG_F | SEG_G,           // E
-    SEG_C | SEG_E | SEG_G,                           // n
-    SEG_B | SEG_C | SEG_D | SEG_E | SEG_G,           // d
-    0x00
-};
+// declare three Strings:
+String stringOne, stringTwo, stringThree;
 
 void setup() {
-  // put your setup code here, to run once:
+  // initialize serial and wait for port to open:
+  Serial.begin(9600);
+  while (!Serial) {
+    ; // wait for serial port to connect. Needed for native USB port only
+  }
 
-  display1.clear();
-  display2.clear();
-  delay(1000);
-
+  stringOne = String("You added ");
+  stringTwo = String("this string");
+  stringThree = String();
+  // send an intro:
+  Serial.println("\n\nAdding Strings together (concatenation):");
+  Serial.println();
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-  display1.setBrightness(7);
-  display2.setBrightness(7);
+  // adding a constant integer to a String:
+  stringThree =  stringOne + 123;
+  Serial.println(stringThree);    // prints "You added 123"
 
-  int i;
-  for (i = 900; i < 1100; i++) {
-    display1.showNumberDec(i);
-    delay(10);
-  }
+  // adding a constant long integer to a String:
+  stringThree = stringOne + 123456789;
+  Serial.println(stringThree);    // prints "You added 123456789"
 
-  delay(2000);
-  display1.setSegments(Acc);
-  display2.setSegments(Run);
-  delay(2000);
-  display1.setSegments(Skid);
-  delay(2000);
-  display1.setSegments(AutX);
-  display2.setSegments(End);
-  delay(2000);
-  display1.setSegments(Strt);
-  delay(2000);
-  display1.setSegments(Done);
-  delay(2000);
+  // adding a constant character to a String:
+  stringThree =  stringOne + 'A';
+  stringThree[3]='\0';
+  Serial.println(stringThree[0]);    // prints "You added A"
+
+  // adding a constant string to a String:
+  stringThree =  stringOne +  "abc";
+  Serial.println(stringThree);    // prints "You added abc"
+
+  stringThree = stringOne + stringTwo;
+  Serial.println(stringThree);    // prints "You added this string"
+
+  // adding a variable integer to a String:
+  int sensorValue = analogRead(A0);
+  stringOne = "Sensor value: ";
+  stringThree = stringOne  + sensorValue;
+  Serial.println(stringThree);    // prints "Sensor Value: 401" or whatever value analogRead(A0) has
+
+  // adding a variable long integer to a String:
+  stringOne = "millis() value: ";
+  stringThree = stringOne + millis();
+  Serial.println(stringThree);    // prints "The millis: 345345" or whatever value millis() has
+
+  // do nothing while true:
+  while (true);
 }
