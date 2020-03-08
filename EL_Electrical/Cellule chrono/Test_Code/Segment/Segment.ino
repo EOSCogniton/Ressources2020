@@ -1,40 +1,53 @@
-#include <TM1637Display.h>
-
-int CLK=8;
-int DIO=10;
-
-TM1637Display display = TM1637Display(CLK, DIO);
-
-const uint8_t done[] = {
-  SEG_A | SEG_B | SEG_C | SEG_D | SEG_E | SEG_F,           // D
-  SEG_A | SEG_B | SEG_C | SEG_D | SEG_E | SEG_F,           // O
-  SEG_A | SEG_B | SEG_C | SEG_E | SEG_F,                   // N
-  SEG_A | SEG_D | SEG_E | SEG_F | SEG_G                    // E
-};
+// declare three Strings:
+String stringOne, stringTwo, stringThree;
 
 void setup() {
-  // put your setup code here, to run once:
+  // initialize serial and wait for port to open:
+  Serial.begin(9600);
+  while (!Serial) {
+    ; // wait for serial port to connect. Needed for native USB port only
+  }
 
-  display.clear();
-  delay(1000);
-
+  stringOne = String("You added ");
+  stringTwo = String("this string");
+  stringThree = String();
+  // send an intro:
+  Serial.println("\n\nAdding Strings together (concatenation):");
+  Serial.println();
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-  display.setBrightness(7);
+  // adding a constant integer to a String:
+  stringThree =  stringOne + 123;
+  Serial.println(stringThree);    // prints "You added 123"
 
-  delay(1000);
+  // adding a constant long integer to a String:
+  stringThree = stringOne + 123456789;
+  Serial.println(stringThree);    // prints "You added 123456789"
 
-  int i;
-  for (i = 900; i < 1101; i++) {
-    display.showNumberDec(i);
-    delay(10);
-  }
+  // adding a constant character to a String:
+  stringThree =  stringOne + 'A';
+  stringThree[3]='\0';
+  Serial.println(stringThree[0]);    // prints "You added A"
 
-  delay(1000);
+  // adding a constant string to a String:
+  stringThree =  stringOne +  "abc";
+  Serial.println(stringThree);    // prints "You added abc"
 
-  display.setSegments(done);
+  stringThree = stringOne + stringTwo;
+  Serial.println(stringThree);    // prints "You added this string"
 
-  delay(1000);
+  // adding a variable integer to a String:
+  int sensorValue = analogRead(A0);
+  stringOne = "Sensor value: ";
+  stringThree = stringOne  + sensorValue;
+  Serial.println(stringThree);    // prints "Sensor Value: 401" or whatever value analogRead(A0) has
+
+  // adding a variable long integer to a String:
+  stringOne = "millis() value: ";
+  stringThree = stringOne + millis();
+  Serial.println(stringThree);    // prints "The millis: 345345" or whatever value millis() has
+
+  // do nothing while true:
+  while (true);
 }
