@@ -69,9 +69,9 @@ boolean can_interface::getGearpotState()
   return gearpotState;
 }
 
-boolean can_interface::getLunchcontrolState()
+boolean can_interface::getLaunchcontrolState()
 {
-  return lunchcontrolState;
+  return launchcontrolState;
 }
 
 boolean can_interface::getWetdryState()
@@ -131,12 +131,12 @@ void can_interface::Data_MAJ()
     Serial.println("id=0x1003, Launch control");
       if (rmsg.buf[0]==0x11){
             // Le bouton n'est pas appuyé
-            lunchcontrolState = false;
+            launchcontrolState = false;
             //Serial.print("0");
         }
       if (rmsg.buf[0]==0x0){
             // le bouton est appuyé
-            lunchcontrolState = true;
+            launchcontrolState = true;
             //Serial.print("1");
       }
     break;

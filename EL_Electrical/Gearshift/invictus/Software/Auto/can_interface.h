@@ -43,7 +43,7 @@ class can_interface
 
     boolean shiftcutState;
     boolean gearpotState;
-    boolean lunchcontrolState;
+    boolean launchcontrolState;
     boolean wetdryState;     
    
     
@@ -59,7 +59,7 @@ public:
     int getRPM();
     boolean getShiftcutState();
     boolean getGearpotState();
-    boolean getLunchcontrolState();
+    boolean getLaunchcontrolState();
     boolean getWetdryState();
 };
 

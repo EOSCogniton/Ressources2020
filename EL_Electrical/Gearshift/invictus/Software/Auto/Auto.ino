@@ -42,12 +42,18 @@ boolean statePaletteDecreaseBefore;
 int positionEngagee; // Contain what motor position is currently engaged
 int wantedPosition;// Contain the motor position wanted so the speed rapport of the bike
 
-boolean stateHoming; // Will contain the state of the homing button
+
 
 boolean outMotor1; //Info return by the motor
 boolean outMotor2;//Info return by the motor
-boolean neutreState; // Will contain the state of the neutral button
 
+boolean homingState; // Will contain the state of the homing button
+boolean neutreState; // Will contain the state of the neutral button
+boolean shiftcutState;
+boolean gearpotState;
+boolean launchcontrolState;
+boolean wetdryState;     
+   
 boolean error;
 const int neutrePosition = 2;
 const int homingPosition=1;
@@ -73,7 +79,7 @@ signed RPM ;
 
 
 //Table which will contain the combination of the motor input for each speed
-boolean motorPosition[16][4];//We use only 4 input motor to command it. The 5 is always 0
+boolean motorPosition[7][3];//We use only 4 input motor to command it.
 
 //Initialization of CANBUS
 can_interface CAN;
@@ -81,7 +87,7 @@ can_interface CAN;
 void setup() 
 { 
   
-  //Serial.begin(115200);
+  Serial.begin(115200);
   //Initialization of the pins
   pinMode(motorState1, INPUT);
   pinMode(motorState2, INPUT);
@@ -122,104 +128,54 @@ void setup()
   valAnalog[5] = 143;
   valAnalog[6] = 176;
   valAnalog[7] = 209;
-  valAnalog[8] = 242;
+  
     //Initialization of the table. We use only the position 1-6, clear error and start Homing
     
     //Clear error and Stop
     motorPosition[0][0] = 0;
     motorPosition[0][1] = 0;
-    motorPosition[0][2] = 0;
-    motorPosition[0][3] = 0; 
+    motorPosition[0][2] = 0; 
 
     //Start Homing
     motorPosition[1][0] = 1;
     motorPosition[1][1] = 0;
     motorPosition[1][2] = 0;
-    motorPosition[1][3] = 0;
+
 
     //Position 1: Neutre
     motorPosition[2][0] = 0;
     motorPosition[2][1] = 1;
     motorPosition[2][2] = 0;
-    motorPosition[2][3] = 0;
 
     //Position 2 : vitesse 1 
     motorPosition[3][0] = 1;
     motorPosition[3][1] = 1;
     motorPosition[3][2] = 0;
-    motorPosition[3][3] = 0;
+
 
     //Position 3 : vitesse 2
     motorPosition[4][0] = 0;
     motorPosition[4][1] = 0;
     motorPosition[4][2] = 1;
-    motorPosition[4][3] = 0;
 
     //Position 4 : vitesse 3
     motorPosition[5][0] = 1;
     motorPosition[5][1] = 0;
     motorPosition[5][2] = 1;
-    motorPosition[5][3] = 0;
 
     //Position 5 : vitesse 4
     motorPosition[6][0] = 0;
     motorPosition[6][1] = 1;
     motorPosition[6][2] = 1;
-    motorPosition[6][3] = 0;
 
     //Position 6 : vitesse 5
     motorPosition[7][0] = 1;
     motorPosition[7][1] = 1;
     motorPosition[7][2] = 1;
-    motorPosition[7][3] = 0;
 
-    //Position 7 : vitesse 6
-    motorPosition[8][0] = 0;
-    motorPosition[8][1] = 0;
-    motorPosition[8][2] = 0;
-    motorPosition[8][3] = 1;
-
-    //Position 8
-    motorPosition[9][0] = 1;
-    motorPosition[9][1] = 0;
-    motorPosition[9][2] = 0;
-    motorPosition[9][3] = 1;
-
-    //Position 9
-    motorPosition[10][0] = 0;
-    motorPosition[10][1] = 1;
-    motorPosition[10][2] = 0;
-    motorPosition[10][3] = 1;
-
-    //Position 10
-    motorPosition[11][0] = 1;
-    motorPosition[11][1] = 1;
-    motorPosition[11][2] = 0;
-    motorPosition[11][3] = 1;
-
-    //Position 11
-    motorPosition[12][0] = 0;
-    motorPosition[12][1] = 0;
-    motorPosition[12][2] = 1;
-    motorPosition[12][3] = 1;
     
-    //Position 12
-    motorPosition[13][0] = 1;
-    motorPosition[13][1] = 0;
-    motorPosition[13][2] = 1;
-    motorPosition[13][3] = 1;
 
-    //Position 13 
-    motorPosition[14][0] = 0;
-    motorPosition[14][1] = 1;
-    motorPosition[14][2] = 1;
-    motorPosition[14][3] = 1;
-
-    //Position 14
-    motorPosition[15][0] = 1;
-    motorPosition[15][1] = 1;
-    motorPosition[15][2] = 1;
-    motorPosition[15][3] = 1;
+   
 
   //Auto
   Auto = false; //we start in normal mode
@@ -331,12 +287,36 @@ void loop()
 
   
   //HOMING
-  stateHoming=CAN.getHomingState(); //We have the state of the homing thank to the can attribut
+  homingState=CAN.getHomingState(); //We have the state of the homing thank to the can attribut
 
-  if(stateHoming and canStable > 32000) //if state is true 
+  if(homingState and canStable > 32000) //if state is true 
   {
     Auto = false;
     wantedPosition=homingPosition;
+  }
+
+  //SHIFTCUT
+  shiftcutState=CAN.getShiftcutState();
+  if(shiftcutState and canStable > 32000) //if state is true 
+  { digitalWrite(shiftCut,HIGH); // Pas fini __ARS
+
+  }
+  
+  //GEARPOT
+  gearpotState=CAN.getGearpotState();
+  if(gearpotState and canStable > 32000) //if state is true 
+  { digitalWrite(gearPot,HIGH); // Pas fini __ARS
+
+  }
+  //LAUNCH CONTROL
+  launchcontroltState=CAN.getLaunchcontrolState();
+  if(canStable > 32000) //if state is true 
+  { digitalWrite(launchControl,launchcontroltState);
+  }
+  //WET DRY
+  wetdryState=CAN.getWetdryState();
+  if(canStable > 32000) 
+  { digitalWrite(wetDry,wetdryState);
   }
 
 
@@ -408,7 +388,6 @@ void EngageVitesse(int wantedPosition) //Function which pass the speed
   digitalWrite(motorInput1, motorPosition[wantedPosition][0]);
   digitalWrite(motorInput2, motorPosition[wantedPosition][1]);
   digitalWrite(motorInput3, motorPosition[wantedPosition][2]);
-  digitalWrite(motorInput4, motorPosition[wantedPosition][3]);
 }
 
 void TransmetToDTATheGear(int rapportEngage)

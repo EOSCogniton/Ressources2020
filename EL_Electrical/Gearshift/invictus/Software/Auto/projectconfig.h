@@ -35,10 +35,10 @@ const int launchControl = 15;
 const int tractionControl=16;
 const int logDta=17;
 const int shiftCut = 18; 
-const int motorInput1 = 22;
-const int motorInput2 = 21;
-const int motorInput3 = 20;
-const int motorInput4 = 19;
+const int motorInput0 = 22;
+const int motorInput1 = 21;
+const int motorInput2 = 20;
+const int motorInput3 = 19;
 const int gearPot = A14;
 
 #endif  /* inclusion guards - INC_PROJECTCONFIG_H */ 

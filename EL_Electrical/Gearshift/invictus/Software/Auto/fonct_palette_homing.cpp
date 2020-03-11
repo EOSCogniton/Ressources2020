@@ -17,11 +17,11 @@
 #include "fonct_palette_homing.h" //Header contenant les prototypes
 #include "projectconfig.h" 
 
-boolean PassageVitesseIsPossible(int rapportEngager)
+boolean PassageVitesseIsPossible(int positionEngagee)
 {
-  //On passe le rapport supérieur que si la vitesse est inférieur ou égale à 6
+  //On passe le rapport supérieur que si la vitesse est inférieur ou égale à 5
   //On passe le rapport inférieur que si la vitesse est supérieur ou égale à 1 
-  if(rapportEngager<9 and rapportEngager>1) 
+  if(positionEngagee<8 and positionEngagee>1) 
   {
     return true;
   }
