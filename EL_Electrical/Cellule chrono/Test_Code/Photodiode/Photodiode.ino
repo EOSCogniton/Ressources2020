@@ -1,28 +1,23 @@
-int laserPin = 2;
-int diodePin = 5;
+
 
 bool val;
 
 void setup() {             
   Serial.begin(9600);
      
-  pinMode(laserPin, OUTPUT);  // Define the digital output interface pin 13 
-  pinMode(diodePin,INPUT);
+  digitalWrite(2,HIGH);
+  digitalWrite(3,HIGH);
 }
 
 void loop() {
-  digitalWrite(laserPin, HIGH); // Open the laser head
 
-  val=digitalRead(diodePin);
+  val=digitalRead(5);
+  Serial.print("Pin 5 : ");
+  Serial.println(val);
+
+  val=digitalRead(6);
+  Serial.print("Pin 6 : ");
   Serial.println(val);
   
   delay(1000); // Delay one second
-  
-  digitalWrite(laserPin, LOW); // Close the laser head
-  delay(20);
-
-  val=digitalRead(diodePin);
-  Serial.println(val);
-  
-  delay(1000); 
 }
