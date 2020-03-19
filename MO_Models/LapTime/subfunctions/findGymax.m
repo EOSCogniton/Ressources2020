@@ -23,9 +23,12 @@
 % On choisit le minimum de ces deux valeurs et on obtient l'accélération maximale telle
 % que la voiture ne dérape pas
 
+
+g = 9.81; %m/s
+
 function [amax,V_turn] = findGymax(R_turn,param_file)
 %import parameters :
-load(param_file,'xr','W','xf','m_t','g','Tf','Tr','h','Cz','rho','S','FZ','FY','Cz_rep')
+load(param_file,'xr','W','xf','m_t','Tf','Tr','h','Cz','rho','S','FZ','FY','Cz_rep')
 
 % Searching for the maximal lateral acceleration for this turn : 
 options = optimset('Algorithm','Levenberg-Marquardt','Display','off');
@@ -46,32 +49,99 @@ V_turn = sqrt(amax*abs(R_turn));
 end
 %% Functions
 
-%force d'adhérence latérale du pneu en fonction de la charge
 function [y] = Y(z,FZ,FY)
+% force laterale y en fonction de la charge z interpolé par rapport au
+% vecteurs FZ et FY qui viennet du modèle de pneu TTC
     y = interp1(FZ,FY,z,'linear','extrap');
 end
 
+% === NOMENCLATURE ===
+% xr : distance CG train arrière
+% xf : distance CG train avant
+% w : empattement (wheelbase)
+% m : masse totale suspendue
+% Cz : costante aérodynamique
+% rho : masse volumique air
+% S : surface équivalente véhicule (plan normale x)
+% a_y ; accéleration latérale
+% R_turn : rayon nominale du virage
+% Cz_rep : répartition aéro avant
+% Tf : voie (track) avant (front)
+% Tr : voie arrière
 
-function [F] = force(a,xr, W, xf, m_t, g, Tf, Tr, h, Cz, rho, S, R_turn, FZ,FY,Cz_rep)
-    Zfe=(xr/W)*m_t*g/2 + 1/4*Cz*rho*S*abs(a)*abs(R_turn)*(1-Cz_rep) + (xr/W)*m_t/Tf*a*h ;
-    Zfi=(xr/W)*m_t*g/2 + 1/4*Cz*rho*S*abs(a)*abs(R_turn)*(1-Cz_rep) - (xr/W)*m_t/Tf*a*h ;
-    Zre=(xf/W)*m_t*g/2 + 1/4*Cz*rho*S*abs(a)*abs(R_turn)*Cz_rep + (xf/W)*m_t/Tr*a*h ;
-    Zri=(xf/W)*m_t*g/2 + 1/4*Cz*rho*S*abs(a)*abs(R_turn)*Cz_rep - (xf/W)*m_t/Tr*a*h ;
-    F = Y(Zfe,FZ,FY)+Y(Zfi,FZ,FY)+Y(Zre,FZ,FY)+Y(Zri,FZ,FY) - m_t*a;
+function f = Z_0f(xr, w, m)
+% charge statique sur un pneu du train avant (front)
+    f = (xr/w)*m*g/2;
+end
+
+function f = Z_0r(xf, w, m)
+% charge statique sur un pneu du train arrière (rear)
+    f = (xf/w)*m*g/2;
+end
+
+function f = Z_aero(Cz, rho, S, a_y, R_turn, Cz_rep)
+% aero sur un pneu (V^2 = a* R_turn),
+    f = 1/4*Cz*rho*S* abs(a_y)*abs(R_turn) *(1-Cz_rep); 
+end
+
+function f = dZ_f(xr, w, m, a_y, h, Tf)
+% transfert de charge train avant (front)
+    f = (xr/w)*m * a_y*h/Tf; 
+end
+
+function f = dZ_r(xf, w, m, a_y, h, Tr)
+% transfert de charge train arrière (rear)
+    f = (xf/w)*m * a_y*h/Tr; 
 end
 
 
-function [F_f] = force_f(a,xr, W, m_t, g, Tf, h, Cz, rho, S, R_turn, FZ,FY,Cz_rep)
-
-    Zfe=(xr/W)*m_t*g/2 + 1/4*Cz*rho*S*abs(a)*abs(R_turn)*(1-Cz_rep) + (xr/W)*m_t/Tf*a*h ;
-    Zfi=(xr/W)*m_t*g/2 + 1/4*Cz*rho*S*abs(a)*abs(R_turn)*(1-Cz_rep) - (xr/W)*m_t/Tf*a*h ;
-    F_f = Y(Zfe,FZ,FY)+Y(Zfi,FZ,FY) - (xr/W)*m_t*a ;
+function [F] = force(a_y, xr, w, xf, m, Tf, Tr, h, Cz, rho, S, R_turn, FZ,FY,Cz_rep)
+% force latérale résultante ? quelle convention pour le repère ??
+    
+    % charge pneu avant extérieur
+    Z_fe = Z_0f(xr, w, m) + dZ_f(xr, w, m, a_y, h, Tf) + Z_aero(Cz, rho, S, a_y, R_turn, Cz_rep); 
+    
+    % charge pneu avant intérieur
+    Z_fi = Z_0f(xr, w, m) - dZ_f(xr, w, m, a_y, h, Tf) + Z_aero(Cz, rho, S, a_y, R_turn, Cz_rep); 
+    
+    % charge pneu arrière extérieur
+    Z_re = Z_0r(xf, w, m) + dZ_r(xf, w, m, a_y, h, Tr) + Z_aero(Cz, rho, S, a_y, R_turn, Cz_rep);
+    
+    % charge pneu arrière intérieur
+    Z_ri = Z_0r(xf, w, m) - dZ_r(xf, w, m, a_y, h, Tr) + Z_aero(Cz, rho, S, a_y, R_turn, Cz_rep);
+    
+    % force latérale résultante
+    F = Y(Z_fe,FZ,FY)+Y(Z_fi,FZ,FY)+Y(Z_re,FZ,FY)+Y(Z_ri,FZ,FY) - m*a_y;
 end
 
 
-function [F_r] = force_r(a, W, xf, m_t, g, Tf, Tr, h, Cz, rho, S, R_turn, FZ,FY,Cz_rep)
+function [F_f] = force_f(a_y,xr, W, m, Tf, h, Cz, rho, S, R_turn, FZ,FY,Cz_rep)
+% force résultatnte train avant
 
-    Zre=(xf/W)*m_t*g/2 + 1/4*Cz*rho*S*abs(a)*(abs(R_turn)+max(Tf,Tr))*Cz_rep + (xf/W)*m_t/Tr*a*h ;
-    Zri=(xf/W)*m_t*g/2 + 1/4*Cz*rho*S*abs(a)*(abs(R_turn)+max(Tf,Tr))*Cz_rep - (xf/W)*m_t/Tr*a*h ;
-    F_r = Y(Zre,FZ,FY)+Y(Zri,FZ,FY) - (xf/W)*m_t*a ;
+    % charge pneu avant extérieur
+    Z_fe = Z_0f(xr, w, m) + dZ_f(xr, w, m, a_y, h, Tf) + Z_aero(Cz, rho, S, a_y, R_turn, Cz_rep); 
+    
+    % charge pneu avant intérieur
+    Z_fi = Z_0f(xr, w, m) - dZ_f(xr, w, m, a_y, h, Tf) + Z_aero(Cz, rho, S, a_y, R_turn, Cz_rep);
+    
+    % contribution CG sur le train avant
+    Y_f = (xr/W)*m*a_y;
+ 
+    F_f = Y(Z_fe,FZ,FY)+Y(Z_fi,FZ,FY) - Y_f;
+end
+
+
+function [F_r] = force_r(a, W, xf, m, Tr, h, Cz, rho, S, R_turn, FZ,FY,Cz_rep)
+% force résultante train arrière
+   
+    % charge pneu arrière extérieur
+    Z_re = Z_0r(xf, w, m) + dZ_r(xf, w, m, a_y, h, Tr) + Z_aero(Cz, rho, S, a_y, R_turn, Cz_rep);
+    
+    % charge pneu arrière intérieur
+    Z_ri = Z_0r(xf, w, m) - dZ_r(xf, w, m, a_y, h, Tr) + Z_aero(Cz, rho, S, a_y, R_turn, Cz_rep);
+    
+    % contribution CG sur train arrière
+    Y_r = (xf/W)*m*a;
+    
+    F_r = Y(Z_re,FZ,FY)+Y(Z_ri,FZ,FY) -Y_r  ;
 end 
