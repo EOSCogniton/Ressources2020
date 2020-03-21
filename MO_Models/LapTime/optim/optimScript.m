@@ -3,7 +3,7 @@ param_file = "C:\Users\mik75\Documents\FSAEinvictus\Ressources2020\MO_Models\Lap
 load(param_file,'xr','W','xf','m_t','Tf','Tr','h','Cz','rho','S','Cz_rep','p_Cy1', 'p_Dy1', 'p_Ky1')
 
 % rayon du virage
-R_turn = 30; %m
+R_turn = 15; %m
 
 % sqp type algorithm
 options = optimoptions('fmincon','Algorithm','sqp',...

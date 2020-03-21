@@ -1,4 +1,4 @@
-function [Z_fi, Z_fe, Z_ri, Z_re] = charges(a_y, R_turn)
+function [Z_fi, Z_fe, Z_ri, Z_re] = charges(a_y, R_turn, xr, xf, w, m, Tf, Tr, h, Cz, rho, S, Cz_rep)
 %CHARGES calcule les charges sur chaque pneu de la voiture
 %   xr : distance CG train arrière
 %   xf : distance CG train avant
@@ -14,14 +14,6 @@ function [Z_fi, Z_fe, Z_ri, Z_re] = charges(a_y, R_turn)
 %   Tr : voie arrière
 
 g = 9.81; %m/s
-
-% load parameters from workspace
-xr = evalin('base','xr'); xf = evalin('base','xf'); w = evalin('base','W');
-m = evalin('base','m_t');
-Tf = evalin('base','Tf');
-Tr = evalin('base','Tr');
-h = evalin('base','h');
-Cz = evalin('base','Cz'); rho = evalin('base','rho'); S = evalin('base','S'); Cz_rep = evalin('base','Cz_rep');
 
 % charges statiques
 Z_0f = (xr/w)*m*g/2;
