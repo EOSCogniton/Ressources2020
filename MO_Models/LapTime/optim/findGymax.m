@@ -7,7 +7,7 @@ function [a_y, v_turn] = findGymax(R_turn, param_file)
 R_turn = abs(R_turn);
 
 %import parameters 
-load(param_file,'xr','W','xf','m_t','Tf','Tr','h','Cz','rho','S','Cz_rep','p_Cy1', 'p_Dy1', 'p_Ky1', 'q')
+load(param_file,'xr','W','xf','m_t','Tf','Tr','h','Cz','rho','S','Cz_rep', 'p_Cy1', 'p_Dy1','p_Ey1', 'p_Ey3', 'p_Ky1', 'p_Hy1', 'p_Vy1', 'q')
 
 % sqp type algorithm
 options = optimoptions('fmincon','Algorithm','sqp',...
@@ -31,7 +31,7 @@ ub = [30, 0.3, 0.3];
 
 
 % fcn for the non linear constraints
-nonlcon = @(x) constraints(x, R_turn, xr, xf, W, m_t, Tf, Tr, h, Cz, rho, S, Cz_rep, p_Cy1, p_Dy1, p_Ky1, q);
+nonlcon = @(x) constraints(x, R_turn, xr, xf, W, m_t, Tf, Tr, h, Cz, rho, S, Cz_rep, p_Cy1, p_Dy1,p_Ey1, p_Ey3, p_Ky1, p_Hy1, p_Vy1, q);
 
 % starting point (only 1 component)
 x0 =  [1, 0, 0];
