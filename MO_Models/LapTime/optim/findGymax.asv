@@ -15,7 +15,7 @@ options = optimoptions('fmincon','Algorithm','sqp',...
     'MaxFunctionEvaluations',2e3,... % nombre max d'iterations
     'Display','off'); % affichiage des itéraions dans le calcule
 
-% la fonction à minimiser c'est tout simplement la valeur de l'acceleration
+% la fonction à
 fun = @objective;
 
 % needed for linear constraints (empty if not needed)
@@ -38,7 +38,6 @@ x0 =  [1, 0, 0];
 % function call
 x = fmincon(fun,x0,A,b,Aeq,beq,lb,ub,nonlcon,options);
 
-% renvoy des variables de la fonction
 a_y = x(1);
 v_turn = sqrt(a_y*R_turn);
 end

@@ -1,3 +1,5 @@
+% SCRIPT tes pour la fonction findGymax.s
+
 %import parameters :
 param_file = "C:\Users\mik75\Documents\FSAEinvictus\Ressources2020\MO_Models\LapTime\test_aeroTire.mat";
 load(param_file,'xr','W','xf','m_t','Tf','Tr','h','Cz','rho','S','Cz_rep','p_Cy1', 'p_Dy1', 'p_Ky1')
