@@ -10,11 +10,11 @@ C_y = p_Cy1;
 mu_y = p_Dy1;
 D_y = mu_y*Z;
 
-K_y = p_Ky1*Z;
+K_y = p_Ky1.*Z;
 
-B_y = K_y/(C_y*D_y +eps);
+B_y = K_y./(C_y.*D_y +eps);
 
-Y= q *D_y*sin(C_y*atan(B_y*SA));
+Y= q .*D_y.*sin(C_y.*atan(B_y.*SA'));
 
 end
 
