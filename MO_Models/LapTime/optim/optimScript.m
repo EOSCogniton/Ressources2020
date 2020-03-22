@@ -26,9 +26,8 @@ Aeq = [];
 beq = [];
 
 % x =  [a_y (m/s^2), SA_f (rad), SA_r (rad)]
-% boundaries (lower) (uper)
-lb = [1, 0, 0];
-ub = [30, 1, 1];
+lb = [1, 0, 0]; % upper boundaries
+ub = [30, 1, 1];    % lower boundaries
 
 
 % fcn for the non linear constraints
