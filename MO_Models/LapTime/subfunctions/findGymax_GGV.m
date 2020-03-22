@@ -1,4 +1,4 @@
-function [amax,V_turn] = findGymax_GGV(R_turn,GGV)
+function [amax,V_turn] = findGymax_GGV(R_turn,GG    V)
 options = optimset('Algorithm','Levenberg-Marquardt','Display','off');
 fun = @(x) tosolve(x,R_turn,GGV);
 V_turn = fsolve(fun,20,options);
