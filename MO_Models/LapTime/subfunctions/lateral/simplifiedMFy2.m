@@ -1,5 +1,5 @@
 function [Y] = simplifiedMFy2(Z,SA, p_Cy1, p_Dy1,p_Ey1, p_Ey3, p_Ky1, p_Hy1, p_Vy1, q, Zo)
-%UNTITLED3 schramm Hiller Baldini chapter . section
+%UNTITLED3 Scrhamm Hiller Bardini chapter . section
 %   Z (N) charge normale
 %   SA (rad) slip angle 
 %   q (real) scaling factor bench to road (Calspan TTC 0.6)
