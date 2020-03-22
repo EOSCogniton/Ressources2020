@@ -1,10 +1,11 @@
-function [Y] = simplifiedMFy2(Z,SA, p_Cy1, p_Dy1,p_Ey1, p_Ey3, p_Ky1, p_Hy1, p_Vy1, q)
+function [Y] = simplifiedMFy2(Z,SA, p_Cy1, p_Dy1,p_Ey1, p_Ey3, p_Ky1, p_Hy1, p_Vy1, q, Zo)
 %UNTITLED3 schramm Hiller Baldini chapter . section
-%   Z N
-%   SA rad
+%   Z (N) charge normale
+%   SA (rad) slip angle 
+%   q (real) scaling factor bench to road (Calspan TTC 0.6)
+%   Zo (N) charge nominale
 
 eps = 1e-3; % avoid singularity
-Zo=1000; %(N) charge nominale
 
 C_y = p_Cy1; % (>=0)
 
@@ -13,7 +14,7 @@ D_y = mu_y*Z;
 
 E_y = p_Ey1*(1-p_Ey3); % (<=1)
 
-K_y = p_Ky1*Zo;    %*Zo; %*sin(p_Ky4*atan(Z/Zo/p_Ky2));
+K_y = p_Ky1*Zo; %*sin(p_Ky4*atan(Z/Zo/p_Ky2));
 
 B_y = K_y./(C_y.*D_y +eps);
 
