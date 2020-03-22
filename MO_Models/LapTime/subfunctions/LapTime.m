@@ -9,8 +9,7 @@ idx_Section = extrema(smoothk);
 R = 1./smoothk;
 R(isnan(R)) = 150; %on enlève les NaN
 R = min(150, max(-150, R)); %on sature
-load(param_file,'Tf','Tr')
-Rabs = abs(R)+max(Tf,Tr);%Le rayon calculé l'a été au niveau du COG or ils noufaut le rayon intérieur
+Rabs = abs(R);%Le rayon calculé l'a été au niveau du COG or ils noufaut le rayon intérieur
 dtrack = diff(track);
 D = sqrt(dtrack(:,1).^2+dtrack(:,2).^2); % vecteur des distances entre chaque point du circuit
 D = [0;D];
@@ -27,7 +26,7 @@ for section=1:length(idx_Section)-1
     V_start = V(end); %vitesse initial de la section
     r_end = Rabs(idx_Section(section+1));
     if r_end < 150
-        [Gy_end,V_end] = findGymax_GGV(r_end,GGV); %vitesse finale sur cette section
+        [Gy_end,V_end] = findGymax_GGV(r_end,GGV);%vitesse finale sur cette section
     else %Si le rayon est trop grand on prend direct la vitesse max
         V_end = max(GGV(:,4));
         Gy_end = 0;

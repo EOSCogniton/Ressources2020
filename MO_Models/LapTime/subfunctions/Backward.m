@@ -15,7 +15,10 @@ for i = length(R)-1:-1:2
     elseif Gx(i)==0 && V(i)~=0
         dt = D(i+1)/V(i);
     else
-        dt = (-V(i)+sqrt(V(i)^2+2*Gx(i)*D(i+1)))/Gx(i); 
+        dt = (-V(i)+sqrt(V(i)^2+2*abs(Gx(i))*D(i+1)))/abs(Gx(i));
+    end
+    if imag(dt)~=0 || dt<0
+        disp(dt)
     end
     t(i:end) = t(i:end) + dt;
     [V_i,Gy_i,Gx_i] = findVmin(V(i),R(i),R(i-1),GGV,dt,Gx(i),Gy(i));

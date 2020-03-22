@@ -1,7 +1,6 @@
 function GGV = makeGGV(param_file)
 load(param_file,'m_t','g','rho','S','Cz','Cx','Long_tire_grip_brake')
-addpath('longitudinal');
-addpath('lateral')
+addpath(
 GGV = zeros(14,4);
 GGV(:,4) = (1:10:140)/3.6; %vitesse de calcul en m/s
 %Acceleration
