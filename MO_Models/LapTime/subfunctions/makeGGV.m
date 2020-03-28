@@ -1,22 +1,33 @@
-function GGV = makeGGV(param_file)
-load(param_file,'m_t','g','rho','S','Cz','Cx','Long_tire_grip_brake')
+function GGV = makeGGV(param_file,V_vector)
+%This function create the GGV matrix :
+% - 1 column : Gx max (Accel) for Gy=0
+% - 2 column : Gx min (Break) for Gy=0
+% - 3 column : Gy max for Gx=0
+% - 4 column : V
+% - 5 column : Radius corresponding to V and Gy
+
+
+%---Speed init--
+GGV = zeros(14,5);
+GGV(:,4) = V_vector;
+
+%---Acceleration---
 addpath('longitudinal');
-addpath('lateral')
-GGV = zeros(14,4);
-GGV(:,4) = (1:10:140)/3.6; %vitesse de calcul en m/s
-%Acceleration
 [V_acc,Gx,~] = Accel(200,param_file);
 GGV(:,1) = interp1(V_acc,Gx,GGV(:,4),'linear','extrap');
-%Breaking
+
+%---Breaking---
+load(param_file,'m_t','g','rho','S','Cz','Cx','Long_tire_grip_brake')
 GGV(:,2) = (-(m_t*g+1/2*rho*S*Cz*(GGV(:,4)).^2)*Long_tire_grip_brake-1/2*rho*S*Cx*(GGV(:,4)).^2)/m_t;
-%Lateral
+
+%---Lateral and Radius---
+addpath('lateral')
 Gy = zeros(15,1);
 V_Gy = zeros(15,1);
 i=1;
-
 for r = 1:10:150
     [Gy(i),V_Gy(i)] = findGymax(r,param_file);
-    if Gy(i)<1
+    if Gy(i)<1 %Debug
         Gy = Gy(1:i-1);
         V_Gy = V_Gy(1:i-1);
         break

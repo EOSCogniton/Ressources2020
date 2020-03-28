@@ -116,7 +116,7 @@ while dsim < D_max
     r = v/(k_p*K(k)*k_f*D_wheel*3.14/60); % Calcul du regime moteur
     % Changement de rapport
     % Changement au rupteur
-    if (r > r_rupteur) && (u >n) && (k<6) && (k<k_max)
+    if (r > r_rupteur) && (u >n) && (k<k_max)
         k = k+1;
         u=0;
         % Changement de rapport pour optimiser le couple
