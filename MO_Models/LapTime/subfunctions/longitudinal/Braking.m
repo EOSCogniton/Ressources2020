@@ -1,15 +1,15 @@
-function [Gx,V,Fsat] = Braking(Vinit,param_file)
+function [Gxf,V,Fsat] = Braking(Vinit,param_file)
 
 %---Parameters---
-dt=0.001; %pas de calcul de la simu
+dt=0.01; %pas de calcul de la simu
 load(param_file,'m_t','xr','xf', 'h', 'W' ,'rho','Cx', 'Cz', 'Cz_rep','D_wheel','Long_tire_grip_brake','x_brf','S')
 x_brf = 0.75;
 %---Init---
 Gx = 0; 
-V = Vinit;
+V = Vinit+20/3.6;
 Fsat = [];
 
-while V(end)>0
+while V(end)>-5
     %--Charges--
     [Z_r,Z_f] = charge_long(Gx(end),V(end), m_t,xr,xf, h, W ,rho, Cz, Cz_rep,S);
     
@@ -36,9 +36,12 @@ while V(end)>0
     V = [V V(end)+Gx_i*dt];
 end
 
-V = V(1:end-1);
-Gx = Gx(1:end-1);
-    
+%Filtrage des données (utile en cas d'instabilité)
+Gxf = movmean(Gx,10);
+
+idx = (V>0 & V<=Vinit);
+V = V(idx);
+Gxf = Gxf(idx);
 
 end
 

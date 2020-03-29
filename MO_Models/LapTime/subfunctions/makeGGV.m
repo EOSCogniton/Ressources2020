@@ -13,12 +13,14 @@ GGV(:,4) = V_vector;
 
 %---Acceleration---
 addpath('longitudinal');
-[V_acc,Gx,~] = Accel(200,param_file);
-GGV(:,1) = interp1(V_acc,Gx,GGV(:,4),'linear','extrap');
+[V_acc,Gx_acc,~] = Accel(200,param_file);
+GGV(:,1) = interp1(V_acc,Gx_acc,GGV(:,4),'linear','extrap');
 
 %---Breaking---
-load(param_file,'m_t','g','rho','S','Cz','Cx','Long_tire_grip_brake')
-GGV(:,2) = (-(m_t*g+1/2*rho*S*Cz*(GGV(:,4)).^2)*Long_tire_grip_brake-1/2*rho*S*Cx*(GGV(:,4)).^2)/m_t;
+% load(param_file,'m_t','g','rho','S','Cz','Cx','Long_tire_grip_brake')
+% GGV(:,2) = (-(m_t*g+1/2*rho*S*Cz*(GGV(:,4)).^2)*Long_tire_grip_brake-1/2*rho*S*Cx*(GGV(:,4)).^2)/m_t;
+[Gx_break,V_break] = Braking(max(V_vector),param_file);
+GGV(:,2) = interp1(V_break,Gx_break,GGV(:,4),'linear','extrap');
 
 %---Lateral and Radius---
 addpath('lateral')
