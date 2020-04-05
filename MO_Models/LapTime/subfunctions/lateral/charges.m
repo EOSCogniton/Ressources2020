@@ -20,8 +20,8 @@ Z_0f = (xr/w)*m*g/2;
 Z_0r = (xf/w)*m*g/2;
 
 % charge aéro
-Z_aero_f = 1/2*Cz*rho*S* abs(a_y)*abs(R_turn) *(1-Cz_rep);
-Z_aero_r = 1/2*Cz*rho*S* abs(a_y)*abs(R_turn) *Cz_rep;
+Z_aero_f = 1/4*Cz*rho*S* abs(a_y)*abs(R_turn) *(1-Cz_rep);
+Z_aero_r = 1/4*Cz*rho*S* abs(a_y)*abs(R_turn) *Cz_rep;
 
 % transfert de charge
 dZ_f = (xr/w)*m * a_y*h/Tf;
