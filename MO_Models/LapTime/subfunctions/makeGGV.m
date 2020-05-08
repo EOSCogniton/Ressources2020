@@ -13,7 +13,12 @@ GGV(:,4) = V_vector;
 
 %---Acceleration---
 addpath('longitudinal');
-[V_acc,Gx_acc,~] = Accel(200,param_file);
+load(param_file,'type_engine')
+if strcmp(type_engine,'Combustion')    
+    [V_acc,Gx_acc,~] = Accel(200,param_file);
+else
+    [V_acc,Gx_acc,~] = Accelelec(200,param_file);
+end
 GGV(:,1) = interp1(V_acc,Gx_acc,GGV(:,4),'linear','extrap');
 
 %---Breaking---
