@@ -35,6 +35,7 @@ j = 0; % Numero du point de fonctionnement du moteur
 t_acc = 0; % Temps
 V_acc = v; % Vitesse
 Gx = 0; % Acceleration en g
+a=0;% Acceleration instantanée en g
 RPM_acc = r_pat; % Regime moteur
 C = 0; % Couple
 d_acc = 0; % Distance
@@ -61,6 +62,9 @@ c_roul = m_t*g*b; % Resistance au roulement (N.m)
 
 J_trans = m_t*D_wheel^2/4; % Inertie equivalente des masses en translation (kg.m²)
 J_eq = J_trans + J_rot; % Inertie totale (kg.m²)
+
+m_rot = J_rot/(D_wheel/2)^2;%masse équivalente des inerties en rotations
+m_eq = m_rot + m_t;
 %% Simulation
 while dsim < D_max  
     tsim = tsim+step;
@@ -88,25 +92,21 @@ while dsim < D_max
     else     % Pas de changement de rapport 
         F_deportance_essieu_arr = 1/2*rho*v^2*Cz*Cz_rep;
         F_trainee = 1/2*rho*v^2*Cx;
-        c_k = interp1(rmot,cmot,r)*pertes/(k_p*K(k)*k_f); % Couple a la roue au rapport engage (m.kg)
-        a_ang = (c_k-c_roul)/J_eq; % Acceleration angulaire des roues arrieres
-        C_ar = rep*m_t*g+m_t*a_ang*(D_wheel/2)*h/W + F_deportance_essieu_arr; % Charge sur l'essieu arrière avec prise en compte du transfert de masse
+        c_k = interp1(rmot,cmot,r,'linear','extrap')*pertes/(k_p*K(k)*k_f); % Couple a la roue au rapport engage (N.m) 
+        C = [C, c_k]; % Memoire du couple aux roues
+        C_ar = rep*m_t*g+m_t*a*h/W + F_deportance_essieu_arr; % Charge sur l'essieu arrière avec prise en compte du transfert de masse
         if C_ar > m_t*g+ F_deportance_essieu_arr % Cas ou les roues avant se soulevent
             C_ar = m_t*g+ F_deportance_essieu_arr;
         end
         c_trans_ar = Long_tire_grip*C_ar*D_wheel/2; % Couple maximum transmissible
         if c_k > c_trans_ar % Risque de patinage des pneus
             Adh = [Adh,1];
-            c_k = c_trans_ar; % Prise en compte de la limite d'adherence des pneus
-            a_ang = (c_k-c_roul)/J_eq; % Acceleration angulaire des roues arrieres
-            C_ar = rep*m_t*g+m_t*a_ang*(D_wheel/2)*h/W + F_deportance_essieu_arr; % Charge sur l'essieu arrière avec prise en compte du transfert de masse
-            % non_influence_de_k_f
+            c_k = c_trans_ar; % Prise en compte de la limite d'adherence des pneus 
         else
             Adh = [Adh, 0];
-        end
-        C = [C, c_k]; % Memoire du couple aux roues
+        end    
         Ch_ar =[Ch_ar C_ar];
-        a = a_ang*D_wheel/2 - F_trainee / (m_t); % Acceleration du vehicule en m/s² non_influence_de_k_f
+        a = ((c_k-c_roul)/(D_wheel/2)-F_trainee)/m_eq; % Acceleration du vehicule en m/s²  
         Gx = [Gx,a]; % Memoire acceleration en m/s²
     end
     v = v + a*step; % Vitesse du vehicule
