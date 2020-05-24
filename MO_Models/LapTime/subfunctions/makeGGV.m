@@ -12,7 +12,6 @@ GGV = zeros(14,5);
 GGV(:,4) = V_vector;
 
 %---Acceleration---
-addpath('longitudinal');
 load(param_file,'type_engine')
 if strcmp(type_engine,'Combustion')    
     [V_acc,Gx_acc,~] = Accel(200,param_file);
@@ -28,7 +27,6 @@ GGV(:,1) = interp1(V_acc,Gx_acc,GGV(:,4),'linear','extrap');
 GGV(:,2) = interp1(V_break,Gx_break,GGV(:,4),'linear','extrap');
 
 %---Lateral and Radius---
-addpath('lateral')
 Gy = zeros(15,1);
 V_Gy = zeros(15,1);
 i=1;

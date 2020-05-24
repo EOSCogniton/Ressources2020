@@ -6,7 +6,6 @@ b = coeff_roul*2/D_wheel; % Decalage du point d'appui (m)
 c_roul = m_t*g*b; % Resistance au roulement (N.m)
 m_rot = J_rot/(D_wheel/2)^2;%masse équivalente des inerties en rotations
 m_eq = m_rot + m_t;
-eff_cont = 0.97;
 
 c_m = zeros(length(V),1);
 P = c_m;

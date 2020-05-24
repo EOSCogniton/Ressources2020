@@ -1,0 +1,87 @@
+clear all
+
+%% Parameters 
+% ___physical___
+g = gravity constant
+rho =  air density
+
+%___Vehicle geometry___
+W =  wheelbase (m)
+D_wheel =  Wheel diameter (m)
+Tf =  rear track width of the car (m)
+Tr =  front track width of the car (m)
+
+m_p = Mass of the pilot (kg)
+h_p =  %Heigh of the center of gravity of the pilote (m)
+m_v =  Mass of the vehicle (kg)
+h_v =  %Heigh of the center of gravity of the du vehicle (m)
+
+Relations
+m_t = m_v + m_p + m_aero; %Mass Total (kg)
+h= (m_v*h_v + h_p*m_p + m_aero*h_aero)/m_t ; %Global CoG 
+
+rep = Mass distribution on the rear axle (%)
+xf =  distance entre le train avant et le C.G.
+xr = W-xf
+
+Jjp = Inertie de la roue et du pneu (CATIA)(à touver pour du 10 pouce)
+Jm = Inertie du moyeu et du freinage (CATIA)
+Ja = inertie d'un arbre de transmission  (CATIA)
+Jd = Inertie du différentiel (CATIA)
+Jc  = Inertie de la couronne (CATIA)
+Jmot = Estimation de l'inertie moteur+ chaine
+J_rot = 2*(Jjp+Jm+Ja)+Jd+Jc+Jmot; % Inertie equivalente des masses en rotation (kg.m²)
+
+%___Tyres ___
+
+%Longi
+Long_tire_grip_brake = coefficient de grip longitudinal en freinage
+Long_tire_grip = coefficient de grip longitudinal en accel
+coeff_roul = Coefficient de resistance au roulement du pneu
+p_Cy1 = shape factor for Cfy
+p_Dy1 = Lateral friction Muy
+p_Ky1 = Maximum value of stiffness Kfy/Fznom
+p_Ey1 = 
+p_Ey3 =
+p_Vy1 =
+p_Hy1 =
+Zo = 
+q = coefficient pour passer des valeur pneu du banc à la piste
+
+%__Motor
+rmot = vitesse du moteur
+cmot = couple max moteur correspondant à la vitesse rmot
+
+r_pat = Regime de patinage de l'embrayage (tr/min)
+r_rupteur = Regime de rupteur (tr/min)
+t_pas = Temps de passage de rapport (s)
+
+%___Transmission___
+k_p = Rapport primaire
+
+% Etagement origine
+K(1) = Rapport de 1ere
+K(2) = Rapport de 2eme
+K(3) = Rapport de 3eme
+K(4) = Rapport de 4eme
+K(5) = Rapport de 5eme
+K(6) = Rapport de 6eme
+
+k_f = Rapport final
+pertes = Coefficient de pertes de couple dans la transmission
+
+k_max = 6; % vitesse maximale autorisée
+
+
+%___Aero___
+
+S= surface effective pour la déportance en m²
+Cz = coefficient de déportance
+Cx = coefficient de trainé
+Cz_rep = répartition de la déportance sur l'essieu arrière
+
+%__Elec__
+
+type_engine = 'Electrique' ou 'Combustion' selon le type
+efficiency = structure contenant la map d'éffcacité du moteur élec
+eff_cont = efficacité du controller

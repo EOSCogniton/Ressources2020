@@ -47,8 +47,6 @@ c_roul = m_t*g*b; % Resistance au roulement (N.m)
 J_trans = m_t*D_wheel^2/4; % Inertie equivalente des masses en translation (kg.m²)
 J_eq = J_trans + J_rot; % Inertie totale (kg.m²)
 
-m_rot = J_rot/(D_wheel/2)^2;%masse équivalente des inerties en rotations
-m_eq = m_rot + m_t;
 
 %% Simulation
 while dsim < D_max  
@@ -60,7 +58,7 @@ while dsim < D_max
     F_deportance_essieu_arr = 1/2*rho*v^2*Cz*Cz_rep;
     F_trainee = 1/2*rho*v^2*Cx;
     c_k = interp1(rmot,cmot,r,'linear','extrap')*pertes/(k_f); % Couple a la roue au rapport engage (N.m) 
-    C = [C, c_k]; % Memoire du couple aux roues
+    
     C_ar = rep*m_t*g+m_t*a*h/W + F_deportance_essieu_arr; % Charge sur l'essieu arrière avec prise en compte du transfert de masse
     if C_ar > m_t*g+ F_deportance_essieu_arr % Cas ou les roues avant se soulevent
         C_ar = m_t*g+ F_deportance_essieu_arr;
@@ -73,8 +71,10 @@ while dsim < D_max
         Adh = [Adh, 0];
     end
     
+    C = [C, c_k]; % Memoire du couple aux roues
     Ch_ar =[Ch_ar C_ar];
-    a = ((c_k-c_roul)/(D_wheel/2)-F_trainee)/m_eq; % Acceleration du vehicule en m/s²   
+    a_ang = (c_k-c_roul-D_wheel/2*F_trainee)/J_eq; % Acceleration du vehicule en m/s²
+    a = a_ang*D_wheel/2; % Acceleration du vehicule en m/s²  
     Gx = [Gx,a]; % Memoire acceleration en m/s²
 
     v = v + a*step; % Vitesse du vehicule
