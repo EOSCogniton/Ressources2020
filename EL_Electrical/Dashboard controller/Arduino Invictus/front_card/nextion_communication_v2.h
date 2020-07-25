@@ -1,7 +1,5 @@
-#ifndef nextion_communication
-#define nextion_communication
-
-
+#ifndef nextion_communication_v2
+#define nextion_communication_v2
 
 /**************************************************************************/
 //    Inclusion of the necessary libraries

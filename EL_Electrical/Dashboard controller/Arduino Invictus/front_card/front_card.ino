@@ -10,7 +10,7 @@
                       Does all the screen display process
                     
 ****************************************************************/
-#include "nextion_communication.h"
+#include "nextion_communication_v2.h"
 #include "shiftlight.h"
 #include "projectconfig.h"
 #include <stdio.h>
@@ -20,7 +20,7 @@ int nvgear;
 int nvpage;
 int ancpage;
 int choixPage;
-char vitesse[7]={'N','1','2','3','4','5'};
+char vitesse[7]={'N','1','2','3','4','5','6'};
 int waterTemp;
 int voltage;
 bool anclaunch;

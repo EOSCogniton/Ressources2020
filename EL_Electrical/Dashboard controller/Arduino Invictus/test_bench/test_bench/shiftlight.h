@@ -4,6 +4,6 @@
 /**************************************************************************/
 //    Functions
 /**************************************************************************/
-void setShiftLight(int Pin,bool enable);
+void setShiftLight(int Pin,bool allum);
 
 #endif

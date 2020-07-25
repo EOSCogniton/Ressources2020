@@ -117,19 +117,18 @@ void receive() {
       LambdaPIDTarg = msg.buf[2]+256*msg.buf[3];
       LambdaPIDAdj = msg.buf[4]+256*msg.buf[5];  
       ECU = msg.buf[6]+256*msg.buf[7] 
-      break;
-          
+      break;     
     }
  
   }
 
 void sendData() {
-  Switch_H=digitalRead(H_PIN);
-  Switch_N=digitalRead(N_PIN);
-  Switch_L=digitalRead(L_PIN);
-  Switch_C=digitalRead(C_PIN);
-  Switch_W=digitalRead(W_PIN);
-  Switch_G=digitalRead(G_PIN);
+  Switch_H=digitalRead(Homing_button);
+  Switch_N=digitalRead(Neutre_button);
+  Switch_L=digitalRead(Log_switch);
+  Switch_C=digitalRead(LaunchControl_button);
+  Switch_W=digitalRead(WD_Switch);
+
 
   byte Modif[8]={0x11, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
   byte Null[8]={0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};

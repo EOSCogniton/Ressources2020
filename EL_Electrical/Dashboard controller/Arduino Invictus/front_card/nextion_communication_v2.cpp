@@ -51,15 +51,15 @@
                     
 ****************************************************************/
 
-#include "nextion_communication.h"
+#include "nextion_communication_v2.h"
 #include "shiftlight.h"
 #include <Arduino.h>
-
+#include <String.h>
 /**************************************************************************/
 //    Variables
 /**************************************************************************/
 
-char pageName[4]={'start','display_pro','display_diag','display_fun'};
+String pageName[4]={"start","display_pro","display_diag","display_fun"};
 bool oilWarning=false;
 bool nvOilBlinking=false;
 bool precOilBlinking=false;

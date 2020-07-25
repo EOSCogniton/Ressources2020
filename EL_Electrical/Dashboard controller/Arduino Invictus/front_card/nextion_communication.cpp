@@ -59,7 +59,7 @@
 //    Variables
 /**************************************************************************/
 
-char pageName[4]={'start','display_pro','display_diag','display_fun'};
+String pageName[4]={"start","display_pro","display_diag","display_fun"};
 bool oilWarning=false;
 bool nvOilBlinking=false;
 bool precOilBlinking=false;

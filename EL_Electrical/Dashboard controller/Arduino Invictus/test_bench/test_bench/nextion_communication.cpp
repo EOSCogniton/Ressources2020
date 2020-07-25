@@ -32,12 +32,12 @@
 #include "nextion_communication.h"
 #include "shiftlight.h"
 #include <Arduino.h>
-
+#include <string.h>
 /**************************************************************************/
 //    Variables
 /**************************************************************************/
 
-char pageName[4]={'start','display_pro','display_diag','display_fun'};
+String pageName[4]={"start","display_pro","display_diag","display_fun"};
 
 /**************************************************************************/
 //    Functions
@@ -109,7 +109,7 @@ void setRPM(int RPM){
 }
 
 void setRaceCapture(bool raceOn){
-  if raceOn{
+  if (raceOn){
     Serial2.print("racecapt.bco=");
     Serial2.print(1441);
     nextion_endMessage();
@@ -120,7 +120,7 @@ void setRaceCapture(bool raceOn){
     nextion_endMessage();
   }
 }
-void setLaunch(int page,bool launch_active){
+void setLaunch(bool launch_active, int page){
   if(launch_active){
     Serial2.print("launch_state.val=");
     Serial2.print(1);
