@@ -46,14 +46,9 @@
                     Changes the display page
               updateDisplay(..)
                     Supposed to be called while changing page or restarting the screen
-              startDisplay()
-                    Called in Teensy setup to test if all display features are working properly
                     
 ****************************************************************/
-
 #include "nextion_communication_v2.h"
-#include "shiftlight.h"
-#include <Arduino.h>
 #include <String.h>
 /**************************************************************************/
 //    Variables
@@ -65,35 +60,31 @@ bool nvOilBlinking=false;
 bool precOilBlinking=false;
 int minOilPress=130;
 int min1OilPress=130;
-int min2oilPress=100;
+int min2OilPress=100;
 int min1WaterTemp=108;
 int min2WaterTemp=100;
 int min1Voltage=11.2;
 int min2Voltage=10.5;
-int min1Rpm=500;
-int min2Rpm=500;
-int rpm_old;
-int rpm_new;
-int oil_new;
-int oil_old;
-int tps_old;
-int tps_new;
-int map_old;
-int map_new;
-int lambda_old;
-int lambda_new;
-int drpm;
-int doil;
-int dtps;
-int dmap;
-int dlambda;
-int seuildrpm=100;
-int seuildoil=100;
-int seuildlambda=100;
-int seuildmap=100;
-int seuildtps=100;
+float oil_new=0;
+float oil_old=0;
+float tps_old=0;
+float tps_new=0;
+float map_old=0;
+float map_new=0;
+float lambda_old=0;
+int lambda_new=0;
+float doil=0;
+float dtps=0;
+float dmap=0;
+float dlambda=0;
+
+float seuildoil=100;
+float seuildlambda=100;
+float seuildmap=100;
+float seuildtps=100;
 unsigned long t=0;
 unsigned long tdt=0;
+extern float dt;
 
 /**************************************************************************/
 //    Functions
@@ -105,40 +96,24 @@ void changePage(int page){
   nextion_endMessage();
 }
 
-void startDisplay(int blueShiftPin,int redShiftPin){
-  //Puts on the lights for 2 seconds and displays welcome page on screen
-  Serial2.print("page ");
-  Serial2.print(0);
-  nextion_endMessage();
-  setShiftLight(blueShiftPin,true);
-  setShiftLight(redShiftPin,true);
-  //Voir avec Bruno pour la commande d'affichage lumineux des boutons
-  delay(5000);
-  //Sets the screen at its work state
-  Serial2.print("page ");
-  Serial2.print(1);
-  nextion_endMessage();
-  setShiftLight(blueShiftPin,false);
-  setShiftLight(redShiftPin,false);
-}
 
-void updateDisplay(int page,char gear,int oilTemp, float voltage,int rpm, bool launch){
+void updateDisplay(int page,char gear,float oilPress, float voltage,int rpm, bool launch){
   if(page==1){
     setGear(gear);
-    setOilTemp(oilTemp);
+    setOil(oilPress, rpm);
     setVoltage(voltage);
-    setLaunch(launch);
+    setLaunch(page,launch);
   }
   if(page==2){
     setGear(gear);
-    setOilTemp(oilTemp);
+    setOil(oilPress, rpm);
     setVoltage(voltage);
     setRPM(rpm);
-    setLaunch(launch);
+    setLaunch(page,launch);
   }
 }
 
-void setOil(int oilPressure, int rpm){
+void setOil(float oilPressure, int RPM){
   //Oil value is sent to Nextion
   Serial2.print("oil_v.val=");
   Serial2.print(oilPressure);
@@ -149,23 +124,23 @@ void setOil(int oilPressure, int rpm){
   if(doil>seuildoil){
 	  Serial2.print("problem.txt=oil");
   }
-  if(rpm<500){
+  if(RPM<500){
 	  minOilPress=min2OilPress;
   }
   else{
 	  minOilPress=min1OilPress;
   }
-  if(oilPressure<minOilPress) and not(oilWarning){
+  if((oilPressure<minOilPress) && !(oilWarning)){
     //Oil problem begins : variables should be initiated
     oilWarning=true;
     t=millis();
     tdt=millis();
     nvOilBlinking=true;
   }
-  if(oilPressure<minOilPress) and oilWarning{
+  if((oilPressure<minOilPress) && oilWarning){
     //Oil problem continues : should the oil logo be displayed?
     tdt=millis();
-    if(tdt-t)%400<200{
+    if((tdt-t)%400<200){
       //In this phase, the oil logo is displayed
       nvOilBlinking=true;
     }
@@ -184,17 +159,17 @@ void setOil(int oilPressure, int rpm){
   if(nvOilBlinking!=precOilBlinking){
     precOilBlinking=nvOilBlinking;
     if(nvOilBlinking){
-    //Oil logo is diplayed
-    Serial2.print("oil.pic=");
-    Serial2.print(7);
-    nextion_endMessage();
-  }
-  else{
-    //There is no oil logo displayed
-    Serial2.print("oil.pic=");
-    Serial2.print(5);
-    nextion_endMessage();
-  }
+      //Oil logo is diplayed
+      Serial2.print("oil.pic=");
+      Serial2.print(7);
+      nextion_endMessage();
+    }
+    else{
+      //There is no oil logo displayed
+      Serial2.print("oil.pic=");
+      Serial2.print(5);
+      nextion_endMessage();
+    }
   }
 }
 
@@ -206,18 +181,18 @@ void setGear(char gear){
   nextion_endMessage();
 }
 
-void setFuel(int fuel){
+void setFuel(float fuel){
 	Serial2.print("fuel.val=");
 	Serial2.print(fuel);
 	nextion_endMessage();
 }
 
-void setWaterTemp(int waterTemp){
+void setWaterTemp(float waterTemp){
   //Water temp value is sent to Nextion
   Serial2.print("water_temp.val=");
   Serial2.print(waterTemp);
   nextion_endMessage();
-  if(waterTemp<min2WaterTemp){
+  if(waterTemp>min1WaterTemp){ //min2WaterTemp=100 and min1WaterTemp=108
     //Water temp is below critical value
     Serial2.print("water.pic=");
     Serial2.print(7);
@@ -225,7 +200,7 @@ void setWaterTemp(int waterTemp){
   }
   else{
     //Water temp is not below critical value
-    if(waterTemp<min1WaterTemp){
+    if(waterTemp>min2WaterTemp){ 
       //Water temp can still be dangerous
       Serial2.print("water.pic=");
       Serial2.print(8);
@@ -240,30 +215,11 @@ void setWaterTemp(int waterTemp){
   }
 }
 
-void setOilPress(int oilPress){
-  //Oil press value is sent to Nextion
-  Serial2.print("oil_v.val=");
-  Serial2.print(oilPress);
-  nextion_endMessage();
-  if(oilPress<minOilPress){
-    //Oil press is below critical value
-    Serial2.print("oil.pic=");
-    Serial2.print(9);
-    nextion_endMessage();
-  }
-  else{
-	  //Oil press is normal
-	  Serial2.print("oil.pic=");
-	  Serial2.print(5);
-	  nextion_endMessage();
-	  }
-}
-
-void setVoltage(int voltage){
+void setVoltage(float voltage){
   Serial2.print("voltage.val=");
   Serial2.print(voltage);
   nextion_endMessage();
-  if(voltage<min2Voltage){
+  if(voltage<min2Voltage){ //10.5V
     //Voltage is below critical value
     Serial2.print("volt.pic=");
     Serial2.print(11);
@@ -271,7 +227,7 @@ void setVoltage(int voltage){
   }
   else{
     //Voltage is not below critical value
-    if(voltage<min1Voltage){
+    if(voltage<min1Voltage){ //min=11.2V
       //Voltage can still be dangerous
       Serial2.print("volt.pic=");
       Serial2.print(12);
@@ -290,30 +246,9 @@ void setRPM(int RPM){
   Serial2.print("rpm.val=");
   Serial2.print(RPM);
   nextion_endMessage();
-  rpm_old=rpm_new;
-  rpm_new=RPM;
-  drpm=abs(oil_new-oil_old)/dt;
-  if(drpm>seuildrpm){
-	  Serial2.print("problem.txt=rpm");
-  }
-  if(RPM<min2Rpm){
-    //RPM is below critical value
-    setShiftlight(BLUE_SHIFT_PIN,true);
-  }
-  else{
-    setShiftlight(BLUE_SHIFT_PIN,false);
-  }
-  if(RPM<min1Rpm){
-    //RPM can be dangerous
-    SetShiftlight(RED_SHIFT_PIN,true);
-  }
-  else{
-    //Water temp is normal
-    SetShiftlight(RED_SHIFT_PIN,false);
-  }
 }
 
-void setThrottle(int throttle){
+void setThrottle(float throttle){
   tps_old=tps_new;
   tps_new=throttle;
   dtps=abs(tps_new-tps_old)/dt;
@@ -325,7 +260,7 @@ void setThrottle(int throttle){
   nextion_endMessage();
 }
 
-void setPlenum(int plenum){
+void setPlenum(float plenum){
   map_old=map_new;
   map_new=plenum;
   dmap=abs(map_new-map_old)/dt;
@@ -337,7 +272,7 @@ void setPlenum(int plenum){
   nextion_endMessage();
 }
 
-void setLambda(int lambda){
+void setLambda(float lambda){
   Serial2.print("lambda.val=");
   Serial2.print(lambda);
   nextion_endMessage();
@@ -350,7 +285,7 @@ void setLambda(int lambda){
 }
 
 void setRaceCapture(bool raceOn){
-  if raceOn{
+  if (raceOn){
     Serial2.print("racecapt.pic=");
     Serial2.print(5);
     nextion_endMessage();
@@ -361,20 +296,22 @@ void setRaceCapture(bool raceOn){
     nextion_endMessage();
   }
 }
-void setLaunch(int page,bool launch_active){
-  if(launch_active){
+
+void setLaunch(int page,bool launchControl_active){
+  if(launchControl_active){
     //The screen turns green if launch control is active
     Serial2.print(pageName[page]);
     Serial2.print(".bco=");
     Serial2.print(1441);
     nextion_endMessage();
+  }
   else{
     //The screen turns black if launch control is inactive
     Serial2.print(pageName[page]);
     Serial2.print(".bco=");
     Serial2.print(0);
     nextion_endMessage();
-    }
+  }
 }
 
 void nextion_endMessage(){

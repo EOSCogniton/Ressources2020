@@ -11,74 +11,119 @@
                     
 ****************************************************************/
 #include "nextion_communication_v2.h"
-#include "shiftlight.h"
 #include "projectconfig.h"
+#include "can_interface_av.h"
 #include <stdio.h>
-int RPM;
+
 int ancgear;
 int nvgear;
 int nvpage;
 int ancpage;
-int choixPage;
+boolean changementPage;
 char vitesse[7]={'N','1','2','3','4','5','6'};
-int waterTemp;
-int voltage;
 bool anclaunch;
 bool nvlaunch;
 bool ancrace;
 bool nvrace;
-int oilPressure;
-int throttle;
-int plenum;
-int lambda;
+unsigned long TchgtPage;
+
+int rpm_old=0;
+int rpm_new=0;
+int drpm=0;
+int seuildrpm=100;
+float dt=0.05;
+int min1Rpm=11500;
+int min2Rpm=12000;
+
+boolean homing, neutre,log_DTA, TC_control, launch_control, Wet_ON;
+
+//Initialization of CANBUS
+can_interface CAN;
+IntervalTimer CANTimer;
+unsigned long Can_send_period=75000; //On envoie sur le can toutes les 75ms
+//header des fonctions
+void Can_Send();
+void setRPMShiftLight(int RPM);
 
 void setup() {
-  Serial2.begin(9600);
-  Serial.begin(9600);
-  pinMode(RED_SHIFT_PIN,OUTPUT);
-  pinMode(BLUE_SHIFT_PIN,OUTPUT);
-  startDisplay(BLUE_SHIFT_PIN,RED_SHIFT_PIN);
-  RPM=0;
+  //Initialisation of the variables used in the program
+  homing=false;
+  neutre=false;
+  log_DTA=false;
+  TC_control=false;
+  launch_control=false;
+  Wet_ON=false;
+  
   //nvvalue is for the new value of value
   //which is compared to its prec value, ancvalue
-  //in order to save screen loading times
+  //in order to save screen loading times 
   ancgear=0;
-  nvgear=0;
   ancpage=1;
   nvpage=1;
-  choixPage=0;
-  waterTemp=0;
-  voltage=0;
+  TchgtPage=0;
+  changementPage=false;
   anclaunch=false;
   nvlaunch=false;
   ancrace=false;
   nvrace=false;
-  //Values should be initiated through a CAN inquiry
-  oilPressure=0;
-  throttle=0;
-  plenum=0;
-  lambda=0;
+  
+  Serial2.begin(9600);
+  Serial.begin(9600);
+  pinMode(RED_SHIFT_PIN,OUTPUT);
+  pinMode(BLUE_SHIFT_PIN,OUTPUT);
+  
+  //Start display
+  //Puts on the lights for 2 seconds and displays welcome page on screen
+  Serial2.print("page ");
+  Serial2.print(0);
+  nextion_endMessage();
+  digitalWrite(BLUE_SHIFT_PIN,HIGH);
+  digitalWrite(RED_SHIFT_PIN,HIGH);
+  //Voir avec Bruno pour la commande d'affichage lumineux des boutons
+  delay(2000);
+  //Sets the screen at its work state
+  Serial2.print("page ");
+  Serial2.print(1);
+  nextion_endMessage();
+  digitalWrite(BLUE_SHIFT_PIN,LOW);
+  digitalWrite(RED_SHIFT_PIN,LOW);
+  
+  //Can et interruption
+  //Define Timer
+  CANTimer.begin(Can_Send, Can_send_period); //each period of the Timer the function Can_Send is launched
 }
 
 void loop() {
-  //This part is for a pot which swaps between pages
-  choixPage=analogRead(POT_PIN);
-  if(choixPage<700){
-    nvpage=3;
-  }
-  if(choixPage<500){
-    nvpage=2;
-  }
-  if(choixPage<300){
-    nvpage=1;
-  }
-  if(nvpage!=ancpage){//Changing page
+  CAN.Receive();
+  homing=digitalRead(Homing_button)*true;
+  neutre=digitalRead(Neutre_button)*true;
+  log_DTA=digitalRead(Log_switch)*true;
+  TC_control=digitalRead(TC_Switch)*true;
+  launch_control=digitalRead(LaunchControl_button)*true;
+  Wet_ON=digitalRead(WD_Switch)*true;
+
+  //Shift light :on allume en fonction des rpms pour savoir si on change de vitesse
+  setRPMShiftLight(CAN.RPM);
+  
+  //This part is for a button which swaps between pages
+  changementPage=digitalRead(Chgt_screen_button)*true; //Quand on appuie sur l'écran ou le bouton ( à voir car il n'y a pas de connexion avec le bouton) il faut changer de page;
+  TchgtPage=millis()-TchgtPage;
+  if(changementPage && TchgtPage>500) //On regarde si cela fait plus de 500ms qu'on a voulu changer de page (Permet d'éviter le fait qu'on est plusieurs loop avec changementPage qui reste à 1 alors que c'est le même appui)
+  {
+    if(ancpage==2)
+    {
+      nvpage=1;
+    }
+    else
+    {
+      nvpage=ancpage+1;
+    }
     changePage(nvpage);
     ancpage=nvpage;
-    updateDisplay(nvpage,nvgear,oilTemp,voltage,RPM,nvlaunch);
+    updateDisplay(nvpage,CAN.gear,CAN.oilPressure,CAN.Volts,CAN.RPM,nvlaunch);
   }
-  if(nvgear!=ancgear){//Changing gear
-    ancgear=nvgear;
+  if(CAN.gear!=ancgear){//Changing gear
+    ancgear=CAN.gear;
     setGear(vitesse[nvgear]);
   }
   if(nvrace!=ancrace){//Changing race capture activation state
@@ -87,13 +132,40 @@ void loop() {
   }
   if(nvlaunch!=anclaunch){
     anclaunch=nvlaunch;
-    setLaunch(launch);
+    setLaunch(ancpage,nvlaunch);
   }
-  setWaterTemp(waterTemp);
-  setVoltage(voltage);
-  setRPM(RPM);
-  setOil(oilPressure);
-  setThrottle(throttle);
-  setPlenum(plenum);
-  setLambda(lambda);
+  setWaterTemp(CAN.waterTemp);
+  setVoltage(CAN.Volts);
+  setRPM(CAN.RPM);
+  setOil(CAN.oilPressure,CAN.RPM);
+  setThrottle(CAN.throttle);
+  setPlenum(CAN.plenum);
+  setLambda(CAN.Lambda);
+}
+
+void setRPMShiftLight(int RPM)
+{
+  rpm_old=rpm_new;
+  rpm_new=RPM;
+  drpm=abs(rpm_new-rpm_old)/dt;
+  if(drpm>seuildrpm){
+    Serial2.print("problem.txt=rpm");
+  }
+  if(RPM<min1Rpm) //min1Rpm=11500; min2Rpm=12000
+  {
+    digitalWrite(BLUE_SHIFT_PIN,LOW);
+    digitalWrite(RED_SHIFT_PIN,LOW);
+  } else if( RPM<min2Rpm)
+  {
+    digitalWrite(BLUE_SHIFT_PIN,HIGH);
+    digitalWrite(RED_SHIFT_PIN,LOW);
+  } else{
+    digitalWrite(BLUE_SHIFT_PIN,HIGH);
+    digitalWrite(RED_SHIFT_PIN,HIGH);
+  }
+}
+
+void Can_Send()
+{
+  CAN.Transmit(homing, neutre,log_DTA, TC_control, launch_control, Wet_ON);
 }

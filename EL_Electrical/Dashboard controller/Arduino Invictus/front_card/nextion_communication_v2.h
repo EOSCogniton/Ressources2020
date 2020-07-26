@@ -4,7 +4,6 @@
 /**************************************************************************/
 //    Inclusion of the necessary libraries
 /**************************************************************************/
-#include "shiftlight.h"
 #include <Arduino.h>
 
 /**************************************************************************/
@@ -16,30 +15,33 @@
 /**************************************************************************/
 void changePage(int page);
 
-void startDisplay(int blueShiftPin,int redShiftPin);
+void updateDisplay(int page,char gear,float oilPress, float voltage,int rpm,bool launch);
 
-void updateDisplay(int page,char gear,int oilTemp, float voltage,int rpm, bool launch);
+void setOil(float oilPress, int RPM);
 
 void setGear(char gear);
 
-void setFuel(int fuel);
+void setFuel(float fuel);
 
-void setWaterTemp(int waterTemp);
+void setWaterTemp(float waterTemp);
 
-void setVoltage(int voltage);
+void setVoltage(float voltage);
 
 void setRPM(int RPM);
 
-void setOil(int oilPress);
+void setThrottle(float throttle);
 
-void setPlenum(int plenum);
+void setPlenum(float plenum);
 
-void setLambda(int lambda);
+void setLambda(float lambda);
 
-void setLaunch(bool launch_active);
+void setRaceCapture(bool raceOn);
+
+void setLaunch(int page,bool launchControl_active);
 
 void nextion_endMessage();
 
-void setRaceCapture(bool raceOn);
+
+
 
 #endif

@@ -10,8 +10,10 @@ const int Homing_button=15;
 const int LaunchControl_button=16;
 const int WD_Switch=17;
 const int TC_Switch=18;
-const int Log_switch=19
+const int Log_switch=19;
 const int RED_SHIFT_PIN=21;
 const int BLUE_SHIFT_PIN=20;
+
+const int Chgt_screen_button=22;
 
 #endif

@@ -11,7 +11,7 @@
     v1.0 - 25/07/2020 creation
 */
 /**************************************************************************/
-#include "can_interface.h"
+#include "can_interface_av.h"
 
 // Set CS to pin chipSelect (projectconfig.h) to object CAN0 (class MCP_CAN) 
 
@@ -28,17 +28,7 @@ unsigned long tmillis=millis();
 can_interface::can_interface()
 {   
     CANbus.begin();
-    digitalWrite(LedPin,HIGH);
-                    
-   // Initialisation of each attribut
-   homingState = false;
-   neutralState = false;
-   tractionControlState = false;
-   logState = false;
-   wetdryState = false;
-   launchcontrolState = false;
-   wetdryState = false;
-   logRaceCapture=false;
+    //digitalWrite(LedPin,HIGH);
 
    Lambda=0;
    Kph=0;
@@ -55,48 +45,9 @@ can_interface::can_interface()
    errorMotored=0;     
    auto_mode=false;
    RPM=0;  
-   
-}
-
-/**************************************************************************/
-/*!
-    @brief   Accesseur: Modify the state of each attribut
-*/
-/**************************************************************************/
-
-void can_interface::setHomingState(boolean etat)
-{
-  homingState=etat;
-}
-
-void can_interface::setNeutralState(boolean etat)
-{
-  neutralState=etat;
-}
-
-void can_interface::setTractionState(boolean etat)
-{
-  tractionControlState=etat;
-}
-
-void can_interface::setLogState(boolean etat)
-{
-  logState=etat;
-}
-
-void can_interface::setLaunchcontrolState(boolean etat)
-{
-  launchcontrolState=etat;
-}
-
-void can_interface::setWetdryState(boolean etat)
-{
-  wetdryState=etat;
-}
-
-void can_interface::setlogRaceCapture(boolean etat)
-{
-  logRaceCapture=etat;
+   throttle=0;
+   oilPressure=0;
+   plenum=0;
 }
 
 void can_interface::Receive()
@@ -115,21 +66,28 @@ void can_interface::Data_MAJ()
 {   
   switch (rmsg.id) {
      case 0x2000:// RPM from DTA, water temp
-      Serial.println("id=0x2000, RPM, Température eau");
+      Serial.println("id=0x2000, RPM, Température eau, TPS(%)");
       RPM=rmsg.buf[0]+256*rmsg.buf[1];
       waterTemp=rmsg.buf[4]+256*rmsg.buf[5];
+      throttle=rmsg.buf[2]+256*rmsg.buf[3];
       Serial.print(RPM);
       Serial.print(", ");
-      Serial.println(waterTemp);
+      Serial.print(waterTemp);
+      Serial.print(", ");
+      Serial.println(throttle);
       break;
       
     case 0x2001:// Pression air, lambda, KPH, pression huile
-      Serial.println("id=0x2000, lambda, KPH");
+      Serial.println("id=0x2000,Pression plenum (kPa), lambda, KPH, pression huile (kPa)");
+      plenum=rmsg.buf[0]+256*rmsg.buf[1];
       Lambda=(rmsg.buf[2]+256*rmsg.buf[3])/1000;
       Kph=(rmsg.buf[4]+256*rmsg.buf[5])/10;
-      Serial.print(lambda);
+      oilPressure=rmsg.buf[6]+256*rmsg.buf[7];
+      Serial.print(Lambda);
       Serial.print(", ");
-      Serial.println(Kph);
+      Serial.print(Kph);
+      Serial.print(", ");
+      Serial.println(oilPressure);
       break;
       
     case 0x2002:// Pression essence, Volt, conso essence L/h
@@ -149,7 +107,7 @@ void can_interface::Data_MAJ()
       Serial.print(AdvanceDeg);
       Serial.print(" V, ");
       Serial.print(Inject);
-      Serial.print(" ms, ")
+      Serial.print(" ms, ");
       Serial.println(FuelConKM);
       break;      
  
@@ -196,7 +154,7 @@ void can_interface::Data_MAJ()
 */
 /**************************************************************************/
 
-void Transmit(boolean homing, boolean neutre, boolean logDta, boolean TCState, boolean LCState, boolean WDState, boolean logRaceCap);
+void can_interface::Transmit(boolean homing, boolean neutre, boolean logDta, boolean TCState, boolean LCState, boolean WDState)
 {  
     tmsg.buf[0]=homing;
     tmsg.buf[1]=neutre;
@@ -204,7 +162,7 @@ void Transmit(boolean homing, boolean neutre, boolean logDta, boolean TCState, b
     tmsg.buf[3]=TCState;
     tmsg.buf[4]=LCState;
     tmsg.buf[5]=WDState;
-    tmsg.buf[6]=logRaceCap;
+    tmsg.buf[6]=0;
     tmsg.buf[7]=0;
     tmsg.id=0x1100;
     CANbus.write(tmsg);

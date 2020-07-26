@@ -33,16 +33,7 @@ class can_interface
     private: //Trouver un moyen de rajouter tmsg et rmsg __ARS
       struct CAN_message_t tmsg;
       struct CAN_message_t rmsg;
-      boolean homingState;
-      boolean neutralState;
       long unsigned int R_ID_Mask;
-
-
-      boolean logState;
-      boolean tractionControlState;
-      boolean launchcontrolState;
-      boolean wetdryState;    
-      boolean logRaceCapture;
       
   public:
         float Lambda;
@@ -60,20 +51,16 @@ class can_interface
         int errorMotored;
         bool auto_mode;
         int RPM;
+        float throttle;
+        float plenum;
+        float oilPressure;
   
   private:
       void Data_MAJ();
   public:
       can_interface();
       void Receive();
-      void Transmit(boolean homing, boolean neutre, boolean logDta, boolean TCState, boolean LCState, boolean WDState, boolean logRaceCap);
-      void setHomingState(boolean etat);
-      void setNeutralState(boolean etat);
-      void setTractionState(boolean etat);
-      void setLogState(boolean etat);
-      void setLaunchcontrolState(boolean etat);
-      void setWetdryState(boolean etat);
-      void setlogRaceCapture(boolean etat);
+      void Transmit(boolean homing, boolean neutre, boolean logDta, boolean TCState, boolean LCState, boolean WDState);
 };
 
 
