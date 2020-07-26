@@ -10,9 +10,7 @@
 
  
     @section  HISTORY
-    v0.3 - 13/02/2019 Transmit, and attributs added
-    V0.2 - 01/11/2018 
-    v0.1 - 21/11/2018 First release ()
+    v0.1 - 25/07/2020 redaction
 */
 /**************************************************************************/
 
@@ -35,32 +33,34 @@ class can_interface
     private: //Trouver un moyen de rajouter tmsg et rmsg __ARS
       struct CAN_message_t tmsg;
       struct CAN_message_t rmsg;
-      boolean homingState;
-      boolean neutralState;
-      int RPM;
       long unsigned int R_ID_Mask;
       
+  public:
+        float Lambda;
+        float Kph;
+        float Volts;
+        float FuelConHR;
+        float AdvanceDeg;
+        float Inject;
+        float FuelConKM;
+        float CamAdv;
+        float CamTarg;
+        float CamPWM;
+        float waterTemp;
+        int gear;
+        int errorMotored;
+        bool auto_mode;
+        int RPM;
+        float throttle;
+        float plenum;
+        float oilPressure;
   
-      boolean logState;
-      boolean tractionControlState;
-      boolean launchcontrolState;
-      boolean wetdryState;    
-   
-    
-
-private:
-    void Data_MAJ();
-public:
-    can_interface();
-    void Receive();
-    void Transmit(int gear, int error, boolean Auto);
-    boolean getHomingState();
-    boolean getNeutralState();
-    int getRPM();
-    boolean getTractionState();
-    boolean getLogState();
-    boolean getLaunchcontrolState();
-    boolean getWetdryState();
+  private:
+      void Data_MAJ();
+  public:
+      can_interface();
+      void Receive();
+      void Transmit(boolean homing, boolean neutre, boolean logDta, boolean TCState, boolean LCState, boolean WDState);
 };
 
 
