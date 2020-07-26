@@ -38,13 +38,13 @@ int engagedPosition; // Contain what motor position is currently engaged
 int wantedPosition;// Contain the motor position wanted so the speed rapport of the bike
 const bool motorCommand[9][4] ={ {0,0,0,0}, //motorCommand[0] = Clear error and Stop
                                  {0,0,0,1}, //motorCommand[1] = Start Homing
-                                 {0,0,1,0}, //motorCommand[2] = Position 1 = Neutral gear
-                                 {0,0,1,1}, //motorCommand[3] = Position 2 = Gear 1
-                                 {0,1,0,0}, //motorCommand[4] = Position 3 = Gear 2
-                                 {0,1,0,1}, //motorCommand[5] = Position 4 = Gear 3
-                                 {0,1,1,0}, //motorCommand[6] = Position 5 = Gear 4
-                                 {0,1,1,1}, //motorCommand[7] = Position 6 = Gear 5
-                                 {1,0,0,0}};//motorCommand[7] = Position 7 = Gear 6
+                                 {0,0,1,0}, //motorCommand[2] = Position 2 = Neutral gear
+                                 {0,0,1,1}, //motorCommand[3] = Position 3 = Gear 1
+                                 {0,1,0,0}, //motorCommand[4] = Position 4 = Gear 2
+                                 {0,1,0,1}, //motorCommand[5] = Position 5 = Gear 3
+                                 {0,1,1,0}, //motorCommand[6] = Position 6 = Gear 4
+                                 {0,1,1,1}, //motorCommand[7] = Position 7 = Gear 5
+                                 {1,0,0,0}};//motorCommand[8] = Position 8 = Gear 6
 bool outMotor1; //Info return by the motor
 bool outMotor2;//Info return by the motor
 const int neutreCommand = 2;
@@ -59,7 +59,9 @@ const int DecreaseDelay=20; //Delay to let the time to the shiftcut to do his jo
 bool error;
 
 //DTA com
-const int valAnalog[] = {0, 0, 43, 77, 110, 143, 176,209}; //voltage to send to the dta for each gear engaged
+const int valAnalog[] = {0, 36, 72, 108, 144, 180, 216,256}; //voltage to send to the dta for each gear engaged
+
+//0.45,  0.93, 1.4
 
 //Auto
 bool Auto; // if true we are in auto mode
@@ -139,6 +141,8 @@ void setup()
          outMotor2 = digitalRead(motorState2Pin);
     }
     engagedPosition = wantedPosition; 
+    Serial.println("setup ok");
+    Serial.println(engagedPosition);
 }
 
 void loop() 
@@ -202,7 +206,8 @@ void loop()
       error=0; //If we are not in neutral we can't check and if we are in neutral and the switch is down it's OK
   }
   //DTA transmission 
-  analogWrite(gearPotPin,valAnalog[engagedPosition-2]); // We send to the DTA the engaged gear with an analogique signal
+  if (engagedPosition>=2)
+    analogWrite(gearPotPin,valAnalog[engagedPosition-2]); // We send to the DTA the engaged gear with an analogique signal
 }
 
 void move()
@@ -243,6 +248,7 @@ void move()
 void Increase() 
 {
   static unsigned long T_Increase = 0;
+  Serial.println("Increase interrupt");
   if ((millis() - T_Increase) > AntiReboundDelay)
   {
     Auto = false;
@@ -263,8 +269,12 @@ void Increase()
       T_Increase = millis();
      }
      if (wantedPosition!=engagedPosition){
-    digitalWrite(shiftCutPin, LOW);//Close the injection
-    delay(IncreaseDelay);//Delay to let time for the motor
+      digitalWrite(shiftCutPin, LOW);//Close the injection
+      delay(IncreaseDelay);//Delay to let time for the motor
+      Serial.print("Position engagée : ");
+      Serial.println(engagedPosition);
+      Serial.print("Position voulue : ");
+      Serial.println(wantedPosition);
     move();
      }
   }
@@ -273,7 +283,7 @@ void Increase()
 void Decrease() 
 {
   static unsigned long T_Decrease = 0;
-
+  Serial.println("Decrease interrupt");
   if ((millis() - T_Decrease) > AntiReboundDelay)
   {
     T_Decrease = millis();
