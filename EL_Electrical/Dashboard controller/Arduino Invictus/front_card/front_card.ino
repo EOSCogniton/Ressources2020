@@ -35,7 +35,7 @@ float dt=0.05;
 int min1Rpm=11500;
 int min2Rpm=12000;
 
-boolean homing, neutre,log_DTA, TC_control, launch_control, Wet_ON;
+int homing, neutre,log_DTA, TC_control, launch_control, Wet_ON;
 
 //Initialization of CANBUS
 can_interface CAN;
@@ -46,13 +46,25 @@ void Can_Send();
 void setRPMShiftLight(int RPM);
 
 void setup() {
+  //définition des entrées-sorties
+  pinMode(Neutre_button,INPUT_PULLUP);
+  pinMode(Homing_button,INPUT_PULLUP);
+  pinMode(LaunchControl_button,INPUT_PULLUP);
+  pinMode(WD_Switch,INPUT_PULLUP);
+  pinMode(TC_Switch,INPUT_PULLUP);
+  pinMode(Log_switch,INPUT_PULLUP);
+  pinMode(RED_SHIFT_PIN,OUTPUT);
+  pinMode(BLUE_SHIFT_PIN,OUTPUT);
+  
+  pinMode(13,OUTPUT);
+  digitalWrite(13,HIGH);
   //Initialisation of the variables used in the program
-  homing=false;
-  neutre=false;
-  log_DTA=false;
-  TC_control=false;
-  launch_control=false;
-  Wet_ON=false;
+  homing=1;
+  neutre=1;
+  log_DTA=1;
+  TC_control=1;
+  launch_control=1;
+  Wet_ON=1;
   
   //nvvalue is for the new value of value
   //which is compared to its prec value, ancvalue
@@ -69,8 +81,7 @@ void setup() {
   
   Serial2.begin(9600);
   Serial.begin(9600);
-  pinMode(RED_SHIFT_PIN,OUTPUT);
-  pinMode(BLUE_SHIFT_PIN,OUTPUT);
+
   
   //Start display
   //Puts on the lights for 2 seconds and displays welcome page on screen
@@ -95,13 +106,38 @@ void setup() {
 
 void loop() {
   CAN.Receive();
-  homing=digitalRead(Homing_button)*true;
-  neutre=digitalRead(Neutre_button)*true;
-  log_DTA=digitalRead(Log_switch)*true;
-  TC_control=digitalRead(TC_Switch)*true;
-  launch_control=digitalRead(LaunchControl_button)*true;
-  Wet_ON=digitalRead(WD_Switch)*true;
+  homing=digitalRead(Homing_button);
+  neutre=digitalRead(Neutre_button);
+  log_DTA=digitalRead(Log_switch);
+  TC_control=digitalRead(TC_Switch);
+  launch_control=digitalRead(LaunchControl_button);
+  Wet_ON=digitalRead(WD_Switch);
 
+  if ( !homing)
+  {
+    Serial.println("appui homing");
+  }
+  if ( !neutre)
+  {
+    Serial.println("appui neutre");
+  }
+  if(!log_DTA)
+  {
+    Serial.println("log dta activé");
+  }
+  if(!TC_control)
+  {
+    Serial.println("TC_control activé");
+  }
+  if(!launch_control)
+  {
+    Serial.println("launch_control activé");
+  }
+  if(!Wet_ON)
+  {
+    Serial.println("Wet_ON activé");
+  }
+  
   //Shift light :on allume en fonction des rpms pour savoir si on change de vitesse
   setRPMShiftLight(CAN.RPM);
   
