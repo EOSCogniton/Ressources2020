@@ -16,7 +16,7 @@
 #include "can_interface_mcp.h"
 
 // Set CS to pin chipSelect (projectconfig.h) to object CAN0 (class MCP_CAN) 
-MCP_CAN CAN0(10); 
+ MCP_CAN CAN0(10);
 
 /**************************************************************************/
 /*!
@@ -30,21 +30,6 @@ MCP_CAN CAN0(10);
 can_interface::can_interface()
 {   
     Len = 0;
-  
-    // Initialize MCP2515 running at 16MHz with a baudrate of 1000kb/s and the masks and filters disabled
-    if(CAN0.begin(MCP_ANY, CAN_1000KBPS, MCP_16MHZ) == CAN_OK){
-        Serial.println("Init Successfully!");
-        digitalWrite(13,HIGH);
-    }
-    else{
-        Serial.println("Init Failure");
-    }
-
-    // Set operation mode to normal so the MCP2515 sends acks to received data
-    CAN0.setMode(MCP_NORMAL);                  
-
-    // Configuring pin for /INT input
-    pinMode(CAN0_INT, INPUT);   
 
    // Initialisation of each attribut
    homingState = false;
@@ -100,20 +85,22 @@ boolean can_interface::getWetdryState()
 
 void can_interface::Recieve()
 {
-    Serial.print("\n");
+    //Serial.print("\n");
     // Read data: Len = data length, Data = data byte(s)
-    CAN0.readMsgBuf(&R_ID_Mask, &Len, Data);      
-
-    // Determine if R_ID_Mask is standard (11 bits) or extended (29 bits)
-    if((R_ID_Mask & 0x80000000) == 0x80000000){
-        Serial.print("\n");
-        Serial.print("Extended");
-        R_ID=(R_ID_Mask & 0x0000FFFF);
-        Data_MAJ();
-    }
-    else{
-        Serial.print("\n");
-        Serial.print("Standard");
+    if(!digitalRead(CAN0_INT))                         // If CAN0_INT pin is low, read receive buffer
+    {
+      CAN0.readMsgBuf(&R_ID_Mask, &Len, Data);      
+      // Determine if R_ID_Mask is standard (11 bits) or extended (29 bits)
+      if((R_ID_Mask & 0x80000000) == 0x80000000){
+          Serial.print("\n");
+          Serial.print("Extended");
+          R_ID=(R_ID_Mask & 0x0000FFFF);
+          Data_MAJ();
+      }
+      else{
+          //Serial.print("\n");
+          //Serial.print("Standard");
+      }
     }
 }
 
@@ -125,9 +112,10 @@ void can_interface::Recieve()
 /**************************************************************************/
 void can_interface::Data_MAJ()
 {   
-    Serial.print("\n");
+    //Serial.print("\n");
+    //Serial.println(R_ID);
     if(R_ID==0x1001){ // Homing neutre launch wetdry traction log
-        if (Data[0]==17){
+        if (Data[0]==1){
             // Le bouton n'est pas appuyé (there is a pullup resistor on this button)
             homingState = false;
             Serial.println("Homing non");       
@@ -137,7 +125,7 @@ void can_interface::Data_MAJ()
             Serial.println("Homing oui");
         }
 
-        if (Data[1]==17){
+        if (Data[1]==1){
             // Le bouton n'est pas appuyé
             neutralState = false;
             Serial.println("neutre non");
@@ -146,7 +134,7 @@ void can_interface::Data_MAJ()
             neutralState = true;
             Serial.println("neutre oui");
         }
-        if (Data[2]==17){
+        if (Data[2]==1){
             // Le bouton n'est pas appuyé
             launchcontrolState = false;
             Serial.println("LC non");
@@ -155,7 +143,7 @@ void can_interface::Data_MAJ()
             launchcontrolState = true;
             Serial.println("LC oui");
         }
-        if (Data[3]==17){
+        if (Data[3]==1){
             // Le bouton n'est pas appuyé
             wetdryState = false;
             Serial.println("Wet non");
@@ -164,7 +152,7 @@ void can_interface::Data_MAJ()
             wetdryState = true;
             Serial.println("Wet oui");
         }
-        if (Data[4]==17){
+        if (Data[4]==1){
             // Le bouton n'est pas appuyé
             tractionControlState = false;
             Serial.println("TC non");
@@ -173,7 +161,7 @@ void can_interface::Data_MAJ()
             tractionControlState = true;
             Serial.println("TC oui");
         }
-        if (Data[5]==17){
+        if (Data[5]==1){
             // Le bouton n'est pas appuyé
             logState = false;
             Serial.println("Log non");
@@ -198,8 +186,23 @@ void can_interface::Data_MAJ()
 */
 /**************************************************************************/
 
-void can_interface::Transmit(int gear, int error, boolean Auto)
+void can_interface::Transmit(int gear, boolean error, boolean Auto)
 {  
+    if (gear<0)
+      gear = 8;
+
+    char msgString[128];
     byte Data_msg[8]={gear, error, Auto, 0x00, 0x00, 0x00, 0x00, 0x00};
-    CAN0.sendMsgBuf(0x1002, 1, 8, Data_msg);
+    /*for(byte i = 0; i<8; i++){
+        sprintf(msgString, " 0x%.2X", Data_msg[i]);
+        Serial.print(msgString);
+      }
+      Serial.println(" ");*/
+    byte sndStat = CAN0.sendMsgBuf(0x1002, 8, Data_msg);
+    /*if(sndStat == CAN_OK){
+      Serial.println("Message Sent Successfully!");
+    } 
+    else {
+      Serial.println("Error Sending Message...");
+    }*/
 }
