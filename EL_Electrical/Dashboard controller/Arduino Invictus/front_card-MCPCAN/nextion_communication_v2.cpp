@@ -91,8 +91,8 @@ extern float dt;
 /**************************************************************************/
 
 void changePage(int page){
-  Serial2.print("page ");
-  Serial2.print(page);
+  Serial1.print("page ");
+  Serial1.print(page);
   nextion_endMessage();
 }
 
@@ -115,14 +115,14 @@ void updateDisplay(int page,char gear,float oilPress, float voltage,int rpm, boo
 
 void setOil(float oilPressure, int RPM){
   //Oil value is sent to Nextion
-  Serial2.print("oil_v.val=");
-  Serial2.print(oilPressure);
+  Serial1.print("oil_v.val=");
+  Serial1.print(oilPressure);
   nextion_endMessage();
   oil_old=oil_new;
   oil_new=oilPressure;
   doil=abs(oil_new-oil_old)/dt;
   if(doil>seuildoil){
-	  Serial2.print("problem.txt=oil");
+	  Serial1.print("problem.txt=oil");
   }
   if(RPM<500){
 	  minOilPress=min2OilPress;
@@ -160,91 +160,91 @@ void setOil(float oilPressure, int RPM){
     precOilBlinking=nvOilBlinking;
     if(nvOilBlinking){
       //Oil logo is diplayed
-      Serial2.print("oil.pic=");
-      Serial2.print(7);
+      Serial1.print("oil.pic=");
+      Serial1.print(7);
       nextion_endMessage();
     }
     else{
       //There is no oil logo displayed
-      Serial2.print("oil.pic=");
-      Serial2.print(5);
+      Serial1.print("oil.pic=");
+      Serial1.print(5);
       nextion_endMessage();
     }
   }
 }
 
 void setGear(char gear){
-  Serial2.print("gear.txt=");
-  Serial2.print("\"");
-  Serial2.print(gear);
-  Serial2.print("\"");
+  Serial1.print("gear.txt=");
+  Serial1.print("\"");
+  Serial1.print(gear);
+  Serial1.print("\"");
   nextion_endMessage();
 }
 
 void setFuel(float fuel){
-	Serial2.print("fuel.val=");
-	Serial2.print(fuel);
+	Serial1.print("fuel.val=");
+	Serial1.print(fuel);
 	nextion_endMessage();
 }
 
 void setWaterTemp(float waterTemp){
   //Water temp value is sent to Nextion
-  Serial2.print("water_temp.val=");
-  Serial2.print(waterTemp);
+  Serial1.print("water_temp.val=");
+  Serial1.print(waterTemp);
   nextion_endMessage();
   if(waterTemp>min1WaterTemp){ //min2WaterTemp=100 and min1WaterTemp=108
     //Water temp is below critical value
-    Serial2.print("water.pic=");
-    Serial2.print(7);
+    Serial1.print("water.pic=");
+    Serial1.print(7);
     nextion_endMessage();
   }
   else{
     //Water temp is not below critical value
     if(waterTemp>min2WaterTemp){ 
       //Water temp can still be dangerous
-      Serial2.print("water.pic=");
-      Serial2.print(8);
+      Serial1.print("water.pic=");
+      Serial1.print(8);
       nextion_endMessage();
     }
     else{
       //Water temp is normal
-      Serial2.print("water.pic=");
-      Serial2.print(5);
+      Serial1.print("water.pic=");
+      Serial1.print(5);
       nextion_endMessage();
     }
   }
 }
 
 void setVoltage(float voltage){
-  Serial2.print("voltage.val=");
-  Serial2.print(voltage);
+  Serial1.print("voltage.val=");
+  Serial1.print(voltage);
   nextion_endMessage();
   if(voltage<min2Voltage){ //10.5V
     //Voltage is below critical value
-    Serial2.print("volt.pic=");
-    Serial2.print(11);
+    Serial1.print("volt.pic=");
+    Serial1.print(11);
     nextion_endMessage();
   }
   else{
     //Voltage is not below critical value
     if(voltage<min1Voltage){ //min=11.2V
       //Voltage can still be dangerous
-      Serial2.print("volt.pic=");
-      Serial2.print(12);
+      Serial1.print("volt.pic=");
+      Serial1.print(12);
       nextion_endMessage();
     }
     else{
       //Voltage is normal
-      Serial2.print("volt.pic=");
-      Serial2.print(5);
+      Serial1.print("volt.pic=");
+      Serial1.print(5);
       nextion_endMessage();
     }
   }
 }
 
 void setRPM(int RPM){
-  Serial2.print("rpm.val=");
-  Serial2.print(RPM);
+  Serial1.print("rpm.val=");
+  Serial1.print(RPM);
   nextion_endMessage();
 }
 
@@ -253,10 +253,10 @@ void setThrottle(float throttle){
   tps_new=throttle;
   dtps=abs(tps_new-tps_old)/dt;
   if(dtps>seuildtps){
-	  Serial2.print("problem.txt=oil");
+	  Serial1.print("problem.txt=oil");
   }
-  Serial2.print("throttle.val=");
-  Serial2.print(throttle);
+  Serial1.print("throttle.val=");
+  Serial1.print(throttle);
   nextion_endMessage();
 }
 
@@ -265,34 +265,34 @@ void setPlenum(float plenum){
   map_new=plenum;
   dmap=abs(map_new-map_old)/dt;
   if(dmap>seuildmap){
-	  Serial2.print("problem.txt=MAP");
+	  Serial1.print("problem.txt=MAP");
   }
-  Serial2.print("plenum.val=");
-  Serial2.print(plenum);
+  Serial1.print("plenum.val=");
+  Serial1.print(plenum);
   nextion_endMessage();
 }
 
 void setLambda(float lambda){
-  Serial2.print("lambda.val=");
-  Serial2.print(lambda);
+  Serial1.print("lambda.val=");
+  Serial1.print(lambda);
   nextion_endMessage();
   lambda_old=lambda_new;
   lambda_new=lambda;
   dlambda=abs(lambda_new-lambda_old)/dt;
   if(dlambda>seuildlambda){
-	  Serial2.print("problem.txt=lambda");
+	  Serial1.print("problem.txt=lambda");
   }
 }
 
 void setRaceCapture(bool raceOn){
   if (raceOn){
-    Serial2.print("racecapt.pic=");
-    Serial2.print(5);
+    Serial1.print("racecapt.pic=");
+    Serial1.print(5);
     nextion_endMessage();
   }
   else{
-    Serial2.print("racecapt.pic=");
-    Serial2.print(4);
+    Serial1.print("racecapt.pic=");
+    Serial1.print(4);
     nextion_endMessage();
   }
 }
@@ -300,25 +300,25 @@ void setRaceCapture(bool raceOn){
 void setLaunch(int page,bool launchControl_active){
   if(launchControl_active){
     //The screen turns green if launch control is active
-    Serial2.print(pageName[page]);
-    Serial2.print(".bco=");
-    Serial2.print(1441);
+    Serial1.print(pageName[page]);
+    Serial1.print(".bco=");
+    Serial1.print(1441);
     nextion_endMessage();
   }
   else{
     //The screen turns black if launch control is inactive
-    Serial2.print(pageName[page]);
-    Serial2.print(".bco=");
-    Serial2.print(0);
+    Serial1.print(pageName[page]);
+    Serial1.print(".bco=");
+    Serial1.print(0);
     nextion_endMessage();
   }
 }
 
 void nextion_endMessage(){
   //This message must be sent to confirm the end of the message
-  Serial2.write(0xff);
-  Serial2.write(0xff);
-  Serial2.write(0xff);
+  Serial1.write(0xff);
+  Serial1.write(0xff);
+  Serial1.write(0xff);
 }
 
 /***************************************************************************

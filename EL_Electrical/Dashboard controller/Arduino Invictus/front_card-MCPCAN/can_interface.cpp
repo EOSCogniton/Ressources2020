@@ -30,21 +30,6 @@ MCP_CAN CAN0(10);
 can_interface::can_interface()
 {   
     Len = 0;
-    // Initialize MCP2515 running at 16MHz with a baudrate of 1000kb/s and the masks and filters disabled
-    if(CAN0.begin(MCP_ANY, CAN_1000KBPS, MCP_16MHZ) == CAN_OK){
-        Serial.println("Init Successfully!");
-        digitalWrite(13,HIGH);
-    }
-    else{
-        Serial.println("Init Failure");
-    }
-
-    // Set operation mode to normal so the MCP2515 sends acks to received data
-    CAN0.setMode(MCP_NORMAL);                  
-
-    // Configuring pin for /INT input
-    pinMode(CAN0_INT, INPUT);   
-
    // Initialisation of each attribut
      Lambda=0;
      Kph=0;
@@ -74,18 +59,23 @@ can_interface::can_interface()
 
 void can_interface::Recieve()
 {
-    Serial.print("Réception: ");
-    // Read data: Len = data length, Data = data byte(s)
-    CAN0.readMsgBuf(&R_ID_Mask, &Len, Data);      
-
-    // Determine if R_ID_Mask is standard (11 bits) or extended (29 bits)
-    if((R_ID_Mask & 0x80000000) == 0x80000000){
-        Serial.println("Extended");
-        R_ID=(R_ID_Mask & 0x0000FFFF);
-        Data_MAJ();
-    }
-    else{
-        Serial.println("Standard");
+    if(!digitalRead(CAN0_INT))  
+      {
+      Serial.print("Réception: ");
+      // Read data: Len = data length, Data = data byte(s)
+      CAN0.readMsgBuf(&R_ID_Mask, &Len, Data);      
+  
+      // Determine if R_ID_Mask is standard (11 bits) or extended (29 bits)
+      if((R_ID_Mask & 0x80000000) == 0x80000000){
+          Serial.println("Extended");
+          R_ID=(R_ID_Mask & 0x0000FFFF);
+          
+      }
+      else{
+          Serial.println("Standard");
+          R_ID=0;
+      }
+      Data_MAJ();
     }
 }
 
@@ -156,19 +146,19 @@ void can_interface::Data_MAJ()
       Serial.print(", ");
       Serial.print(CamPWM);
   }
-  if(R_ID==0x1100){ 
-      Serial.println("id=0x1100, Rear Card");
+  if(R_ID_Mask==0x110){ 
+      Serial.println("id=0x110, Rear Card");
       gear=Data[0];
-      Serial.println("Vitesse : ");
-      Serial.print(gear);
+      Serial.print("Vitesse : ");
+      Serial.println(gear);
   
       errorMotored=Data[1];
-      Serial.println("Errreur motoréducteur : ");
-      Serial.print(errorMotored);
+      Serial.print("Errreur motoréducteur : ");
+      Serial.println(errorMotored);
 
       auto_mode=Data[2]*true;
-      Serial.println("Mode auto : ");
-      Serial.print(auto_mode);
+      Serial.print("Mode auto : ");
+      Serial.println(auto_mode);
   }
   
   
@@ -183,6 +173,19 @@ void can_interface::Data_MAJ()
 
 void can_interface::Transmit(boolean homing, boolean neutre, boolean logDta, boolean TCState, boolean LCState, boolean WDState)
 {  
+    
     byte Data_msg[8]={homing, neutre, logDta, TCState, LCState, WDState, 0x00, 0x00};
-    CAN0.sendMsgBuf(0x1002, 1, 8, Data_msg);
+    /*char msgString[128];
+    for(byte i = 0; i<8; i++){
+        sprintf(msgString, " 0x%.2X", Data_msg[i]);
+        Serial.print(msgString);
+      }
+      Serial.println(" ");*/
+    byte sndStat = CAN0.sendMsgBuf(0x100, 8, Data_msg); //0x1001
+    /*if(sndStat == CAN_OK){
+      Serial.println("Message Sent Successfully!");
+    } 
+    else {
+      Serial.println("Error Sending Message...");
+    }*/
 }

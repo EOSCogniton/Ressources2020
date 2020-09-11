@@ -28,7 +28,6 @@
 
 // Defintion of the pins
 // Set INT to pin intPinCAN (projectconfig.h)
-#define CAN0_INT intPinCAN 
 // Set CS to pin chipSelect (projectconfig.h) to object CAN0 (class MCP_CAN) 
 extern MCP_CAN CAN0; 
 

@@ -74,7 +74,7 @@ int canStable; //When the Teensy power up the can is not very stable and because
 const int Canstabledelay= 30000; //Number of loop before using the CAN
 can_interface CAN;
 IntervalTimer CANTimer;
-unsigned long Can_send_period=500000; //On envoie sur le can toutes les 75ms
+unsigned long Can_send_period=75000; //On envoie sur le can toutes les 75ms
 
 void setup() 
 {   

@@ -89,7 +89,9 @@ void can_interface::Recieve()
     // Read data: Len = data length, Data = data byte(s)
     if(!digitalRead(CAN0_INT))                         // If CAN0_INT pin is low, read receive buffer
     {
-      CAN0.readMsgBuf(&R_ID_Mask, &Len, Data);      
+      Serial.print("Reception, ID = ");
+      CAN0.readMsgBuf(&R_ID_Mask, &Len, Data);  
+      Serial.println(R_ID_Mask); 
       // Determine if R_ID_Mask is standard (11 bits) or extended (29 bits)
       if((R_ID_Mask & 0x80000000) == 0x80000000){
           Serial.print("\n");
@@ -100,7 +102,9 @@ void can_interface::Recieve()
       else{
           //Serial.print("\n");
           //Serial.print("Standard");
+          R_ID=0;
       }
+        Data_MAJ();
     }
 }
 
@@ -114,52 +118,52 @@ void can_interface::Data_MAJ()
 {   
     //Serial.print("\n");
     //Serial.println(R_ID);
-    if(R_ID==0x1001){ // Homing neutre launch wetdry traction log
+    if(R_ID_Mask==0x100){ // Homing neutre launch wetdry traction log
         if (Data[0]==1){
             // Le bouton n'est pas appuyé (there is a pullup resistor on this button)
             homingState = false;
-            Serial.println("Homing non");       
+            Serial.print("Homing :1,  ");       
         }else if (Data[0]==0){
             // le bouton est appuyé
             homingState = true;
-            Serial.println("Homing oui");
+            Serial.print("Homing :0,  ");
         }
 
         if (Data[1]==1){
             // Le bouton n'est pas appuyé
             neutralState = false;
-            Serial.println("neutre non");
+            Serial.print("Neutral : 1,  ");
         }else if (Data[1]==0){
             // le bouton est appuyé
             neutralState = true;
-            Serial.println("neutre oui");
+            Serial.print("Neutral : 0,  ");
         }
         if (Data[2]==1){
             // Le bouton n'est pas appuyé
             launchcontrolState = false;
-            Serial.println("LC non");
+            Serial.print("LC:1,   ");
         }else if (Data[2]==0){
             // le bouton est appuyé
             launchcontrolState = true;
-            Serial.println("LC oui");
+            Serial.print("LC:0,   ");
         }
         if (Data[3]==1){
             // Le bouton n'est pas appuyé
             wetdryState = false;
-            Serial.println("Wet non");
+            Serial.print("Wet:1,   ");
         }else if (Data[3]==0){
             // le bouton est appuyé
             wetdryState = true;
-            Serial.println("Wet oui");
+            Serial.print("Wet:0,  ");
         }
         if (Data[4]==1){
             // Le bouton n'est pas appuyé
             tractionControlState = false;
-            Serial.println("TC non");
+            Serial.print("TC:1,  ");
         }else if (Data[4]==0){
             // le bouton est appuyé
             tractionControlState = true;
-            Serial.println("TC oui");
+            Serial.print("TC:1,  ");
         }
         if (Data[5]==1){
             // Le bouton n'est pas appuyé
@@ -198,7 +202,7 @@ void can_interface::Transmit(int gear, boolean error, boolean Auto)
         Serial.print(msgString);
       }
       Serial.println(" ");*/
-    byte sndStat = CAN0.sendMsgBuf(0x1002, 8, Data_msg);
+    byte sndStat = CAN0.sendMsgBuf(0x110, 8, Data_msg); //0x1100
     /*if(sndStat == CAN_OK){
       Serial.println("Message Sent Successfully!");
     } 

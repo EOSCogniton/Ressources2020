@@ -15,8 +15,7 @@
 #include "can_interface.h"
 #include <stdio.h>
 #include <SPI.h>
-#include <mcp_can.h>
-#include <mcp_can_dfs.h>
+
 
 
 int ancgear;
@@ -45,11 +44,25 @@ int homing, neutre,log_DTA, TC_control, launch_control, Wet_ON;
 can_interface CAN;
 IntervalTimer CANTimer;
 unsigned long Can_send_period=75000; //On envoie sur le can toutes les 75ms
-//header des fonctions
-void Can_Send();
-void setRPMShiftLight(int RPM);
 
 void setup() {
+  //Init CAN
+      // Initialize MCP2515 running at 16MHz with a baudrate of 1000kb/s and the masks and filters disabled
+    if(CAN0.begin(MCP_ANY, CAN_1000KBPS, MCP_16MHZ) == CAN_OK){
+        Serial.println("Init Successfully!");
+        digitalWrite(13,HIGH);
+    }
+    else{
+        Serial.println("Init Failure");
+    }
+
+    // Set operation mode to normal so the MCP2515 sends acks to received data
+    CAN0.setMode(MCP_NORMAL);                  
+
+    // Configuring pin for /INT input
+    pinMode(CAN0_INT, INPUT);  
+
+    
   //définition des entrées-sorties
   pinMode(Neutre_button,INPUT_PULLUP);
   pinMode(Homing_button,INPUT_PULLUP);
@@ -60,8 +73,6 @@ void setup() {
   pinMode(RED_SHIFT_PIN,OUTPUT);
   pinMode(BLUE_SHIFT_PIN,OUTPUT);
   
-  pinMode(13,OUTPUT);
-  digitalWrite(13,HIGH);
   //Initialisation of the variables used in the program
   homing=1;
   neutre=1;
@@ -83,22 +94,22 @@ void setup() {
   ancrace=false;
   nvrace=false;
   
-  Serial2.begin(9600);
   Serial.begin(9600);
+  Serial1.begin(9600);
 
-  
+
   //Start display
   //Puts on the lights for 2 seconds and displays welcome page on screen
-  Serial2.print("page ");
-  Serial2.print(0);
+  Serial1.print("page ");
+  Serial1.print(0);
   nextion_endMessage();
   digitalWrite(BLUE_SHIFT_PIN,HIGH);
   digitalWrite(RED_SHIFT_PIN,HIGH);
   //Voir avec Bruno pour la commande d'affichage lumineux des boutons
   delay(2000);
   //Sets the screen at its work state
-  Serial2.print("page ");
-  Serial2.print(1);
+  Serial1.print("page ");
+  Serial1.print(1);
   nextion_endMessage();
   digitalWrite(BLUE_SHIFT_PIN,LOW);
   digitalWrite(RED_SHIFT_PIN,LOW);
@@ -189,7 +200,7 @@ void setRPMShiftLight(int RPM)
   rpm_new=RPM;
   drpm=abs(rpm_new-rpm_old)/dt;
   if(drpm>seuildrpm){
-    Serial2.print("problem.txt=rpm");
+    Serial1.print("problem.txt=rpm");
   }
   if(RPM<min1Rpm) //min1Rpm=11500; min2Rpm=12000
   {
