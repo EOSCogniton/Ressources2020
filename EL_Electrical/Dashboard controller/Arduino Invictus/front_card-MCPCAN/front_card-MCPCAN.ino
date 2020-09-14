@@ -19,11 +19,10 @@
 
 
 int ancgear;
-int nvgear;
 int nvpage;
 int ancpage;
 boolean changementPage;
-char vitesse[7]={'N','1','2','3','4','5','6'};
+char vitesse[9]={'N','1','2','3','4','5','6','E','H'};
 bool anclaunch;
 bool nvlaunch;
 bool ancrace;
@@ -33,7 +32,7 @@ unsigned long TchgtPage;
 int rpm_old=0;
 int rpm_new=0;
 int drpm=0;
-int seuildrpm=100;
+int seuildrpm=500;
 float dt=0.05;
 int min1Rpm=11500;
 int min2Rpm=12000;
@@ -106,7 +105,7 @@ void setup() {
   digitalWrite(BLUE_SHIFT_PIN,HIGH);
   digitalWrite(RED_SHIFT_PIN,HIGH);
   //Voir avec Bruno pour la commande d'affichage lumineux des boutons
-  delay(2000);
+  delay(1000);
   //Sets the screen at its work state
   Serial1.print("page ");
   Serial1.print(1);
@@ -157,10 +156,11 @@ void loop() {
   setRPMShiftLight(CAN.RPM);
   
   //This part is for a button which swaps between pages
-  changementPage=digitalRead(Chgt_screen_button)*true; //Quand on appuie sur l'écran ou le bouton ( à voir car il n'y a pas de connexion avec le bouton) il faut changer de page;
-  TchgtPage=millis()-TchgtPage;
-  if(changementPage && TchgtPage>500) //On regarde si cela fait plus de 500ms qu'on a voulu changer de page (Permet d'éviter le fait qu'on est plusieurs loop avec changementPage qui reste à 1 alors que c'est le même appui)
+  changementPage=digitalRead(Chgt_screen_button); //Quand on appuie sur l'écran ou le bouton ( à voir car il n'y a pas de connexion avec le bouton) il faut changer de page;
+  
+  if(changementPage && (millis()-TchgtPage)>500) //On regarde si cela fait plus de 500ms qu'on a voulu changer de page (Permet d'éviter le fait qu'on est plusieurs loop avec changementPage qui reste à 1 alors que c'est le même appui)
   {
+    TchgtPage=millis();
     if(ancpage==2)
     {
       nvpage=1;
@@ -171,19 +171,19 @@ void loop() {
     }
     changePage(nvpage);
     ancpage=nvpage;
-    updateDisplay(nvpage,CAN.gear,CAN.oilPressure,CAN.Volts,CAN.RPM,nvlaunch);
+    updateDisplay(nvpage,CAN.gear,CAN.oilPressure,CAN.Volts,CAN.RPM,CAN.LC_state);
   }
   if(CAN.gear!=ancgear){//Changing gear
     ancgear=CAN.gear;
-    setGear(vitesse[nvgear]);
+    setGear(vitesse[CAN.gear]);
   }
   if(nvrace!=ancrace){//Changing race capture activation state
     ancrace=nvrace;
     setRaceCapture(nvrace);
   }
-  if(nvlaunch!=anclaunch){
-    anclaunch=nvlaunch;
-    setLaunch(ancpage,nvlaunch);
+  if(CAN.LC_state!=anclaunch){
+    anclaunch=CAN.LC_state;
+    setLaunch(ancpage,CAN.LC_state);
   }
   setWaterTemp(CAN.waterTemp);
   setVoltage(CAN.Volts);

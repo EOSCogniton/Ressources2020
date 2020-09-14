@@ -146,6 +146,14 @@ void can_interface::Data_MAJ()
       Serial.print(", ");
       Serial.print(CamPWM);
   }
+
+  if(R_ID==0x2007){
+    LC_state=bitRead(Data[6], 6); //read just one bit of the data
+    Serial.print("id=0x2007, LC state : ");
+    Serial.print(LC_state);
+  }
+
+  
   if(R_ID_Mask==0x110){ 
       Serial.println("id=0x110, Rear Card");
       gear=Data[0];
@@ -174,7 +182,7 @@ void can_interface::Data_MAJ()
 void can_interface::Transmit(boolean homing, boolean neutre, boolean logDta, boolean TCState, boolean LCState, boolean WDState)
 {  
     
-    byte Data_msg[8]={homing, neutre, logDta, TCState, LCState, WDState, 0x00, 0x00};
+    byte Data_msg[8]={homing, neutre, LCState, TCState, WDState, logDta, 0x00, 0x00};
     /*char msgString[128];
     for(byte i = 0; i<8; i++){
         sprintf(msgString, " 0x%.2X", Data_msg[i]);

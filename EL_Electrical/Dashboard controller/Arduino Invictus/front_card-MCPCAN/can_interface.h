@@ -60,6 +60,7 @@ class can_interface
         float throttle;
         float plenum;
         float oilPressure;
+        bool LC_state;
 
 private:
     void Data_MAJ();

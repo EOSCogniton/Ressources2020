@@ -268,6 +268,10 @@ void Increase()
 {
   static unsigned long T_Increase = 0;
   Serial.println("Increase interrupt");
+  Serial.print("Out 1 : ");
+  Serial.println(outMotor1);
+  Serial.print("Out 2 : ");
+  Serial.println(outMotor2);
   if ((millis() - T_Increase) > AntiReboundDelay)
   {
     Auto = false;

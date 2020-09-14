@@ -149,22 +149,24 @@ void can_interface::Data_MAJ()
         }
         if (Data[3]==1){
             // Le bouton n'est pas appuyé
+            tractionControlState = false;
+            Serial.print("TC:1,  ");
+        }else if (Data[3]==0){
+            // le bouton est appuyé
+            tractionControlState = true;
+            Serial.print("TC:0,  ");
+        }
+            
+        if (Data[4]==1){
+            // Le bouton n'est pas appuyé
             wetdryState = false;
             Serial.print("Wet:1,   ");
-        }else if (Data[3]==0){
+        }else if (Data[4]==0){
             // le bouton est appuyé
             wetdryState = true;
             Serial.print("Wet:0,  ");
         }
-        if (Data[4]==1){
-            // Le bouton n'est pas appuyé
-            tractionControlState = false;
-            Serial.print("TC:1,  ");
-        }else if (Data[4]==0){
-            // le bouton est appuyé
-            tractionControlState = true;
-            Serial.print("TC:1,  ");
-        }
+
         if (Data[5]==1){
             // Le bouton n'est pas appuyé
             logState = false;
@@ -192,7 +194,9 @@ void can_interface::Data_MAJ()
 
 void can_interface::Transmit(int gear, boolean error, boolean Auto)
 {  
-    if (gear<0)
+    if (gear==-2)
+      gear = 7;
+    else if (gear==-1)
       gear = 8;
 
     char msgString[128];
