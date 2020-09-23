@@ -7,7 +7,7 @@ int gear;
 int nvpage;
 int ancpage;
 int choixPage;
-char vitesse[7]={'N','1','2','3','4','5'};
+char vitesse[6]={'N','1','2','3','4','5'};
 int oilTemp;
 int voltage;
 int launch;
@@ -49,13 +49,14 @@ void loop() {
 //    digitalWrite(BLUE_SHIFT_PIN,LOW);
 //  }
   choixPage=analogRead(POT_PIN);
-  if(choixPage<700){
+  Serial.println(choixPage);
+  if(choixPage<700 && choixPage>500){
     nvpage=3;
   }
-  if(choixPage<500){
+  else if(choixPage<500 && choixPage>300){
     nvpage=2;
   }
-  if(choixPage<300){
+  else if(choixPage<300){
     nvpage=1;
   }
   if(analogRead(GEAR_UP_PIN)>500)

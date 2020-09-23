@@ -26,7 +26,7 @@ void setVoltage(int voltage);
 
 void setRPM(int RPM);
 
-void setLaunch(bool launch_active);
+void setLaunch(bool launch_active, int page=1);
 
 void setRaceCapture(bool RaceOn);
 

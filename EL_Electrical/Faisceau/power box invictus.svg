@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1549.3 841.9" style="enable-background:new 0 0 1549.3 841.9;" xml:space="preserve">
+<style type="text/css">
+	.st0{font-family:'MyriadPro-Regular';}
+	.st1{font-size:17.9267px;}
+	.st2{font-size:23.4347px;}
+	.st3{font-size:22px;}
+	.st4{font-size:16.2625px;}
+	.st5{fill:none;stroke:#1D1D1B;stroke-miterlimit:10;}
+	.st6{fill:#FFFFFF;stroke:#1D1D1B;stroke-miterlimit:10;}
+	.st7{font-size:15.8059px;}
+	.st8{font-size:12.5759px;}
+	.st9{font-size:14.72px;}
+	.st10{font-size:15.3869px;}
+	.st11{font-size:16.5688px;}
+	.st12{fill:none;stroke:#000000;stroke-width:1.6554;}
+	.st13{fill:none;stroke:#000000;stroke-width:1.6894;}
+	.st14{fill:none;stroke:#000000;stroke-width:1.6243;}
+	.st15{fill:none;stroke:#1D1D1B;stroke-width:2;}
+	.st16{font-size:16px;}
+	.st17{fill:#1D1D1B;stroke:#1D1D1B;stroke-width:1.4173;}
+	.st18{fill:none;stroke:#1D1D1B;stroke-width:1.4173;}
+	.st19{font-size:21.3416px;}
+	.st20{fill:#FFED00;}
+	.st21{fill:none;stroke:#FFED00;stroke-width:3;}
+	.st22{fill:#312783;stroke:#312783;stroke-width:2;}
+	.st23{fill:#008D36;stroke:#009640;stroke-width:2;}
+	.st24{fill:none;stroke:#312783;stroke-width:1.5;}
+	.st25{fill:none;stroke:#009640;stroke-width:2;}
+	.st26{fill:#E71D73;stroke:#E71D73;stroke-width:2;}
+	.st27{fill:none;stroke:#E71D73;stroke-width:2;}
+	.st28{font-size:15.3293px;}
+	.st29{fill:#FF0000;}
+	.st30{fill:#E30613;}
+	.st31{fill:#951B81;}
+	.st32{fill:none;stroke:#FF0000;stroke-width:2;}
+	.st33{fill:#1D1D1B;stroke:#1D1D1B;stroke-width:2;stroke-miterlimit:10;}
+	.st34{fill:none;stroke:#951B81;stroke-width:2;stroke-miterlimit:10;}
+	.st35{font-size:18px;}
+	.st36{fill:none;stroke:#E30613;stroke-width:2;stroke-miterlimit:10;}
+	.st37{fill:#FFFFFF;stroke:#1D1D1B;stroke-width:1.5;}
+	.st38{fill:none;stroke:#1D1D1B;stroke-width:2;stroke-miterlimit:10;}
+</style>
+<image style="overflow:visible;" width="638" height="451" xlink:href="../../../../power box.PNG"  transform="matrix(1.1996 0 0 1.2005 753.7186 0)">
+</image>
+<text transform="matrix(1.0255 0 0 1 1202.4141 49.3307)" class="st0 st1">Pompe</text>
+<text transform="matrix(1.0255 0 0 1 1383.4385 44.3312)" class="st0 st1">Ventilateur</text>
+<text transform="matrix(0.7876 0 0 1 1202.4141 147.5597)"><tspan x="0" y="0" class="st0 st2">Shifter+</tspan><tspan x="0" y="28.1" class="st0 st2">Lambda</tspan></text>
+<text transform="matrix(1.0255 0 0 1 1377.4384 147.5597)" class="st0 st3">Injecteur</text>
+<text transform="matrix(0.8884 0 0 1 793.566 90.4328)" class="st0 st4">Ventilo 15A</text>
+<text transform="matrix(0.8884 0 0 1 903.2886 90.4326)" class="st0 st4">Brake light 2A</text>
+<text transform="matrix(0.8884 0 0 1 793.5662 138.6297)" class="st0 st4">Lambda 5A</text>
+<text transform="matrix(0.8883 -1.610724e-02 1.813000e-02 0.9998 915.7438 141.1672)" class="st0 st4">Injecteur 5A</text>
+<text transform="matrix(0.8884 0 0 1 917.4828 186.7554)" class="st0 st4">Motored 15A</text>
+<text transform="matrix(0.8884 0 0 1 780.2749 186.7554)" class="st0 st4">Carte arrière 1A</text>
+<rect x="61" y="36.7" class="st5" width="545" height="124"/>
+<g>
+	<rect x="388" y="81.8" class="st6" width="96.1" height="46.1"/>
+	<text transform="matrix(0.7084 0 0 1 413.1807 110.7773)" class="st0 st7">BSPD 5A</text>
+</g>
+<g>
+	<rect x="291" y="81.8" class="st6" width="97" height="47.4"/>
+	<text transform="matrix(1.2072 0 0 1 307.4795 111.752)" class="st0 st8">MK3 1A</text>
+</g>
+<g>
+	<rect x="67" y="84" class="st6" width="111.2" height="42.9"/>
+	<text transform="matrix(0.8802 0 0 1 85.897 110.2713)" class="st0 st9">Carte avant 1A</text>
+</g>
+<g>
+	<rect x="178.2" y="83" class="st6" width="112.8" height="44.9"/>
+	<text transform="matrix(0.854 0 0 1 197.3804 110.4888)" class="st0 st10">Shutdown 1A</text>
+</g>
+<text transform="matrix(0.9657 0 0 1 914.875 39.3965)" class="st0 st11">Pompe 20A</text>
+<g>
+	<line class="st12" x1="1088.2" y1="407.3" x2="1125.2" y2="407.3"/>
+	<line class="st13" x1="1094.3" y1="413.5" x2="1119" y2="413.5"/>
+	<line class="st14" x1="1100.3" y1="419" x2="1112.1" y2="419"/>
+</g>
+<g>
+	<line class="st15" x1="917.9" y1="266.6" x2="917.9" y2="319.4"/>
+	<text transform="matrix(1 0 0 1 925.0001 279.1898)" class="st0 st16">Pin 4 DTA </text>
+</g>
+<line class="st15" x1="1163.5" y1="316" x2="1110.8" y2="316"/>
+<text transform="matrix(1 0 0 1 1166.0649 297.1898)" class="st0 st16">Pin 3 DTA</text>
+<circle class="st17" cx="917.9" cy="317.4" r="14.2"/>
+<circle class="st17" cx="1112.1" cy="316" r="14.2"/>
+<line class="st18" x1="1163.5" y1="293.1" x2="1163.5" y2="316"/>
+<g>
+	<line class="st15" x1="857.8" y1="588.3" x2="857.8" y2="453.7"/>
+	<text transform="matrix(0.7497 0 0 1 817.0001 588.3074)" class="st0 st19">Timer</text>
+	<line class="st15" x1="857.8" y1="453.7" x2="917.5" y2="409.2"/>
+</g>
+<circle class="st17" cx="917.5" cy="409.2" r="14.2"/>
+<circle class="st20" cx="795.2" cy="361.5" r="14.2"/>
+<circle class="st20" cx="791.2" cy="459.3" r="14.2"/>
+<circle class="st20" cx="981.4" cy="457.3" r="14.2"/>
+<circle class="st20" cx="981.4" cy="352.5" r="14.2"/>
+<line class="st21" x1="803.7" y1="361.4" x2="662.8" y2="361.4"/>
+<polyline class="st21" points="796.9,352.5 856.3,384.1 856.4,429.4 795.7,459.8 842.6,502.6 928.2,503 973.1,459.8 1016.5,428.5 
+	1015.5,385.1 974.3,353.3 "/>
+<circle class="st22" cx="791.2" cy="311.8" r="14.2"/>
+<circle class="st22" cx="1419.4" cy="355.6" r="14.2"/>
+<circle class="st23" cx="1290.8" cy="310.8" r="14.2"/>
+<circle class="st23" cx="981.4" cy="311.8" r="14.2"/>
+<line class="st24" x1="791.2" y1="311.8" x2="828.6" y2="261.6"/>
+<line class="st25" x1="1281.3" y1="270.2" x2="995.5" y2="270.2"/>
+<line class="st25" x1="995.5" y1="270.2" x2="981.4" y2="311.8"/>
+<line class="st25" x1="1281.3" y1="270.2" x2="1290.8" y2="310.8"/>
+<line class="st24" x1="828.6" y1="261.6" x2="1412" y2="261.6"/>
+<circle class="st26" cx="794.6" cy="408.4" r="14.2"/>
+<circle class="st26" cx="1297.7" cy="407.3" r="14.2"/>
+<line class="st27" x1="732.8" y1="507" x2="756.5" y2="521.3"/>
+<line class="st27" x1="1231.6" y1="517" x2="753.9" y2="521"/>
+<line class="st27" x1="1229.5" y1="407.3" x2="1231.6" y2="517"/>
+<line class="st27" x1="733.2" y1="508" x2="732.6" y2="430"/>
+<line class="st27" x1="732.6" y1="430" x2="794.6" y2="408.4"/>
+<line class="st27" x1="1297.7" y1="407.3" x2="1229.5" y2="407.3"/>
+<g>
+	<rect x="501" y="82.5" class="st6" width="96.7" height="44.7"/>
+	<text transform="matrix(0.7346 0 0 1 526.3029 110.5984)" class="st0 st28">dta 5A</text>
+</g>
+<circle class="st29" cx="1479.6" cy="361.5" r="14.2"/>
+<circle class="st30" cx="984.7" cy="407.5" r="14.2"/>
+<circle class="st31" cx="1482.9" cy="413.5" r="14.2"/>
+<circle class="st31" cx="1485.6" cy="460.5" r="14.2"/>
+<circle class="st31" cx="1359.6" cy="460.5" r="14.2"/>
+<circle class="st29" cx="1357.5" cy="405.8" r="14.2"/>
+<circle class="st29" cx="1357.5" cy="354.2" r="14.2"/>
+<circle class="st29" cx="1357.5" cy="304.5" r="14.2"/>
+<line class="st32" x1="1042" y1="462.1" x2="1042" y2="612"/>
+<text transform="matrix(1 0 0 1 977 635)" class="st0 st3">12V master switch</text>
+<g>
+	<line class="st33" x1="904.2" y1="347.7" x2="931.3" y2="371.4"/>
+	<line class="st33" x1="904.2" y1="373.6" x2="931.3" y2="347"/>
+</g>
+<g>
+	<line class="st33" x1="905.2" y1="444.7" x2="932.3" y2="468.4"/>
+	<line class="st33" x1="905.2" y1="470.6" x2="932.3" y2="444"/>
+</g>
+<line class="st15" x1="918.9" y1="589.3" x2="918.9" y2="454.7"/>
+<text transform="matrix(1 0 0 1 893 608.0493)" class="st0 st3">Injecteurs</text>
+<line class="st15" x1="917.9" y1="359.5" x2="857.8" y2="308.7"/>
+<line class="st15" x1="857.8" y1="270.2" x2="857.8" y2="308.7"/>
+<line class="st15" x1="857.8" y1="270.2" x2="744.6" y2="270.2"/>
+<text transform="matrix(1 0 0 1 640 270.19)" class="st0 st3">Ventilateur</text>
+<circle class="st31" cx="1106.7" cy="459.1" r="14.2"/>
+<line class="st34" x1="1106.7" y1="459.1" x2="1166.1" y2="503"/>
+<line class="st34" x1="1166.1" y1="503" x2="1524.3" y2="503"/>
+<line class="st34" x1="1524.3" y1="503" x2="1524.3" y2="431.5"/>
+<line class="st34" x1="1479.2" y1="414.6" x2="1524.3" y2="431.5"/>
+<line class="st34" x1="1359.6" y1="503" x2="1359.6" y2="462.1"/>
+<line class="st34" x1="1485.6" y1="503" x2="1485.6" y2="459.1"/>
+<g>
+	<line class="st33" x1="1405.9" y1="395.1" x2="1432.9" y2="418.8"/>
+	<line class="st33" x1="1405.9" y1="421" x2="1432.9" y2="394.4"/>
+</g>
+<g>
+	<line class="st33" x1="1402.2" y1="446.1" x2="1429.2" y2="469.8"/>
+	<line class="st33" x1="1402.2" y1="471.9" x2="1429.2" y2="445.4"/>
+</g>
+<g>
+	<line class="st33" x1="1282.1" y1="447.9" x2="1309.1" y2="471.6"/>
+	<line class="st33" x1="1282.1" y1="473.8" x2="1309.1" y2="447.2"/>
+</g>
+<line class="st15" x1="1295.6" y1="553.8" x2="1295.6" y2="454.7"/>
+<line class="st15" x1="1415.5" y1="560" x2="1415.5" y2="454.7"/>
+<line class="st15" x1="1421.9" y1="409.2" x2="1442" y2="446.3"/>
+<line class="st15" x1="1443" y1="565.7" x2="1442" y2="446.3"/>
+<text transform="matrix(1 0 0 1 1255.3217 569.0009)" class="st0 st35">Motored</text>
+<text transform="matrix(1 0 0 1 1371.6523 557)"><tspan x="0" y="0" class="st0 st35">Carte </tspan><tspan x="0" y="21.6" class="st0 st35">arrière</tspan></text>
+<text transform="matrix(1 0 0 1 1449 565.7041)" class="st0 st35">Lambda</text>
+<g>
+	<line class="st33" x1="1281" y1="345.7" x2="1305.7" y2="369.4"/>
+	<line class="st33" x1="1281" y1="371.6" x2="1305.7" y2="345"/>
+</g>
+<line class="st15" x1="1240" y1="357.6" x2="1293.2" y2="357.8"/>
+<text transform="matrix(1 0 0 1 1182 352.5273)" class="st0 st35">Brake light</text>
+<text transform="matrix(1 0 0 1 611 352.5273)" class="st0 st35">Shutdown circuit</text>
+<line class="st36" x1="1042.9" y1="461.2" x2="991.8" y2="410.1"/>
+<line class="st36" x1="1041.2" y1="375.7" x2="1041.9" y2="461.2"/>
+<line class="st36" x1="1041.2" y1="375.7" x2="1317" y2="375.7"/>
+<line class="st36" x1="1317" y1="375.7" x2="1357.5" y2="304.5"/>
+<line class="st36" x1="1359.6" y1="355.6" x2="1317" y2="375.7"/>
+<line class="st36" x1="1357.5" y1="409.2" x2="1317" y2="375.7"/>
+<line class="st36" x1="1317" y1="375.7" x2="1433.6" y2="375.7"/>
+<line class="st36" x1="1479.6" y1="365.7" x2="1433.6" y2="375.7"/>
+<rect x="763.6" y="8.9" class="st37" width="62.4" height="48.2"/>
+<rect x="825.6" y="8.9" class="st37" width="62.4" height="48.2"/>
+<rect x="1449.4" y="284.6" class="st37" width="62.4" height="48.2"/>
+<rect x="1386.5" y="284.6" class="st37" width="62.4" height="48.2"/>
+<line class="st24" x1="1419.4" y1="355.6" x2="1412" y2="261.7"/>
+<g>
+	<line class="st33" x1="1093.8" y1="348.8" x2="1120.8" y2="372.5"/>
+	<line class="st33" x1="1093.8" y1="374.7" x2="1120.8" y2="348.1"/>
+</g>
+<line class="st38" x1="1106.2" y1="360.7" x2="1065" y2="361"/>
+<text transform="matrix(1 0 0 1 1028 352.5273)" class="st0 st35">Pompe</text>
+</svg>

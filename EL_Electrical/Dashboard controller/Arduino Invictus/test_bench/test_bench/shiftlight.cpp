@@ -13,8 +13,8 @@
 //    Functions
 /**************************************************************************/
 
-void setShiftLight(int Pin,bool enable){
-  if(enable){
+void setShiftLight(int Pin,bool allum){
+  if(allum){
     digitalWrite(Pin,HIGH);
   }
   else{
