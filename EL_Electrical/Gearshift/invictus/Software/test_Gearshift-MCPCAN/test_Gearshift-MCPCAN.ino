@@ -78,6 +78,22 @@ unsigned long Can_send_period=75000; //On envoie sur le can toutes les 75ms
 
 void setup() 
 {   
+  //Init CAN
+      // Initialize MCP2515 running at 16MHz with a baudrate of 1000kb/s and the masks and filters disabled
+    if(CAN0.begin(MCP_ANY, CAN_1000KBPS, MCP_16MHZ) == CAN_OK){
+        Serial.println("Init Successfully!");
+        digitalWrite(13,HIGH);
+    }
+    else{
+        Serial.println("Init Failure");
+    }
+
+    // Set operation mode to normal so the MCP2515 sends acks to received data
+    CAN0.setMode(MCP_NORMAL);                  
+
+    // Configuring pin for /INT input
+    pinMode(CAN0_INT, INPUT);   
+    
   //Initialization of the variables
   //Motor
   engagedPosition = 0; // We don't know but this normaly not the homming position
@@ -105,7 +121,7 @@ void setup()
   pinMode(wetDryPin,OUTPUT); 
   pinMode(logDtaPin,OUTPUT); 
   pinMode(shiftCutPin, OUTPUT);
-  pinMode(LedPin, OUTPUT);
+  //pinMode(LedPin, OUTPUT);
   pinMode(gearPotPin, OUTPUT);
   //Neutral sensor
   pinMode(neutralSensorPin, INPUT_PULLUP); 
@@ -113,6 +129,9 @@ void setup()
   //Define interruptions
   attachInterrupt(paletteIncreasePin, Increase, RISING);
   attachInterrupt(paletteDecreasePin, Decrease, RISING);
+
+  CAN.Transmit(engagedPosition-2, error,Auto);
+  
   //Define Timer
   CANTimer.begin(Send_CAN, Can_send_period); //each period of the Timer the function Send_Can is launched
 
@@ -125,15 +144,15 @@ void setup()
   digitalWrite(motorInput4Pin, motorCommand[wantedPosition][3]);
   //DTA
   digitalWrite(shiftCutPin, HIGH);
-  digitalWrite(LedPin,LOW);
+  //digitalWrite(LedPin,LOW);
   digitalWrite(tractionControlPin,LOW); 
   digitalWrite(launchControlPin,LOW); 
   digitalWrite(wetDryPin,LOW); 
   digitalWrite(logDtaPin,LOW); 
   analogWrite(gearPotPin,0); 
-
+  
   //We wait the end of the homming to start the void loop
-  outMotor1 = digitalRead(motorState1Pin);
+  /*outMotor1 = digitalRead(motorState1Pin);
   outMotor2 = digitalRead(motorState2Pin);
   while (!PositionReachedOrHomingDone(outMotor1,outMotor2))
     {
@@ -142,7 +161,7 @@ void setup()
     }
     engagedPosition = wantedPosition; 
     Serial.println("setup ok");
-    Serial.println(engagedPosition);
+    Serial.println(engagedPosition);*/
 }
 
 void loop() 
@@ -150,7 +169,7 @@ void loop()
   //MAJ of attributs by receiving the last datas
   CAN.Recieve();
   canStable++;
-  canStable = min(canStable,Canstabledelay+100); //To be sure that the canStable variable will not exceed Arduino limite and go back to 0
+  canStable = min(canStable,Canstabledelay+1); //To be sure that the canStable variable will not exceed Arduino limite and go back to 0
 
   if(canStable > Canstabledelay) //If the CAN is stable then the info which are on it can be consider as reliable
   {
@@ -249,6 +268,10 @@ void Increase()
 {
   static unsigned long T_Increase = 0;
   Serial.println("Increase interrupt");
+  Serial.print("Out 1 : ");
+  Serial.println(outMotor1);
+  Serial.print("Out 2 : ");
+  Serial.println(outMotor2);
   if ((millis() - T_Increase) > AntiReboundDelay)
   {
     Auto = false;

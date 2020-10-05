@@ -40,7 +40,7 @@ const int motorInput3Pin = 21;
 const int motorInput4Pin = 20;
 const int neutralSensorPin = 19;
 const int gearPotPin = A14;
-const int intPinCAN=2;
+const int CAN0_INT=2;
 #endif  /* inclusion guards - INC_PROJECTCONFIG_H */ 
 
 // SIZER, Ben. Organizing Code Files in C and C++.  

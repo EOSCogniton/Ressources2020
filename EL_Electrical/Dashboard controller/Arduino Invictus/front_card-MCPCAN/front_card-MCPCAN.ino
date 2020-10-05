@@ -15,16 +15,14 @@
 #include "can_interface.h"
 #include <stdio.h>
 #include <SPI.h>
-#include <mcp_can.h>
-#include <mcp_can_dfs.h>
+
 
 
 int ancgear;
-int nvgear;
 int nvpage;
 int ancpage;
 boolean changementPage;
-char vitesse[7]={'N','1','2','3','4','5','6'};
+char vitesse[9]={'N','1','2','3','4','5','6','E','H'};
 bool anclaunch;
 bool nvlaunch;
 bool ancrace;
@@ -34,7 +32,7 @@ unsigned long TchgtPage;
 int rpm_old=0;
 int rpm_new=0;
 int drpm=0;
-int seuildrpm=100;
+int seuildrpm=500;
 float dt=0.05;
 int min1Rpm=11500;
 int min2Rpm=12000;
@@ -45,11 +43,25 @@ int homing, neutre,log_DTA, TC_control, launch_control, Wet_ON;
 can_interface CAN;
 IntervalTimer CANTimer;
 unsigned long Can_send_period=75000; //On envoie sur le can toutes les 75ms
-//header des fonctions
-void Can_Send();
-void setRPMShiftLight(int RPM);
 
 void setup() {
+  //Init CAN
+      // Initialize MCP2515 running at 16MHz with a baudrate of 1000kb/s and the masks and filters disabled
+    if(CAN0.begin(MCP_ANY, CAN_1000KBPS, MCP_16MHZ) == CAN_OK){
+        Serial.println("Init Successfully!");
+        digitalWrite(13,HIGH);
+    }
+    else{
+        Serial.println("Init Failure");
+    }
+
+    // Set operation mode to normal so the MCP2515 sends acks to received data
+    CAN0.setMode(MCP_NORMAL);                  
+
+    // Configuring pin for /INT input
+    pinMode(CAN0_INT, INPUT);  
+
+    
   //définition des entrées-sorties
   pinMode(Neutre_button,INPUT_PULLUP);
   pinMode(Homing_button,INPUT_PULLUP);
@@ -60,8 +72,6 @@ void setup() {
   pinMode(RED_SHIFT_PIN,OUTPUT);
   pinMode(BLUE_SHIFT_PIN,OUTPUT);
   
-  pinMode(13,OUTPUT);
-  digitalWrite(13,HIGH);
   //Initialisation of the variables used in the program
   homing=1;
   neutre=1;
@@ -83,22 +93,22 @@ void setup() {
   ancrace=false;
   nvrace=false;
   
-  Serial2.begin(9600);
   Serial.begin(9600);
+  Serial1.begin(9600);
 
-  
+
   //Start display
   //Puts on the lights for 2 seconds and displays welcome page on screen
-  Serial2.print("page ");
-  Serial2.print(0);
+  Serial1.print("page ");
+  Serial1.print(0);
   nextion_endMessage();
   digitalWrite(BLUE_SHIFT_PIN,HIGH);
   digitalWrite(RED_SHIFT_PIN,HIGH);
   //Voir avec Bruno pour la commande d'affichage lumineux des boutons
-  delay(2000);
+  delay(1000);
   //Sets the screen at its work state
-  Serial2.print("page ");
-  Serial2.print(1);
+  Serial1.print("page ");
+  Serial1.print(1);
   nextion_endMessage();
   digitalWrite(BLUE_SHIFT_PIN,LOW);
   digitalWrite(RED_SHIFT_PIN,LOW);
@@ -146,10 +156,11 @@ void loop() {
   setRPMShiftLight(CAN.RPM);
   
   //This part is for a button which swaps between pages
-  changementPage=digitalRead(Chgt_screen_button)*true; //Quand on appuie sur l'écran ou le bouton ( à voir car il n'y a pas de connexion avec le bouton) il faut changer de page;
-  TchgtPage=millis()-TchgtPage;
-  if(changementPage && TchgtPage>500) //On regarde si cela fait plus de 500ms qu'on a voulu changer de page (Permet d'éviter le fait qu'on est plusieurs loop avec changementPage qui reste à 1 alors que c'est le même appui)
+  changementPage=digitalRead(Chgt_screen_button); //Quand on appuie sur l'écran ou le bouton ( à voir car il n'y a pas de connexion avec le bouton) il faut changer de page;
+  
+  if(changementPage && (millis()-TchgtPage)>500) //On regarde si cela fait plus de 500ms qu'on a voulu changer de page (Permet d'éviter le fait qu'on est plusieurs loop avec changementPage qui reste à 1 alors que c'est le même appui)
   {
+    TchgtPage=millis();
     if(ancpage==2)
     {
       nvpage=1;
@@ -160,19 +171,19 @@ void loop() {
     }
     changePage(nvpage);
     ancpage=nvpage;
-    updateDisplay(nvpage,CAN.gear,CAN.oilPressure,CAN.Volts,CAN.RPM,nvlaunch);
+    updateDisplay(nvpage,CAN.gear,CAN.oilPressure,CAN.Volts,CAN.RPM,CAN.LC_state);
   }
   if(CAN.gear!=ancgear){//Changing gear
     ancgear=CAN.gear;
-    setGear(vitesse[nvgear]);
+    setGear(vitesse[CAN.gear]);
   }
   if(nvrace!=ancrace){//Changing race capture activation state
     ancrace=nvrace;
     setRaceCapture(nvrace);
   }
-  if(nvlaunch!=anclaunch){
-    anclaunch=nvlaunch;
-    setLaunch(ancpage,nvlaunch);
+  if(CAN.LC_state!=anclaunch){
+    anclaunch=CAN.LC_state;
+    setLaunch(ancpage,CAN.LC_state);
   }
   setWaterTemp(CAN.waterTemp);
   setVoltage(CAN.Volts);
@@ -189,7 +200,7 @@ void setRPMShiftLight(int RPM)
   rpm_new=RPM;
   drpm=abs(rpm_new-rpm_old)/dt;
   if(drpm>seuildrpm){
-    Serial2.print("problem.txt=rpm");
+    Serial1.print("problem.txt=rpm");
   }
   if(RPM<min1Rpm) //min1Rpm=11500; min2Rpm=12000
   {

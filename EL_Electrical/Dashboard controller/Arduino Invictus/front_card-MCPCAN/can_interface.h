@@ -28,40 +28,49 @@
 
 // Defintion of the pins
 // Set INT to pin intPinCAN (projectconfig.h)
-#define CAN0_INT intPinCAN 
 // Set CS to pin chipSelect (projectconfig.h) to object CAN0 (class MCP_CAN) 
 extern MCP_CAN CAN0; 
 
 class can_interface
 {
     private:
-      //MCP_CAN CAN0(10); 
-      boolean homingState;
-      boolean neutralState;
-      int RPM;
-      long unsigned int R_ID_Mask;
-      long unsigned int R_ID;
-      unsigned char Data[8];
-      // Recieve variables init
-      unsigned char Len; 
-      boolean logState;
-      boolean tractionControlState;
-      boolean launchcontrolState;
-      boolean wetdryState;
-    
+    //MCP_CAN CAN0(10); 
+    long unsigned int R_ID_Mask;
+    long unsigned int R_ID;
+    unsigned char Data[8];
+    // Recieve variables init
+    unsigned char Len; 
+
+    public:
+        float Lambda;
+        float Kph;
+        float Volts;
+        float FuelConHR;
+        float AdvanceDeg;
+        float Inject;
+        float FuelConKM;
+        float CamAdv;
+        float CamTarg;
+        float CamPWM;
+        float waterTemp;
+        int gear;
+        int errorMotored;
+        bool auto_mode;
+        int RPM;
+        float throttle;
+        float plenum;
+        float oilPressure;
+        bool LC_state;
+
 private:
     void Data_MAJ();
 public:
     can_interface();
     void Recieve();
-    void Transmit(int gear, int error, boolean Auto);
+    void Transmit(boolean homing, boolean neutre, boolean logDta, boolean TCState, boolean LCState, boolean WDState);
     boolean getHomingState();
-    boolean getNeutralState();
+    boolean getNeutreState();
     int getRPM();
-    boolean getTractionState();
-    boolean getLogState();
-    boolean getLaunchcontrolState();
-    boolean getWetdryState();
 };
 
 
