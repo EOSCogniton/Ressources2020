@@ -54,7 +54,7 @@
 //    Variables
 /**************************************************************************/
 
-String pageName[4]={"start","display_pro","display_diag","display_fun"};
+String pageName[4]={"start","display_pro","display_bench","display_fun"};
 bool oilWarning=false;
 bool nvOilBlinking=false;
 bool precOilBlinking=false;
@@ -161,7 +161,7 @@ void setOil(float oilPressure, int RPM){
     if(nvOilBlinking){
       //Oil logo is diplayed
       Serial1.print("oil.pic=");
-      Serial1.print(7);
+      Serial1.print(9);
       nextion_endMessage();
     }
     else{
@@ -183,15 +183,16 @@ void setGear(char gear){
 
 void setFuel(float fuel){
 	Serial1.print("fuel.val=");
-	Serial1.print(fuel);
+	Serial1.print(int(fuel));
 	nextion_endMessage();
 }
 
-void setWaterTemp(float waterTemp){
+void setWaterTemp(int waterTemp){
   //Water temp value is sent to Nextion
   Serial1.print("water_temp.val=");
-  Serial1.print(waterTemp);
+  Serial1.print(int(waterTemp));
   nextion_endMessage();
+  
   if(waterTemp>min1WaterTemp){ //min2WaterTemp=100 and min1WaterTemp=108
     //Water temp is below critical value
     Serial1.print("water.pic=");
@@ -217,7 +218,7 @@ void setWaterTemp(float waterTemp){
 
 void setVoltage(float voltage){
   Serial1.print("voltage.val=");
-  Serial1.print(voltage);
+  Serial1.print(int(voltage*10));
   nextion_endMessage();
   if(voltage<min2Voltage){ //10.5V
     //Voltage is below critical value
@@ -253,10 +254,10 @@ void setThrottle(float throttle){
   tps_new=throttle;
   dtps=abs(tps_new-tps_old)/dt;
   if(dtps>seuildtps){
-	  Serial1.print("problem.txt=oil");
+	  Serial1.print("problem.txt=TPS");
   }
   Serial1.print("throttle.val=");
-  Serial1.print(throttle);
+  Serial1.print(int(throttle));
   nextion_endMessage();
 }
 
@@ -265,16 +266,16 @@ void setPlenum(float plenum){
   map_new=plenum;
   dmap=abs(map_new-map_old)/dt;
   if(dmap>seuildmap){
-	  Serial1.print("problem.txt=MAP");
+	  Serial1.print("problem.txt= MAP");
   }
   Serial1.print("plenum.val=");
-  Serial1.print(plenum);
+  Serial1.print(int(plenum));
   nextion_endMessage();
 }
 
 void setLambda(float lambda){
   Serial1.print("lambda.val=");
-  Serial1.print(lambda);
+  Serial1.print(int(lambda*100));
   nextion_endMessage();
   lambda_old=lambda_new;
   lambda_new=lambda;
@@ -301,15 +302,29 @@ void setLaunch(int page,bool launchControl_active){
   if(launchControl_active){
     //The screen turns green if launch control is active
     Serial1.print(pageName[page]);
-    Serial1.print(".bco=");
-    Serial1.print(1441);
+    Serial1.print(".bco=1441");
+    nextion_endMessage();
+    Serial1.print("gear.bco=1441");
+    nextion_endMessage();
+    Serial1.print("water_temp.bco=1441");
+    nextion_endMessage();
+    Serial1.print("voltage.bco=1441");
+    nextion_endMessage();
+    Serial1.print(".bco=1441");
     nextion_endMessage();
   }
   else{
     //The screen turns black if launch control is inactive
     Serial1.print(pageName[page]);
-    Serial1.print(".bco=");
-    Serial1.print(0);
+    Serial1.print(".bco=0");
+    nextion_endMessage();
+    Serial1.print("gear.bco=0");
+    nextion_endMessage();
+    Serial1.print("water_temp.bco=0");
+    nextion_endMessage();
+    Serial1.print("voltage.bco=0");
+    nextion_endMessage();
+    Serial1.print(".bco=0");
     nextion_endMessage();
   }
 }

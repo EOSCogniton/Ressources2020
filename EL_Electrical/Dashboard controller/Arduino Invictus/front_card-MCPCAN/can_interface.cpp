@@ -66,14 +66,14 @@ void can_interface::Recieve()
       CAN0.readMsgBuf(&R_ID_Mask, &Len, Data);      
   
       // Determine if R_ID_Mask is standard (11 bits) or extended (29 bits)
-      if((R_ID_Mask & 0x80000000) == 0x80000000){
-          Serial.println("Extended");
+      if((R_ID_Mask & 0x80000000) == 0x80000000){ 
           R_ID=(R_ID_Mask & 0x0000FFFF);
-          
+          Serial.print("Extended, ID = ");  
+          Serial.println(R_ID);
       }
       else{
           Serial.println("Standard");
-          R_ID=0;
+          //R_ID=0;
       }
       Data_MAJ();
     }
