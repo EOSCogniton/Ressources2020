@@ -37,14 +37,14 @@
 int engagedPosition; // Contain what motor position is currently engaged
 int wantedPosition;// Contain the motor position wanted so the speed rapport of the bike
 const bool motorCommand[9][4] ={ {0,0,0,0}, //motorCommand[0] = Clear error and Stop
-                                 {0,0,0,1}, //motorCommand[1] = Start Homing
-                                 {0,0,1,0}, //motorCommand[2] = Position 2 = Neutral gear
-                                 {0,0,1,1}, //motorCommand[3] = Position 3 = Gear 1
-                                 {0,1,0,0}, //motorCommand[4] = Position 4 = Gear 2
-                                 {0,1,0,1}, //motorCommand[5] = Position 5 = Gear 3
+                                 {1,0,0,0}, //motorCommand[1] = Start Homing
+                                 {0,1,0,0}, //motorCommand[2] = Position 2 = Neutral gear
+                                 {1,1,0,0}, //motorCommand[3] = Position 3 = Gear 1
+                                 {0,0,1,0}, //motorCommand[4] = Position 4 = Gear 2
+                                 {1,0,1,0}, //motorCommand[5] = Position 5 = Gear 3
                                  {0,1,1,0}, //motorCommand[6] = Position 6 = Gear 4
-                                 {0,1,1,1}, //motorCommand[7] = Position 7 = Gear 5
-                                 {1,0,0,0}};//motorCommand[8] = Position 8 = Gear 6
+                                 {1,1,1,0}, //motorCommand[7] = Position 7 = Gear 5
+                                 {0,0,0,1}};//motorCommand[8] = Position 8 = Gear 6
 bool outMotor1; //Info return by the motor
 bool outMotor2;//Info return by the motor
 const int neutreCommand = 2;
@@ -142,6 +142,7 @@ void setup()
   digitalWrite(motorInput2Pin, motorCommand[wantedPosition][1]);
   digitalWrite(motorInput3Pin, motorCommand[wantedPosition][2]);
   digitalWrite(motorInput4Pin, motorCommand[wantedPosition][3]);
+  
   //DTA
   digitalWrite(shiftCutPin, HIGH);
   //digitalWrite(LedPin,LOW);
@@ -152,16 +153,22 @@ void setup()
   analogWrite(gearPotPin,0); 
   
   //We wait the end of the homming to start the void loop
-  /*outMotor1 = digitalRead(motorState1Pin);
+  outMotor1 = digitalRead(motorState1Pin);
   outMotor2 = digitalRead(motorState2Pin);
   while (!PositionReachedOrHomingDone(outMotor1,outMotor2))
     {
          outMotor1 = digitalRead(motorState1Pin);
          outMotor2 = digitalRead(motorState2Pin);
+         Serial.print("motorState1 :");
+         Serial.println(outMotor1);
+         Serial.print("motorState2 :");
+         Serial.println(outMotor2);
+         delay(500);
+         
     }
     engagedPosition = wantedPosition; 
     Serial.println("setup ok");
-    Serial.println(engagedPosition);*/
+    Serial.println(engagedPosition);
 }
 
 void loop() 
@@ -194,7 +201,7 @@ void loop()
   //  //AUTO
   //Mode Auto turned ON when the first gear is engaged and the Decrease palette is pushed
   //it turned of on any command of the pilote on the palette or on the neutral and homming button
-  if (Auto==true)
+  /*if (Auto==true)
      {
       RPM=CAN.getRPM();
       if (millis()-T_ShiftAuto>500) {
@@ -204,7 +211,7 @@ void loop()
         T_ShiftAuto = millis();
       }
      }
-
+  */
   //Motor mouvement
   move();
   
@@ -295,9 +302,9 @@ void Increase()
       digitalWrite(shiftCutPin, LOW);//Close the injection
       delay(IncreaseDelay);//Delay to let time for the motor
       Serial.print("Position engagée : ");
-      Serial.println(engagedPosition);
+      Serial.println(engagedPosition-2);
       Serial.print("Position voulue : ");
-      Serial.println(wantedPosition);
+      Serial.println(wantedPosition-2);
     move();
      }
   }
@@ -307,6 +314,10 @@ void Decrease()
 {
   static unsigned long T_Decrease = 0;
   Serial.println("Decrease interrupt");
+  Serial.print("Out 1 : ");
+  Serial.println(outMotor1);
+  Serial.print("Out 2 : ");
+  Serial.println(outMotor2);
   if ((millis() - T_Decrease) > AntiReboundDelay)
   {
     T_Decrease = millis();
@@ -322,16 +333,21 @@ void Decrease()
      }
     else if (engagedPosition == 3 and wantedPosition != engagedPosition-1)
     {
-        if (Auto==false)
+      wantedPosition = 2;
+        /*if (Auto==false)
         {
           Auto = true;
-        }
+        }*/
       }
     if (wantedPosition != engagedPosition)
     {
       digitalWrite(shiftCutPin, LOW);//Close the injection
       delay(DecreaseDelay);//Delay to let time for the motor
       move();
+      Serial.print("Position engagée : ");
+      Serial.println(engagedPosition-2);
+      Serial.print("Position voulue : ");
+      Serial.println(wantedPosition-2);
     }
   }
 }

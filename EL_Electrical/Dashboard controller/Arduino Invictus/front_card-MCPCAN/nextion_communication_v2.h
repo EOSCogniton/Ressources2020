@@ -23,7 +23,7 @@ void setGear(char gear);
 
 void setFuel(float fuel);
 
-void setWaterTemp(float waterTemp);
+void setWaterTemp(int waterTemp);
 
 void setVoltage(float voltage);
 
