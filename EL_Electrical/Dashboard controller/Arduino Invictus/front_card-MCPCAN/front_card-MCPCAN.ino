@@ -29,6 +29,8 @@ bool ancrace;
 bool nvrace;
 unsigned long TchgtPage;
 
+float i=1;
+int j = 1;
 int rpm_old=0;
 int rpm_new=0;
 int drpm=0;
@@ -36,7 +38,7 @@ int seuildrpm=500;
 float dt=0.05;
 int min1Rpm=11500;
 int min2Rpm=12000;
-
+int meme_display;
 int homing, neutre,log_DTA, TC_control, launch_control, Wet_ON;
 
 //Initialization of CANBUS
@@ -119,15 +121,16 @@ void setup() {
 }
 
 void loop() {
+
   CAN.Recieve();
   homing=digitalRead(Homing_button);
   neutre=digitalRead(Neutre_button);
   log_DTA=digitalRead(Log_switch);
   TC_control=digitalRead(TC_Switch);
   launch_control=digitalRead(LaunchControl_button);
-  Wet_ON=digitalRead(WD_Switch);
+  Wet_ON=digitalRead(WD_Switch);*/
 
-  if ( !homing)
+  /*if ( !homing)
   {
     Serial.println("appui homing");
   }
@@ -150,7 +153,7 @@ void loop() {
   if(!Wet_ON)
   {
     Serial.println("Wet_ON activé");
-  }
+  }*/
   
   //Shift light :on allume en fonction des rpms pour savoir si on change de vitesse
   setRPMShiftLight(CAN.RPM);
@@ -160,6 +163,7 @@ void loop() {
   
   if(changementPage && (millis()-TchgtPage)>500) //On regarde si cela fait plus de 500ms qu'on a voulu changer de page (Permet d'éviter le fait qu'on est plusieurs loop avec changementPage qui reste à 1 alors que c'est le même appui)
   {
+    meme_display = 0;
     TchgtPage=millis();
     if(ancpage==2)
     {
@@ -171,7 +175,14 @@ void loop() {
     }
     changePage(nvpage);
     ancpage=nvpage;
-    updateDisplay(nvpage,CAN.gear,CAN.oilPressure,CAN.Volts,CAN.RPM,CAN.LC_state);
+    updateDisplay(nvpage,vitesse[CAN.gear],CAN.oilPressure,CAN.Volts,CAN.RPM,CAN.LC_state);
+  }
+  else {//Petit photo de pso qui fait bien plaisir le couz
+    meme_display = meme_display+1;
+    if meme_display==2 
+    {
+      changePage(3);
+    }
   }
   if(CAN.gear!=ancgear){//Changing gear
     ancgear=CAN.gear;
@@ -201,6 +212,7 @@ void setRPMShiftLight(int RPM)
   drpm=abs(rpm_new-rpm_old)/dt;
   if(drpm>seuildrpm){
     Serial1.print("problem.txt=rpm");
+    nextion_endMessage();
   }
   if(RPM<min1Rpm) //min1Rpm=11500; min2Rpm=12000
   {
