@@ -31,6 +31,7 @@ can_interface::can_interface()
 {   
     Len = 0;
    // Initialisation of each attribut
+     FuelPressure=0;
      Lambda=0;
      Kph=0;
      Volts=0;
@@ -61,18 +62,18 @@ void can_interface::Recieve()
 {
     if(!digitalRead(CAN0_INT))  
       {
-      Serial.print("Réception: ");
+      //Serial.print("Réception: ");
       // Read data: Len = data length, Data = data byte(s)
       CAN0.readMsgBuf(&R_ID_Mask, &Len, Data);      
   
       // Determine if R_ID_Mask is standard (11 bits) or extended (29 bits)
       if((R_ID_Mask & 0x80000000) == 0x80000000){ 
           R_ID=(R_ID_Mask & 0x0000FFFF);
-          Serial.print("Extended, ID = ");  
-          Serial.println(R_ID);
+          //Serial.print("Extended, ID = ");  
+          //Serial.println(R_ID);
       }
       else{
-          Serial.println("Standard");
+          //Serial.println("Standard");
           //R_ID=0;
       }
       Data_MAJ();
@@ -89,38 +90,41 @@ void can_interface::Data_MAJ()
 {   
   //Serial.print("\n");
   if(R_ID==0x2000){
-    Serial.println("id=0x2000, RPM, Température eau, TPS(%)");
+    //Serial.println("id=0x2000, RPM, Température eau, TPS(%)");
     RPM=Data[0]+256*Data[1];
     waterTemp=Data[4]+256*Data[5];
     throttle=Data[2]+256*Data[3];
-    Serial.print(RPM);
+    /*Serial.print(RPM);
     Serial.print(", ");
     Serial.print(waterTemp);
     Serial.print(", ");
-    Serial.println(throttle);
+    Serial.println(throttle);*/
   }
 
   if(R_ID==0x2001){ 
-      Serial.println("id=0x2000,Pression plenum (kPa), lambda, KPH, pression huile (kPa)");
+      //Serial.println("id=0x2000,Pression plenum (kPa), lambda, KPH, pression huile (kPa)");
       plenum=Data[0]+256*Data[1];
-      Lambda=(Data[2]+256*Data[3])/1000;
+      Lambda=(Data[2]+256*Data[3]);
       Kph=(Data[4]+256*Data[5])/10;
       oilPressure=Data[6]+256*Data[7];
-      Serial.print(Lambda);
+      /*Serial.print(Lambda);
       Serial.print(", ");
       Serial.print(Kph);
       Serial.print(", ");
-      Serial.println(oilPressure);
+      Serial.println(oilPressure);*/
   }
     if(R_ID==0x2002){ 
-      Serial.println("id=0x2002, tension batterie  air, conso essence L/h");
-      Volts=(Data[4]+256*Data[5])/10;
-      FuelConHR=(Data[6]+256*Data[7])/10;
-      Serial.print(Volts);
-      Serial.print(" V, ");
-      Serial.println(FuelConHR);
+      //Serial.println("id=0x2002, fuel pressure, tension batterie, conso essence L/h");
+      FuelPressure = Data[0]+256*Data[1];
+      //Serial.print(FuelPressure);
+      //Serial.print(',');
+      Volts=(Data[4]+256*Data[5]);
+      //FuelConHR=(Data[6]+256*Data[7])/10;
+      //Serial.print(Volts);
+      //Serial.println(" V, ");
+      //Serial.println(FuelConHR);
   }
-  if(R_ID==0x2003){ 
+  /*if(R_ID==0x2003){ 
       Serial.println("id=0x2003,  advance deg, injection, conso essence L/100km");
       AdvanceDeg=(Data[2]+256*Data[3])/10;
       FuelConKM=(Data[6]+256*Data[7])/10;
@@ -145,28 +149,28 @@ void can_interface::Data_MAJ()
       Serial.print(CamTarg);
       Serial.print(", ");
       Serial.print(CamPWM);
-  }
+  }*/
 
   if(R_ID==0x2007){
     LC_state=bitRead(Data[6], 6); //read just one bit of the data
     Serial.print("id=0x2007, LC state : ");
-    Serial.print(LC_state);
+    Serial.println(LC_state);
   }
 
   
   if(R_ID_Mask==0x110){ 
-      Serial.println("id=0x110, Rear Card");
+      //Serial.println("id=0x110, Rear Card");
       gear=Data[0];
-      Serial.print("Vitesse : ");
-      Serial.println(gear);
+      //Serial.print("Vitesse : ");
+      //Serial.println(gear);
   
       errorMotored=Data[1];
-      Serial.print("Errreur motoréducteur : ");
-      Serial.println(errorMotored);
+      //Serial.print("Errreur motoréducteur : ");
+      //Serial.println(errorMotored);
 
       auto_mode=Data[2]*true;
-      Serial.print("Mode auto : ");
-      Serial.println(auto_mode);
+      //Serial.print("Mode auto : ");
+      //Serial.println(auto_mode);
   }
   
   
@@ -190,10 +194,10 @@ void can_interface::Transmit(boolean homing, boolean neutre, boolean logDta, boo
       }
       Serial.println(" ");*/
     byte sndStat = CAN0.sendMsgBuf(0x100, 8, Data_msg); //0x1001
-    /*if(sndStat == CAN_OK){
-      Serial.println("Message Sent Successfully!");
+    if(sndStat == CAN_OK){
+      //Serial.println("Message Sent Successfully!");
     } 
     else {
       Serial.println("Error Sending Message...");
-    }*/
+    }
 }

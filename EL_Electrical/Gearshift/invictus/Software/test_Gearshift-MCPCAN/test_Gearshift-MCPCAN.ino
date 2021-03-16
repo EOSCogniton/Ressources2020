@@ -71,7 +71,7 @@ signed RPM ;
 
 //Initialization of CANBUS
 int canStable; //When the Teensy power up the can is not very stable and because it affect directly the motor we need to wait a little before using the CAN
-const int Canstabledelay= 30000; //Number of loop before using the CAN
+const int Canstabledelay= 3000; //Number of loop before using the CAN
 can_interface CAN;
 IntervalTimer CANTimer;
 unsigned long Can_send_period=75000; //On envoie sur le can toutes les 75ms
@@ -104,7 +104,7 @@ void setup()
   T_ShiftAuto = 0;
   //CAN
   canStable = 0;
-  Serial.begin(115200);
+  Serial.begin(9600);
   
   //Initialization of the pins
   //Motor
@@ -138,7 +138,8 @@ void setup()
   //Initialization of the output
   //Motor, start with asking for homming position
   
-  digitalWrite(motorInput1Pin, motorCommand[wantedPosition][0]);
+  digitalWrite(
+, motorCommand[wantedPosition][0]);
   digitalWrite(motorInput2Pin, motorCommand[wantedPosition][1]);
   digitalWrite(motorInput3Pin, motorCommand[wantedPosition][2]);
   digitalWrite(motorInput4Pin, motorCommand[wantedPosition][3]);
@@ -174,29 +175,23 @@ void setup()
 void loop() 
 { 
   //MAJ of attributs by receiving the last datas
-  CAN.Recieve();
-  canStable++;
-  canStable = min(canStable,Canstabledelay+1); //To be sure that the canStable variable will not exceed Arduino limite and go back to 0
-
-  if(canStable > Canstabledelay) //If the CAN is stable then the info which are on it can be consider as reliable
+  CAN.Recieve();  
+  digitalWrite(launchControlPin,CAN.getLaunchcontrolState()); //LAUNCH CONTROL
+  digitalWrite(tractionControlPin,CAN.getTractionState()); //Traction control
+  digitalWrite(wetDryPin,CAN.getWetdryState()); //WET DRY
+  digitalWrite(logDtaPin,CAN.getLogState()); //LOG
+  //Neutral
+  if(CAN.getNeutralState()) 
   {
-    digitalWrite(launchControlPin,CAN.getLaunchcontrolState()); //LAUNCH CONTROL
-    digitalWrite(tractionControlPin,CAN.getTractionState()); //Traction control
-    digitalWrite(wetDryPin,CAN.getWetdryState()); //WET DRY
-    digitalWrite(logDtaPin,CAN.getLogState()); //LOG
-    //Neutral
-    if(CAN.getNeutralState()) 
-    {
-      Auto = false;
-      wantedPosition = neutreCommand;
-    }
-    //Homming
-    if(CAN.getHomingState()) 
-    {
-      Auto = false;
-      wantedPosition = homingCommand;
-    }  
+    Auto = false;
+    wantedPosition = neutreCommand;
   }
+  //Homming
+  if(CAN.getHomingState()) 
+  {
+    Auto = false;
+    wantedPosition = homingCommand;
+  }  
 
   //  //AUTO
   //Mode Auto turned ON when the first gear is engaged and the Decrease palette is pushed
@@ -333,8 +328,7 @@ void Decrease()
      }
     else if (engagedPosition == 3 and wantedPosition != engagedPosition-1)
     {
-      wantedPosition = 2;
-        /*if (Auto==false)
+      /*if (Auto==false)
         {
           Auto = true;
         }*/

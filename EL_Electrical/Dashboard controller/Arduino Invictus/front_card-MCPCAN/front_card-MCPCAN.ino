@@ -17,20 +17,20 @@
 #include <SPI.h>
 
 
-
+int flag;
 int ancgear;
 int nvpage;
 int ancpage;
-boolean changementPage;
+bool changementPage;
+bool changementPageprec;
 char vitesse[9]={'N','1','2','3','4','5','6','E','H'};
 bool anclaunch;
 bool nvlaunch;
 bool ancrace;
 bool nvrace;
 unsigned long TchgtPage;
+unsigned long T1;
 
-float i=1;
-int j = 1;
 int rpm_old=0;
 int rpm_new=0;
 int drpm=0;
@@ -38,7 +38,7 @@ int seuildrpm=500;
 float dt=0.05;
 int min1Rpm=11500;
 int min2Rpm=12000;
-int meme_display;
+int meme_display=0;
 int homing, neutre,log_DTA, TC_control, launch_control, Wet_ON;
 
 //Initialization of CANBUS
@@ -71,6 +71,7 @@ void setup() {
   pinMode(WD_Switch,INPUT_PULLUP);
   pinMode(TC_Switch,INPUT_PULLUP);
   pinMode(Log_switch,INPUT_PULLUP);
+  pinMode(Chgt_screen_button,INPUT_PULLUP);
   pinMode(RED_SHIFT_PIN,OUTPUT);
   pinMode(BLUE_SHIFT_PIN,OUTPUT);
   
@@ -110,7 +111,7 @@ void setup() {
   delay(1000);
   //Sets the screen at its work state
   Serial1.print("page ");
-  Serial1.print(1);
+  Serial1.print(2);
   nextion_endMessage();
   digitalWrite(BLUE_SHIFT_PIN,LOW);
   digitalWrite(RED_SHIFT_PIN,LOW);
@@ -121,16 +122,19 @@ void setup() {
 }
 
 void loop() {
+  CAN.Recieve(); // on lit tout le temps le can et une fois sur 5 on mets à jour l'écran
+  
+  delay(5);
 
-  CAN.Recieve();
+  
   homing=digitalRead(Homing_button);
   neutre=digitalRead(Neutre_button);
   log_DTA=digitalRead(Log_switch);
   TC_control=digitalRead(TC_Switch);
   launch_control=digitalRead(LaunchControl_button);
-  Wet_ON=digitalRead(WD_Switch);*/
+  Wet_ON=digitalRead(WD_Switch);
 
-  /*if ( !homing)
+  if ( !homing)
   {
     Serial.println("appui homing");
   }
@@ -152,16 +156,19 @@ void loop() {
   }
   if(!Wet_ON)
   {
-    Serial.println("Wet_ON activé");
-  }*/
+    Serial.println("Dry activé");
+  }
   
   //Shift light :on allume en fonction des rpms pour savoir si on change de vitesse
   setRPMShiftLight(CAN.RPM);
-  
+   flag = flag + 1;
+  if (flag == 40) { 
+    flag = 0; 
   //This part is for a button which swaps between pages
+  changementPageprec = changementPage;
   changementPage=digitalRead(Chgt_screen_button); //Quand on appuie sur l'écran ou le bouton ( à voir car il n'y a pas de connexion avec le bouton) il faut changer de page;
   
-  if(changementPage && (millis()-TchgtPage)>500) //On regarde si cela fait plus de 500ms qu'on a voulu changer de page (Permet d'éviter le fait qu'on est plusieurs loop avec changementPage qui reste à 1 alors que c'est le même appui)
+  if( !changementPage && changementPage!=changementPageprec && (millis()-TchgtPage)>700) //On regarde si cela fait plus de 500ms qu'on a voulu changer de page (Permet d'éviter le fait qu'on est plusieurs loop avec changementPage qui reste à 1 alors que c'est le même appui)
   {
     meme_display = 0;
     TchgtPage=millis();
@@ -177,13 +184,15 @@ void loop() {
     ancpage=nvpage;
     updateDisplay(nvpage,vitesse[CAN.gear],CAN.oilPressure,CAN.Volts,CAN.RPM,CAN.LC_state);
   }
-  else {//Petit photo de pso qui fait bien plaisir le couz
+  else if ( !changementPage && changementPage!=changementPageprec) {//Petit photo de pso qui fait bien plaisir le couz
     meme_display = meme_display+1;
-    if meme_display==2 
+    if (meme_display==2)
     {
+      meme_display = 0;
       changePage(3);
     }
   }
+  
   if(CAN.gear!=ancgear){//Changing gear
     ancgear=CAN.gear;
     setGear(vitesse[CAN.gear]);
@@ -203,6 +212,8 @@ void loop() {
   setThrottle(CAN.throttle);
   setPlenum(CAN.plenum);
   setLambda(CAN.Lambda);
+  setFuel(CAN.FuelPressure);
+  }
 }
 
 void setRPMShiftLight(int RPM)

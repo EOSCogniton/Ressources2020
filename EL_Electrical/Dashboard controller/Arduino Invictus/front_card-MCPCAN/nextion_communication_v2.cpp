@@ -58,7 +58,7 @@ String pageName[4]={"start","display_pro","display_bench","display_fun"};
 bool oilWarning=false;
 bool nvOilBlinking=false;
 bool precOilBlinking=false;
-int minOilPress=130;
+int minOilPress=200;
 int min1OilPress=130;
 int min2OilPress=100;
 int min1WaterTemp=108;
@@ -127,7 +127,7 @@ void setOil(float oilPressure, int RPM){
   if(RPM<500){
 	  minOilPress=min2OilPress;
   }
-  else{
+  else{ 
 	  minOilPress=min1OilPress;
   }
   if((oilPressure<minOilPress) && !(oilWarning)){
@@ -218,7 +218,7 @@ void setWaterTemp(int waterTemp){
 
 void setVoltage(float voltage){
   Serial1.print("voltage.val=");
-  Serial1.print(int(voltage*10));
+  Serial1.print(int(voltage));
   nextion_endMessage();
   if(voltage<min2Voltage){ //10.5V
     //Voltage is below critical value
@@ -275,7 +275,7 @@ void setPlenum(float plenum){
 
 void setLambda(float lambda){
   Serial1.print("lambda.val=");
-  Serial1.print(int(lambda*100));
+  Serial1.print(int(lambda/10));
   nextion_endMessage();
   lambda_old=lambda_new;
   lambda_new=lambda;

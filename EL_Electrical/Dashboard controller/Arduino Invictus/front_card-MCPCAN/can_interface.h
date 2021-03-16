@@ -42,6 +42,7 @@ class can_interface
     unsigned char Len; 
 
     public:
+        float FuelPressure;
         float Lambda;
         float Kph;
         float Volts;
