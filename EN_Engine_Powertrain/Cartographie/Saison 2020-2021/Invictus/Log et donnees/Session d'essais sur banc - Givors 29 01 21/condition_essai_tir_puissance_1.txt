@@ -1,6 +1,0 @@
-facteur correction tir puissance 1 = 1.028
-rapport de sortie tir puissance 1 = 8.516
-régime début=4000tr/min
-régime fin=13000tr/min
-temps =15s
-régime attente=3000tr/min
