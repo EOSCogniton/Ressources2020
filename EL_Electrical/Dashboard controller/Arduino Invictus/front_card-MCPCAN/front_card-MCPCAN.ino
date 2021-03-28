@@ -44,7 +44,8 @@ int homing, neutre,log_DTA, TC_control, launch_control, Wet_ON;
 //Initialization of CANBUS
 can_interface CAN;
 IntervalTimer CANTimer;
-unsigned long Can_send_period=75000; //On envoie sur le can toutes les 75ms
+unsigned long Can_send_period=150; //On envoie sur le can toutes les 150ms
+unsigned long Last_can_send; //On retient quand on a envoyé le can la dernière fois
 
 void setup() {
   //Init CAN
@@ -118,13 +119,18 @@ void setup() {
   
   //Can et interruption
   //Define Timer
-  CANTimer.begin(Can_Send, Can_send_period); //each period of the Timer the function Can_Send is launched
+  //CANTimer.begin(Can_Send, Can_send_period); //each period of the Timer the function Can_Send is launched
 }
 
 void loop() {
+  if (millis()-Last_can_send>Can_send_period)  
+  {
+    Can_Send();
+    Last_can_send = millis();
+    }
   CAN.Recieve(); // on lit tout le temps le can et une fois sur 5 on mets à jour l'écran
   
-  delay(5);
+  delay(7);
 
   
   homing=digitalRead(Homing_button);

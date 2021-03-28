@@ -74,8 +74,8 @@ int canStable; //When the Teensy power up the can is not very stable and because
 const int Canstabledelay= 3000; //Number of loop before using the CAN
 can_interface CAN;
 IntervalTimer CANTimer;
-unsigned long Can_send_period=75000; //On envoie sur le can toutes les 75ms
-
+unsigned long Can_send_period=150; //On envoie sur le can toutes les 75ms
+unsigned long Last_can_send; //On retient quand on a envoyé le can la dernière fois
 void setup() 
 {   
   //Init CAN
@@ -133,13 +133,12 @@ void setup()
   CAN.Transmit(engagedPosition-2, error,Auto);
   
   //Define Timer
-  CANTimer.begin(Send_CAN, Can_send_period); //each period of the Timer the function Send_Can is launched
+  //CANTimer.begin(Send_CAN, Can_send_period); //each period of the Timer the function Send_Can is launched
 
   //Initialization of the output
   //Motor, start with asking for homming position
   
-  digitalWrite(
-, motorCommand[wantedPosition][0]);
+  digitalWrite(motorInput1Pin, motorCommand[wantedPosition][0]);
   digitalWrite(motorInput2Pin, motorCommand[wantedPosition][1]);
   digitalWrite(motorInput3Pin, motorCommand[wantedPosition][2]);
   digitalWrite(motorInput4Pin, motorCommand[wantedPosition][3]);
@@ -174,6 +173,11 @@ void setup()
 
 void loop() 
 { 
+  if (millis()-Last_can_send>Can_send_period)  
+  {
+    Send_CAN();
+    Last_can_send = millis();
+    }
   //MAJ of attributs by receiving the last datas
   CAN.Recieve();  
   digitalWrite(launchControlPin,CAN.getLaunchcontrolState()); //LAUNCH CONTROL
@@ -269,39 +273,43 @@ void move()
 void Increase() 
 {
   static unsigned long T_Increase = 0;
-  Serial.println("Increase interrupt");
-  Serial.print("Out 1 : ");
-  Serial.println(outMotor1);
-  Serial.print("Out 2 : ");
-  Serial.println(outMotor2);
-  if ((millis() - T_Increase) > AntiReboundDelay)
-  {
-    Auto = false;
-    // Si demande de Homming
-    if (NeedHoming(outMotor1,outMotor2))
+  delay(20);
+  if (digitalRead(paletteIncreasePin))
+    {  
+    Serial.println("Increase interrupt");
+    Serial.print("Out 1 : ");
+    Serial.println(outMotor1);
+    Serial.print("Out 2 : ");
+    Serial.println(outMotor2);
+    if ((millis() - T_Increase) > AntiReboundDelay)
     {
-      wantedPosition = 1; //On fait le homming
-      T_Increase = millis();
+      Auto = false;
+      // Si demande de Homming
+      if (NeedHoming(outMotor1,outMotor2))
+      {
+        wantedPosition = 1; //On fait le homming
+        T_Increase = millis();
+      }
+      else if(PassageVitesseIsPossible(engagedPosition+1)) 
+      {
+        wantedPosition = engagedPosition+1;
+        T_Increase = millis();
+       }
+      else if (engagedPosition == 1)
+       {  
+        wantedPosition = engagedPosition+2;
+        T_Increase = millis();
+       }
+       if (wantedPosition!=engagedPosition){
+        digitalWrite(shiftCutPin, LOW);//Close the injection
+        delay(IncreaseDelay);//Delay to let time for the motor
+        Serial.print("Position engagée : ");
+        Serial.println(engagedPosition-2);
+        Serial.print("Position voulue : ");
+        Serial.println(wantedPosition-2);
+      move();
+       }
     }
-    else if(PassageVitesseIsPossible(engagedPosition+1)) 
-    {
-      wantedPosition = engagedPosition+1;
-      T_Increase = millis();
-     }
-    else if (engagedPosition == 1)
-     {  
-      wantedPosition = engagedPosition+2;
-      T_Increase = millis();
-     }
-     if (wantedPosition!=engagedPosition){
-      digitalWrite(shiftCutPin, LOW);//Close the injection
-      delay(IncreaseDelay);//Delay to let time for the motor
-      Serial.print("Position engagée : ");
-      Serial.println(engagedPosition-2);
-      Serial.print("Position voulue : ");
-      Serial.println(wantedPosition-2);
-    move();
-     }
   }
 }
 

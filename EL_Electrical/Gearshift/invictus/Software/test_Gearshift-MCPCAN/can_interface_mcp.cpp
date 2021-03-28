@@ -122,11 +122,11 @@ void can_interface::Data_MAJ()
         if (Data[0]==1){
             // Le bouton n'est pas appuyé (there is a pullup resistor on this button)
             homingState = false;
-            Serial.print("Homing :1,  ");       
+            //Serial.print("Homing :1,  ");       
         }else if (Data[0]==0){
             // le bouton est appuyé
             homingState = true;
-            Serial.print("Homing :0,  ");
+            //Serial.print("Homing :0,  ");
         }
 
         if (Data[1]==1){
@@ -170,11 +170,11 @@ void can_interface::Data_MAJ()
         if (Data[5]==1){
             // Le bouton n'est pas appuyé
             logState = false;
-            Serial.println("Log non");
+            //Serial.println("Log non");
         }else if (Data[5]==0){
             // le bouton est appuyé
             logState = true;
-            Serial.println("Log oui");
+            //Serial.println("Log oui");
         }
         
     }
