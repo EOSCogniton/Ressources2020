@@ -173,6 +173,12 @@ void can_interface::Data_MAJ()
       //Serial.println(auto_mode);
   }
   
+  if(R_ID_Mask==0x1008){ 
+      //Serial.println("id=0x1008, logRC");
+      logRC=Data[0];
+      Serial.print("Log racecapture : ");
+      Serial.println(logRC);
+  }
   
 }
 

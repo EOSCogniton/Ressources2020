@@ -1,3 +1,5 @@
+
+
 /***************************************************************
   @file: front_card
   @author: Raphaël Viudès(RVS)
@@ -219,6 +221,7 @@ void loop() {
   setPlenum(CAN.plenum);
   setLambda(CAN.Lambda);
   setFuel(CAN.FuelPressure);
+  setRaceCapture (CAN.logRC);
   }
 }
 

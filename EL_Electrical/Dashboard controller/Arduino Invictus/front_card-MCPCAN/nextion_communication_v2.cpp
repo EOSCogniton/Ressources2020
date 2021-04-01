@@ -288,7 +288,7 @@ void setLambda(float lambda){
 void setRaceCapture(bool raceOn){
   if (raceOn){
     Serial1.print("racecapt.pic=");
-    Serial1.print(5);
+    Serial1.print(14);
     nextion_endMessage();
   }
   else{

@@ -62,6 +62,7 @@ class can_interface
         float plenum;
         float oilPressure;
         bool LC_state;
+        bool logRC;
 
 private:
     void Data_MAJ();
