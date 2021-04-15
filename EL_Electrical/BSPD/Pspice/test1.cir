@@ -1,0 +1,24 @@
+* D:\EPSA\STUF2019\EL - Electrical\Autre\BSPD\Pspice\test1.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Fri Sep 28 19:44:31 2018
+
+
+
+** Analysis setup **
+.tran 0ns 2s
+.STMLIB "test1.stl"
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "D:\cours\STI\eea.lib"
+.lib "nom.lib"
+
+.INC "test1.net"
+.INC "test1.als"
+
+
+.probe
+
+
+.END

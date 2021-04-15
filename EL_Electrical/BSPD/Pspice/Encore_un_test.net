@@ -1,0 +1,44 @@
+* Schematics Netlist *
+
+
+
+V_V3         $N_0001 0 5V
+R_R13         $N_0003 $N_0002  1k  
+R_R14         $N_0005 $N_0004  1k  
+X_U6A         $N_0001 10s $N_0006 $N_0001 OUT $N_0007 $G_DPWR $G_DGND 7474
++  PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U7A         10s 500ms $N_0006 $G_DPWR $G_DGND 7432 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U10A         IN $N_0008 10s $G_DPWR $G_DGND 7402 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U11A         $N_0009 $N_0010 500ms $G_DPWR $G_DGND 7402 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_X1         0 $N_0011 $N_0008 IN $N_0012 $N_0003 $N_0003 $N_0002 555D PARAMS:
++  MAXFREQ=3E6
+C_C8         0 $N_0013  10n  
+R_R12         IN $N_0011  1k  
+C_C4         0 $N_0011  10n  
+C_C3         0 $N_0014  10n  
+R_R11         $N_0009 $N_0014  1k  
+X_U5A         IN $N_0009 $G_DPWR $G_DGND 7404 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_X2         0 $N_0014 $N_0010 $N_0015 $N_0013 $N_0005 $N_0005 $N_0004 555D
++  PARAMS: MAXFREQ=3E6
+C_C5         0 $N_0003  9.1u  
+C_C7         0 $N_0005  454n  
+C_C6         0 $N_0012  10n  
+V_V4         $N_0002 0 5V
+V_V5         $N_0004 0 5V
+X_U12A         $N_0009 $N_0015 $G_DPWR $G_DGND 7404 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+R_OUT         0 OUT  1k  
+U_DSTM1         STIM(1,1)
++ $G_DPWR $G_DGND
++ IN 
++ IO_STM
++ IO_LEVEL=0
++  0s 1  
++ 300ms 0  
++ 600ms 1  
++ 1200ms 0 

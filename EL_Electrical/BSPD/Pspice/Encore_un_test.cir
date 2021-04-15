@@ -1,0 +1,23 @@
+* D:\EPSA\STUF2019\EL - Electrical\Autre\BSPD\Pspice\Encore_un_test.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Mon Nov 12 22:40:01 2018
+
+
+
+** Analysis setup **
+.tran 0ns 1.5s
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "D:\cours\STI\eea.lib"
+.lib "nom.lib"
+
+.INC "Encore_un_test.net"
+.INC "Encore_un_test.als"
+
+
+.probe
+
+
+.END

@@ -1,0 +1,24 @@
+{
+    "Header": {
+        "Comment": "All values are metric (mm)",
+        "CreationDate": "2018-12-22T17:25:02Z",
+        "GenerationSoftware": {
+            "Application": "EAGLE",
+            "Vendor": "Autodesk",
+            "Version": "9.2.1"
+        },
+        "Part": "Single"
+    },
+    "Overall": {
+        "BoardThickness": 0.18,
+        "LayerNumber": 2,
+        "Name": {
+            "ProjectId": "FSG_2019_BSPD_0.2_SMD"
+        },
+        "Owner": "bob aubouin <bob.aubouin@gmail.com>",
+        "Size": {
+            "X": 44,
+            "Y": 36
+        }
+    }
+}

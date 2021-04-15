@@ -1,0 +1,709 @@
+
+**** 11/12/18 22:43:01 *********** Evaluation PSpice (Nov 1999) **************
+
+ * D:\EPSA\STUF2019\EL - Electrical\Autre\BSPD\Pspice\Encore_un_test.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Mon Nov 12 22:40:01 2018
+
+
+
+** Analysis setup **
+.tran 0ns 1.5s
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "D:\cours\STI\eea.lib"
+.lib "nom.lib"
+
+.INC "Encore_un_test.net"
+
+**** INCLUDING Encore_un_test.net ****
+* Schematics Netlist *
+
+
+
+V_V3         $N_0001 0 5V
+R_R13         $N_0003 $N_0002  1k  
+R_R14         $N_0005 $N_0004  1k  
+X_U6A         $N_0001 10s $N_0006 $N_0001 OUT $N_0007 $G_DPWR $G_DGND 7474
++  PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U7A         10s 500ms $N_0006 $G_DPWR $G_DGND 7432 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U10A         IN $N_0008 10s $G_DPWR $G_DGND 7402 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U11A         $N_0009 $N_0010 500ms $G_DPWR $G_DGND 7402 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_X1         0 $N_0011 $N_0008 IN $N_0012 $N_0003 $N_0003 $N_0002 555D PARAMS:
++  MAXFREQ=3E6
+C_C8         0 $N_0013  10n  
+R_R12         IN $N_0011  1k  
+C_C4         0 $N_0011  10n  
+C_C3         0 $N_0014  10n  
+R_R11         $N_0009 $N_0014  1k  
+X_U5A         IN $N_0009 $G_DPWR $G_DGND 7404 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_X2         0 $N_0014 $N_0010 $N_0015 $N_0013 $N_0005 $N_0005 $N_0004 555D
++  PARAMS: MAXFREQ=3E6
+C_C5         0 $N_0003  9.1u  
+C_C7         0 $N_0005  454n  
+C_C6         0 $N_0012  10n  
+V_V4         $N_0002 0 5V
+V_V5         $N_0004 0 5V
+X_U12A         $N_0009 $N_0015 $G_DPWR $G_DGND 7404 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+R_OUT         0 OUT  1k  
+U_DSTM1         STIM(1,1)
++ $G_DPWR $G_DGND
++ IN 
++ IO_STM
++ IO_LEVEL=0
++  0s 1  
++ 300ms 0  
++ 600ms 1  
++ 1200ms 0 
+
+**** RESUMING Encore_un_test.cir ****
+.INC "Encore_un_test.als"
+
+
+
+**** INCLUDING Encore_un_test.als ****
+* Schematics Aliases *
+
+.ALIASES
+V_V3            V3(+=$N_0001 -=0 )
+R_R13           R13(1=$N_0003 2=$N_0002 )
+R_R14           R14(1=$N_0005 2=$N_0004 )
+X_U6A           U6A(CLRbar=$N_0001 D=10s CLK=$N_0006 PREbar=$N_0001 Q=OUT
++  Qbar=$N_0007 PWR=$G_DPWR GND=$G_DGND )
+X_U7A           U7A(A=10s B=500ms Y=$N_0006 PWR=$G_DPWR GND=$G_DGND )
+X_U10A          U10A(A=IN B=$N_0008 Y=10s PWR=$G_DPWR GND=$G_DGND )
+X_U11A          U11A(A=$N_0009 B=$N_0010 Y=500ms PWR=$G_DPWR GND=$G_DGND )
+X_X1            X1(GND=0 TRIGGER=$N_0011 OUTPUT=$N_0008 RESET=IN
++  CONTROL=$N_0012 THRESHOLD=$N_0003 DISCHARGE=$N_0003 VCC=$N_0002 )
+C_C8            C8(1=0 2=$N_0013 )
+R_R12           R12(1=IN 2=$N_0011 )
+C_C4            C4(1=0 2=$N_0011 )
+C_C3            C3(1=0 2=$N_0014 )
+R_R11           R11(1=$N_0009 2=$N_0014 )
+X_U5A           U5A(A=IN Y=$N_0009 PWR=$G_DPWR GND=$G_DGND )
+X_X2            X2(GND=0 TRIGGER=$N_0014 OUTPUT=$N_0010 RESET=$N_0015
++  CONTROL=$N_0013 THRESHOLD=$N_0005 DISCHARGE=$N_0005 VCC=$N_0004 )
+C_C5            C5(1=0 2=$N_0003 )
+C_C7            C7(1=0 2=$N_0005 )
+C_C6            C6(1=0 2=$N_0012 )
+V_V4            V4(+=$N_0002 -=0 )
+V_V5            V5(+=$N_0004 -=0 )
+X_U12A          U12A(A=$N_0009 Y=$N_0015 PWR=$G_DPWR GND=$G_DGND )
+R_OUT           OUT(1=0 2=OUT )
+U_DSTM1          DSTM1(PIN1=IN )
+_    _(10s=10s)
+_    _(OUT=OUT)
+_    _(500ms=500ms)
+_    _(IN=IN)
+_    _($G_DGND=$G_DGND)
+_    _($G_DPWR=$G_DPWR)
+.ENDALIASES
+
+
+**** RESUMING Encore_un_test.cir ****
+.probe
+
+
+.END
+
+
+**** Generated AtoD and DtoA Interfaces ****
+
+*
+* Analog/Digital interface for node $N_0001
+*
+* Moving X_U6A.UFF1:CLRBAR from analog node $N_0001 to new digital node $N_0001$AtoD
+X$$N_0001_AtoD1
++ $N_0001
++ $N_0001$AtoD
++ $G_DPWR
++ $G_DGND
++ AtoD_STD
++       PARAMS: CAPACITANCE=   0     
+* Moving X_U6A.UFF1:PREBAR from analog node $N_0001 to new digital node $N_0001$AtoD2
+X$$N_0001_AtoD2
++ $N_0001
++ $N_0001$AtoD2
++ $G_DPWR
++ $G_DGND
++ AtoD_STD
++       PARAMS: CAPACITANCE=   0     
+*
+* Analog/Digital interface for node IN
+*
+* Moving X_U5A.U1:IN1 from analog node IN to new digital node IN$AtoD
+X$IN_AtoD1
++ IN
++ IN$AtoD
++ $G_DPWR
++ $G_DGND
++ AtoD_STD
++       PARAMS: CAPACITANCE=   0     
+* Moving X_X1.u1:CLRBAR from analog node IN to new digital node IN$AtoD2
+X$IN_AtoD2
++ IN
++ IN$AtoD2
++ $N_0002
++ 0
++ atod_555
++       PARAMS: CAPACITANCE=   0     
+* Moving X_U10A.U1:IN1 from analog node IN to new digital node IN$AtoD3
+X$IN_AtoD3
++ IN
++ IN$AtoD3
++ $G_DPWR
++ $G_DGND
++ AtoD_STD
++       PARAMS: CAPACITANCE=   0     
+* Moving U_DSTM1:OUT1 from analog node IN to new digital node IN$DtoA
+X$IN_DtoA1
++ IN$DtoA
++ IN
++ $G_DPWR
++ $G_DGND
++ DtoA_STM
++       PARAMS: DRVH=   0      DRVL=   0      CAPACITANCE=   0     
+*
+* Analog/Digital interface for node $N_0009
+*
+* Moving X_U12A.U1:IN1 from analog node $N_0009 to new digital node $N_0009$AtoD
+X$$N_0009_AtoD1
++ $N_0009
++ $N_0009$AtoD
++ $G_DPWR
++ $G_DGND
++ AtoD_STD
++       PARAMS: CAPACITANCE=   0     
+* Moving X_U11A.U1:IN1 from analog node $N_0009 to new digital node $N_0009$AtoD2
+X$$N_0009_AtoD2
++ $N_0009
++ $N_0009$AtoD2
++ $G_DPWR
++ $G_DGND
++ AtoD_STD
++       PARAMS: CAPACITANCE=   0     
+* Moving X_U5A.U1:OUT1 from analog node $N_0009 to new digital node $N_0009$DtoA
+X$$N_0009_DtoA1
++ $N_0009$DtoA
++ $N_0009
++ $G_DPWR
++ $G_DGND
++ DtoA_STD
++       PARAMS: DRVH=  96.4   DRVL= 104    CAPACITANCE=   0     
+*
+* Analog/Digital interface for node OUT
+*
+* Moving X_U6A.UFF1:Q1 from analog node OUT to new digital node OUT$DtoA
+X$OUT_DtoA1
++ OUT$DtoA
++ OUT
++ $G_DPWR
++ $G_DGND
++ DtoA_STD
++       PARAMS: DRVH=  96.4   DRVL= 104    CAPACITANCE=   0     
+*
+* Analog/Digital interface for node X_X1.qb
+*
+* Moving X_X1.u1:QBAR1 from analog node X_X1.qb to new digital node X_X1.qb$DtoA
+X$X_X1.qb_DtoA1
++ X_X1.qb$DtoA
++ X_X1.qb
++ $N_0002
++ 0
++ dtoa_555
++       PARAMS: DRVH=  96.4   DRVL= 104    CAPACITANCE=   0     
+*
+* Analog/Digital interface for node X_X2.qb
+*
+* Moving X_X2.u1:QBAR1 from analog node X_X2.qb to new digital node X_X2.qb$DtoA
+X$X_X2.qb_DtoA1
++ X_X2.qb$DtoA
++ X_X2.qb
++ $N_0004
++ 0
++ dtoa_555
++       PARAMS: DRVH=  96.4   DRVL= 104    CAPACITANCE=   0     
+*
+* Analog/Digital interface power supply subcircuits
+*
+
+X$DIGIFPWR 0 DIGIFPWR
+
+**** 11/12/18 22:43:01 *********** Evaluation PSpice (Nov 1999) **************
+
+ * D:\EPSA\STUF2019\EL - Electrical\Autre\BSPD\Pspice\Encore_un_test.sch
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D74CLMP         D74             
+          IS    1.000000E-15  100.000000E-18 
+          RS    2              25            
+         CJO    2.000000E-12    2.000000E-12 
+
+
+**** 11/12/18 22:43:01 *********** Evaluation PSpice (Nov 1999) **************
+
+ * D:\EPSA\STUF2019\EL - Electrical\Autre\BSPD\Pspice\Encore_un_test.sch
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Q74             
+               NPN             
+          IS  100.000000E-18 
+          BF   49            
+          NF    1            
+         ISE  100.000000E-18 
+          BR     .03         
+          NR    1            
+         ISC  400.000000E-18 
+          RB   50            
+          RC   20            
+         CJE    1.000000E-12 
+         VJE     .9          
+         MJE     .5          
+         CJC  500.000000E-15 
+         VJC     .8          
+         CJS    3.000000E-12 
+         VJS     .7          
+         MJS     .33         
+          TF  200.000000E-12 
+          TR   10.000000E-09 
+          CN    2.42         
+           D     .87         
+
+
+**** 11/12/18 22:43:01 *********** Evaluation PSpice (Nov 1999) **************
+
+ * D:\EPSA\STUF2019\EL - Electrical\Autre\BSPD\Pspice\Encore_un_test.sch
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_X1.nchan      X_X2.nchan      
+               NMOS            NMOS            
+       LEVEL    1               1            
+           L  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06 
+         VTO    0               0            
+          KP   20.000000E-06   20.000000E-06 
+       GAMMA    0               0            
+         PHI     .6              .6          
+      LAMBDA    0               0            
+          IS   10.000000E-15   10.000000E-15 
+          JS    0               0            
+          PB     .8              .8          
+        PBSW     .8              .8          
+          CJ    0               0            
+        CJSW    0               0            
+        CGSO    1.000000E-12    1.000000E-12 
+        CGDO    1.000000E-12    1.000000E-12 
+        CGBO    1.000000E-12    1.000000E-12 
+         TOX    0               0            
+          XJ    0               0            
+       UCRIT   10.000000E+03   10.000000E+03 
+      DIOMOD    1               1            
+         VFB    0               0            
+        LETA    0               0            
+        WETA    0               0            
+          U0    0               0            
+        TEMP    0               0            
+         VDD    0               0            
+       XPART    0               0            
+
+
+**** 11/12/18 22:43:01 *********** Evaluation PSpice (Nov 1999) **************
+
+ * D:\EPSA\STUF2019\EL - Electrical\Autre\BSPD\Pspice\Encore_un_test.sch
+
+
+ ****     Digital Input MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               DINSTM          DIN74           din555          
+        FILE DSO_DTOA        DSO_DTOA        DSO_DTOA        
+      FORMAT    6               6               6            
+    TIMESTEP  100.000000E-12  100.000000E-12  100.000000E-12 
+      S0NAME 0               0               0               
+       S0TSW  500.000000E-12    3.500000E-09  700.000000E-12 
+       S0RLO     .5             7.13          100            
+       S0RHI    1.000000E+03  389               1.000000E+06 
+      S1NAME 1               1               1               
+       S1TSW  500.000000E-12    5.500000E-09  700.000000E-12 
+       S1RLO    1.000000E+03  467               1.000000E+06 
+       S1RHI     .5           200             300            
+      S2NAME X               X               x               
+       S2TSW  500.000000E-12    3.500000E-09  700.000000E-12 
+       S2RLO     .429          42.9           200            
+       S2RHI    1.16          116             200            
+      S3NAME R               R               r               
+       S3TSW  500.000000E-12    3.500000E-09  700.000000E-12 
+       S3RLO     .429          42.9           200            
+       S3RHI    1.16          116             200            
+      S4NAME F               F               f               
+       S4TSW  500.000000E-12    3.500000E-09  700.000000E-12 
+       S4RLO     .429          42.9           200            
+       S4RHI    1.16          116             200            
+      S5NAME Z               Z               z               
+       S5TSW  500.000000E-12    3.500000E-09  700.000000E-12 
+       S5RLO    1.000000E+06  200.000000E+03  200.000000E+03 
+       S5RHI    1.000000E+06  200.000000E+03  200.000000E+03 
+
+
+**** 11/12/18 22:43:01 *********** Evaluation PSpice (Nov 1999) **************
+
+ * D:\EPSA\STUF2019\EL - Electrical\Autre\BSPD\Pspice\Encore_un_test.sch
+
+
+ ****     Digital Output MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_X1.cmp        X_X2.cmp        DO74            do555           
+        FILE DSO_ATOD        DSO_ATOD        DSO_ATOD        DSO_ATOD        
+      FORMAT    6               6               6               6            
+     CHGONLY    1               1               1               1            
+    TIMESTEP  100.000000E-12  100.000000E-12  100.000000E-12  100.000000E-12 
+      S0NAME 0               0               X               X               
+       S0VHI                                    2               2            
+       S0VLO -500            -500                .8              .8          
+      S1NAME 1               1               0               0               
+       S1VHI  500             500                .8              .8          
+       S1VLO                                   -1.5            -1.5          
+      S2NAME                                 R               R               
+       S2VHI                                    1.4             1.4          
+       S2VLO                                     .8              .8          
+      S3NAME                                 R               R               
+       S3VHI                                    2               2            
+       S3VLO                                    1.3             1.3          
+      S4NAME                                 X               X               
+       S4VHI                                    2               2            
+       S4VLO                                     .8              .8          
+      S5NAME                                 1               1               
+       S5VHI                                    7              50            
+       S5VLO                                    2               2            
+      S6NAME                                 F               F               
+       S6VHI                                    2               2            
+       S6VLO                                    1.3             1.3          
+      S7NAME                                 F               F               
+       S7VHI                                    1.4             1.4          
+       S7VLO                                     .8              .8          
+
+
+**** 11/12/18 22:43:01 *********** Evaluation PSpice (Nov 1999) **************
+
+ * D:\EPSA\STUF2019\EL - Electrical\Autre\BSPD\Pspice\Encore_un_test.sch
+
+
+ ****     Digital Gate MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D_32            D_02            D_04            
+      TPLHMN    4.000000E-09    4.800000E-09    4.800000E-09 
+      TPLHTY   10.000000E-09   12.000000E-09   12.000000E-09 
+      TPLHMX   15.000000E-09   22.000000E-09   22.000000E-09 
+      TPHLMN    5.600000E-09    3.200000E-09    3.200000E-09 
+      TPHLTY   14.000000E-09    8.000000E-09    8.000000E-09 
+      TPHLMX   22.000000E-09   15.000000E-09   15.000000E-09 
+
+
+**** 11/12/18 22:43:01 *********** Evaluation PSpice (Nov 1999) **************
+
+ * D:\EPSA\STUF2019\EL - Electrical\Autre\BSPD\Pspice\Encore_un_test.sch
+
+
+ ****     Digital Edge Triggered FF MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D_74            
+  TPCLKQLHMN    5.600000E-09 
+  TPCLKQLHTY   14.000000E-09 
+  TPCLKQLHMX   25.000000E-09 
+  TPCLKQHLMN    8.000000E-09 
+  TPCLKQHLTY   20.000000E-09 
+  TPCLKQHLMX   40.000000E-09 
+   TPPCQLHMN    6.250000E-09 
+   TPPCQLHTY   15.625000E-09 
+   TPPCQLHMX   25.000000E-09 
+   TPPCQHLMN   10.000000E-09 
+   TPPCQHLTY   25.000000E-09 
+   TPPCQHLMX   40.000000E-09 
+    TWCLKLMN   37.000000E-09 
+    TWCLKLTY   37.000000E-09 
+    TWCLKLMX   37.000000E-09 
+    TWCLKHMN   30.000000E-09 
+    TWCLKHTY   30.000000E-09 
+    TWCLKHMX   30.000000E-09 
+     TWPCLMN   30.000000E-09 
+     TWPCLTY   30.000000E-09 
+     TWPCLMX   30.000000E-09 
+   TSUDCLKMN   20.000000E-09 
+   TSUDCLKTY   20.000000E-09 
+   TSUDCLKMX   20.000000E-09 
+ TSUPCCLKHMN    0            
+ TSUPCCLKHTY    0            
+ TSUPCCLKHMX    0            
+    THDCLKMN    5.000000E-09 
+    THDCLKTY    5.000000E-09 
+    THDCLKMX    5.000000E-09 
+  TSUCECLKMN    0            
+  TSUCECLKTY    0            
+  TSUCECLKMX    0            
+   THCECLKMN    0            
+   THCECLKTY    0            
+   THCECLKMX    0            
+
+
+**** 11/12/18 22:43:01 *********** Evaluation PSpice (Nov 1999) **************
+
+ * D:\EPSA\STUF2019\EL - Electrical\Autre\BSPD\Pspice\Encore_un_test.sch
+
+
+ ****     Digital Gated FF MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_X1.t_srff     X_X2.t_srff     
+    TPDQLHMN    0               0            
+    TPDQLHTY    0               0            
+    TPDQLHMX    0               0            
+    TPDQHLMN    0               0            
+    TPDQHLTY    0               0            
+    TPDQHLMX    0               0            
+    TPGQLHMN    0               0            
+    TPGQLHTY    0               0            
+    TPGQLHMX    0               0            
+    TPGQHLMN    0               0            
+    TPGQHLTY    0               0            
+    TPGQHLMX    0               0            
+   TPPCQLHMN   48.000000E-09   48.000000E-09 
+   TPPCQLHTY  120.000000E-09  120.000000E-09 
+   TPPCQLHMX  192.000000E-09  192.000000E-09 
+   TPPCQHLMN    0               0            
+   TPPCQHLTY    0               0            
+   TPPCQHLMX    0               0            
+      TWGHMN    0               0            
+      TWGHTY    0               0            
+      TWGHMX    0               0            
+     TWPCLMN    0               0            
+     TWPCLTY    0               0            
+     TWPCLMX    0               0            
+     TSUDGMN    0               0            
+     TSUDGTY    0               0            
+     TSUDGMX    0               0            
+   TSUPCGHMN    0               0            
+   TSUPCGHTY    0               0            
+   TSUPCGHMX    0               0            
+      THDGMN    0               0            
+      THDGTY    0               0            
+      THDGMX    0               0            
+
+
+**** 11/12/18 22:43:01 *********** Evaluation PSpice (Nov 1999) **************
+
+ * D:\EPSA\STUF2019\EL - Electrical\Autre\BSPD\Pspice\Encore_un_test.sch
+
+
+ ****     Digital Delay Line MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_X1.dlymod     X_X2.dlymod     
+       DLYMN  166.666700E-09  166.666700E-09 
+       DLYTY  166.666700E-09  166.666700E-09 
+       DLYMX  166.666700E-09  166.666700E-09 
+
+
+**** 11/12/18 22:43:01 *********** Evaluation PSpice (Nov 1999) **************
+
+ * D:\EPSA\STUF2019\EL - Electrical\Autre\BSPD\Pspice\Encore_un_test.sch
+
+
+ ****     Digital IO  MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               IO_STM          X_X1.io_555     X_X2.io_555     IO_STD          
+        DRVL    0             104             104             104            
+        DRVH    0              96.4            96.4            96.4          
+       AtoD1                 atod_555        atod_555        AtoD_STD        
+       AtoD2                 atod_555        atod_555        AtoD_STD_NX     
+       AtoD3                 atod_555        atod_555        AtoD_STD        
+       AtoD4                 atod_555        atod_555        AtoD_STD_NX     
+       DtoA1 DtoA_STM        dtoa_555        dtoa_555        DtoA_STD        
+       DtoA2 DtoA_STM        dtoa_555        dtoa_555        DtoA_STD        
+       DtoA3 DtoA_STM        dtoa_555        dtoa_555        DtoA_STD        
+       DtoA4 DtoA_STM        dtoa_555        dtoa_555        DtoA_STD        
+      TSWHL1                                                    1.373000E-09 
+      TSWHL2                                                    1.346000E-09 
+      TSWHL3                                                    1.511000E-09 
+      TSWHL4                                                    1.487000E-09 
+      TSWLH1                                                    3.382000E-09 
+      TSWLH2                                                    3.424000E-09 
+      TSWLH3                                                    3.517000E-09 
+      TSWLH4                                                    3.564000E-09 
+       TPWRT  100.000000E+03  100.000000E+03  100.000000E+03  100.000000E+03 
+
+
+**** 11/12/18 22:43:01 *********** Evaluation PSpice (Nov 1999) **************
+
+ * D:\EPSA\STUF2019\EL - Electrical\Autre\BSPD\Pspice\Encore_un_test.sch
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    4.9975  (  OUT)    1.3089  ($G_DGND)    0.0000                       
+
+($G_DPWR)    5.0000                   ($N_0001)    5.0000                       
+
+($N_0002)    5.0000                   ($N_0003)    5.0000                       
+
+($N_0004)    5.0000                   ($N_0005)    5.0000                       
+
+($N_0009)     .1042                   ($N_0011)    4.9975                       
+
+($N_0012)    3.3333                   ($N_0013)    3.3333                       
+
+($N_0014)     .1042                   (X_X1.qb) 500.0E-06                       
+
+(X_X2.qb) 500.0E-06                   (X_X1.botm)    1.6667                     
+
+(X_X2.botm)    1.6667                 (X$IN_AtoD1.1)    1.5648                  
+
+(X$IN_AtoD1.2)     .7824              (X$IN_AtoD1.3)    2.2862                  
+
+(X$IN_AtoD3.1)    1.5648              (X$IN_AtoD3.2)     .7824                  
+
+(X$IN_AtoD3.3)    2.2862              (X$$N_0001_AtoD1.1)    1.5648             
+
+(X$$N_0001_AtoD1.2)     .7824         (X$$N_0001_AtoD1.3)    2.2862             
+
+(X$$N_0001_AtoD2.1)    1.5648         (X$$N_0001_AtoD2.2)     .7824             
+
+(X$$N_0001_AtoD2.3)    2.2862         (X$$N_0009_AtoD1.1)     .1957             
+
+(X$$N_0009_AtoD1.2)     .0979         (X$$N_0009_AtoD1.3)     .9300             
+
+(X$$N_0009_AtoD2.1)     .1957         (X$$N_0009_AtoD2.2)     .0979             
+
+(X$$N_0009_AtoD2.3)     .9300         
+
+
+
+ DGTL NODE : STATE  DGTL NODE : STATE  DGTL NODE : STATE  DGTL NODE : STATE
+
+
+(   500ms) : 0     ( X_X2.rd) : 1     (  X_X1.r) : 1     ( X_X1.sd) : 0         
+
+($N_0009$DtoA) : 0                    ($N_0009$AtoD2) : 0                       
+
+( IN$AtoD) : 1     ( X_X2.hi) : 1     ( $N_0010) : 1     ( $N_0015) : 1         
+
+( X_X1.rd) : 1     (X_X1.strt) : 0    ($N_0009$AtoD) : 0                        
+
+(  X_X1.s) : 0     ( $N_0006) : 0     ( X_X1.hi) : 1     (X_X2.strt) : 0        
+
+( IN$DtoA) : 1     (  X_X2.r) : 1     ($N_0001$AtoD2) : 1                       
+
+(IN$AtoD2) : 1     (X_X2.qb$DtoA) : 0                    ($N_0001$AtoD) : 1     
+
+( $N_0007) : X     ( $N_0008) : 1     (  X_X2.s) : 1     ( X_X2.sd) : 1         
+
+(     10s) : 0     (X_X1.qb$DtoA) : 0                    (IN$AtoD3) : 1         
+
+(OUT$DtoA) : X     
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V3        -4.071E-05
+    V_V4        -1.332E-04
+    V_V5        -1.332E-04
+    X$DIGIFPWR.VDPWR  -5.420E-02
+    X$DIGIFPWR.VDGND  -1.273E-03
+
+    TOTAL POWER DISSIPATION   2.73E-01  WATTS
+
+
+          JOB ABORTED
+
+          TOTAL JOB TIME           10.48
+
