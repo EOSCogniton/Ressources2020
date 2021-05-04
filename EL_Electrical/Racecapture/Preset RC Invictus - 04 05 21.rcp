@@ -1,8 +1,256 @@
 {
   "app_prefs": {
-    "alerts": {},
+    "alerts": {
+      "AccelX": {
+        "alert_rules": [],
+        "channel": "AccelX"
+      },
+      "AccelY": {
+        "alert_rules": [],
+        "channel": "AccelY"
+      },
+      "AccelZ": {
+        "alert_rules": [],
+        "channel": "AccelZ"
+      },
+      "AdvIgnition": {
+        "alert_rules": [],
+        "channel": "AdvIgnition"
+      },
+      "AirTemp": {
+        "alert_rules": [],
+        "channel": "AirTemp"
+      },
+      "Altitude": {
+        "alert_rules": [],
+        "channel": "Altitude"
+      },
+      "Batterie": {
+        "alert_rules": [],
+        "channel": "Batterie"
+      },
+      "BestLap": {
+        "alert_rules": [],
+        "channel": "BestLap"
+      },
+      "Brake_F": {
+        "alert_rules": [],
+        "channel": "Brake_F"
+      },
+      "Brake_R": {
+        "alert_rules": [],
+        "channel": "Brake_R"
+      },
+      "ConsoHr": {
+        "alert_rules": [],
+        "channel": "ConsoHr"
+      },
+      "ConsoKm": {
+        "alert_rules": [],
+        "channel": "ConsoKm"
+      },
+      "CurrentLap": {
+        "alert_rules": [],
+        "channel": "CurrentLap"
+      },
+      "Distance": {
+        "alert_rules": [],
+        "channel": "Distance"
+      },
+      "ElapsedTime": {
+        "alert_rules": [],
+        "channel": "ElapsedTime"
+      },
+      "FanOn": {
+        "alert_rules": [],
+        "channel": "FanOn"
+      },
+      "FuelPressur": {
+        "alert_rules": [],
+        "channel": "FuelPressur"
+      },
+      "GPSDOP": {
+        "alert_rules": [],
+        "channel": "GPSDOP"
+      },
+      "GPSQual": {
+        "alert_rules": [],
+        "channel": "GPSQual"
+      },
+      "GPSSats": {
+        "alert_rules": [],
+        "channel": "GPSSats"
+      },
+      "Gear": {
+        "alert_rules": [],
+        "channel": "Gear"
+      },
+      "Gsum": {
+        "alert_rules": [],
+        "channel": "Gsum"
+      },
+      "Height_LF": {
+        "alert_rules": [],
+        "channel": "Height_LF"
+      },
+      "Height_LR": {
+        "alert_rules": [],
+        "channel": "Height_LR"
+      },
+      "Height_RF": {
+        "alert_rules": [],
+        "channel": "Height_RF"
+      },
+      "Height_RR": {
+        "alert_rules": [],
+        "channel": "Height_RR"
+      },
+      "Injection": {
+        "alert_rules": [],
+        "channel": "Injection"
+      },
+      "Interval": {
+        "alert_rules": [],
+        "channel": "Interval"
+      },
+      "LC_Active": {
+        "alert_rules": [],
+        "channel": "LC_Active"
+      },
+      "LC_But_Pres": {
+        "alert_rules": [],
+        "channel": "LC_But_Pres"
+      },
+      "LD_Speed": {
+        "alert_rules": [],
+        "channel": "LD_Speed"
+      },
+      "LUD_Speed": {
+        "alert_rules": [],
+        "channel": "LUD_Speed"
+      },
+      "Lambda": {
+        "alert_rules": [],
+        "channel": "Lambda"
+      },
+      "LapCount": {
+        "alert_rules": [],
+        "channel": "LapCount"
+      },
+      "LapDelta": {
+        "alert_rules": [],
+        "channel": "LapDelta"
+      },
+      "LapTime": {
+        "alert_rules": [],
+        "channel": "LapTime"
+      },
+      "Latitude": {
+        "alert_rules": [],
+        "channel": "Latitude"
+      },
+      "Log_Button": {
+        "alert_rules": [
+          {
+            "activate_sec": 0,
+            "alert_actions": [],
+            "deactivate_sec": 0,
+            "enabled": true,
+            "high_threshold": null,
+            "low_threshold": 0.0,
+            "range_type": ">="
+          }
+        ],
+        "channel": "Log_Button"
+      },
+      "Longitude": {
+        "alert_rules": [],
+        "channel": "Longitude"
+      },
+      "MAP": {
+        "alert_rules": [],
+        "channel": "MAP"
+      },
+      "OilPress": {
+        "alert_rules": [],
+        "channel": "OilPress"
+      },
+      "Pitch": {
+        "alert_rules": [],
+        "channel": "Pitch"
+      },
+      "PredTime": {
+        "alert_rules": [],
+        "channel": "PredTime"
+      },
+      "RD_Speed": {
+        "alert_rules": [],
+        "channel": "RD_Speed"
+      },
+      "RPM": {
+        "alert_rules": [],
+        "channel": "RPM"
+      },
+      "RUD_Speed": {
+        "alert_rules": [],
+        "channel": "RUD_Speed"
+      },
+      "Roll": {
+        "alert_rules": [],
+        "channel": "Roll"
+      },
+      "Sector": {
+        "alert_rules": [],
+        "channel": "Sector"
+      },
+      "SectorTime": {
+        "alert_rules": [],
+        "channel": "SectorTime"
+      },
+      "SessionTime": {
+        "alert_rules": [],
+        "channel": "SessionTime"
+      },
+      "Speed": {
+        "alert_rules": [],
+        "channel": "Speed"
+      },
+      "SpeedDTA": {
+        "alert_rules": [],
+        "channel": "SpeedDTA"
+      },
+      "Steering": {
+        "alert_rules": [],
+        "channel": "Steering"
+      },
+      "TPS": {
+        "alert_rules": [],
+        "channel": "TPS"
+      },
+      "TractionOn": {
+        "alert_rules": [],
+        "channel": "TractionOn"
+      },
+      "TractionWet": {
+        "alert_rules": [],
+        "channel": "TractionWet"
+      },
+      "Utc": {
+        "alert_rules": [],
+        "channel": "Utc"
+      },
+      "WaterTemp": {
+        "alert_rules": [],
+        "channel": "WaterTemp"
+      },
+      "Yaw": {
+        "alert_rules": [],
+        "channel": "Yaw"
+      }
+    },
     "gauge_settings": {},
     "general_prefs": {
+      "analysis_map": {},
       "analysis_preferences": {
         "selected_analysis_channels": "Speed",
         "selected_sessions_laps": "{\"sessions\":{}}"
@@ -20,12 +268,14 @@
         "remote_dash_nav_enabled": "1"
       },
       "help": {
+        "analysis_welcome": "False",
         "can_mapping_help": "False",
         "dashboard_gauge_help": "False",
+        "lap_setup": "False",
         "rc_write_config": "False"
       },
       "preferences": {
-        "config_file_dir": "C:\\Users\\Mathieu\\Downloads",
+        "config_file_dir": "C:\\Users\\Mathieu\\Documents\\EPSA\\Ressources2020\\EL_Electrical\\Racecapture",
         "conn_type": "Serial",
         "distance_units": "miles",
         "export_file_dir": "C:\\Users\\Documents",
@@ -45,7 +295,7 @@
       "track_detection": {
         "last_selected_track_id": "0",
         "last_selected_track_timestamp": "0",
-        "user_cancelled_location": "0,0"
+        "user_cancelled_location": "45.748898,4.906239"
       }
     },
     "range_alerts": {},
@@ -942,7 +1192,7 @@
     },
     "imuCfg": {
       "0": {
-        "alpha": 0.077,
+        "alpha": 0.08,
         "chan": 0,
         "max": 3.0,
         "min": -3.0,
@@ -951,46 +1201,46 @@
         "prec": 2,
         "sr": 50,
         "ut": "G",
-        "zeroVal": -60
+        "zeroVal": 220
       },
       "1": {
-        "alpha": 0.077,
+        "alpha": 0.08,
         "chan": 1,
         "max": 3.0,
         "min": -3.0,
-        "mode": 1,
+        "mode": 2,
         "nm": "AccelY",
         "prec": 2,
         "sr": 50,
         "ut": "G",
-        "zeroVal": 312
+        "zeroVal": 468
       },
       "2": {
-        "alpha": 0.077,
+        "alpha": 0.08,
         "chan": 2,
         "max": 3.0,
         "min": -3.0,
-        "mode": 1,
+        "mode": 2,
         "nm": "AccelZ",
         "prec": 2,
         "sr": 50,
         "ut": "G",
-        "zeroVal": 136
+        "zeroVal": 28
       },
       "3": {
-        "alpha": 0.077,
+        "alpha": 0.08,
         "chan": 3,
         "max": 120,
         "min": -120,
-        "mode": 1,
+        "mode": 2,
         "nm": "Yaw",
         "prec": 0,
         "sr": 50,
         "ut": "Deg/Sec",
-        "zeroVal": -24
+        "zeroVal": -102
       },
       "4": {
-        "alpha": 0.077,
+        "alpha": 0.08,
         "chan": 4,
         "max": 120,
         "min": -120,
@@ -999,19 +1249,19 @@
         "prec": 0,
         "sr": 50,
         "ut": "Deg/Sec",
-        "zeroVal": 214
+        "zeroVal": 253
       },
       "5": {
-        "alpha": 0.077,
+        "alpha": 0.08,
         "chan": 5,
         "max": 120,
         "min": -120,
-        "mode": 1,
+        "mode": 2,
         "nm": "Roll",
         "prec": 0,
         "sr": 50,
         "ut": "Deg/Sec",
-        "zeroVal": -37
+        "zeroVal": -44
       }
     },
     "lapCfg": {
