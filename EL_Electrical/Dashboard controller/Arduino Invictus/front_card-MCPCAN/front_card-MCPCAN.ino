@@ -142,7 +142,7 @@ void loop() {
   launch_control=digitalRead(LaunchControl_button);
   Wet_ON=digitalRead(WD_Switch);
 
-  if ( !homing)
+  if (!homing)
   {
     Serial.println("appui homing");
   }
