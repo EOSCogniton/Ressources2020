@@ -1147,7 +1147,7 @@
         "cellEn": 0
       },
       "telCfg": {
-        "bgStream": 1,
+        "bgStream": 0,
         "deviceId": ""
       }
     },
@@ -1456,7 +1456,7 @@
       }
     },
     "trackCfg": {
-      "autoDetect": 1,
+      "autoDetect": 0,
       "rad": 0.0001,
       "track": {
         "id": 0,
