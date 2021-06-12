@@ -69,8 +69,8 @@ void can_interface::Recieve()
       // Determine if R_ID_Mask is standard (11 bits) or extended (29 bits)
       if((R_ID_Mask & 0x80000000) == 0x80000000){ 
           R_ID=(R_ID_Mask & 0x0000FFFF);
-          //Serial.print("Extended, ID = ");  
-          //Serial.println(R_ID);
+          Serial.print("Extended, ID = ");  
+          Serial.println(R_ID);
       }
       else{
           //Serial.println("Standard");
@@ -173,8 +173,8 @@ void can_interface::Data_MAJ()
       //Serial.println(auto_mode);
   }
   
-  if(R_ID_Mask==0x1008){ 
-      //Serial.println("id=0x1008, logRC");
+  if(R_ID==4104){ 
+      Serial.println("id=0x1008, logRC");
       logRC=Data[0];
       Serial.print("Log racecapture : ");
       Serial.println(logRC);
