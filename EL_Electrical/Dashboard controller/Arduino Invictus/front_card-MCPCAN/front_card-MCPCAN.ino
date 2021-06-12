@@ -30,6 +30,7 @@ bool anclaunch;
 bool nvlaunch;
 bool ancrace;
 bool nvrace;
+bool ancauto_mode;
 unsigned long TchgtPage;
 unsigned long T1;
 
@@ -98,6 +99,7 @@ void setup() {
   nvlaunch=false;
   ancrace=false;
   nvrace=false;
+  ancauto_mode=false;
   
   Serial.begin(9600);
   Serial1.begin(9600);
@@ -166,9 +168,30 @@ void loop() {
   {
     Serial.println("Dry activé");
   }
+  if (CAN.auto_mode!=ancauto_mode)
+  {
+    if (CAN.auto_mode==true)
+    {
+     digitalWrite(BLUE_SHIFT_PIN,HIGH);
+     digitalWrite(RED_SHIFT_PIN,HIGH); 
+    }
+    else
+    {
+      digitalWrite(BLUE_SHIFT_PIN,LOW);
+      digitalWrite(RED_SHIFT_PIN,LOW);
+    }
+    ancauto_mode = CAN.auto_mode;
+    Serial.print("auto mode : ");
+    Serial.println(ancauto_mode);
+  }
   
-  //Shift light :on allume en fonction des rpms pour savoir si on change de vitesse
-  setRPMShiftLight(CAN.RPM);
+  
+  
+  //Shift light :si on n'est pas en passage automatique des vitesses on allume en fonction des rpms pour savoir si on change de vitesse
+  if (ancauto_mode!=true)
+  {
+    setRPMShiftLight(CAN.RPM);
+  }
    flag = flag + 1;
   if (flag == 40) { 
     flag = 0; 

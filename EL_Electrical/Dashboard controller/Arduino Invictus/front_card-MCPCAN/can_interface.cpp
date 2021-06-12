@@ -159,7 +159,7 @@ void can_interface::Data_MAJ()
 
   
   if(R_ID_Mask==0x110){ 
-      //Serial.println("id=0x110, Rear Card");
+      Serial.println("id=0x110, Rear Card");
       gear=Data[0];
       //Serial.print("Vitesse : ");
       //Serial.println(gear);
