@@ -52,6 +52,7 @@ const int homingCommand = 1;
 
 //Palettes : 
 const unsigned long AntiReboundDelay=200; //Delay in order to avoid signal rebound on shifter and pass two gear on one push
+const unsigned long AutoActiveDelay=500; //Delay in order to activate autoshifter when pussing two time in row in the gear down "palette"
 const int IncreaseDelay=10; //Delay to let the time to the shiftcut to do his job for an gear UP
 const int DecreaseDelay=20; //Delay to let the time to the shiftcut to do his job for an gear DOWN
 
@@ -65,7 +66,8 @@ const int valAnalog[] = {0, 36, 72, 108, 144, 180, 216,256}; //voltage to send t
 
 //Auto
 bool Auto; // if true we are in auto mode
-const int RPM_shift[3] = {12500,12200,12000};
+const int RPM_shift_up[5] = {12500,12200,12000,11800,11600};
+const int RPM_shift_down[5] = {8200,8200,8200,8200,8200};
 unsigned long T_ShiftAuto; //To make sur the car doesn't shift up two time in a row
 signed RPM ;
 
@@ -200,7 +202,7 @@ void loop()
   //  //AUTO
   //Mode Auto turned ON when the first gear is engaged and the Decrease palette is pushed
   //it turned of on any command of the pilote on the palette or on the neutral and homming button
-  /*if (Auto==true)
+  if (Auto==true)
      {
       RPM=CAN.getRPM();
       if (millis()-T_ShiftAuto>500) {
@@ -210,7 +212,7 @@ void loop()
         T_ShiftAuto = millis();
       }
      }
-  */
+  
   //Motor mouvement
   move();
   
@@ -323,7 +325,6 @@ void Decrease()
   Serial.println(outMotor2);
   if ((millis() - T_Decrease) > AntiReboundDelay)
   {
-    T_Decrease = millis();
     Auto = false;
     // Si demande de Homming
     if (NeedHoming(outMotor1,outMotor2))
@@ -334,13 +335,30 @@ void Decrease()
     {
       wantedPosition = engagedPosition-1;
      }
-    else if (engagedPosition == 3 and wantedPosition != engagedPosition-1)
+    /*else if (engagedPosition == 3 and wantedPosition != engagedPosition-1)
     {
-      /*if (Auto==false)
+      if (Auto==false)
         {
           Auto = true;
-        }*/
+        }
+      }*/
+    else if (engagedPosition == 3 and (millis() - T_Decrease) < AutoActiveDelay)
+    {
+      Serial.print("critère passage des vitesse : ");
+      Serial.println(millis() - T_Decrease);
+      Serial.println(millis());
+      T_Decrease = millis();
+      if (Auto==false)
+      {
+        Auto = true;
+        Serial.print("Passage auto des vitesse activé");
       }
+      else if (Auto==true)
+      {
+        Auto = false;
+        Serial.print("Passage auto des vitesse désactivé");
+      }
+    }
     if (wantedPosition != engagedPosition)
     {
       digitalWrite(shiftCutPin, LOW);//Close the injection
@@ -351,6 +369,7 @@ void Decrease()
       Serial.print("Position voulue : ");
       Serial.println(wantedPosition-2);
     }
+    T_Decrease = millis();
   }
 }
 
@@ -363,15 +382,36 @@ int CalculAuto(int pos,int RPM){
   if (pos<=2) {
     return(3);
   }
-  else if (pos==3 && RPM>RPM_shift[0]){
+  else if (pos==3 && RPM>RPM_shift_up[0]){
     return(4);
   }
-  else if (pos==4 && RPM>RPM_shift[1]){
+  else if (pos==4 && RPM<RPM_shift_down[0]){
+    return(3);
+  }
+  else if (pos==4 && RPM>RPM_shift_up[1]){
     return(5);
   }
-  else if (pos==5 && RPM>RPM_shift[2]){
+  else if (pos==5 && RPM<RPM_shift_down[1]){
+    return(4);
+  }
+  else if (pos==5 && RPM>RPM_shift_up[2]){
     return(6);
     }
+  else if (pos==6 && RPM<RPM_shift_down[2]){
+    return(5);
+  }
+  else if (pos==6 && RPM>RPM_shift_up[3]){
+    return(7);
+    }
+  else if (pos==7 && RPM<RPM_shift_down[3]){
+    return(6);
+  }
+  else if (pos==7 && RPM>RPM_shift_up[4]){
+    return(8);
+    }
+  else if (pos==8 && RPM<RPM_shift_down[4]){
+    return(7);
+  }
   else {
     return(pos);
     }
