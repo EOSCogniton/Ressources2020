@@ -224,10 +224,16 @@ void loop() {
     }
   }
   
-  if(CAN.gear!=ancgear){//Changing gear
-    ancgear=CAN.gear;
-    setGear(vitesse[CAN.gear]);
+  if(CAN.gear!=ancgear || (CAN.errorMotored==1)) {//Changing gear
+    if(CAN.errorMotored==1) {
+      setGear(vitesse[7]);
+    }
+    else {
+      ancgear=CAN.gear;
+      setGear(vitesse[CAN.gear]);
+    }
   }
+  
   if(nvrace!=ancrace){//Changing race capture activation state
     ancrace=nvrace;
     setRaceCapture(nvrace);
