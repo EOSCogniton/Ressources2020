@@ -1,0 +1,5 @@
+Les logos sont à l'échelle 1:1 sur le fichier .ai portant leur nom.
+Une bordure grise a été ajoutée pour tous les logos à imprimer : elle est à enlever avant la découpe (comme l'année dernière).
+Les cotes sont rappelées sur le fichier (à l'échelle) : si un doute persiste ou les cotes ne sont pas cohérentes : le fichier .ai donne les bonnes mesures.
+La plupart des logos sont à découpés de manière à ce qu'ils soient "sans fond". Les exceptions sont numero_cote_81 , numero_cote_181 , numero_face_81 , numero_face_181 .
+Ne pas hésiter de contacter Pierre-Guillaume THOMAS (06 48 97 67 07 pierre-guillaume.thomas@ecl18.ec-lyon.fr) si besoin.
