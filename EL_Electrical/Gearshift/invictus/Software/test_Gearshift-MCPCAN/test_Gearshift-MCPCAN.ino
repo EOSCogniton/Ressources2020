@@ -240,7 +240,16 @@ void loop()
 void move()
 {
   if (engagedPosition != wantedPosition)
-  {
+    {
+    if(Auto){
+      digitalWrite(shiftCutPin,LOW);
+      if(wantedPosition>engagedPosition){
+        delay(IncreaseDelay);
+      }
+      else {
+        delay(DecreaseDelay);
+      }
+    }
     //Send Command to the motor
     digitalWrite(motorInput1Pin, motorCommand[wantedPosition][0]);
     digitalWrite(motorInput2Pin, motorCommand[wantedPosition][1]);
