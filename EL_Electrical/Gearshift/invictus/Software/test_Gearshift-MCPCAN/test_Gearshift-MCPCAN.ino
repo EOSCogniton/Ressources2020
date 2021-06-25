@@ -66,8 +66,8 @@ const int valAnalog[] = {0, 36, 72, 108, 144, 180, 216,256}; //voltage to send t
 
 //Auto
 bool Auto; // if true we are in auto mode
-const int RPM_shift_up[5] = {12500,12200,12000,11800,11600};
-const int RPM_shift_down[5] = {8200,8200,8200,8200,8200};
+const int RPM_shift_up[5] = {13000,11900,11500,11200,11000};
+const int RPM_shift_down[5] = {8500,8900,8900,9000,9000};
 unsigned long T_ShiftAuto; //To make sur the car doesn't shift up two time in a row
 signed RPM ;
 

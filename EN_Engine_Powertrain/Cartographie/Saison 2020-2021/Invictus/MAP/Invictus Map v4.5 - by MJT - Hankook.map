@@ -1,5 +1,5 @@
 DTAMAPVER50.0
-Traction/launch control                                                                                                                                                                     
+Traction/launch control - Engine start avc timer                                                                                                                                                                     
  1000 
  1500 
  2500 
@@ -760,26 +760,26 @@ Traction/launch control
  0 
  0 
  0 
- 6 
- 7 
- 8 
- 9 
- 10 
- 16 
- 20 
- 30 
- 40 
- 50 
- 70 
- 100 
- 130 
- 160 
- 200 
- 240 
- 280 
- 320 
- 360 
- 400 
+ 23 
+ 24 
+ 25 
+ 26 
+ 27 
+ 33 
+ 37 
+ 47 
+ 57 
+ 67 
+ 87 
+ 117 
+ 147 
+ 177 
+ 217 
+ 257 
+ 297 
+ 337 
+ 377 
+ 417 
  1 
  10 
  20 
