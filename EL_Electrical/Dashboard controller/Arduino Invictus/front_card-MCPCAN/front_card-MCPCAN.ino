@@ -39,6 +39,7 @@ int rpm_new=0;
 int drpm=0;
 int seuildrpm=500;
 float dt=0.05;
+const int RPM_shift_up[5] = {13000,11900,11500,11200,11000};
 int min1Rpm=11500;
 int min2Rpm=12000;
 int meme_display=0;
@@ -190,7 +191,7 @@ void loop() {
   //Shift light :si on n'est pas en passage automatique des vitesses on allume en fonction des rpms pour savoir si on change de vitesse
   if (ancauto_mode!=true)
   {
-    setRPMShiftLight(CAN.RPM);
+    setRPMShiftLight(CAN.RPM, CAN.gear);
   }
    flag = flag + 1;
   if (flag == 40) { 
@@ -254,7 +255,7 @@ void loop() {
   }
 }
 
-void setRPMShiftLight(int RPM)
+void setRPMShiftLight(int RPM, int gear)
 {
   rpm_old=rpm_new;
   rpm_new=RPM;
@@ -263,11 +264,11 @@ void setRPMShiftLight(int RPM)
     Serial1.print("problem.txt=rpm");
     nextion_endMessage();
   }
-  if(RPM<min1Rpm) //min1Rpm=11500; min2Rpm=12000
+  if(RPM<(RPM_shift_up[gear-1]-500)) //min1Rpm=11500; min2Rpm=12000 Edit: Le seuil de RPM de passage de vitesse depend du rapport engager. 500 correspond a la variation de RPM que l'on veut entre l'allumage de la premiere et de la deuxieme led
   {
     digitalWrite(BLUE_SHIFT_PIN,LOW);
     digitalWrite(RED_SHIFT_PIN,LOW);
-  } else if( RPM<min2Rpm)
+  } else if( RPM<RPM_shift_up[gear-1])
   {
     digitalWrite(BLUE_SHIFT_PIN,HIGH);
     digitalWrite(RED_SHIFT_PIN,LOW);
