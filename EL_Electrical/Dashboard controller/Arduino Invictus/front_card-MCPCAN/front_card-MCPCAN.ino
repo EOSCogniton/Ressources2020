@@ -255,7 +255,7 @@ void loop() {
   }
 }
 
-void setRPMShiftLight(int RPM, int gear)
+void setRPMShiftLight(int RPM, int gearValue)
 {
   rpm_old=rpm_new;
   rpm_new=RPM;
@@ -264,17 +264,86 @@ void setRPMShiftLight(int RPM, int gear)
     Serial1.print("problem.txt=rpm");
     nextion_endMessage();
   }
-  if(RPM<(RPM_shift_up[gear-1]-500)) //min1Rpm=11500; min2Rpm=12000 Edit: Le seuil de RPM de passage de vitesse depend du rapport engager. 500 correspond a la variation de RPM que l'on veut entre l'allumage de la premiere et de la deuxieme led
-  {
-    digitalWrite(BLUE_SHIFT_PIN,LOW);
-    digitalWrite(RED_SHIFT_PIN,LOW);
-  } else if( RPM<RPM_shift_up[gear-1])
-  {
-    digitalWrite(BLUE_SHIFT_PIN,HIGH);
-    digitalWrite(RED_SHIFT_PIN,LOW);
-  } else{
-    digitalWrite(BLUE_SHIFT_PIN,HIGH);
-    digitalWrite(RED_SHIFT_PIN,HIGH);
+  switch (gearValue) {
+    case 1:
+      if(RPM<(RPM_shift_up[0]-500)) //min1Rpm=11500; min2Rpm=12000 Edit: Le seuil de RPM de passage de vitesse depend du rapport engager. 500 correspond a la variation de RPM que l'on veut entre l'allumage de la premiere et de la deuxieme led
+      {
+        digitalWrite(BLUE_SHIFT_PIN,LOW);
+        digitalWrite(RED_SHIFT_PIN,LOW);
+      } else if( RPM<RPM_shift_up[0])
+      {
+        digitalWrite(BLUE_SHIFT_PIN,HIGH);
+        digitalWrite(RED_SHIFT_PIN,LOW);
+      } else{
+        digitalWrite(BLUE_SHIFT_PIN,HIGH);
+        digitalWrite(RED_SHIFT_PIN,HIGH);
+      }
+      break;
+    
+    case 2:
+      if(RPM<(RPM_shift_up[1]-500)) //min1Rpm=11500; min2Rpm=12000 Edit: Le seuil de RPM de passage de vitesse depend du rapport engager. 500 correspond a la variation de RPM que l'on veut entre l'allumage de la premiere et de la deuxieme led
+      {
+        digitalWrite(BLUE_SHIFT_PIN,LOW);
+        digitalWrite(RED_SHIFT_PIN,LOW);
+      } else if( RPM<RPM_shift_up[1])
+      {
+        digitalWrite(BLUE_SHIFT_PIN,HIGH);
+        digitalWrite(RED_SHIFT_PIN,LOW);
+      } else{
+        digitalWrite(BLUE_SHIFT_PIN,HIGH);
+        digitalWrite(RED_SHIFT_PIN,HIGH);
+      }
+      break;
+      
+     case 3:
+      if(RPM<(RPM_shift_up[2]-500)) //min1Rpm=11500; min2Rpm=12000 Edit: Le seuil de RPM de passage de vitesse depend du rapport engager. 500 correspond a la variation de RPM que l'on veut entre l'allumage de la premiere et de la deuxieme led
+      {
+        digitalWrite(BLUE_SHIFT_PIN,LOW);
+        digitalWrite(RED_SHIFT_PIN,LOW);
+      } else if( RPM<RPM_shift_up[2])
+      {
+        digitalWrite(BLUE_SHIFT_PIN,HIGH);
+        digitalWrite(RED_SHIFT_PIN,LOW);
+      } else{
+        digitalWrite(BLUE_SHIFT_PIN,HIGH);
+        digitalWrite(RED_SHIFT_PIN,HIGH);
+      }
+      break; 
+     
+    case 4:
+      if(RPM<(RPM_shift_up[3]-500)) //min1Rpm=11500; min2Rpm=12000 Edit: Le seuil de RPM de passage de vitesse depend du rapport engager. 500 correspond a la variation de RPM que l'on veut entre l'allumage de la premiere et de la deuxieme led
+      {
+        digitalWrite(BLUE_SHIFT_PIN,LOW);
+        digitalWrite(RED_SHIFT_PIN,LOW);
+      } else if( RPM<RPM_shift_up[3])
+      {
+        digitalWrite(BLUE_SHIFT_PIN,HIGH);
+        digitalWrite(RED_SHIFT_PIN,LOW);
+      } else{
+        digitalWrite(BLUE_SHIFT_PIN,HIGH);
+        digitalWrite(RED_SHIFT_PIN,HIGH);
+      }
+      break;
+      
+    case 5:
+      if(RPM<(RPM_shift_up[4]-500)) //min1Rpm=11500; min2Rpm=12000 Edit: Le seuil de RPM de passage de vitesse depend du rapport engager. 500 correspond a la variation de RPM que l'on veut entre l'allumage de la premiere et de la deuxieme led
+      {
+        digitalWrite(BLUE_SHIFT_PIN,LOW);
+        digitalWrite(RED_SHIFT_PIN,LOW);
+      } else if( RPM<RPM_shift_up[4])
+      {
+        digitalWrite(BLUE_SHIFT_PIN,HIGH);
+        digitalWrite(RED_SHIFT_PIN,LOW);
+      } else{
+        digitalWrite(BLUE_SHIFT_PIN,HIGH);
+        digitalWrite(RED_SHIFT_PIN,HIGH);
+      }
+      break;
+      
+    default:
+      digitalWrite(BLUE_SHIFT_PIN,LOW);
+      digitalWrite(RED_SHIFT_PIN,LOW);
+      break;
   }
 }
 
