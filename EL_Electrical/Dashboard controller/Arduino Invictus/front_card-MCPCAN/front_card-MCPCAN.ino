@@ -340,6 +340,21 @@ void setRPMShiftLight(int RPM, int gearValue)
       }
       break;
       
+    case 8:
+      if(RPM<6500) // Edit: Le seuil de RPM de passage de vitesse depend du rapport engager. 500 correspond a la variation de RPM que l'on veut entre l'allumage de la premiere et de la deuxieme led
+      {
+        digitalWrite(BLUE_SHIFT_PIN,LOW);
+        digitalWrite(RED_SHIFT_PIN,LOW);
+      } else if(RPM<7000)
+      {
+        digitalWrite(BLUE_SHIFT_PIN,HIGH);
+        digitalWrite(RED_SHIFT_PIN,LOW);
+      } else{
+        digitalWrite(BLUE_SHIFT_PIN,HIGH);
+        digitalWrite(RED_SHIFT_PIN,HIGH);
+      }
+      break;
+      
     default:
       digitalWrite(BLUE_SHIFT_PIN,LOW);
       digitalWrite(RED_SHIFT_PIN,LOW);
